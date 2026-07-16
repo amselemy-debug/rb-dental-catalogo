@@ -79,7 +79,7 @@
         }
         .hero-content {
             text-align: center;
-            padding: 1.5rem 1.5rem 0;
+            padding: 1.5rem 1.5rem 1.75rem;
             position: relative;
             z-index: 2;
         }
@@ -113,22 +113,8 @@
             font-size: 0.85rem;
             color: #aaaaaa;
             font-weight: 300;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0;
             letter-spacing: 0.3px;
-        }
-        .hero-img-wrap {
-            width: 100%;
-            max-width: 420px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        .hero-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: var(--radius) var(--radius) 0 0;
-            display: block;
         }
         .hero-stats {
             display: grid;
@@ -288,15 +274,23 @@
             scroll-snap-type: x mandatory;
         }
         .gallery::-webkit-scrollbar { display: none; }
-        .gallery img {
-            width: 160px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 12px;
+        .gallery a {
             flex-shrink: 0;
             scroll-snap-align: start;
+            line-height: 0;
+        }
+        .gallery img {
+            width: 230px;
+            height: 165px;
+            object-fit: cover;
+            border-radius: 12px;
             border: 1px solid var(--border);
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .gallery a:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
         }
 
         /* TABLE */
@@ -566,10 +560,9 @@
 
         /* RESPONSIVE */
         @media (min-width: 768px) {
-            .hero-content { padding: 2rem 2rem 0; }
+            .hero-content { padding: 2rem 2rem 2.5rem; }
             .hero-logo-rb { font-size: 3.4rem; }
-            .hero-img { height: 280px; }
-            .hero-img-wrap { max-width: 500px; }
+            .gallery img { width: 270px; height: 195px; }
             .time-grid { grid-template-columns: 1fr 1fr; }
         }
 
@@ -590,9 +583,6 @@
                 <span class="hero-logo-digital">D I G I T A L</span>
             </div>
             <p class="hero-subtitle">Laboratorio de Pr&oacute;tesis Dental Digital</p>
-        </div>
-        <div class="hero-img-wrap">
-            <img src="img/hero-corona-zirconio.png" alt="Corona de Zirconio" class="hero-img">
         </div>
         <div class="hero-stats">
             <div class="hero-stat">
@@ -623,7 +613,7 @@
             <a href="#fijas">Fijas</a>
             <a href="#cadcam">CAD-CAM</a>
             <a href="#implantes">Implantes</a>
-            <a href="#varios">Varios</a>
+            <a href="#resina">Resina</a>
             <a href="#allon">All-on-4/6</a>
             <a href="#ortodoncia">Ortodoncia</a>
             <a href="#tiempos">Tiempos</a>
@@ -644,17 +634,16 @@
 
         <!-- GALERIA -->
         <div class="gallery">
-            <img src="img/hero-corona-zirconio.png" alt="Corona de Zirconio">
-            <img src="img/coronas-zirconio.png" alt="Coronas de Zirconio">
-            <img src="img/protesis-completa.png" alt="Pr&oacute;tesis Completa">
-            <img src="img/protesis-superior.png" alt="Pr&oacute;tesis Superior">
-            <img src="img/protesis-mano.png" alt="Pr&oacute;tesis">
-            <img src="img/ferula-descarga.png" alt="F&eacute;rula de Descarga">
-            <img src="img/ferula-transparente.png" alt="F&eacute;rula Transparente">
-            <img src="img/all-on-four.png" alt="All on Four">
-            <img src="img/ortodoncia-aparato.png" alt="Aparato de Ortodoncia">
-            <img src="img/ortodoncia-placas.png" alt="Placas de Ortodoncia">
-            <img src="img/ortodoncia-hawley.png" alt="Placa Hawley">
+            <a href="img/coronas-zirconio.png" target="_blank"><img src="img/coronas-zirconio.png" alt="Coronas de Zirconio" loading="lazy"></a>
+            <a href="img/protesis-completa.png" target="_blank"><img src="img/protesis-completa.png" alt="Pr&oacute;tesis Completa" loading="lazy"></a>
+            <a href="img/protesis-superior.png" target="_blank"><img src="img/protesis-superior.png" alt="Pr&oacute;tesis Superior" loading="lazy"></a>
+            <a href="img/protesis-mano.png" target="_blank"><img src="img/protesis-mano.png" alt="Pr&oacute;tesis" loading="lazy"></a>
+            <a href="img/ferula-descarga.png" target="_blank"><img src="img/ferula-descarga.png" alt="F&eacute;rula de Descarga" loading="lazy"></a>
+            <a href="img/ferula-transparente.png" target="_blank"><img src="img/ferula-transparente.png" alt="F&eacute;rula Transparente" loading="lazy"></a>
+            <a href="img/all-on-four.png" target="_blank"><img src="img/all-on-four.png" alt="All on Four" loading="lazy"></a>
+            <a href="img/ortodoncia-aparato.png" target="_blank"><img src="img/ortodoncia-aparato.png" alt="Aparato de Ortodoncia" loading="lazy"></a>
+            <a href="img/ortodoncia-placas.png" target="_blank"><img src="img/ortodoncia-placas.png" alt="Placas de Ortodoncia" loading="lazy"></a>
+            <a href="img/ortodoncia-hawley.png" target="_blank"><img src="img/ortodoncia-hawley.png" alt="Placa Hawley" loading="lazy"></a>
         </div>
 
         <!-- PROTESIS REMOVIBLES -->
@@ -713,8 +702,10 @@
         <section class="section" id="cadcam">
             <div class="section-header">
                 <div class="section-icon">&#128187;</div>
-                <h2 class="section-title">CAD-CAM Metal Sinterizado</h2>
+                <h2 class="section-title">CAD-CAM</h2>
             </div>
+
+            <span class="subsection-label">Metal Sinterizado</span>
             <div class="price-card">
                 <table class="price-table">
                     <thead>
@@ -724,6 +715,52 @@
                         <tr><td>Corona Metal Porcelana</td><td class="price">60,00 &euro;</td></tr>
                         <tr><td>Corona sobre Implante Atornillada / Cementada</td><td class="price">110,00 &euro;</td></tr>
                         <tr><td>Enc&iacute;a Rosa (por pieza)</td><td class="price">25,00 &euro;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <span class="subsection-label">Zirconio</span>
+            <div class="price-card">
+                <table class="price-table">
+                    <thead>
+                        <tr><th>Trabajo</th><th>Precio</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Corona de Zirconio Monol&iacute;tico</td><td class="price">100,00 &euro;</td></tr>
+                        <tr><td>Corona de Zirconio Estratificado</td><td class="price">110,00 &euro;</td></tr>
+                        <tr><td>Corona de Zirconio sobre Implante</td><td class="price">130,00 &euro;</td></tr>
+                        <tr><td>Prueba Pl&aacute;stica (unidad)</td><td class="price">15,00 &euro;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <span class="subsection-label">Fresado</span>
+            <div class="price-card">
+                <table class="price-table">
+                    <thead>
+                        <tr><th>Trabajo</th><th>Precio</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>F&eacute;rula de Descarga Fresada</td><td class="price">80,00 &euro;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <span class="subsection-label">Est&eacute;tica</span>
+            <div class="price-card">
+                <table class="price-table">
+                    <thead>
+                        <tr><th>Trabajo</th><th>Precio</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Carillas de Composite</td><td class="price">Consultar</td></tr>
+                        <tr><td>Dise&ntilde;o Digital de Mock Up</td><td class="price">Consultar</td></tr>
+                        <tr><td>Carillas de Zirconio</td><td class="price">Consultar</td></tr>
+                        <tr><td>Coronas de Zirconio</td><td class="price">Consultar</td></tr>
+                        <tr><td>Carillas de Disilicato de Litio</td><td class="price">Consultar</td></tr>
+                        <tr><td>Dise&ntilde;o de Sonrisa</td><td class="price">Consultar</td></tr>
+                        <tr><td>Incrustaciones de Composite</td><td class="price">Consultar</td></tr>
+                        <tr><td>Incrustaciones de Disilicato de Litio</td><td class="price">Consultar</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -752,11 +789,11 @@
             </div>
         </section>
 
-        <!-- VARIOS -->
-        <section class="section" id="varios">
+        <!-- RESINA -->
+        <section class="section" id="resina">
             <div class="section-header">
                 <div class="section-icon">&#128230;</div>
-                <h2 class="section-title">Varios</h2>
+                <h2 class="section-title">Resina</h2>
             </div>
             <div class="price-card">
                 <table class="price-table">
@@ -769,10 +806,6 @@
                         <tr><td>Rebase</td><td class="price">40,00 &euro;</td></tr>
                         <tr><td>Compostura Simple</td><td class="price">30,00 &euro;</td></tr>
                         <tr><td>A&ntilde;adir Pieza o Gancho</td><td class="price">30,00 &euro;</td></tr>
-                        <tr><td>F&eacute;rula de Descarga</td><td class="price">70,00 &euro;</td></tr>
-                        <tr><td>F&eacute;rula de Descarga Fresada</td><td class="price">80,00 &euro;</td></tr>
-                        <tr><td>F&eacute;rula de Blanqueamiento (unidad)</td><td class="price">35,00 &euro;</td></tr>
-                        <tr><td>Retenedor Essix (por arcada)</td><td class="price">39,00 &euro;</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -788,10 +821,10 @@
             </div>
 
             <div class="gallery" style="margin-bottom:1rem">
-                <img src="img/all-on-four.png" alt="All on Four">
-                <img src="img/all-on-four-xray.png" alt="All on Four Radiograf&iacute;a">
-                <img src="img/all-on-six.png" alt="All on Six">
-                <img src="img/all-on-six-superior.png" alt="All on Six Superior">
+                <a href="img/all-on-four.png" target="_blank"><img src="img/all-on-four.png" alt="All on Four" loading="lazy"></a>
+                <a href="img/all-on-four-xray.png" target="_blank"><img src="img/all-on-four-xray.png" alt="All on Four Radiograf&iacute;a" loading="lazy"></a>
+                <a href="img/all-on-six.png" target="_blank"><img src="img/all-on-six.png" alt="All on Six" loading="lazy"></a>
+                <a href="img/all-on-six-superior.png" target="_blank"><img src="img/all-on-six-superior.png" alt="All on Six Superior" loading="lazy"></a>
             </div>
 
             <!-- ALL ON 4 - METAL CERAMICA -->
@@ -921,10 +954,10 @@
             </div>
 
             <div class="gallery" style="margin-bottom:1rem">
-                <img src="img/ortodoncia-aparato.png" alt="Aparato Ortodoncia">
-                <img src="img/ortodoncia-placas.png" alt="Placas Ortodoncia">
-                <img src="img/ortodoncia-placa-rosa.png" alt="Placa Rosa">
-                <img src="img/ortodoncia-hawley.png" alt="Placa Hawley">
+                <a href="img/ortodoncia-aparato.png" target="_blank"><img src="img/ortodoncia-aparato.png" alt="Aparato Ortodoncia" loading="lazy"></a>
+                <a href="img/ortodoncia-placas.png" target="_blank"><img src="img/ortodoncia-placas.png" alt="Placas Ortodoncia" loading="lazy"></a>
+                <a href="img/ortodoncia-placa-rosa.png" target="_blank"><img src="img/ortodoncia-placa-rosa.png" alt="Placa Rosa" loading="lazy"></a>
+                <a href="img/ortodoncia-hawley.png" target="_blank"><img src="img/ortodoncia-hawley.png" alt="Placa Hawley" loading="lazy"></a>
             </div>
 
             <div class="price-card">
@@ -957,7 +990,9 @@
                         <tr><td>4138</td><td>F&eacute;rula de Descarga Mixta</td><td class="price">58,00 &euro;</td></tr>
                         <tr><td>4139</td><td>Arco Vestibular</td><td class="price">14,00 &euro;</td></tr>
                         <tr><td>2107</td><td>F&eacute;rula de Descarga</td><td class="price">70,00 &euro;</td></tr>
-                        <tr><td>2108</td><td>F&eacute;rula de Blanqueamiento</td><td class="price">35,00 &euro;</td></tr>
+                        <tr><td>&mdash;</td><td>F&eacute;rula de Descarga Fresada</td><td class="price">80,00 &euro;</td></tr>
+                        <tr><td>2108</td><td>F&eacute;rula de Blanqueamiento (unidad)</td><td class="price">35,00 &euro;</td></tr>
+                        <tr><td>&mdash;</td><td>Retenedor Essix (por arcada)</td><td class="price">39,00 &euro;</td></tr>
                         <tr><td>3102</td><td>Placa Hawley</td><td class="price">45,00 &euro;</td></tr>
                         <tr><td>3103</td><td>Placa Schwartz</td><td class="price">35,00 &euro;</td></tr>
                         <tr><td>4108</td><td>Placa Circunferencial</td><td class="price">45,00 &euro;</td></tr>
@@ -1021,7 +1056,7 @@
     <footer>
         <strong>RB Dental Digital</strong> &middot; Laboratorio de Pr&oacute;tesis Dental Digital<br>
         N&ordm; Licencia Sanitaria FP-00602 &middot; Consejer&iacute;a de Sanidad C. de Madrid<br>
-        &copy; 2026 &middot; Precios actualizados Marzo 2026
+        &copy; 2026 &middot; Precios actualizados Julio 2026
     </footer>
 
 </body>
