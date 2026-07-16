@@ -8,13 +8,18 @@
     <meta property="og:title" content="RB Dental Digital - Tarifas 2026">
     <meta property="og:description" content="Laboratorio de Pr&oacute;tesis Dental Digital. +30 a&ntilde;os de experiencia. Precios actualizados 2026.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tarifas.laboratoriodentalrb.com/">
+    <meta property="og:image" content="https://tarifas.laboratoriodentalrb.com/img/estetica-carillas.jpg">
+    <meta name="theme-color" content="#00013C">
+    <link rel="canonical" href="https://tarifas.laboratoriodentalrb.com/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%B7%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #000019;
-            --primary-light: #08081a;
+            --primary: #00013C;
+            --primary-light: #00002E;
             --gold: #c9a84c;
             --gold-light: #fbf5e0;
             --bg: #f2f2f0;
@@ -568,6 +573,42 @@
 
         html { scroll-behavior: smooth; }
         .section, .contact-section { scroll-margin-top: 60px; }
+
+        /* ANIMACIONES */
+        @keyframes statPop {
+            0% { opacity: 0; transform: translateY(10px) scale(0.9); }
+            100% { opacity: 1; transform: none; }
+        }
+        .hero-stat-num { animation: statPop 0.7s cubic-bezier(0.22,1,0.36,1) backwards; }
+        .hero-stat:nth-child(2) .hero-stat-num { animation-delay: 0.15s; }
+        .hero-stat:nth-child(3) .hero-stat-num { animation-delay: 0.3s; }
+        .js .section { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .js .section.visible { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-stat-num { animation: none; }
+            .js .section { opacity: 1; transform: none; transition: none; }
+        }
+
+        /* WHATSAPP FLOTANTE */
+        .wa-float {
+            position: fixed;
+            bottom: 18px;
+            right: 18px;
+            z-index: 200;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+            transition: transform 0.2s;
+        }
+        .wa-float:hover { transform: scale(1.08); }
     </style>
 </head>
 <body>
@@ -586,7 +627,7 @@
         </div>
         <div class="hero-stats">
             <div class="hero-stat">
-                <div class="hero-stat-num">+30</div>
+                <div class="hero-stat-num" data-count="30" data-prefix="+">+30</div>
                 <div class="hero-stat-label">A&ntilde;os exp.</div>
             </div>
             <div class="hero-stat">
@@ -612,6 +653,7 @@
             <a href="#removibles">Removibles</a>
             <a href="#fijas">Fijas</a>
             <a href="#cadcam">CAD-CAM</a>
+            <a href="#estetica">Est&eacute;tica</a>
             <a href="#implantes">Implantes</a>
             <a href="#resina">Resina</a>
             <a href="#allon">All-on-4/6</a>
@@ -634,16 +676,15 @@
 
         <!-- GALERIA -->
         <div class="gallery">
-            <a href="img/coronas-zirconio.png" target="_blank"><img src="img/coronas-zirconio.png" alt="Coronas de Zirconio" loading="lazy"></a>
-            <a href="img/protesis-completa.png" target="_blank"><img src="img/protesis-completa.png" alt="Pr&oacute;tesis Completa" loading="lazy"></a>
-            <a href="img/protesis-superior.png" target="_blank"><img src="img/protesis-superior.png" alt="Pr&oacute;tesis Superior" loading="lazy"></a>
-            <a href="img/protesis-mano.png" target="_blank"><img src="img/protesis-mano.png" alt="Pr&oacute;tesis" loading="lazy"></a>
-            <a href="img/ferula-descarga.png" target="_blank"><img src="img/ferula-descarga.png" alt="F&eacute;rula de Descarga" loading="lazy"></a>
-            <a href="img/ferula-transparente.png" target="_blank"><img src="img/ferula-transparente.png" alt="F&eacute;rula Transparente" loading="lazy"></a>
+            <a href="img/estetica-carillas.jpg" target="_blank"><img src="img/estetica-carillas.jpg" alt="Coronas est&eacute;ticas sobre modelo" loading="lazy"></a>
+            <a href="img/rehabilitacion-zirconio.jpg" target="_blank"><img src="img/rehabilitacion-zirconio.jpg" alt="Rehabilitaci&oacute;n en zirconio monol&iacute;tico" loading="lazy"></a>
+            <a href="img/puente-implantes.jpg" target="_blank"><img src="img/puente-implantes.jpg" alt="Puente sobre implantes" loading="lazy"></a>
+            <a href="img/completa-frontal.jpg" target="_blank"><img src="img/completa-frontal.jpg" alt="Pr&oacute;tesis completa" loading="lazy"></a>
+            <a href="img/completa-oclusal.jpg" target="_blank"><img src="img/completa-oclusal.jpg" alt="Pr&oacute;tesis completa vista oclusal" loading="lazy"></a>
+            <a href="img/completa-mano.jpg" target="_blank"><img src="img/completa-mano.jpg" alt="Pr&oacute;tesis completa articulada" loading="lazy"></a>
             <a href="img/all-on-four.png" target="_blank"><img src="img/all-on-four.png" alt="All on Four" loading="lazy"></a>
-            <a href="img/ortodoncia-aparato.png" target="_blank"><img src="img/ortodoncia-aparato.png" alt="Aparato de Ortodoncia" loading="lazy"></a>
-            <a href="img/ortodoncia-placas.png" target="_blank"><img src="img/ortodoncia-placas.png" alt="Placas de Ortodoncia" loading="lazy"></a>
-            <a href="img/ortodoncia-hawley.png" target="_blank"><img src="img/ortodoncia-hawley.png" alt="Placa Hawley" loading="lazy"></a>
+            <a href="img/ortodoncia-rosa.jpg" target="_blank"><img src="img/ortodoncia-rosa.jpg" alt="Aparato de ortodoncia" loading="lazy"></a>
+            <a href="img/ortodoncia-purpura.jpg" target="_blank"><img src="img/ortodoncia-purpura.jpg" alt="Placa de ortodoncia" loading="lazy"></a>
         </div>
 
         <!-- PROTESIS REMOVIBLES -->
@@ -653,6 +694,11 @@
                 <h2 class="section-title">Pr&oacute;tesis Removibles Acr&iacute;licas</h2>
             </div>
             <div class="discount-note">20% DTO. PRIMER MES <span>Bono de bienvenida aplicable a esta secci&oacute;n</span></div>
+            <div class="gallery" style="margin-bottom:1rem">
+                <a href="img/completa-superior-mano.jpg" target="_blank"><img src="img/completa-superior-mano.jpg" alt="Completa superior" loading="lazy"></a>
+                <a href="img/completa-detalle.jpg" target="_blank"><img src="img/completa-detalle.jpg" alt="Detalle pr&oacute;tesis completa" loading="lazy"></a>
+                <a href="img/parciales-mano.jpg" target="_blank"><img src="img/parciales-mano.jpg" alt="Pr&oacute;tesis parciales" loading="lazy"></a>
+            </div>
             <div class="price-card">
                 <table class="price-table">
                     <thead>
@@ -746,7 +792,21 @@
                 </table>
             </div>
 
-            <span class="subsection-label">Est&eacute;tica</span>
+        </section>
+
+        <!-- ESTETICA -->
+        <section class="section" id="estetica">
+            <div class="section-header">
+                <div class="section-icon">&#10024;</div>
+                <h2 class="section-title">Est&eacute;tica</h2>
+            </div>
+
+            <div class="gallery" style="margin-bottom:1rem">
+                <a href="img/estetica-carillas.jpg" target="_blank"><img src="img/estetica-carillas.jpg" alt="Coronas y carillas est&eacute;ticas" loading="lazy"></a>
+                <a href="img/puente-implantes.jpg" target="_blank"><img src="img/puente-implantes.jpg" alt="Puente est&eacute;tico sobre implantes" loading="lazy"></a>
+                <a href="img/rehabilitacion-zirconio.jpg" target="_blank"><img src="img/rehabilitacion-zirconio.jpg" alt="Rehabilitaci&oacute;n en zirconio monol&iacute;tico" loading="lazy"></a>
+            </div>
+
             <div class="price-card">
                 <table class="price-table">
                     <thead>
@@ -821,6 +881,7 @@
             </div>
 
             <div class="gallery" style="margin-bottom:1rem">
+                <a href="img/rehabilitacion-zirconio.jpg" target="_blank"><img src="img/rehabilitacion-zirconio.jpg" alt="Rehabilitaci&oacute;n en zirconio monol&iacute;tico" loading="lazy"></a>
                 <a href="img/all-on-four.png" target="_blank"><img src="img/all-on-four.png" alt="All on Four" loading="lazy"></a>
                 <a href="img/all-on-four-xray.png" target="_blank"><img src="img/all-on-four-xray.png" alt="All on Four Radiograf&iacute;a" loading="lazy"></a>
                 <a href="img/all-on-six.png" target="_blank"><img src="img/all-on-six.png" alt="All on Six" loading="lazy"></a>
@@ -954,10 +1015,11 @@
             </div>
 
             <div class="gallery" style="margin-bottom:1rem">
-                <a href="img/ortodoncia-aparato.png" target="_blank"><img src="img/ortodoncia-aparato.png" alt="Aparato Ortodoncia" loading="lazy"></a>
-                <a href="img/ortodoncia-placas.png" target="_blank"><img src="img/ortodoncia-placas.png" alt="Placas Ortodoncia" loading="lazy"></a>
-                <a href="img/ortodoncia-placa-rosa.png" target="_blank"><img src="img/ortodoncia-placa-rosa.png" alt="Placa Rosa" loading="lazy"></a>
-                <a href="img/ortodoncia-hawley.png" target="_blank"><img src="img/ortodoncia-hawley.png" alt="Placa Hawley" loading="lazy"></a>
+                <a href="img/ortodoncia-rosa.jpg" target="_blank"><img src="img/ortodoncia-rosa.jpg" alt="Aparato de ortodoncia" loading="lazy"></a>
+                <a href="img/ortodoncia-purpura.jpg" target="_blank"><img src="img/ortodoncia-purpura.jpg" alt="Placa de ortodoncia" loading="lazy"></a>
+                <a href="img/ortodoncia-modelo.jpg" target="_blank"><img src="img/ortodoncia-modelo.jpg" alt="Aparato sobre modelo" loading="lazy"></a>
+                <a href="img/ortodoncia-verde.jpg" target="_blank"><img src="img/ortodoncia-verde.jpg" alt="Placa de ortodoncia verde" loading="lazy"></a>
+                <a href="img/ortodoncia-placa-verde.jpg" target="_blank"><img src="img/ortodoncia-placa-verde.jpg" alt="Placa sobre modelo" loading="lazy"></a>
             </div>
 
             <div class="price-card">
@@ -1058,6 +1120,56 @@
         N&ordm; Licencia Sanitaria FP-00602 &middot; Consejer&iacute;a de Sanidad C. de Madrid<br>
         &copy; 2026 &middot; Precios actualizados Julio 2026
     </footer>
+
+    <a href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas" class="wa-float" aria-label="WhatsApp">&#128172;</a>
+
+    <script>
+        document.documentElement.classList.add('js');
+
+        // Contador animado de los numeros del hero
+        var counterIO = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                var el = entry.target;
+                var target = parseInt(el.dataset.count, 10);
+                var prefix = el.dataset.prefix || '';
+                var start = null, dur = 1400;
+                function step(ts) {
+                    if (!start) start = ts;
+                    var k = Math.min((ts - start) / dur, 1);
+                    var eased = 1 - Math.pow(1 - k, 3);
+                    el.textContent = prefix + Math.round(target * eased);
+                    if (k < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+                counterIO.unobserve(el);
+            });
+        }, { threshold: 0.4 });
+        document.querySelectorAll('[data-count]').forEach(function (el) { counterIO.observe(el); });
+
+        // Aparicion suave de secciones
+        var revealIO = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealIO.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.section').forEach(function (s) { revealIO.observe(s); });
+
+        // Resaltar en la barra la seccion visible
+        var navLinks = document.querySelectorAll('.nav a');
+        var navIO = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(function (a) {
+                    a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+                });
+            });
+        }, { rootMargin: '-30% 0px -60% 0px' });
+        document.querySelectorAll('section[id]').forEach(function (s) { navIO.observe(s); });
+    </script>
 
 </body>
 </html>
