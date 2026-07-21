@@ -45,7 +45,7 @@
 
         /* HERO */
         .hero {
-            background: var(--primary);
+            background: linear-gradient(rgba(0,1,60,0.90), rgba(0,1,60,0.96)), url('img/estetica-macro.jpg') center/cover no-repeat;
             color: white;
             position: relative;
             overflow: hidden;
@@ -609,6 +609,103 @@
             transition: transform 0.2s;
         }
         .wa-float:hover { transform: scale(1.08); }
+
+        /* BUSCADOR */
+        .search-bar {
+            display: flex;
+            gap: 8px;
+            margin: 0.3rem 0 0.5rem;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 12px 18px;
+            border-radius: 50px;
+            border: 1px solid var(--border);
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 0.9rem;
+            background: var(--white);
+            color: var(--text);
+            outline: none;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .search-bar input:focus { border-color: var(--gold); }
+        .search-bar button {
+            padding: 12px 18px;
+            border-radius: 50px;
+            border: none;
+            background: var(--primary);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .search-bar button:hover { background: var(--primary-light); }
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,1,30,0.92);
+            z-index: 500;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            cursor: zoom-out;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img {
+            max-width: 100%;
+            max-height: 82vh;
+            border-radius: 12px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+        }
+        .lightbox figcaption {
+            color: white;
+            font-size: 0.85rem;
+            margin-top: 0.8rem;
+            text-align: center;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            color: white;
+            font-size: 1.8rem;
+            line-height: 1;
+            cursor: pointer;
+            background: rgba(255,255,255,0.12);
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* IMPRESION */
+        @media print {
+            .nav, .wa-float, .search-bar, .gallery, .services-strip, .lightbox, .contact-btns { display: none !important; }
+            .js .section { opacity: 1 !important; transform: none !important; }
+            .hero, .bono-banner, .price-table th, .contact-section, .section-icon {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .hero { background: var(--primary) !important; }
+            body { background: #fff; }
+            .price-card, .offer-card { box-shadow: none; break-inside: avoid; }
+            .section { margin: 1rem 0; }
+        }
     </style>
 </head>
 <body>
@@ -664,6 +761,13 @@
     </nav>
 
     <div class="container">
+
+        <!-- BUSCADOR -->
+        <div class="search-bar" style="margin-top:1rem">
+            <input type="search" id="buscador" placeholder="&#128269; Buscar trabajo&hellip; (ej. corona, f&eacute;rula, rebase)" aria-label="Buscar trabajo">
+            <button type="button" onclick="window.print()">&#128424; Imprimir / PDF</button>
+        </div>
+        <div class="no-results" id="sin-resultados">No se encontr&oacute; ning&uacute;n trabajo con ese nombre.</div>
 
         <!-- SERVICES -->
         <div class="services-strip">
@@ -1134,6 +1238,12 @@
 
     <a href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas" class="wa-float" aria-label="WhatsApp">&#128172;</a>
 
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Imagen ampliada">
+        <span class="lightbox-close" aria-label="Cerrar">&times;</span>
+        <img src="" alt="">
+        <figcaption></figcaption>
+    </div>
+
     <script>
         document.documentElement.classList.add('js');
 
@@ -1168,6 +1278,51 @@
             });
         }, { threshold: 0.08 });
         document.querySelectorAll('.section').forEach(function (s) { revealIO.observe(s); });
+
+        // Lightbox de las galerias
+        var lb = document.getElementById('lightbox');
+        var lbImg = lb.querySelector('img');
+        var lbCap = lb.querySelector('figcaption');
+        document.querySelectorAll('.gallery a').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                e.preventDefault();
+                lbImg.src = a.getAttribute('href');
+                var alt = a.querySelector('img') ? a.querySelector('img').alt : '';
+                lbImg.alt = alt;
+                lbCap.textContent = alt;
+                lb.classList.add('open');
+            });
+        });
+        lb.addEventListener('click', function () { lb.classList.remove('open'); lbImg.src = ''; });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('open'); });
+
+        // Buscador de trabajos
+        var buscador = document.getElementById('buscador');
+        var sinResultados = document.getElementById('sin-resultados');
+        function normaliza(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+        buscador.addEventListener('input', function () {
+            var q = normaliza(buscador.value.trim());
+            var totalVisibles = 0;
+            document.querySelectorAll('section.section').forEach(function (sec) {
+                var filas = sec.querySelectorAll('.price-table tbody tr');
+                if (!filas.length) {
+                    sec.style.display = q ? 'none' : '';
+                    return;
+                }
+                var visiblesSec = 0;
+                filas.forEach(function (tr) {
+                    var ok = !q || normaliza(tr.textContent).indexOf(q) !== -1;
+                    tr.style.display = ok ? '' : 'none';
+                    if (ok) visiblesSec++;
+                });
+                sec.style.display = (q && visiblesSec === 0) ? 'none' : '';
+                totalVisibles += visiblesSec;
+                sec.querySelectorAll('.gallery, .discount-note, .subsection-label, .offer-grid, .note').forEach(function (el) {
+                    el.style.display = q ? 'none' : '';
+                });
+            });
+            sinResultados.style.display = (q && totalVisibles === 0) ? 'block' : 'none';
+        });
 
         // Resaltar en la barra la seccion visible
         var navLinks = document.querySelectorAll('.nav a');
