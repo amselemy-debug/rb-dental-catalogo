@@ -248,12 +248,21 @@
             gap: 14px;
             margin-bottom: 1.2rem;
             padding-bottom: 0.8rem;
-            border-bottom: 2px solid var(--primary);
+            border-bottom: 1px solid var(--border);
+        }
+        .section-kicker {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
         }
         .section-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--primary);
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(135deg, var(--primary), #1b1c66);
+            border: 1px solid rgba(201,168,76,0.35);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -264,8 +273,10 @@
         }
         .section-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 700;
+            font-size: 1.35rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             color: var(--primary);
         }
 
@@ -765,9 +776,9 @@
     <!-- NAV -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="#fija">1 &middot; Fija</a>
-            <a href="#removible">2 &middot; Removible</a>
-            <a href="#ortodoncia">3 &middot; Ortodoncia</a>
+            <a href="#fija">Fija</a>
+            <a href="#removible">Removible</a>
+            <a href="#ortodoncia">Ortodoncia</a>
             <a href="#tiempos">Tiempos</a>
             <a href="#contacto">Contacto</a>
         </div>
@@ -791,37 +802,36 @@
             <div class="service-chip">&#128200; Control de calidad</div>
         </div>
 
-        <!-- GALERIA -->
-        <div class="gallery">
-            <a href="img/estetica-macro.jpg" target="_blank"><img src="img/estetica-macro.jpg" alt="Carillas est&eacute;ticas macro" loading="lazy"></a>
-            <a href="img/arcada-azul.jpg" target="_blank"><img src="img/arcada-azul.jpg" alt="Arcada completa sobre implantes" loading="lazy"></a>
-            <a href="img/estetica-carillas.jpg" target="_blank"><img src="img/estetica-carillas.jpg" alt="Coronas est&eacute;ticas sobre modelo" loading="lazy"></a>
-            <a href="img/completas-articuladas.jpg" target="_blank"><img src="img/completas-articuladas.jpg" alt="Pr&oacute;tesis completas articuladas" loading="lazy"></a>
-            <a href="img/puentes-zirconio.jpg" target="_blank"><img src="img/puentes-zirconio.jpg" alt="Puentes de zirconio" loading="lazy"></a>
-            <a href="img/rehabilitacion-zirconio.jpg" target="_blank"><img src="img/rehabilitacion-zirconio.jpg" alt="Rehabilitaci&oacute;n en zirconio monol&iacute;tico" loading="lazy"></a>
-            <a href="img/estructura-implantes.jpg" target="_blank"><img src="img/estructura-implantes.jpg" alt="Estructura sobre implantes" loading="lazy"></a>
-            <a href="img/ortodoncia-rosa.jpg" target="_blank"><img src="img/ortodoncia-rosa.jpg" alt="Aparato de ortodoncia" loading="lazy"></a>
-            <a href="img/ortodoncia-purpura.jpg" target="_blank"><img src="img/ortodoncia-purpura.jpg" alt="Placa de ortodoncia" loading="lazy"></a>
-        </div>
-
         <!-- INTRO CAD-CAM -->
         <div class="intro-card">
             <strong>&#9881; Tecnolog&iacute;a CAD/CAM</strong>
             Todos nuestros trabajos se fabrican mediante tecnolog&iacute;a CAD/CAM. Realizamos el dise&ntilde;o digital y el escaneado, mientras que las estructuras met&aacute;licas son producidas mediante sinterizado l&aacute;ser (SLM) en un centro de fresado especializado.
         </div>
 
+        <!-- GALERIA -->
+        <div class="gallery">
+            <a href="img/estetica-macro.jpg" target="_blank"><img src="img/estetica-macro.jpg" alt="Carillas est&eacute;ticas macro" loading="lazy"></a>
+            <a href="img/arcada-azul.jpg" target="_blank"><img src="img/arcada-azul.jpg" alt="Arcada completa sobre implantes" loading="lazy"></a>
+            <a href="img/estetica-carillas.jpg" target="_blank"><img src="img/estetica-carillas.jpg" alt="Coronas est&eacute;ticas sobre modelo" loading="lazy"></a>
+            <a href="img/completas-articuladas.jpg" target="_blank"><img src="img/completas-articuladas.jpg" alt="Pr&oacute;tesis completas articuladas" loading="lazy"></a>
+            <a href="img/completa-oclusal.jpg" target="_blank"><img src="img/completa-oclusal.jpg" alt="Pr&oacute;tesis completa" loading="lazy"></a>
+            <a href="img/estructura-implantes.jpg" target="_blank"><img src="img/estructura-implantes.jpg" alt="Estructura sobre implantes" loading="lazy"></a>
+            <a href="img/ortodoncia-rosa.jpg" target="_blank"><img src="img/ortodoncia-rosa.jpg" alt="Aparato de ortodoncia" loading="lazy"></a>
+            <a href="img/ortodoncia-purpura.jpg" target="_blank"><img src="img/ortodoncia-purpura.jpg" alt="Placa de ortodoncia" loading="lazy"></a>
+        </div>
+
         <!-- 1. PROTESIS FIJA -->
         <section class="section" id="fija">
             <div class="section-header">
                 <div class="section-icon">&#129464;</div>
-                <h2 class="section-title">1 &middot; Pr&oacute;tesis Fija</h2>
+                <div><div class="section-kicker">Cat&aacute;logo 2026</div><h2 class="section-title">Pr&oacute;tesis Fija</h2></div>
             </div>
             <div class="discount-note">20% DTO. PRIMER MES <span>Bono de bienvenida aplicable a esta secci&oacute;n</span></div>
 
             <span class="subsection-label">Sobre diente</span>
             <div class="gallery" style="margin-bottom:1rem">
-                <a href="img/puentes-zirconio.jpg" target="_blank"><img src="img/puentes-zirconio.jpg" alt="Puentes de zirconio" loading="lazy"></a>
                 <a href="img/estetica-macro.jpg" target="_blank"><img src="img/estetica-macro.jpg" alt="Carillas est&eacute;ticas" loading="lazy"></a>
+                <a href="img/estetica-carillas.jpg" target="_blank"><img src="img/estetica-carillas.jpg" alt="Coronas est&eacute;ticas sobre modelo" loading="lazy"></a>
             </div>
             <div class="price-card">
                 <table class="price-table">
@@ -842,9 +852,7 @@
             <span class="subsection-label">Sobre implante</span>
             <div class="gallery" style="margin-bottom:1rem">
                 <a href="img/estructura-implantes.jpg" target="_blank"><img src="img/estructura-implantes.jpg" alt="Estructura sobre implantes" loading="lazy"></a>
-                <a href="img/hibrida-implantes.jpg" target="_blank"><img src="img/hibrida-implantes.jpg" alt="H&iacute;brida sobre implantes" loading="lazy"></a>
                 <a href="img/arcada-azul.jpg" target="_blank"><img src="img/arcada-azul.jpg" alt="Arcada completa sobre implantes" loading="lazy"></a>
-                <a href="img/rehabilitacion-zirconio.jpg" target="_blank"><img src="img/rehabilitacion-zirconio.jpg" alt="Rehabilitaci&oacute;n en zirconio" loading="lazy"></a>
             </div>
             <div class="price-card">
                 <table class="price-table">
@@ -979,7 +987,7 @@
             <span class="subsection-label">Est&eacute;tica</span>
             <div class="gallery" style="margin-bottom:1rem">
                 <a href="img/estetica-carillas.jpg" target="_blank"><img src="img/estetica-carillas.jpg" alt="Coronas y carillas est&eacute;ticas" loading="lazy"></a>
-                <a href="img/puente-implantes.jpg" target="_blank"><img src="img/puente-implantes.jpg" alt="Puente est&eacute;tico" loading="lazy"></a>
+                <a href="img/completa-frontal.jpg" target="_blank"><img src="img/completa-frontal.jpg" alt="Trabajo est&eacute;tico terminado" loading="lazy"></a>
             </div>
             <div class="price-card">
                 <table class="price-table">
@@ -1006,14 +1014,13 @@
         <section class="section" id="removible">
             <div class="section-header">
                 <div class="section-icon">&#129463;</div>
-                <h2 class="section-title">2 &middot; Pr&oacute;tesis Removible</h2>
+                <div><div class="section-kicker">Cat&aacute;logo 2026</div><h2 class="section-title">Pr&oacute;tesis Removible</h2></div>
             </div>
             <div class="discount-note">20% DTO. PRIMER MES <span>Bono de bienvenida aplicable a esta secci&oacute;n</span></div>
             <div class="gallery" style="margin-bottom:1rem">
                 <a href="img/completas-articuladas.jpg" target="_blank"><img src="img/completas-articuladas.jpg" alt="Pr&oacute;tesis completas" loading="lazy"></a>
-                <a href="img/protesis-inferior-modelo.jpg" target="_blank"><img src="img/protesis-inferior-modelo.jpg" alt="Pr&oacute;tesis inferior" loading="lazy"></a>
+                <a href="img/completa-oclusal.jpg" target="_blank"><img src="img/completa-oclusal.jpg" alt="Pr&oacute;tesis completa oclusal" loading="lazy"></a>
                 <a href="img/completa-superior-mano.jpg" target="_blank"><img src="img/completa-superior-mano.jpg" alt="Completa superior" loading="lazy"></a>
-                <a href="img/parciales-mano.jpg" target="_blank"><img src="img/parciales-mano.jpg" alt="Pr&oacute;tesis parciales" loading="lazy"></a>
             </div>
 
             <span class="subsection-label">Acr&iacute;lica</span>
@@ -1074,14 +1081,13 @@
         <section class="section" id="ortodoncia">
             <div class="section-header">
                 <div class="section-icon">&#128516;</div>
-                <h2 class="section-title">3 &middot; Ortodoncia</h2>
+                <div><div class="section-kicker">Cat&aacute;logo 2026</div><h2 class="section-title">Ortodoncia</h2></div>
             </div>
 
             <div class="gallery" style="margin-bottom:1rem">
                 <a href="img/ortodoncia-rosa.jpg" target="_blank"><img src="img/ortodoncia-rosa.jpg" alt="Aparato de ortodoncia" loading="lazy"></a>
                 <a href="img/ortodoncia-purpura.jpg" target="_blank"><img src="img/ortodoncia-purpura.jpg" alt="Placa de ortodoncia" loading="lazy"></a>
                 <a href="img/ortodoncia-modelo.jpg" target="_blank"><img src="img/ortodoncia-modelo.jpg" alt="Aparato sobre modelo" loading="lazy"></a>
-                <a href="img/ortodoncia-verde.jpg" target="_blank"><img src="img/ortodoncia-verde.jpg" alt="Placa verde" loading="lazy"></a>
                 <a href="img/ortodoncia-placa-verde.jpg" target="_blank"><img src="img/ortodoncia-placa-verde.jpg" alt="Placa sobre modelo" loading="lazy"></a>
             </div>
 
