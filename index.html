@@ -563,6 +563,24 @@
 
         .divider { height: 1px; background: var(--border); margin: 2rem 0; }
 
+        .intro-card {
+            background: var(--white);
+            border-left: 4px solid var(--gold);
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            box-shadow: var(--shadow);
+            margin: 0.3rem 0 1.5rem;
+        }
+        .intro-card strong {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 3px;
+            font-size: 0.88rem;
+        }
+
         /* RESPONSIVE */
         @media (min-width: 768px) {
             .hero-content { padding: 2rem 2rem 2.5rem; }
@@ -747,14 +765,9 @@
     <!-- NAV -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="#removibles">Removibles</a>
-            <a href="#fijas">Fijas</a>
-            <a href="#cadcam">CAD-CAM</a>
-            <a href="#estetica">Est&eacute;tica</a>
-            <a href="#implantes">Implantes</a>
-            <a href="#resina">Resina</a>
-            <a href="#allon">All-on-4/6</a>
-            <a href="#ortodoncia">Ortodoncia</a>
+            <a href="#fija">1 &middot; Fija</a>
+            <a href="#removible">2 &middot; Removible</a>
+            <a href="#ortodoncia">3 &middot; Ortodoncia</a>
             <a href="#tiempos">Tiempos</a>
             <a href="#contacto">Contacto</a>
         </div>
@@ -791,219 +804,68 @@
             <a href="img/ortodoncia-purpura.jpg" target="_blank"><img src="img/ortodoncia-purpura.jpg" alt="Placa de ortodoncia" loading="lazy"></a>
         </div>
 
-        <!-- PROTESIS REMOVIBLES -->
-        <section class="section" id="removibles">
-            <div class="section-header">
-                <div class="section-icon">&#129463;</div>
-                <h2 class="section-title">Pr&oacute;tesis Removibles Acr&iacute;licas</h2>
-            </div>
-            <div class="discount-note">20% DTO. PRIMER MES <span>Bono de bienvenida aplicable a esta secci&oacute;n</span></div>
-            <div class="gallery" style="margin-bottom:1rem">
-                <a href="img/completas-articuladas.jpg" target="_blank"><img src="img/completas-articuladas.jpg" alt="Pr&oacute;tesis completas articuladas" loading="lazy"></a>
-                <a href="img/protesis-inferior-modelo.jpg" target="_blank"><img src="img/protesis-inferior-modelo.jpg" alt="Pr&oacute;tesis inferior sobre modelo" loading="lazy"></a>
-                <a href="img/completa-superior-mano.jpg" target="_blank"><img src="img/completa-superior-mano.jpg" alt="Completa superior" loading="lazy"></a>
-                <a href="img/parciales-mano.jpg" target="_blank"><img src="img/parciales-mano.jpg" alt="Pr&oacute;tesis parciales" loading="lazy"></a>
-            </div>
-            <div class="price-card">
-                <table class="price-table">
-                    <thead>
-                        <tr><th>Trabajo</th><th>Precio</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Esquel&eacute;tico de 1 a 5 piezas</td><td class="price">175,00 &euro;</td></tr>
-                        <tr><td>Esquel&eacute;tico de m&aacute;s de 6 piezas</td><td class="price">225,00 &euro;</td></tr>
-                        <tr><td>Compostura Colada para Esquel&eacute;tico</td><td class="price">40,00 &euro;</td></tr>
-                        <tr><td>Solchapa Unidad</td><td class="price">40,00 &euro;</td></tr>
-                        <tr><td>Puente Maryland (cada pieza)</td><td class="price">25,00 &euro;</td></tr>
-                        <tr><td>Completa Superior o Inferior de Resina</td><td class="price">130,00 &euro;</td></tr>
-                        <tr><td>Parciales de Resina</td><td class="price">100,00 &euro;</td></tr>
-                        <tr><td>Completa Superior o Inferior de Flexite</td><td class="price">180,00 &euro;</td></tr>
-                        <tr><td>Parcial de Flexite</td><td class="price">170,00 &euro;</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <!-- INTRO CAD-CAM -->
+        <div class="intro-card">
+            <strong>&#9881; Tecnolog&iacute;a CAD/CAM</strong>
+            Todos nuestros trabajos se fabrican mediante tecnolog&iacute;a CAD/CAM. Realizamos el dise&ntilde;o digital y el escaneado, mientras que las estructuras met&aacute;licas son producidas mediante sinterizado l&aacute;ser (SLM) en un centro de fresado especializado.
+        </div>
 
-        <!-- PROTESIS FIJAS -->
-        <section class="section" id="fijas">
+        <!-- 1. PROTESIS FIJA -->
+        <section class="section" id="fija">
             <div class="section-header">
                 <div class="section-icon">&#129464;</div>
-                <h2 class="section-title">Pr&oacute;tesis Fijas</h2>
+                <h2 class="section-title">1 &middot; Pr&oacute;tesis Fija</h2>
             </div>
             <div class="discount-note">20% DTO. PRIMER MES <span>Bono de bienvenida aplicable a esta secci&oacute;n</span></div>
+
+            <span class="subsection-label">Sobre diente</span>
             <div class="gallery" style="margin-bottom:1rem">
                 <a href="img/puentes-zirconio.jpg" target="_blank"><img src="img/puentes-zirconio.jpg" alt="Puentes de zirconio" loading="lazy"></a>
-                <a href="img/estetica-macro.jpg" target="_blank"><img src="img/estetica-macro.jpg" alt="Carillas est&eacute;ticas macro" loading="lazy"></a>
+                <a href="img/estetica-macro.jpg" target="_blank"><img src="img/estetica-macro.jpg" alt="Carillas est&eacute;ticas" loading="lazy"></a>
             </div>
             <div class="price-card">
                 <table class="price-table">
-                    <thead>
-                        <tr><th>Trabajo</th><th>Precio</th></tr>
-                    </thead>
+                    <thead><tr><th>Trabajo</th><th>Precio</th></tr></thead>
                     <tbody>
-                        <tr><td>Perno Mu&ntilde;&oacute;n Colado</td><td class="price">30,00 &euro;</td></tr>
-                        <tr><td>Coronas Provisionales</td><td class="price">15,00 &euro;</td></tr>
-                        <tr><td>Atache + Montaje</td><td class="price">Seg&uacute;n tipo</td></tr>
                         <tr><td>Corona de Zirconio Monol&iacute;tico</td><td class="price">100,00 &euro;</td></tr>
                         <tr><td>Corona de Zirconio Estratificado</td><td class="price">110,00 &euro;</td></tr>
-                        <tr><td>Corona de Zirconio sobre Implante</td><td class="price">130,00 &euro;</td></tr>
-                        <tr><td>Prueba Pl&aacute;stica (unidad)</td><td class="price">15,00 &euro;</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- CAD-CAM -->
-        <section class="section" id="cadcam">
-            <div class="section-header">
-                <div class="section-icon">&#128187;</div>
-                <h2 class="section-title">CAD-CAM</h2>
-            </div>
-
-            <span class="subsection-label">Metal Sinterizado</span>
-            <div class="price-card">
-                <table class="price-table">
-                    <thead>
-                        <tr><th>Trabajo</th><th>Precio</th></tr>
-                    </thead>
-                    <tbody>
                         <tr><td>Corona Metal Porcelana</td><td class="price">60,00 &euro;</td></tr>
-                        <tr><td>Corona sobre Implante Atornillada / Cementada</td><td class="price">110,00 &euro;</td></tr>
-                        <tr><td>Enc&iacute;a Rosa (por pieza)</td><td class="price">25,00 &euro;</td></tr>
+                        <tr><td>Coronas Provisionales</td><td class="price">15,00 &euro;</td></tr>
+                        <tr><td>Perno Mu&ntilde;&oacute;n Colado</td><td class="price">30,00 &euro;</td></tr>
+                        <tr><td>Puente Maryland (cada pieza)</td><td class="price">25,00 &euro;</td></tr>
+                        <tr><td>Atache + Montaje (unidad)</td><td class="price">17,00 &euro;</td></tr>
+                        <tr><td>Dise&ntilde;o Digital de Mock Up (PMMA) unidad</td><td class="price">25,00 &euro;</td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <span class="subsection-label">Zirconio</span>
-            <div class="price-card">
-                <table class="price-table">
-                    <thead>
-                        <tr><th>Trabajo</th><th>Precio</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Corona de Zirconio Monol&iacute;tico</td><td class="price">100,00 &euro;</td></tr>
-                        <tr><td>Corona de Zirconio Estratificado</td><td class="price">110,00 &euro;</td></tr>
-                        <tr><td>Corona de Zirconio sobre Implante</td><td class="price">130,00 &euro;</td></tr>
-                        <tr><td>Prueba Pl&aacute;stica (unidad)</td><td class="price">15,00 &euro;</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <span class="subsection-label">Fresado</span>
-            <div class="price-card">
-                <table class="price-table">
-                    <thead>
-                        <tr><th>Trabajo</th><th>Precio</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>F&eacute;rula de Descarga Fresada</td><td class="price">80,00 &euro;</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </section>
-
-        <!-- ESTETICA -->
-        <section class="section" id="estetica">
-            <div class="section-header">
-                <div class="section-icon">&#10024;</div>
-                <h2 class="section-title">Est&eacute;tica</h2>
-            </div>
-
-            <div class="gallery" style="margin-bottom:1rem">
-                <a href="img/estetica-macro.jpg" target="_blank"><img src="img/estetica-macro.jpg" alt="Carillas est&eacute;ticas macro" loading="lazy"></a>
-                <a href="img/estetica-carillas.jpg" target="_blank"><img src="img/estetica-carillas.jpg" alt="Coronas y carillas est&eacute;ticas" loading="lazy"></a>
-                <a href="img/puentes-zirconio.jpg" target="_blank"><img src="img/puentes-zirconio.jpg" alt="Puentes de zirconio" loading="lazy"></a>
-                <a href="img/puente-implantes.jpg" target="_blank"><img src="img/puente-implantes.jpg" alt="Puente est&eacute;tico sobre implantes" loading="lazy"></a>
-            </div>
-
-            <div class="price-card">
-                <table class="price-table">
-                    <thead>
-                        <tr><th>Trabajo</th><th>Precio</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Carillas de Composite</td><td class="price">Consultar</td></tr>
-                        <tr><td>Dise&ntilde;o Digital de Mock Up</td><td class="price">Consultar</td></tr>
-                        <tr><td>Carillas de Zirconio</td><td class="price">Consultar</td></tr>
-                        <tr><td>Coronas de Zirconio</td><td class="price">Consultar</td></tr>
-                        <tr><td>Carillas de Disilicato de Litio</td><td class="price">Consultar</td></tr>
-                        <tr><td>Dise&ntilde;o de Sonrisa</td><td class="price">Consultar</td></tr>
-                        <tr><td>Incrustaciones de Composite</td><td class="price">Consultar</td></tr>
-                        <tr><td>Incrustaciones de Disilicato de Litio</td><td class="price">Consultar</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- PROTESIS SOBRE IMPLANTES -->
-        <section class="section" id="implantes">
-            <div class="section-header">
-                <div class="section-icon">&#128297;</div>
-                <h2 class="section-title">Pr&oacute;tesis sobre Implantes</h2>
-            </div>
+            <span class="subsection-label">Sobre implante</span>
             <div class="gallery" style="margin-bottom:1rem">
                 <a href="img/estructura-implantes.jpg" target="_blank"><img src="img/estructura-implantes.jpg" alt="Estructura sobre implantes" loading="lazy"></a>
                 <a href="img/hibrida-implantes.jpg" target="_blank"><img src="img/hibrida-implantes.jpg" alt="H&iacute;brida sobre implantes" loading="lazy"></a>
                 <a href="img/arcada-azul.jpg" target="_blank"><img src="img/arcada-azul.jpg" alt="Arcada completa sobre implantes" loading="lazy"></a>
+                <a href="img/rehabilitacion-zirconio.jpg" target="_blank"><img src="img/rehabilitacion-zirconio.jpg" alt="Rehabilitaci&oacute;n en zirconio" loading="lazy"></a>
             </div>
             <div class="price-card">
                 <table class="price-table">
-                    <thead>
-                        <tr><th>Trabajo</th><th>Precio</th></tr>
-                    </thead>
+                    <thead><tr><th>Trabajo</th><th>Precio</th></tr></thead>
                     <tbody>
+                        <tr><td>Corona de Zirconio sobre Implante</td><td class="price">130,00 &euro;</td></tr>
+                        <tr><td>Corona sobre Implante Atornillada</td><td class="price">110,00 &euro;</td></tr>
+                        <tr><td>Corona sobre Implante Cementada</td><td class="price">110,00 &euro;</td></tr>
+                        <tr><td>Enc&iacute;a Rosa (por pieza)</td><td class="price">25,00 &euro;</td></tr>
                         <tr><td>Prueba de Pasividad por IOI</td><td class="price">15,00 &euro;</td></tr>
                         <tr><td>Confecci&oacute;n Barra Ackerman sobre 2 IOI</td><td class="price">200,00 &euro;</td></tr>
+                        <tr><td>Confecci&oacute;n Barra Ackerman sobre 3 IOI</td><td class="price">200,00 &euro;</td></tr>
                         <tr><td>Confecci&oacute;n Barra Ackerman sobre 4 IOI</td><td class="price">350,00 &euro;</td></tr>
+                        <tr><td>Confecci&oacute;n Barra Ackerman sobre 5 IOI</td><td class="price">350,00 &euro;</td></tr>
                         <tr><td>Sobredentadura Implanto-mucosoportada</td><td class="price">250,00 &euro;</td></tr>
-                        <tr><td>Supraestructura</td><td class="price">60,00 &euro;</td></tr>
                         <tr><td>Sobredentadura Implanto-mucosoportada (H&iacute;brida)</td><td class="price">450,00 &euro;</td></tr>
+                        <tr><td>Supraestructura</td><td class="price">60,00 &euro;</td></tr>
                     </tbody>
                 </table>
             </div>
-        </section>
 
-        <!-- RESINA -->
-        <section class="section" id="resina">
-            <div class="section-header">
-                <div class="section-icon">&#128230;</div>
-                <h2 class="section-title">Resina</h2>
-            </div>
-            <div class="price-card">
-                <table class="price-table">
-                    <thead>
-                        <tr><th>Trabajo</th><th>Precio</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Cubeta Individual de Resina</td><td class="price">15,00 &euro;</td></tr>
-                        <tr><td>Plancha de articulaci&oacute;n</td><td class="price">15,00 &euro;</td></tr>
-                        <tr><td>Rebase</td><td class="price">40,00 &euro;</td></tr>
-                        <tr><td>Compostura Simple</td><td class="price">30,00 &euro;</td></tr>
-                        <tr><td>A&ntilde;adir Pieza o Gancho</td><td class="price">30,00 &euro;</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <!-- ALL ON FOUR -->
-        <section class="section" id="allon">
-            <div class="section-header">
-                <div class="section-icon">&#129702;</div>
-                <h2 class="section-title">All-on-Four / All-on-Six</h2>
-            </div>
-
-            <div class="gallery" style="margin-bottom:1rem">
-                <a href="img/rehabilitacion-zirconio.jpg" target="_blank"><img src="img/rehabilitacion-zirconio.jpg" alt="Rehabilitaci&oacute;n en zirconio monol&iacute;tico" loading="lazy"></a>
-                <a href="img/all-on-four.png" target="_blank"><img src="img/all-on-four.png" alt="All on Four" loading="lazy"></a>
-                <a href="img/all-on-four-xray.png" target="_blank"><img src="img/all-on-four-xray.png" alt="All on Four Radiograf&iacute;a" loading="lazy"></a>
-                <a href="img/all-on-six.png" target="_blank"><img src="img/all-on-six.png" alt="All on Six" loading="lazy"></a>
-                <a href="img/all-on-six-superior.png" target="_blank"><img src="img/all-on-six-superior.png" alt="All on Six Superior" loading="lazy"></a>
-            </div>
-
-            <!-- ALL ON 4 - METAL CERAMICA -->
             <span class="subsection-label">ALL ON FOUR &middot; Metal Cer&aacute;mica</span>
             <div class="offer-grid">
                 <div class="offer-card">
@@ -1030,7 +892,6 @@
                 </div>
             </div>
 
-            <!-- ALL ON 4 - ZIRCONIO -->
             <span class="subsection-label">ALL ON FOUR &middot; Zirconio Monol&iacute;tico</span>
             <div class="offer-grid">
                 <div class="offer-card">
@@ -1058,11 +919,7 @@
                     </table>
                 </div>
             </div>
-            <div class="note">&#9888; La enc&iacute;a rosa se cobra aparte: 25 &euro; por pieza</div>
 
-            <br>
-
-            <!-- ALL ON 6 - METAL CERAMICA -->
             <span class="subsection-label">ALL ON SIX &middot; Metal Cer&aacute;mica</span>
             <div class="offer-grid">
                 <div class="offer-card">
@@ -1089,7 +946,6 @@
                 </div>
             </div>
 
-            <!-- ALL ON 6 - ZIRCONIO -->
             <span class="subsection-label">ALL ON SIX &middot; Zirconio Monol&iacute;tico</span>
             <div class="offer-grid">
                 <div class="offer-card">
@@ -1118,36 +974,139 @@
                 </div>
             </div>
             <div class="note">&#9888; La enc&iacute;a rosa se cobra aparte: 25 &euro; por pieza</div>
+
+            <br>
+            <span class="subsection-label">Est&eacute;tica</span>
+            <div class="gallery" style="margin-bottom:1rem">
+                <a href="img/estetica-carillas.jpg" target="_blank"><img src="img/estetica-carillas.jpg" alt="Coronas y carillas est&eacute;ticas" loading="lazy"></a>
+                <a href="img/puente-implantes.jpg" target="_blank"><img src="img/puente-implantes.jpg" alt="Puente est&eacute;tico" loading="lazy"></a>
+            </div>
+            <div class="price-card">
+                <table class="price-table">
+                    <thead><tr><th>Trabajo</th><th>Precio</th></tr></thead>
+                    <tbody>
+                        <tr><td>Carillas de Composite sin cer&aacute;mica</td><td class="price">60,00 &euro;</td></tr>
+                        <tr><td>Carillas de Composite con cer&aacute;mica</td><td class="price">85,00 &euro;</td></tr>
+                        <tr><td>Carillas de Disilicato de Litio</td><td class="price">90,00 &euro;</td></tr>
+                        <tr><td>Corona de Zirconio Monol&iacute;tico</td><td class="price">100,00 &euro;</td></tr>
+                        <tr><td>Corona de Zirconio Estratificado</td><td class="price">110,00 &euro;</td></tr>
+                        <tr><td>Incrustaciones de Composite (por pieza)</td><td class="price">90,00 &euro;</td></tr>
+                        <tr><td>Incrustaciones de Disilicato de Litio</td><td class="price">100,00 &euro;</td></tr>
+                        <tr><td>Dise&ntilde;o Digital de Mock Up (PMMA)</td><td class="price">25,00 &euro;</td></tr>
+                        <tr><td>Dise&ntilde;o de Sonrisa (por arcada)</td><td class="price">30,00 &euro;</td></tr>
+                        <tr><td>Llave para Carillas</td><td class="price">30,00 &euro;</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <div class="divider"></div>
 
-        <!-- ORTODONCIA -->
+        <!-- 2. PROTESIS REMOVIBLE -->
+        <section class="section" id="removible">
+            <div class="section-header">
+                <div class="section-icon">&#129463;</div>
+                <h2 class="section-title">2 &middot; Pr&oacute;tesis Removible</h2>
+            </div>
+            <div class="discount-note">20% DTO. PRIMER MES <span>Bono de bienvenida aplicable a esta secci&oacute;n</span></div>
+            <div class="gallery" style="margin-bottom:1rem">
+                <a href="img/completas-articuladas.jpg" target="_blank"><img src="img/completas-articuladas.jpg" alt="Pr&oacute;tesis completas" loading="lazy"></a>
+                <a href="img/protesis-inferior-modelo.jpg" target="_blank"><img src="img/protesis-inferior-modelo.jpg" alt="Pr&oacute;tesis inferior" loading="lazy"></a>
+                <a href="img/completa-superior-mano.jpg" target="_blank"><img src="img/completa-superior-mano.jpg" alt="Completa superior" loading="lazy"></a>
+                <a href="img/parciales-mano.jpg" target="_blank"><img src="img/parciales-mano.jpg" alt="Pr&oacute;tesis parciales" loading="lazy"></a>
+            </div>
+
+            <span class="subsection-label">Acr&iacute;lica</span>
+            <div class="price-card">
+                <table class="price-table">
+                    <thead><tr><th>Trabajo</th><th>Precio</th></tr></thead>
+                    <tbody>
+                        <tr><td>Completa Superior o Inferior de Resina</td><td class="price">130,00 &euro;</td></tr>
+                        <tr><td>Parciales de Resina de 1 a 9 piezas</td><td class="price">100,00 &euro;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <span class="subsection-label">Flexible</span>
+            <div class="price-card">
+                <table class="price-table">
+                    <thead><tr><th>Trabajo</th><th>Precio</th></tr></thead>
+                    <tbody>
+                        <tr><td>Valplast de 1 a 2 piezas</td><td class="price">Consultar</td></tr>
+                        <tr><td>Valplast de 3 a 5 piezas</td><td class="price">170,00 &euro;</td></tr>
+                        <tr><td>Valplast de m&aacute;s de 6 piezas</td><td class="price">Consultar</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <span class="subsection-label">Esquel&eacute;tico</span>
+            <div class="price-card">
+                <table class="price-table">
+                    <thead><tr><th>Trabajo</th><th>Precio</th></tr></thead>
+                    <tbody>
+                        <tr><td>Esquel&eacute;tico de 1 a 2 piezas</td><td class="price">Consultar</td></tr>
+                        <tr><td>Esquel&eacute;tico de 3 a 5 piezas</td><td class="price">Consultar</td></tr>
+                        <tr><td>Esquel&eacute;tico de m&aacute;s de 6 piezas</td><td class="price">225,00 &euro;</td></tr>
+                        <tr><td>Compostura Colada para Esquel&eacute;tico</td><td class="price">40,00 &euro;</td></tr>
+                        <tr><td>Solchapa Unidad</td><td class="price">40,00 &euro;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <span class="subsection-label">Arreglos y resina</span>
+            <div class="price-card">
+                <table class="price-table">
+                    <thead><tr><th>Trabajo</th><th>Precio</th></tr></thead>
+                    <tbody>
+                        <tr><td>Rebase</td><td class="price">40,00 &euro;</td></tr>
+                        <tr><td>Compostura Simple</td><td class="price">30,00 &euro;</td></tr>
+                        <tr><td>A&ntilde;adir Pieza o Gancho</td><td class="price">30,00 &euro;</td></tr>
+                        <tr><td>Soldadura</td><td class="price">40,00 &euro;</td></tr>
+                        <tr><td>Cubeta Individual de Resina</td><td class="price">15,00 &euro;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- 3. ORTODONCIA -->
         <section class="section" id="ortodoncia">
             <div class="section-header">
                 <div class="section-icon">&#128516;</div>
-                <h2 class="section-title">Ortodoncia</h2>
+                <h2 class="section-title">3 &middot; Ortodoncia</h2>
             </div>
 
             <div class="gallery" style="margin-bottom:1rem">
                 <a href="img/ortodoncia-rosa.jpg" target="_blank"><img src="img/ortodoncia-rosa.jpg" alt="Aparato de ortodoncia" loading="lazy"></a>
                 <a href="img/ortodoncia-purpura.jpg" target="_blank"><img src="img/ortodoncia-purpura.jpg" alt="Placa de ortodoncia" loading="lazy"></a>
                 <a href="img/ortodoncia-modelo.jpg" target="_blank"><img src="img/ortodoncia-modelo.jpg" alt="Aparato sobre modelo" loading="lazy"></a>
-                <a href="img/ortodoncia-verde.jpg" target="_blank"><img src="img/ortodoncia-verde.jpg" alt="Placa de ortodoncia verde" loading="lazy"></a>
+                <a href="img/ortodoncia-verde.jpg" target="_blank"><img src="img/ortodoncia-verde.jpg" alt="Placa verde" loading="lazy"></a>
                 <a href="img/ortodoncia-placa-verde.jpg" target="_blank"><img src="img/ortodoncia-placa-verde.jpg" alt="Placa sobre modelo" loading="lazy"></a>
             </div>
 
+            <span class="subsection-label">F&eacute;rulas y retenedores</span>
             <div class="price-card">
                 <table class="price-table orto-table">
-                    <thead>
-                        <tr><th>Cod.</th><th>Trabajo</th><th>Precio</th></tr>
-                    </thead>
+                    <thead><tr><th>Cod.</th><th>Trabajo</th><th>Precio</th></tr></thead>
+                    <tbody>
+                        <tr><td>2107</td><td>F&eacute;rula de Descarga</td><td class="price">70,00 &euro;</td></tr>
+                        <tr><td>2158</td><td>F&eacute;rula de Descarga Fresada</td><td class="price">80,00 &euro;</td></tr>
+                        <tr><td>2108</td><td>F&eacute;rula de Blanqueamiento (por arcada)</td><td class="price">35,00 &euro;</td></tr>
+                        <tr><td>2164</td><td>F&eacute;rula Contenci&oacute;n (Essix) por arcada</td><td class="price">39,00 &euro;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <span class="subsection-label">Aparatolog&iacute;a</span>
+            <div class="price-card">
+                <table class="price-table orto-table">
+                    <thead><tr><th>Cod.</th><th>Trabajo</th><th>Precio</th></tr></thead>
                     <tbody>
                         <tr><td>0002</td><td>Ganchos Adams</td><td class="price">10,00 &euro;</td></tr>
                         <tr><td>0004</td><td>Disyuntor MCNamara</td><td class="price">100,00 &euro;</td></tr>
                         <tr><td>2152</td><td>Bandas</td><td class="price">14,00 &euro;</td></tr>
                         <tr><td>2159</td><td>Arco Progenie</td><td class="price">14,00 &euro;</td></tr>
-                        <tr><td>2164</td><td>F&eacute;rula de Contenci&oacute;n</td><td class="price">32,00 &euro;</td></tr>
                         <tr><td>2235</td><td>Ganchos de Tracci&oacute;n</td><td class="price">12,00 &euro;</td></tr>
                         <tr><td>4104</td><td>Quad-Helix</td><td class="price">35,00 &euro;</td></tr>
                         <tr><td>4105</td><td>Barra Transpalatina</td><td class="price">32,00 &euro;</td></tr>
@@ -1166,10 +1125,6 @@
                         <tr><td>4133</td><td>Escudo Labial</td><td class="price">14,00 &euro;</td></tr>
                         <tr><td>4138</td><td>F&eacute;rula de Descarga Mixta</td><td class="price">58,00 &euro;</td></tr>
                         <tr><td>4139</td><td>Arco Vestibular</td><td class="price">14,00 &euro;</td></tr>
-                        <tr><td>2107</td><td>F&eacute;rula de Descarga</td><td class="price">70,00 &euro;</td></tr>
-                        <tr><td>&mdash;</td><td>F&eacute;rula de Descarga Fresada</td><td class="price">80,00 &euro;</td></tr>
-                        <tr><td>2108</td><td>F&eacute;rula de Blanqueamiento (unidad)</td><td class="price">35,00 &euro;</td></tr>
-                        <tr><td>&mdash;</td><td>Retenedor Essix (por arcada)</td><td class="price">39,00 &euro;</td></tr>
                         <tr><td>3102</td><td>Placa Hawley</td><td class="price">45,00 &euro;</td></tr>
                         <tr><td>3103</td><td>Placa Schwartz</td><td class="price">35,00 &euro;</td></tr>
                         <tr><td>4108</td><td>Placa Circunferencial</td><td class="price">45,00 &euro;</td></tr>
@@ -1179,6 +1134,7 @@
                         <tr><td>4116</td><td>Bumper</td><td class="price">25,00 &euro;</td></tr>
                         <tr><td>4118</td><td>Sander</td><td class="price">62,00 &euro;</td></tr>
                         <tr><td>4120</td><td>Cajetines</td><td class="price">14,00 &euro;</td></tr>
+                        <tr><td>4135</td><td>Soldadura</td><td class="price">40,00 &euro;</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1193,22 +1149,18 @@
                 <h2 class="section-title">Tiempos de Entrega</h2>
             </div>
             <div class="time-grid">
-                <div class="time-item"><span>Cubetas y Rodetes</span><span class="time-badge">1 d&iacute;a</span></div>
-                <div class="time-item"><span>Compostura resina / a&ntilde;adir pieza</span><span class="time-badge">1 d&iacute;a</span></div>
-                <div class="time-item"><span>Perno mu&ntilde;&oacute;n colado</span><span class="time-badge">2 d&iacute;as</span></div>
-                <div class="time-item"><span>Rebases</span><span class="time-badge">2 d&iacute;as</span></div>
-                <div class="time-item"><span>F&eacute;rulas blandas, Essix</span><span class="time-badge">2 d&iacute;as</span></div>
-                <div class="time-item"><span>F&eacute;rula de descarga</span><span class="time-badge">3 d&iacute;as</span></div>
-                <div class="time-item"><span>Terminaci&oacute;n de resina</span><span class="time-badge">3 d&iacute;as</span></div>
-                <div class="time-item"><span>Compostura de cer&aacute;mica</span><span class="time-badge">4 d&iacute;as</span></div>
-                <div class="time-item"><span>Prueba de metal o zirconio</span><span class="time-badge">4 d&iacute;as</span></div>
-                <div class="time-item"><span>Prueba de dientes</span><span class="time-badge">4 d&iacute;as</span></div>
-                <div class="time-item"><span>Terminaci&oacute;n resina en esquel&eacute;ticos</span><span class="time-badge">4 d&iacute;as</span></div>
-                <div class="time-item"><span>Soldar gancho/retenedor a esquel&eacute;tico</span><span class="time-badge">5 d&iacute;as</span></div>
-                <div class="time-item"><span>Prueba de bizcocho o acabado directo</span><span class="time-badge">5 d&iacute;as</span></div>
-                <div class="time-item"><span>Pr&oacute;tesis inmediatas</span><span class="time-badge">5 d&iacute;as</span></div>
+                <div class="time-item"><span>Compostura (a&ntilde;adir porcelana)</span><span class="time-badge">4-5 d&iacute;as</span></div>
+                <div class="time-item"><span>Pernos &middot; Prueba de metal</span><span class="time-badge">5 d&iacute;as</span></div>
+                <div class="time-item"><span>Prueba de bizcocho o terminado</span><span class="time-badge">5 d&iacute;as</span></div>
+                <div class="time-item"><span>Cubetas &middot; Rodetes &middot; Prueba de dientes</span><span class="time-badge">4-5 d&iacute;as</span></div>
+                <div class="time-item"><span>Pr&oacute;tesis inmediata (acabado directo)</span><span class="time-badge">5 d&iacute;as</span></div>
+                <div class="time-item"><span>Terminaci&oacute;n de resina</span><span class="time-badge">4-5 d&iacute;as</span></div>
+                <div class="time-item"><span>Terminaci&oacute;n de estructuras de esquel&eacute;ticos</span><span class="time-badge">4-5 d&iacute;as</span></div>
+                <div class="time-item"><span>Rebases &middot; Composturas</span><span class="time-badge">4-5 d&iacute;as</span></div>
+                <div class="time-item"><span>F&eacute;rulas blandas, de descarga y Essix</span><span class="time-badge">4-5 d&iacute;as</span></div>
+                <div class="time-item"><span>Terminado directo mediante iTero</span><span class="time-badge">6-7 d&iacute;as</span></div>
             </div>
-            <div class="note">* A los tiempos indicados hay que a&ntilde;adir dos d&iacute;as, uno de recogida y otro de entrega.</div>
+            <div class="note">&#8505; Los plazos corresponden &uacute;nicamente al tiempo de fabricaci&oacute;n en laboratorio. Para trabajos enviados por mensajer&iacute;a, a&ntilde;adir 2 d&iacute;as laborables (1 de recogida y 1 de entrega). Terminado directo mediante esc&aacute;ner intraoral iTero: plazo total de 8-9 d&iacute;as laborables incluyendo recogida y entrega.</div>
         </section>
 
         <!-- CONTACTO -->
