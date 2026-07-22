@@ -105,7 +105,7 @@
             cursor: pointer; border: none; font-family: inherit; display: block; width: 100%;
         }
         .qa:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,60,0.12); }
-        .qa i { font-size: 1.4rem; font-style: normal; display: block; margin-bottom: 5px; }
+        .qa svg { width: 36px; height: 36px; display: block; margin: 0 auto 6px; stroke: #2b4a8f; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
         .qa b { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; color: var(--primary); display: block; }
         .qa span { display: block; font-size: 0.56rem; color: var(--text-light); margin-top: 1px; }
 
@@ -118,7 +118,7 @@
         }
         .bono b { font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 900; display: block; }
         .bono span { font-size: 0.68rem; font-weight: 700; opacity: 0.85; }
-        .bono .star { font-size: 1.5rem; }
+        .bono .star svg { width: 30px; height: 30px; stroke: var(--primary); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
         /* INTRO CAD-CAM */
         .intro {
@@ -134,6 +134,7 @@
             box-shadow: var(--shadow); overflow: hidden; scroll-margin-top: 14px;
         }
         .card-h { display: flex; align-items: center; gap: 13px; padding: 16px 18px 12px; }
+        .card-h .ico svg { width: 24px; height: 24px; stroke: var(--gold); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
         .card-h .ico {
             width: 44px; height: 44px; border-radius: 13px;
             background: linear-gradient(135deg, var(--primary), var(--primary-2));
@@ -156,6 +157,25 @@
             margin: 4px 18px 6px; background: var(--gold-light); border-radius: 10px;
             font-size: 0.68rem; color: var(--primary); font-weight: 700; text-align: center; padding: 7px;
         }
+
+        /* ALL-ON OFERTAS (doble tarjeta) */
+        .allon-label { margin: 8px 18px 2px; font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800; color: var(--primary); }
+        .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin: 6px 18px 4px; }
+        @media (max-width: 350px) { .offer-grid { grid-template-columns: 1fr; } }
+        .offer-card { border: 1px solid var(--border); border-radius: 13px; overflow: hidden; background: #fff; }
+        .offer-card .oh {
+            background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #fff;
+            font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 800;
+            text-align: center; padding: 8px 6px; letter-spacing: 0.4px;
+        }
+        .offer-card .oh.oferta { background: linear-gradient(135deg, #10b981, #059669); }
+        .offer-card .oh .badge { background: #ffffff2e; border-radius: 12px; padding: 1px 7px; margin-left: 5px; font-size: 0.62rem; }
+        .offer-card .ro { display: flex; justify-content: space-between; gap: 6px; font-size: 0.63rem; padding: 5.5px 10px; border-bottom: 1px solid #f4f5f9; }
+        .offer-card .ro b { font-family: 'Montserrat', sans-serif; color: var(--primary); white-space: nowrap; }
+        .offer-card .ro .free { color: #059669; font-weight: 800; }
+        .offer-card .total { display: flex; justify-content: space-between; gap: 8px; padding: 8px 10px; background: #f0f1f6; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 0.78rem; color: var(--primary); }
+        .offer-card .total.oferta { background: #ecfdf5; color: #059669; }
+        .offer-card .total s { color: var(--text-light); font-weight: 600; font-size: 0.66rem; }
 
         /* ALL-ON DETAILS */
         details.allon { margin: 6px 18px; border: 1px solid var(--border); border-radius: 13px; overflow: hidden; }
@@ -204,6 +224,7 @@
             position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
             width: min(516px, calc(100% - 44px)); z-index: 200;
             background: var(--wa); color: #fff; border-radius: 16px;
+            display: flex; align-items: center; justify-content: center; gap: 9px;
             text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.88rem;
             padding: 14px; text-decoration: none; box-shadow: 0 10px 28px rgba(0,0,0,0.28);
         }
@@ -228,6 +249,41 @@
 </head>
 <body>
 <div class="shell">
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-fija" viewBox="0 0 24 24">
+    <path d="M8.2 2.8c1.1 0 1.9.5 2.6.9.4.2.8.4 1.2.4s.8-.2 1.2-.4c.7-.4 1.5-.9 2.6-.9 2 0 3.4 1.6 3.4 3.9 0 1.9-.8 3.3-1.7 4.3-.5.6-1 1.2-1.2 1.8h-8.6c-.2-.6-.7-1.2-1.2-1.8-.9-1-1.7-2.4-1.7-4.3 0-2.3 1.4-3.9 3.4-3.9Z"/>
+    <path d="M9 15h6l-.7 2.2h-4.6L9 15Zm1.1 4.4h3.8l-.8 1.8c-.2.5-.6.8-1.1.8s-.9-.3-1.1-.8l-.8-1.8Z"/>
+  </symbol>
+  <symbol id="i-removible" viewBox="0 0 24 24">
+    <path d="M2.5 9.5c2.6-3.4 6-5 9.5-5s6.9 1.6 9.5 5c.6.8.4 1.9-.4 2.6-2.6 2.2-5.7 3.4-9.1 3.4s-6.5-1.2-9.1-3.4c-.8-.7-1-1.8-.4-2.6Z"/>
+    <path d="M5.5 11.8V8.6M8.5 13.2V6.9M12 13.8V6.3M15.5 13.2V6.9M18.5 11.8V8.6"/>
+  </symbol>
+  <symbol id="i-orto" viewBox="0 0 24 24">
+    <rect x="2" y="8" width="5" height="8" rx="2"/>
+    <rect x="9.5" y="8" width="5" height="8" rx="2"/>
+    <rect x="17" y="8" width="5" height="8" rx="2"/>
+    <path d="M2 12h20"/>
+    <rect x="3.6" y="10.7" width="1.8" height="2.6" rx="0.4"/>
+    <rect x="11.1" y="10.7" width="1.8" height="2.6" rx="0.4"/>
+    <rect x="18.6" y="10.7" width="1.8" height="2.6" rx="0.4"/>
+  </symbol>
+  <symbol id="i-tiempos" viewBox="0 0 24 24">
+    <circle cx="12" cy="13" r="7.5"/>
+    <path d="M12 9v4.2l2.8 1.6M4.5 5 7 3M19.5 5 17 3M6 19.5l-1.5 2M18 19.5l1.5 2"/>
+  </symbol>
+  <symbol id="i-pdf" viewBox="0 0 24 24">
+    <path d="M6 2.5h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-17a1 1 0 0 1 1-1Z"/>
+    <path d="M14 2.5v4h4M8.5 15h7M8.5 18h7"/>
+    <path d="M12.5 8.2c-1.4 0-2.4 1-2.4 2.2s1 2.2 2.4 2.2M9.3 9.6h2.6M9.3 11.2h2.6"/>
+  </symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24">
+    <path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.2L2.5 21.5l4.9-1.3A9.5 9.5 0 1 0 12 2.5Z"/>
+    <path d="M8.6 7.8c-.3.6-.4 1.4-.1 2.2.6 1.9 2.1 3.6 4 4.5.8.4 1.7.4 2.4 0l.6-.4c.4-.2.4-.8.1-1.1l-1.2-1c-.3-.2-.7-.2-.9 0l-.5.4c-.9-.5-1.7-1.3-2.2-2.2l.4-.5c.2-.3.2-.6 0-.9l-1-1.2c-.3-.4-.9-.3-1.1.1l-.5.6Z"/>
+  </symbol>
+  <symbol id="i-star" viewBox="0 0 24 24">
+    <path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6L12 16.7l-5.4 2.9 1.1-6-4.5-4.2 6.1-.8L12 3Z"/>
+  </symbol>
+</svg>
 
     <!-- HERO -->
     <header class="hero">
@@ -251,18 +307,18 @@
 
     <!-- QUICK ACTIONS -->
     <nav class="grid" id="accesos">
-        <a class="qa" href="#fija"><i>&#129463;</i><b>Fija</b><span>30 trabajos</span></a>
-        <a class="qa" href="#removible"><i>&#128556;</i><b>Removible</b><span>15 trabajos</span></a>
-        <a class="qa" href="#ortodoncia"><i>&#128516;</i><b>Ortodoncia</b><span>36 trabajos</span></a>
-        <a class="qa" href="#tiempos"><i>&#9200;</i><b>Tiempos</b><span>4-5 d&iacute;as</span></a>
-        <button class="qa" type="button" onclick="window.print()"><i>&#128196;</i><b>PDF tarifa</b><span>descargar</span></button>
-        <a class="qa" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas"><i>&#128172;</i><b>WhatsApp</b><span>680 555 303</span></a>
+        <a class="qa" href="#fija"><svg aria-hidden="true"><use href="#i-fija"/></svg><b>Fija</b><span>30 trabajos</span></a>
+        <a class="qa" href="#removible"><svg aria-hidden="true"><use href="#i-removible"/></svg><b>Removible</b><span>15 trabajos</span></a>
+        <a class="qa" href="#ortodoncia"><svg aria-hidden="true"><use href="#i-orto"/></svg><b>Ortodoncia</b><span>36 trabajos</span></a>
+        <a class="qa" href="#tiempos"><svg aria-hidden="true"><use href="#i-tiempos"/></svg><b>Tiempos</b><span>4-5 d&iacute;as</span></a>
+        <button class="qa" type="button" onclick="window.print()"><svg aria-hidden="true"><use href="#i-pdf"/></svg><b>PDF tarifa</b><span>descargar</span></button>
+        <a class="qa" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas"><svg aria-hidden="true"><use href="#i-wa"/></svg><b>WhatsApp</b><span>680 555 303</span></a>
     </nav>
 
     <!-- BONO -->
     <div class="bono fade">
         <div><b>20% DTO. PRIMER MES</b><span>Bono de bienvenida &middot; pr&oacute;tesis fija y removible</span></div>
-        <div class="star">&#11088;</div>
+        <div class="star"><svg aria-hidden="true"><use href="#i-star"/></svg></div>
     </div>
 
     <!-- INTRO CAD-CAM -->
@@ -273,7 +329,7 @@
 
     <!-- MAS PEDIDOS -->
     <section class="card fade">
-        <div class="card-h"><div class="ico">&#11088;</div><div class="t"><b>Los m&aacute;s pedidos</b><span>Nuestros trabajos estrella</span></div></div>
+        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-star"/></svg></div><div class="t"><b>Los m&aacute;s pedidos</b><span>Nuestros trabajos estrella</span></div></div>
         <div class="rows">
             <div class="r"><span>Corona de Zirconio Monol&iacute;tico</span><b>100,00 &euro;</b></div>
             <div class="r"><span>F&eacute;rula de Descarga</span><b>70,00 &euro;</b></div>
@@ -284,7 +340,7 @@
 
     <!-- FIJA -->
     <section class="card fade" id="fija">
-        <div class="card-h"><div class="ico">&#129463;</div><div class="t"><b>Pr&oacute;tesis Fija</b><span>Sobre diente &middot; sobre implante &middot; All-on &middot; est&eacute;tica</span></div></div>
+        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-fija"/></svg></div><div class="t"><b>Pr&oacute;tesis Fija</b><span>Sobre diente &middot; sobre implante &middot; All-on &middot; est&eacute;tica</span></div></div>
         <div class="discount-line">&#9733; 20% dto. el primer mes en esta secci&oacute;n</div>
         <span class="ap">Sobre diente</span>
         <div class="rows">
@@ -313,52 +369,94 @@
             <div class="r"><span>Supraestructura</span><b>60,00 &euro;</b></div>
         </div>
         <span class="ap">All-on-Four / All-on-Six &middot; ofertas</span>
-        <details class="allon">
-            <summary><span>All-on-Four &middot; Metal Cer&aacute;mica</span><span class="price-tag"><s>1.596 &euro;</s>1.200 &euro;</span></summary>
-            <div class="rows">
-                <div class="r"><span>12x Fundas Metal Cer&aacute;mica</span><b>1.020 &euro;</b></div>
-                <div class="r"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
-                <div class="r"><span>2x Multi Unit Angulado</span><b>120 &euro;</b></div>
-                <div class="r"><span>4x An&aacute;logo Digital</span><b>0 &euro;</b></div>
-                <div class="r"><span>2x Modelos Impresos</span><b>0 &euro;</b></div>
-                <div class="r"><span><strong>Total oferta (-25%)</strong></span><b>1.200 &euro;</b></div>
+        <div class="allon-label">ALL-ON-FOUR &middot; Metal Cer&aacute;mica</div>
+        <div class="offer-grid">
+            <div class="offer-card">
+                <div class="oh">PRECIO TARIFA</div>
+                    <div class="ro"><span>12x Fundas Metal Cer&aacute;mica</span><b>1.320 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Angulado</span><b>120 &euro;</b></div>
+                    <div class="ro"><span>4x An&aacute;logo Digital</span><b>72 &euro;</b></div>
+                    <div class="ro"><span>2x Modelos Impresos</span><b>24 &euro;</b></div>
+                <div class="total"><span>Total</span><span>1.596 &euro;</span></div>
             </div>
-        </details>
-        <details class="allon">
-            <summary><span>All-on-Four &middot; Zirconio Monol&iacute;tico</span><span class="price-tag"><s>1.956 &euro;</s>1.380 &euro;</span></summary>
-            <div class="rows">
-                <div class="r"><span>12x Zirconio Monol&iacute;tico</span><b>1.200 &euro;</b></div>
-                <div class="r"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
-                <div class="r"><span>2x Multi Unit Angulado</span><b>120 &euro;</b></div>
-                <div class="r"><span>4x Interfases</span><b>0 &euro;</b></div>
-                <div class="r"><span>4x An&aacute;logo Digital</span><b>0 &euro;</b></div>
-                <div class="r"><span>2x Modelos Impresos</span><b>0 &euro;</b></div>
-                <div class="r"><span><strong>Total oferta (-29%)</strong></span><b>1.380 &euro;</b></div>
+            <div class="offer-card">
+                <div class="oh oferta">PRECIO OFERTA <span class="badge">-25%</span></div>
+                    <div class="ro"><span>12x Fundas Metal Cer&aacute;mica</span><b>1.020 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Angulado</span><b>120 &euro;</b></div>
+                    <div class="ro"><span>4x An&aacute;logo Digital</span><b class="free">0 &euro;</b></div>
+                    <div class="ro"><span>2x Modelos Impresos</span><b class="free">0 &euro;</b></div>
+                <div class="total oferta"><span>Total <s>1.596 &euro;</s></span><span>1.200 &euro;</span></div>
             </div>
-        </details>
-        <details class="allon">
-            <summary><span>All-on-Six &middot; Metal Cer&aacute;mica</span><span class="price-tag"><s>1.752 &euro;</s>1.320 &euro;</span></summary>
-            <div class="rows">
-                <div class="r"><span>12x Fundas Metal Cer&aacute;mica</span><b>1.020 &euro;</b></div>
-                <div class="r"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
-                <div class="r"><span>4x Multi Unit Angulado</span><b>240 &euro;</b></div>
-                <div class="r"><span>6x An&aacute;logo Digital</span><b>0 &euro;</b></div>
-                <div class="r"><span>2x Modelos Impresos</span><b>0 &euro;</b></div>
-                <div class="r"><span><strong>Total oferta (-25%)</strong></span><b>1.320 &euro;</b></div>
+        </div>
+        <div class="allon-label">ALL-ON-FOUR &middot; Zirconio Monol&iacute;tico</div>
+        <div class="offer-grid">
+            <div class="offer-card">
+                <div class="oh">PRECIO TARIFA</div>
+                    <div class="ro"><span>12x Zirconio Monol&iacute;tico</span><b>1.560 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Angulado</span><b>120 &euro;</b></div>
+                    <div class="ro"><span>4x Interfases</span><b>120 &euro;</b></div>
+                    <div class="ro"><span>4x An&aacute;logo Digital</span><b>72 &euro;</b></div>
+                    <div class="ro"><span>2x Modelos Impresos</span><b>24 &euro;</b></div>
+                <div class="total"><span>Total</span><span>1.956 &euro;</span></div>
             </div>
-        </details>
-        <details class="allon">
-            <summary><span>All-on-Six &middot; Zirconio Monol&iacute;tico</span><span class="price-tag"><s>2.172 &euro;</s>1.500 &euro;</span></summary>
-            <div class="rows">
-                <div class="r"><span>12x Zirconio Monol&iacute;tico</span><b>1.200 &euro;</b></div>
-                <div class="r"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
-                <div class="r"><span>4x Multi Unit Angulado</span><b>240 &euro;</b></div>
-                <div class="r"><span>6x Interfases</span><b>0 &euro;</b></div>
-                <div class="r"><span>6x An&aacute;logo Digital</span><b>0 &euro;</b></div>
-                <div class="r"><span>2x Modelos Impresos</span><b>0 &euro;</b></div>
-                <div class="r"><span><strong>Total oferta (-31%)</strong></span><b>1.500 &euro;</b></div>
+            <div class="offer-card">
+                <div class="oh oferta">PRECIO OFERTA <span class="badge">-29%</span></div>
+                    <div class="ro"><span>12x Zirconio Monol&iacute;tico</span><b>1.200 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Angulado</span><b>120 &euro;</b></div>
+                    <div class="ro"><span>4x Interfases</span><b class="free">0 &euro;</b></div>
+                    <div class="ro"><span>4x An&aacute;logo Digital</span><b class="free">0 &euro;</b></div>
+                    <div class="ro"><span>2x Modelos Impresos</span><b class="free">0 &euro;</b></div>
+                <div class="total oferta"><span>Total <s>1.956 &euro;</s></span><span>1.380 &euro;</span></div>
             </div>
-        </details>
+        </div>
+        <div class="allon-label">ALL-ON-SIX &middot; Metal Cer&aacute;mica</div>
+        <div class="offer-grid">
+            <div class="offer-card">
+                <div class="oh">PRECIO TARIFA</div>
+                    <div class="ro"><span>12x Fundas Metal Cer&aacute;mica</span><b>1.320 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
+                    <div class="ro"><span>4x Multi Unit Angulado</span><b>240 &euro;</b></div>
+                    <div class="ro"><span>6x An&aacute;logo Digital</span><b>108 &euro;</b></div>
+                    <div class="ro"><span>2x Modelos Impresos</span><b>24 &euro;</b></div>
+                <div class="total"><span>Total</span><span>1.752 &euro;</span></div>
+            </div>
+            <div class="offer-card">
+                <div class="oh oferta">PRECIO OFERTA <span class="badge">-25%</span></div>
+                    <div class="ro"><span>12x Fundas Metal Cer&aacute;mica</span><b>1.020 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
+                    <div class="ro"><span>4x Multi Unit Angulado</span><b>240 &euro;</b></div>
+                    <div class="ro"><span>6x An&aacute;logo Digital</span><b class="free">0 &euro;</b></div>
+                    <div class="ro"><span>2x Modelos Impresos</span><b class="free">0 &euro;</b></div>
+                <div class="total oferta"><span>Total <s>1.752 &euro;</s></span><span>1.320 &euro;</span></div>
+            </div>
+        </div>
+        <div class="allon-label">ALL-ON-SIX &middot; Zirconio Monol&iacute;tico</div>
+        <div class="offer-grid">
+            <div class="offer-card">
+                <div class="oh">PRECIO TARIFA</div>
+                    <div class="ro"><span>12x Zirconio Monol&iacute;tico</span><b>1.560 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
+                    <div class="ro"><span>4x Multi Unit Angulado</span><b>240 &euro;</b></div>
+                    <div class="ro"><span>6x Interfases</span><b>180 &euro;</b></div>
+                    <div class="ro"><span>6x An&aacute;logo Digital</span><b>108 &euro;</b></div>
+                    <div class="ro"><span>2x Modelos Impresos</span><b>24 &euro;</b></div>
+                <div class="total"><span>Total</span><span>2.172 &euro;</span></div>
+            </div>
+            <div class="offer-card">
+                <div class="oh oferta">PRECIO OFERTA <span class="badge">-31%</span></div>
+                    <div class="ro"><span>12x Zirconio Monol&iacute;tico</span><b>1.200 &euro;</b></div>
+                    <div class="ro"><span>2x Multi Unit Recto</span><b>60 &euro;</b></div>
+                    <div class="ro"><span>4x Multi Unit Angulado</span><b>240 &euro;</b></div>
+                    <div class="ro"><span>6x Interfases</span><b class="free">0 &euro;</b></div>
+                    <div class="ro"><span>6x An&aacute;logo Digital</span><b class="free">0 &euro;</b></div>
+                    <div class="ro"><span>2x Modelos Impresos</span><b class="free">0 &euro;</b></div>
+                <div class="total oferta"><span>Total <s>2.172 &euro;</s></span><span>1.500 &euro;</span></div>
+            </div>
+        </div>
         <div class="note">&#9888; La enc&iacute;a rosa se cobra aparte: 25 &euro; por pieza</div>
         <span class="ap">Est&eacute;tica</span>
         <div class="rows" style="padding-bottom:16px">
@@ -377,7 +475,7 @@
 
     <!-- REMOVIBLE -->
     <section class="card fade" id="removible">
-        <div class="card-h"><div class="ico">&#128556;</div><div class="t"><b>Pr&oacute;tesis Removible</b><span>Acr&iacute;lica &middot; flexible &middot; esquel&eacute;tico &middot; arreglos</span></div></div>
+        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-removible"/></svg></div><div class="t"><b>Pr&oacute;tesis Removible</b><span>Acr&iacute;lica &middot; flexible &middot; esquel&eacute;tico &middot; arreglos</span></div></div>
         <div class="discount-line">&#9733; 20% dto. el primer mes en esta secci&oacute;n</div>
         <span class="ap">Acr&iacute;lica</span>
         <div class="rows">
@@ -410,7 +508,7 @@
 
     <!-- ORTODONCIA -->
     <section class="card fade" id="ortodoncia">
-        <div class="card-h"><div class="ico">&#128516;</div><div class="t"><b>Ortodoncia</b><span>F&eacute;rulas, retenedores y aparatolog&iacute;a</span></div></div>
+        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-orto"/></svg></div><div class="t"><b>Ortodoncia</b><span>F&eacute;rulas, retenedores y aparatolog&iacute;a</span></div></div>
         <span class="ap">F&eacute;rulas y retenedores</span>
         <div class="rows">
             <div class="r"><span>F&eacute;rula de Descarga</span><b>70,00 &euro;</b></div>
@@ -457,7 +555,7 @@
 
     <!-- TIEMPOS -->
     <section class="card fade" id="tiempos">
-        <div class="card-h"><div class="ico">&#9200;</div><div class="t"><b>Tiempos de entrega</b><span>Fabricaci&oacute;n en laboratorio</span></div></div>
+        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-tiempos"/></svg></div><div class="t"><b>Tiempos de entrega</b><span>Fabricaci&oacute;n en laboratorio</span></div></div>
         <div class="rows" style="padding-bottom:6px">
             <div class="time-r"><span>Compostura (a&ntilde;adir porcelana)</span><span class="time-badge">4-5 d&iacute;as</span></div>
             <div class="time-r"><span>Pernos &middot; Prueba de metal</span><span class="time-badge">5 d&iacute;as</span></div>
@@ -490,7 +588,7 @@
 
 </div>
 
-<a href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas" class="wa-bar">&#128172; Habla con nosotros por WhatsApp</a>
+<a href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas" class="wa-bar"><svg aria-hidden="true" style="width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round"><use href="#i-wa"/></svg> Habla con nosotros por WhatsApp</a>
 
 <script>
     document.documentElement.classList.add('js');
@@ -521,10 +619,9 @@
             });
             card.style.display = (q && vis === 0) ? 'none' : '';
             total += vis;
-            card.querySelectorAll('.ap, .discount-line, .note, details.allon').forEach(function (el) {
+            card.querySelectorAll('.ap, .discount-line, .note, .offer-grid, .allon-label').forEach(function (el) {
                 el.style.display = q ? 'none' : '';
             });
-            if (q) card.querySelectorAll('details.allon .r').forEach(function (r) { r.style.display = 'none'; });
         });
         sinResultados.style.display = (q && total === 0) ? 'block' : 'none';
     });
