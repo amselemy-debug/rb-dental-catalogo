@@ -216,18 +216,19 @@
         .cbtn.tel { background: #fff; color: var(--primary); }
         .cbtn.web { background: rgba(201,168,76,0.15); color: var(--gold); border: 1px solid rgba(201,168,76,0.4); }
 
-        footer { text-align: center; padding: 10px 22px 100px; font-size: 0.66rem; color: var(--text-light); }
+        footer { text-align: center; padding: 10px 22px 40px; font-size: 0.66rem; color: var(--text-light); }
         footer strong { font-family: 'Montserrat', sans-serif; color: var(--primary); }
 
         /* WHATSAPP STICKY */
         .wa-bar {
-            position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
-            width: min(516px, calc(100% - 44px)); z-index: 200;
-            background: var(--wa); color: #fff; border-radius: 16px;
-            display: flex; align-items: center; justify-content: center; gap: 9px;
-            text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.88rem;
-            padding: 14px; text-decoration: none; box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+            position: fixed; bottom: 18px; right: 18px; z-index: 200;
+            width: 54px; height: 54px; border-radius: 50%;
+            background: var(--wa); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+            transition: transform 0.15s;
         }
+        .wa-bar:hover { transform: scale(1.08); }
 
         /* ANIMACIONES */
         .js .fade { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
@@ -588,7 +589,7 @@
 
 </div>
 
-<a href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas" class="wa-bar"><svg aria-hidden="true" style="width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round"><use href="#i-wa"/></svg> Habla con nosotros por WhatsApp</a>
+<a href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas" class="wa-bar" aria-label="WhatsApp"><svg aria-hidden="true" style="width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round"><use href="#i-wa"/></svg></a>
 
 <script>
     document.documentElement.classList.add('js');
