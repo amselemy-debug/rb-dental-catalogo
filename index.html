@@ -189,6 +189,7 @@
         details.allon summary .price-tag s { color: var(--text-light); font-weight: 600; margin-right: 6px; font-size: 0.72rem; }
         details.allon .rows { padding: 2px 14px 8px; }
         details.allon .r { font-size: 0.78rem; padding: 6px 0; }
+        .ph { display: block; width: calc(100% - 36px); margin: 10px 18px 2px; height: 150px; object-fit: cover; border-radius: 14px; }
         .note { margin: 8px 18px 12px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 9px 13px; font-size: 0.72rem; color: #92400e; }
 
         /* TIEMPOS */
@@ -352,6 +353,7 @@
     <!-- FIJA -->
     <section class="card fade" id="fija">
         <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-fija"/></svg></div><div class="t"><b>Pr&oacute;tesis Fija</b><span>Sobre diente &middot; sobre implante &middot; All-on &middot; Blender &middot; est&eacute;tica</span></div></div>
+        <img class="ph" src="img/fija.jpg" alt="Coronas de zirconio — pr&oacute;tesis fija RB Dental" loading="lazy">
         <div class="discount-line">&#9733; 20% dto. el primer mes en esta secci&oacute;n</div>
         <span class="ap">Sobre diente</span>
         <div class="rows">
@@ -367,6 +369,7 @@
             <div class="r"><span>Compostura Porcelana</span><b>30,00 &euro;</b></div>
         </div>
         <span class="ap">Sobre implante</span>
+        <img class="ph" src="img/implantes.jpg" alt="Pr&oacute;tesis fija sobre implantes" loading="lazy">
         <div class="rows">
             <div class="r"><span>Corona s/Implante Zirconio Monol&iacute;tico</span><b>130,00 &euro;</b></div>
             <div class="r"><span>Corona s/Implante Zirconio Estratificado</span><b>130,00 &euro;</b></div>
@@ -386,6 +389,7 @@
             <div class="r"><span>Supraestructura</span><b>60,00 &euro;</b></div>
         </div>
         <span class="ap">All-on-Four / All-on-Six &middot; ofertas</span>
+        <img class="ph" src="img/allon.jpg" alt="All-on-Four y All-on-Six sobre implantes" loading="lazy">
         <div class="allon-label">ALL-ON-FOUR &middot; Metal Cer&aacute;mica</div>
         <div class="offer-grid">
             <div class="offer-card">
@@ -476,6 +480,7 @@
         </div>
         <div class="note">&#9888; La enc&iacute;a rosa se cobra aparte: 25 &euro; por pieza</div>
         <span class="ap">Barra Blender &middot; sobre implantes</span>
+        <img class="ph" src="img/blender.jpg" alt="Barra Blender fresada y anodizada" loading="lazy">
         <div class="rows">
             <div class="r"><span>Barra Blender fresada Ti sobre 2 Implantes*</span><b>215,00 &euro;</b></div>
             <div class="r"><span>Barra Blender fresada Ti sobre 3 Implantes*</span><b>245,00 &euro;</b></div>
@@ -516,6 +521,7 @@
     <!-- REMOVIBLE -->
     <section class="card fade" id="removible">
         <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-removible"/></svg></div><div class="t"><b>Pr&oacute;tesis Removible</b><span>Acr&iacute;lica &middot; flexible &middot; esquel&eacute;tico &middot; arreglos</span></div></div>
+        <img class="ph" src="img/removible.jpg" alt="Pr&oacute;tesis removible completa" loading="lazy">
         <div class="discount-line">&#9733; 20% dto. el primer mes en esta secci&oacute;n</div>
         <span class="ap">Acr&iacute;lica</span>
         <div class="rows">
@@ -554,7 +560,9 @@
     <!-- ORTODONCIA -->
     <section class="card fade" id="ortodoncia">
         <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-orto"/></svg></div><div class="t"><b>Ortodoncia</b><span>F&eacute;rulas, retenedores y aparatolog&iacute;a</span></div></div>
+        <img class="ph" src="img/ortodoncia.jpg" alt="Aparatolog&iacute;a de ortodoncia" loading="lazy">
         <span class="ap">F&eacute;rulas y retenedores</span>
+        <img class="ph" src="img/ferulas.jpg" alt="F&eacute;rula de descarga fresada" loading="lazy">
         <div class="rows">
             <div class="r"><span>F&eacute;rula de Descarga</span><b>70,00 &euro;</b></div>
             <div class="r"><span>F&eacute;rula de Descarga Fresada</span><b>90,00 &euro;</b></div>
@@ -675,7 +683,7 @@
             });
             card.style.display = (q && vis === 0) ? 'none' : '';
             total += vis;
-            card.querySelectorAll('.ap, .discount-line, .note, .offer-grid, .allon-label').forEach(function (el) {
+            card.querySelectorAll('.ap, .discount-line, .note, .offer-grid, .allon-label, .ph').forEach(function (el) {
                 el.style.display = q ? 'none' : '';
             });
         });
