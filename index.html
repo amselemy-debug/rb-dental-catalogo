@@ -358,7 +358,7 @@
     </div>
 
     <!-- MAS PEDIDOS -->
-    <section class="card fade">
+    <section class="card fade" id="mas-pedidos">
         <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-star"/></svg></div><div class="t"><b>Los m&aacute;s pedidos</b><span>Nuestros trabajos estrella</span></div></div>
         <div class="rows">
             <div class="r"><span>Corona de Zirconio Monol&iacute;tico</span><b>100,00 &euro;</b></div>
@@ -705,6 +705,7 @@
                 el.style.display = q ? 'none' : '';
             });
         });
+        document.querySelectorAll('#accesos, .bono, .intro, #mas-pedidos').forEach(function (el) { el.style.display = q ? 'none' : ''; });
         sinResultados.style.display = (q && total === 0) ? 'block' : 'none';
     });
 
