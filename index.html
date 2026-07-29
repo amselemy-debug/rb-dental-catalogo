@@ -245,12 +245,28 @@
         .js .fade.visible { opacity: 1; transform: none; }
         @media (min-width: 900px) {
             .shell { max-width: min(1280px, 94vw); }
-            .hero h1 { font-size: 2.1rem; }
+            .hero h1 { font-size: 2.4rem; }
             .hero { border-radius: 0 0 28px 28px; }
-            .gal img { width: 214px; height: 150px; }
-            .r span { font-size: 0.95rem; }
-            .r b { font-size: 0.98rem; }
-            .card-h .t b { font-size: 1.15rem; }
+            .grid { grid-template-columns: repeat(6, 1fr); gap: 12px; }
+            .qa { padding: 18px 8px 14px; }
+            .qa svg { width: 34px; height: 34px; }
+            .qa b { font-size: 1rem; }
+            .qa span { font-size: 0.78rem; }
+            .bono div b { font-size: 1.25rem; }
+            .bono div span { font-size: 0.92rem; }
+            .intro { font-size: 0.95rem; }
+            .ap { font-size: 0.8rem; }
+            .gal img { width: 232px; height: 162px; }
+            .gal figcaption { font-size: 0.74rem; }
+            .r { padding: 13px 0; }
+            .r span { font-size: 1rem; }
+            .r b { font-size: 1.05rem; }
+            .card-h .t b { font-size: 1.25rem; }
+            .card-h .t span { font-size: 0.85rem; }
+            .note { font-size: 0.82rem; }
+            .ro span, .ro b { font-size: 0.85rem; }
+            .total { font-size: 0.95rem; }
+            .time-r span { font-size: 0.95rem; }
         }
         @media (prefers-reduced-motion: reduce) { .js .fade { opacity: 1; transform: none; transition: none; } }
 
@@ -371,7 +387,7 @@
     <!-- FIJA -->
     <section class="card fade" id="fija">
         <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-fija"/></svg></div><div class="t"><b>Pr&oacute;tesis Fija</b><span>Sobre diente &middot; sobre implante &middot; All-on &middot; Blender &middot; est&eacute;tica</span></div></div>
-        <div class="gal"><figure><a href="img/fija.jpg" target="_blank"><img src="img/fija.jpg" alt="Coronas de zirconio" loading="lazy"></a><figcaption>Coronas de zirconio</figcaption></figure><figure><a href="img/fija2.jpg" target="_blank"><img src="img/fija2.jpg" alt="Zirconio cementado" loading="lazy"></a><figcaption>Zirconio cementado</figcaption></figure><figure><a href="img/fija3.jpg" target="_blank"><img src="img/fija3.jpg" alt="Carga inmediata" loading="lazy"></a><figcaption>Carga inmediata</figcaption></figure></div>
+        <div class="gal"><figure><a href="img/fija.jpg" target="_blank"><img src="img/fija.jpg" alt="Coronas de zirconio" loading="lazy"></a><figcaption>Coronas de zirconio</figcaption></figure><figure><a href="img/fija2.jpg" target="_blank"><img src="img/fija2.jpg" alt="Zirconio cementado" loading="lazy"></a><figcaption>Zirconio cementado</figcaption></figure><figure><a href="img/fija3.jpg" target="_blank"><img src="img/fija3.jpg" alt="Carga inmediata" loading="lazy"></a><figcaption>Carga inmediata</figcaption></figure><figure><a href="img/fija4.jpg" target="_blank"><img src="img/fija4.jpg" alt="Rehabilitaci&oacute;n en zirconio" loading="lazy"></a><figcaption>Rehabilitaci&oacute;n en zirconio</figcaption></figure></div>
         <div class="discount-line">&#9733; 20% dto. el primer mes en esta secci&oacute;n</div>
         <span class="ap">Sobre diente</span>
         <div class="rows">
@@ -521,6 +537,7 @@
         </div>
         <div class="note">* El precio incluye la barra Blender fresada + el anodizado y pulido de la estructura de titanio + Divisi&oacute;n Blender (extrusi&oacute;n)</div>
         <span class="ap" id="estetica" style="scroll-margin-top:14px">Est&eacute;tica</span>
+        <div class="gal"><figure><a href="img/estetica.jpg" target="_blank"><img src="img/estetica.jpg" alt="Incrustaciones" loading="lazy"></a><figcaption>Incrustaciones</figcaption></figure><figure><a href="img/fija.jpg" target="_blank"><img src="img/fija.jpg" alt="Coronas y carillas" loading="lazy"></a><figcaption>Coronas y carillas</figcaption></figure></div>
         <div class="rows" style="padding-bottom:16px">
             <div class="r"><span>Carillas de Composite sin cer&aacute;mica</span><b>60,00 &euro;</b></div>
             <div class="r"><span>Carillas de Composite con cer&aacute;mica</span><b>85,00 &euro;</b></div>
@@ -578,7 +595,7 @@
     <!-- ORTODONCIA -->
     <section class="card fade" id="ortodoncia">
         <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-orto"/></svg></div><div class="t"><b>Ortodoncia</b><span>F&eacute;rulas, retenedores y aparatolog&iacute;a</span></div></div>
-        <div class="gal"><figure><a href="img/ortodoncia.jpg" target="_blank"><img src="img/ortodoncia.jpg" alt="Aparatolog&iacute;a" loading="lazy"></a><figcaption>Aparatolog&iacute;a</figcaption></figure><figure><a href="img/ortodoncia2.jpg" target="_blank"><img src="img/ortodoncia2.jpg" alt="Placa de expansi&oacute;n" loading="lazy"></a><figcaption>Placa de expansi&oacute;n</figcaption></figure><figure><a href="img/ortodoncia3.jpg" target="_blank"><img src="img/ortodoncia3.jpg" alt="Expansor" loading="lazy"></a><figcaption>Expansor</figcaption></figure></div>
+        <div class="gal"><figure><a href="img/ortodoncia.jpg" target="_blank"><img src="img/ortodoncia.jpg" alt="Aparatolog&iacute;a" loading="lazy"></a><figcaption>Aparatolog&iacute;a</figcaption></figure><figure><a href="img/ortodoncia2.jpg" target="_blank"><img src="img/ortodoncia2.jpg" alt="Placa de expansi&oacute;n" loading="lazy"></a><figcaption>Placa de expansi&oacute;n</figcaption></figure><figure><a href="img/ortodoncia3.jpg" target="_blank"><img src="img/ortodoncia3.jpg" alt="Expansor" loading="lazy"></a><figcaption>Expansor</figcaption></figure><figure><a href="img/ortodoncia4.jpg" target="_blank"><img src="img/ortodoncia4.jpg" alt="Placa de retenci&oacute;n Hawley" loading="lazy"></a><figcaption>Placa de retenci&oacute;n Hawley</figcaption></figure></div>
         <span class="ap">F&eacute;rulas y retenedores</span>
         <div class="gal"><figure><a href="img/ferulas.jpg" target="_blank"><img src="img/ferulas.jpg" alt="F&eacute;rula fresada" loading="lazy"></a><figcaption>F&eacute;rula fresada</figcaption></figure><figure><a href="img/ferulas2.jpg" target="_blank"><img src="img/ferulas2.jpg" alt="F&eacute;rulas de descarga" loading="lazy"></a><figcaption>F&eacute;rulas de descarga</figcaption></figure><figure><a href="img/ferulas3.jpg" target="_blank"><img src="img/ferulas3.jpg" alt="F&eacute;rula de descarga" loading="lazy"></a><figcaption>F&eacute;rula de descarga</figcaption></figure><figure><a href="img/ferulas4.jpg" target="_blank"><img src="img/ferulas4.jpg" alt="Retenedor Essix" loading="lazy"></a><figcaption>Retenedor Essix</figcaption></figure></div>
         <div class="rows">
