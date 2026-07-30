@@ -270,6 +270,48 @@
             .total { font-size: 0.95rem; }
             .time-r span { font-size: 0.95rem; }
         }
+        .topnav, .hero-desk, .hero-photo, .st-desk { display: none; }
+        @media (min-width: 1000px) {
+            .topnav { display: block; position: sticky; top: 0; z-index: 60; background: #01021f; box-shadow: 0 2px 14px rgba(0,0,0,0.35); }
+            .tn-in { max-width: min(1280px, 94vw); margin: 0 auto; display: flex; align-items: center; gap: 26px; padding: 12px 18px; }
+            .tn-logo { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 1.25rem; color: #fff; }
+            .tn-logo span { color: #C9A84C; }
+            .tn-links { margin-left: auto; display: flex; gap: 22px; }
+            .tn-links a { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.92rem; opacity: 0.9; }
+            .tn-links a:hover { opacity: 1; color: #C9A84C; }
+            .tn-wa { background: linear-gradient(120deg, #C9A84C, #e3c76e); color: #01021f; font-weight: 800; font-size: 0.9rem; text-decoration: none; padding: 9px 18px; border-radius: 999px; }
+            .hero { position: relative; padding-right: 480px; min-height: 430px; }
+            .hero .logo, .hero .logo-digital, .hero-year, .hero > h1 { display: none; }
+            .hero .kicker { letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.72rem; }
+            .hero-desk { display: block; }
+            .hero-desk h1 { font-size: 3.6rem; margin: 10px 0 14px; color: #fff; font-family: Montserrat, sans-serif; font-weight: 900; }
+            .hero-desk p { color: #c7d0ea; font-size: 1.05rem; line-height: 1.65; margin: 0 0 26px; }
+            .hero-photo { display: block; position: absolute; right: 30px; top: 42px; width: 400px; margin: 0; }
+            .hero-photo img { width: 100%; height: 290px; object-fit: cover; border-radius: 16px; display: block; }
+            .hero-photo figcaption { color: #9fb0d8; font-size: 0.75rem; margin-top: 8px; }
+            .st-desk { display: block; }
+            .hero .stats { background: none; gap: 0; }
+            .hero .st { background: none; border: none; border-left: 1px solid rgba(255,255,255,0.18); padding: 2px 26px; text-align: left; }
+            .hero .st:first-child { border-left: none; padding-left: 0; }
+            .hero .st b { font-size: 1.7rem; }
+            .grid { display: none; }
+            .bono { display: flex; justify-content: center; align-items: baseline; gap: 12px; border-radius: 12px; padding: 13px 20px; }
+            .bono .star { display: none; }
+            .bono div { display: flex; align-items: baseline; gap: 12px; }
+            .content { display: flex; gap: 26px; align-items: flex-start; margin-top: 18px; }
+            .sidenav { position: sticky; top: 74px; width: 265px; flex-shrink: 0; }
+            .sidenav .search-wrap { margin: 0 0 14px; padding: 0; }
+            .maincol { flex: 1; min-width: 0; }
+            .sideidx { background: #fff; border: 1px solid #e3eaf6; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(10,22,40,0.05); }
+            .sideidx a { display: flex; justify-content: space-between; align-items: center; padding: 13px 16px; text-decoration: none; color: #0a1628; font-weight: 600; font-size: 0.93rem; border-bottom: 1px solid #eef2fa; }
+            .sideidx a:last-child { border-bottom: none; }
+            .sideidx a:hover { background: #f5f8ff; }
+            .sideidx b { color: #8aaad4; font-size: 0.8rem; font-weight: 700; }
+            #mas-pedidos .rows { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 4px 18px 18px; }
+            #mas-pedidos .r { display: block; border: 1px solid #e3eaf6; border-radius: 16px; padding: 16px; }
+            #mas-pedidos .r span { display: block; font-weight: 700; margin-bottom: 12px; }
+            #mas-pedidos .r b { font-size: 1.45rem; color: #0f2060; }
+        }
         @media (prefers-reduced-motion: reduce) { .js .fade { opacity: 1; transform: none; transition: none; } }
 
         /* IMPRESION */
@@ -286,6 +328,19 @@
     </style>
 </head>
 <body>
+<header class="topnav">
+    <div class="tn-in">
+        <span class="tn-logo">RB<span>dental</span></span>
+        <nav class="tn-links">
+            <a href="#fija">Fija</a>
+            <a href="#removible">Removible</a>
+            <a href="#ortodoncia">Ortodoncia</a>
+            <a href="#estetica">Est&eacute;tica</a>
+            <a href="#tiempos">Tiempos</a>
+        </nav>
+        <a class="tn-wa" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas">WhatsApp &middot; 680 555 303</a>
+    </div>
+</header>
 <div class="shell">
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
   <symbol id="i-fija" viewBox="0 0 24 24">
@@ -340,10 +395,20 @@
         <div class="logo-digital">D I G I T A L</div>
         <div class="kicker">Laboratorio de Pr&oacute;tesis Dental &middot; Madrid &middot; Desde 1990</div>
         <h1>35 a&ntilde;os de experiencia.<br>Hoy, <i>100% digitales.</i></h1>
+        <div class="hero-desk">
+            <h1>Tarifa 2026</h1>
+            <p>Treinta y cinco a&ntilde;os garantizando resultados, no promesas.<br>
+            Precisi&oacute;n CAD-CAM para que no tengas que repetir el trabajo.</p>
+        </div>
+        <figure class="hero-photo">
+            <img src="img/hero.jpg" alt="Rehabilitaci&oacute;n completa en zirconio en el laboratorio">
+            <figcaption>Rehabilitaci&oacute;n completa en zirconio &middot; trabajo real del laboratorio</figcaption>
+        </figure>
         <div class="stats">
             <div class="st"><b>+35</b><span>A&Ntilde;OS</span></div>
             <div class="st"><b>CAD-CAM</b><span>SLM &middot; iTERO</span></div>
             <div class="st"><b>4-5d</b><span>FABRICACI&Oacute;N</span></div>
+            <div class="st st-desk"><b>Gratis</b><span>RECOGIDA MADRID</span></div>
         </div>
     </header>
 
@@ -424,7 +489,7 @@
             <div class="r"><span>Sobredentadura Implanto-mucosoportada (H&iacute;brida)</span><b>450,00 &euro;</b></div>
             <div class="r"><span>Supraestructura</span><b>60,00 &euro;</b></div>
         </div>
-        <span class="ap">All-on-Four / All-on-Six &middot; ofertas</span>
+        <span class="ap" id="allon" style="scroll-margin-top:70px">All-on-Four / All-on-Six &middot; ofertas</span>
         <div class="gal"><figure><a href="img/allon.jpg" target="_blank"><img src="img/allon.jpg" alt="All-on-Six" loading="lazy"></a><figcaption>All-on-Six</figcaption></figure><figure><a href="img/allon4.jpg" target="_blank"><img src="img/allon4.jpg" alt="All-on-Four" loading="lazy"></a><figcaption>All-on-Four</figcaption></figure><figure><a href="img/allon6b.jpg" target="_blank"><img src="img/allon6b.jpg" alt="All-on-Six" loading="lazy"></a><figcaption>All-on-Six</figcaption></figure><figure><a href="img/allon4b.jpg" target="_blank"><img src="img/allon4b.jpg" alt="All-on-Four" loading="lazy"></a><figcaption>All-on-Four</figcaption></figure></div>
         <div class="allon-label">ALL-ON-FOUR &middot; Metal Cer&aacute;mica</div>
         <div class="offer-grid">
@@ -750,6 +815,30 @@
             next.hidden = gal.scrollLeft > gal.scrollWidth - gal.clientWidth - 10;
         }, { passive: true });
     });
+
+    // Maquetación de escritorio: sidebar con buscador e índice
+    if (window.matchMedia('(min-width: 1000px)').matches) {
+        var shell = document.querySelector('.shell');
+        var content = document.createElement('div'); content.className = 'content';
+        var aside = document.createElement('aside'); aside.className = 'sidenav';
+        var main = document.createElement('div'); main.className = 'maincol';
+        var bono = document.querySelector('.bono');
+        shell.insertBefore(content, bono.nextSibling);
+        aside.appendChild(document.querySelector('.search-wrap'));
+        aside.appendChild(document.getElementById('sin-resultados'));
+        var idx = document.createElement('nav'); idx.className = 'sideidx';
+        idx.innerHTML =
+            '<a href="#fija"><span>Pr\u00f3tesis Fija</span><b>52</b></a>' +
+            '<a href="#allon"><span>Ofertas All-on</span><b>-25/31%</b></a>' +
+            '<a href="#removible"><span>Pr\u00f3tesis Removible</span><b>20</b></a>' +
+            '<a href="#ortodoncia"><span>Ortodoncia</span><b>47</b></a>' +
+            '<a href="#estetica"><span>Est\u00e9tica</span><b>11</b></a>' +
+            '<a href="#tiempos"><span>Tiempos de entrega</span><b>4-5d</b></a>' +
+            '<a href="#contacto"><span>Contacto</span><b>&rsaquo;</b></a>';
+        aside.appendChild(idx);
+        document.querySelectorAll('.intro, section.card, section.contact').forEach(function (el) { main.appendChild(el); });
+        content.appendChild(aside); content.appendChild(main);
+    }
 </script>
 </body>
 </html>
