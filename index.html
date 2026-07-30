@@ -300,7 +300,8 @@
             .bono div { display: flex; align-items: baseline; gap: 12px; }
             .content { display: flex; gap: 26px; align-items: flex-start; margin-top: 18px; }
             .sidenav { position: sticky; top: 74px; width: 265px; flex-shrink: 0; }
-            .sidenav .search-wrap { margin: 0 0 14px; padding: 0; }
+            .shell > .search-wrap { margin: 18px 0 0; padding: 0; }
+            .shell > .search-wrap input { height: 54px; font-size: 1rem; }
             .maincol { flex: 1; min-width: 0; }
             .sideidx { background: #fff; border: 1px solid #e3eaf6; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(10,22,40,0.05); }
             .sideidx a { display: flex; justify-content: space-between; align-items: center; padding: 13px 16px; text-decoration: none; color: #0a1628; font-weight: 600; font-size: 0.93rem; border-bottom: 1px solid #eef2fa; }
@@ -401,8 +402,8 @@
             Precisi&oacute;n CAD-CAM para que no tengas que repetir el trabajo.</p>
         </div>
         <figure class="hero-photo">
-            <img src="img/hero.jpg" alt="Rehabilitaci&oacute;n completa en zirconio en el laboratorio">
-            <figcaption>Rehabilitaci&oacute;n completa en zirconio &middot; trabajo real del laboratorio</figcaption>
+            <img src="img/hero.jpg" alt="Barra Blender fresada y anodizada con coronas">
+            <figcaption>Barra Blender fresada y anodizada &middot; trabajo real del laboratorio</figcaption>
         </figure>
         <div class="stats">
             <div class="st"><b>+35</b><span>A&Ntilde;OS</span></div>
@@ -824,8 +825,10 @@
         var main = document.createElement('div'); main.className = 'maincol';
         var bono = document.querySelector('.bono');
         shell.insertBefore(content, bono.nextSibling);
-        aside.appendChild(document.querySelector('.search-wrap'));
-        aside.appendChild(document.getElementById('sin-resultados'));
+        var sw = document.querySelector('.search-wrap');
+        var nr = document.getElementById('sin-resultados');
+        shell.insertBefore(sw, content);
+        shell.insertBefore(nr, content);
         var idx = document.createElement('nav'); idx.className = 'sideidx';
         idx.innerHTML =
             '<a href="#fija"><span>Pr\u00f3tesis Fija</span><b>52</b></a>' +
