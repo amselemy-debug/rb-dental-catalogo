@@ -189,6 +189,7 @@
         details.allon summary .price-tag s { color: var(--text-light); font-weight: 600; margin-right: 6px; font-size: 0.72rem; }
         details.allon .rows { padding: 2px 14px 8px; }
         details.allon .r { font-size: 0.78rem; padding: 6px 0; }
+        .qa-wide { grid-column: 1 / -1; }
         .gal { display: flex; gap: 10px; overflow-x: auto; padding: 10px 18px 2px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
         .gal::-webkit-scrollbar { display: none; }
         .gal figure { flex-shrink: 0; margin: 0; scroll-snap-align: start; background: #fff; border: 1px solid #e3eaf6; border-radius: 14px; padding: 6px 6px 2px; box-shadow: 0 2px 8px rgba(10,22,40,0.05); }
@@ -334,6 +335,7 @@
         <span class="tn-logo">RB<span>dental</span></span>
         <nav class="tn-links">
             <a href="#fija">Fija</a>
+            <a href="#blender">Blender</a>
             <a href="#removible">Removible</a>
             <a href="#ortodoncia">Ortodoncia</a>
             <a href="#estetica">Est&eacute;tica</a>
@@ -384,6 +386,12 @@
     <path d="M12 3.5c.5 3.8 2 6.4 6.5 7-4.5.6-6 3.2-6.5 7-.5-3.8-2-6.4-6.5-7 4.5-.6 6-3.2 6.5-7Z"/>
     <path d="M19 15.5c.25 1.7 1 2.9 3 3.2-2 .3-2.75 1.5-3 3.2-.25-1.7-1-2.9-3-3.2 2-.3 2.75-1.5 3-3.2Z"/>
   </symbol>
+  <symbol id="i-blender" viewBox="0 0 24 24">
+    <path d="M3.5 14.5c0-5 3.8-8.5 8.5-8.5s8.5 3.5 8.5 8.5c0 1.6-1.3 2.9-2.9 2.9h-1c-.9 0-1.6-.7-1.6-1.6 0-.8-.7-1.5-1.5-1.5h-3c-.8 0-1.5.7-1.5 1.5 0 .9-.7 1.6-1.6 1.6h-1c-1.6 0-2.9-1.3-2.9-2.9Z"/>
+    <circle cx="8" cy="12.2" r="0.9"/>
+    <circle cx="12" cy="11" r="0.9"/>
+    <circle cx="16" cy="12.2" r="0.9"/>
+  </symbol>
   <symbol id="i-star" viewBox="0 0 24 24">
     <path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6L12 16.7l-5.4 2.9 1.1-6-4.5-4.2 6.1-.8L12 3Z"/>
   </symbol>
@@ -421,12 +429,13 @@
 
     <!-- QUICK ACTIONS -->
     <nav class="grid" id="accesos">
-        <a class="qa" href="#fija"><svg aria-hidden="true"><use href="#i-fija"/></svg><b>Fija</b><span>51 trabajos</span></a>
+        <a class="qa" href="#fija"><svg aria-hidden="true"><use href="#i-fija"/></svg><b>Fija</b><span>37 trabajos</span></a>
         <a class="qa" href="#removible"><svg aria-hidden="true"><use href="#i-removible"/></svg><b>Removible</b><span>20 trabajos</span></a>
         <a class="qa" href="#ortodoncia"><svg aria-hidden="true"><use href="#i-orto"/></svg><b>Ortodoncia</b><span>47 trabajos</span></a>
         <a class="qa" href="#tiempos"><svg aria-hidden="true"><use href="#i-tiempos"/></svg><b>Tiempos</b><span>4-5 d&iacute;as</span></a>
         <a class="qa" href="#contacto"><svg aria-hidden="true"><use href="#i-van"/></svg><b>Recogida y entrega</b><span>gratis en Madrid</span></a>
         <a class="qa" href="#estetica"><svg aria-hidden="true"><use href="#i-estetica"/></svg><b>Est&eacute;tica</b><span>11 trabajos</span></a>
+        <a class="qa qa-wide" href="#blender"><svg aria-hidden="true"><use href="#i-blender"/></svg><b>Blender</b><span>14 trabajos &middot; barras fresadas</span></a>
     </nav>
 
     <!-- BONO -->
@@ -454,7 +463,7 @@
 
     <!-- FIJA -->
     <section class="card fade" id="fija">
-        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-fija"/></svg></div><div class="t"><b>Pr&oacute;tesis Fija</b><span>Sobre diente &middot; sobre implante &middot; All-on &middot; Blender &middot; est&eacute;tica</span></div></div>
+        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-fija"/></svg></div><div class="t"><b>Pr&oacute;tesis Fija</b><span>Sobre diente &middot; sobre implante &middot; All-on &middot; est&eacute;tica</span></div></div>
         <div class="gal"><figure><a href="img/fija.jpg" target="_blank"><img src="img/fija.jpg" alt="Coronas de zirconio" loading="lazy"></a><figcaption>Coronas de zirconio</figcaption></figure><figure><a href="img/fija2.jpg" target="_blank"><img src="img/fija2.jpg" alt="Zirconio cementado" loading="lazy"></a><figcaption>Zirconio cementado</figcaption></figure><figure><a href="img/fija3.jpg" target="_blank"><img src="img/fija3.jpg" alt="Carga inmediata" loading="lazy"></a><figcaption>Carga inmediata</figcaption></figure><figure><a href="img/fija4.jpg" target="_blank"><img src="img/fija4.jpg" alt="Rehabilitaci&oacute;n en zirconio" loading="lazy"></a><figcaption>Rehabilitaci&oacute;n en zirconio</figcaption></figure></div>
         <div class="discount-line">&#9733; 20% dto. el primer mes en esta secci&oacute;n</div>
         <span class="ap">Sobre diente</span>
@@ -581,6 +590,26 @@
             </div>
         </div>
         <div class="note">&#9888; La enc&iacute;a rosa se cobra aparte: 25 &euro; por pieza</div>
+        <span class="ap" id="estetica" style="scroll-margin-top:14px">Est&eacute;tica</span>
+        <div class="gal"><figure><a href="img/estetica.jpg" target="_blank"><img src="img/estetica.jpg" alt="Incrustaciones" loading="lazy"></a><figcaption>Incrustaciones</figcaption></figure><figure><a href="img/fija.jpg" target="_blank"><img src="img/fija.jpg" alt="Coronas y carillas" loading="lazy"></a><figcaption>Coronas y carillas</figcaption></figure></div>
+        <div class="rows" style="padding-bottom:16px">
+            <div class="r"><span>Carillas de Composite sin cer&aacute;mica</span><b>60,00 &euro;</b></div>
+            <div class="r"><span>Carillas de Composite con cer&aacute;mica</span><b>85,00 &euro;</b></div>
+            <div class="r"><span>Carillas de Disilicato de Litio</span><b>90,00 &euro;</b></div>
+            <div class="r"><span>Corona de Zirconio Monol&iacute;tico</span><b>100,00 &euro;</b></div>
+            <div class="r"><span>Corona de Zirconio Estratificado</span><b>110,00 &euro;</b></div>
+            <div class="r"><span>Incrustaciones de Composite (por pieza)</span><b>90,00 &euro;</b></div>
+            <div class="r"><span>Incrustaciones de Disilicato de Litio</span><b>100,00 &euro;</b></div>
+            <div class="r"><span>Dise&ntilde;o de Sonrisa (por pieza) &middot; Modelo 3D incluido</span><b>20,00 &euro;</b></div>
+            <div class="r"><span>Llave de silicona para el Mock Up (por arcada)</span><b>20,00 &euro;</b></div>
+            <div class="r"><span>Llave para carillas inyectadas (por arcada)</span><b>40,00 &euro;</b></div>
+            <div class="r"><span>Llave para Carillas</span><b>30,00 &euro;</b></div>
+        </div>
+    </section>
+
+    <!-- BLENDER -->
+    <section class="card fade" id="blender">
+        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-blender"/></svg></div><div class="t"><b>Blender</b><span>Barras fresadas &middot; sobre implantes y sobre diente</span></div></div>
         <span class="ap">Barra Blender &middot; sobre implantes</span>
         <div class="gal"><figure><a href="img/blender.jpg" target="_blank"><img src="img/blender.jpg" alt="Barra Blender" loading="lazy"></a><figcaption>Barra Blender</figcaption></figure><figure><a href="img/blender2.jpg" target="_blank"><img src="img/blender2.jpg" alt="Barra + estructura" loading="lazy"></a><figcaption>Barra + estructura</figcaption></figure><figure><a href="img/blender3.jpg" target="_blank"><img src="img/blender3.jpg" alt="Barra anodizada" loading="lazy"></a><figcaption>Barra anodizada</figcaption></figure><figure><a href="img/blender4.jpg" target="_blank"><img src="img/blender4.jpg" alt="Barra Blender Ti" loading="lazy"></a><figcaption>Barra Blender Ti</figcaption></figure><figure><a href="img/blender5.jpg" target="_blank"><img src="img/blender5.jpg" alt="Barra Blender sobredentadura" loading="lazy"></a><figcaption>Barra sobredentadura</figcaption></figure></div>
         <div class="rows">
@@ -603,21 +632,6 @@
             <div class="r"><span>Barra Blender fresada sobre 8 piezas*</span><b>432,00 &euro;</b></div>
         </div>
         <div class="note">* El precio incluye la barra Blender fresada + el anodizado y pulido de la estructura de titanio + Divisi&oacute;n Blender (extrusi&oacute;n)</div>
-        <span class="ap" id="estetica" style="scroll-margin-top:14px">Est&eacute;tica</span>
-        <div class="gal"><figure><a href="img/estetica.jpg" target="_blank"><img src="img/estetica.jpg" alt="Incrustaciones" loading="lazy"></a><figcaption>Incrustaciones</figcaption></figure><figure><a href="img/fija.jpg" target="_blank"><img src="img/fija.jpg" alt="Coronas y carillas" loading="lazy"></a><figcaption>Coronas y carillas</figcaption></figure></div>
-        <div class="rows" style="padding-bottom:16px">
-            <div class="r"><span>Carillas de Composite sin cer&aacute;mica</span><b>60,00 &euro;</b></div>
-            <div class="r"><span>Carillas de Composite con cer&aacute;mica</span><b>85,00 &euro;</b></div>
-            <div class="r"><span>Carillas de Disilicato de Litio</span><b>90,00 &euro;</b></div>
-            <div class="r"><span>Corona de Zirconio Monol&iacute;tico</span><b>100,00 &euro;</b></div>
-            <div class="r"><span>Corona de Zirconio Estratificado</span><b>110,00 &euro;</b></div>
-            <div class="r"><span>Incrustaciones de Composite (por pieza)</span><b>90,00 &euro;</b></div>
-            <div class="r"><span>Incrustaciones de Disilicato de Litio</span><b>100,00 &euro;</b></div>
-            <div class="r"><span>Dise&ntilde;o de Sonrisa (por pieza) &middot; Modelo 3D incluido</span><b>20,00 &euro;</b></div>
-            <div class="r"><span>Llave de silicona para el Mock Up (por arcada)</span><b>20,00 &euro;</b></div>
-            <div class="r"><span>Llave para carillas inyectadas (por arcada)</span><b>40,00 &euro;</b></div>
-            <div class="r"><span>Llave para Carillas</span><b>30,00 &euro;</b></div>
-        </div>
     </section>
 
     <!-- REMOVIBLE -->
@@ -830,8 +844,9 @@
         shell.insertBefore(nr, content);
         var idx = document.createElement('nav'); idx.className = 'sideidx';
         idx.innerHTML =
-            '<a href="#fija"><span>Pr\u00f3tesis Fija</span><b>51</b></a>' +
+            '<a href="#fija"><span>Pr\u00f3tesis Fija</span><b>37</b></a>' +
             '<a href="#allon"><span>Ofertas All-on</span><b>-25/31%</b></a>' +
+            '<a href="#blender"><span>Blender</span><b>14</b></a>' +
             '<a href="#removible"><span>Pr\u00f3tesis Removible</span><b>20</b></a>' +
             '<a href="#ortodoncia"><span>Ortodoncia</span><b>47</b></a>' +
             '<a href="#estetica"><span>Est\u00e9tica</span><b>11</b></a>' +
