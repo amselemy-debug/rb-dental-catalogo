@@ -200,6 +200,13 @@
         .gal-prev { left: 6px; }
         .gal-prev[hidden], .gal-next[hidden] { display: none; }
         .gal figcaption { font-size: 0.66rem; font-weight: 700; color: #0f2060; text-align: center; padding: 5px 2px 4px; letter-spacing: 0.02em; }
+        .folleto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 12px 18px 18px; }
+        .folleto { background: #fff; border: 1px solid #e3eaf6; border-radius: 14px; padding: 7px 7px 9px; text-align: center; box-shadow: 0 2px 8px rgba(10,22,40,0.05); display: flex; flex-direction: column; gap: 7px; }
+        .folleto .cover { display: block; }
+        .folleto img { width: 100%; aspect-ratio: 210 / 297; object-fit: cover; border-radius: 9px; border: 1px solid #eef2fa; display: block; }
+        .folleto b { font-family: 'Montserrat', sans-serif; font-size: 0.66rem; color: var(--primary); line-height: 1.25; }
+        .folleto-btn { display: block; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.6rem; text-decoration: none; border-radius: 999px; padding: 7px 4px; letter-spacing: 0.04em; }
+        .folleto-btn:hover { background: var(--primary-2); }
         .note { margin: 8px 18px 12px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 9px 13px; font-size: 0.72rem; color: #92400e; }
 
         /* TIEMPOS */
@@ -261,6 +268,10 @@
             .gal figure { flex: 0 1 300px; }
             .gal img { width: 100%; height: 200px; }
             .gal figcaption { font-size: 0.74rem; }
+            .folleto-grid { gap: 16px; padding: 16px 22px 22px; }
+            .folleto { padding: 10px 10px 13px; gap: 9px; }
+            .folleto b { font-size: 0.88rem; }
+            .folleto-btn { font-size: 0.76rem; padding: 9px 6px; }
             .r { padding: 13px 0; }
             .r span { font-size: 1rem; }
             .r b { font-size: 1.05rem; }
@@ -340,6 +351,7 @@
             <a href="#ortodoncia">Ortodoncia</a>
             <a href="#estetica">Est&eacute;tica</a>
             <a href="#tiempos">Tiempos</a>
+            <a href="#folletos">Folletos</a>
         </nav>
         <a class="tn-wa" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas">WhatsApp &middot; 680 555 303</a>
     </div>
@@ -436,6 +448,7 @@
         <a class="qa" href="#contacto"><svg aria-hidden="true"><use href="#i-van"/></svg><b>Recogida y entrega</b><span>gratis en Madrid</span></a>
         <a class="qa" href="#estetica"><svg aria-hidden="true"><use href="#i-estetica"/></svg><b>Est&eacute;tica</b><span>11 trabajos</span></a>
         <a class="qa qa-wide" href="#blender"><svg aria-hidden="true"><use href="#i-blender"/></svg><b>Blender</b><span>14 trabajos &middot; barras fresadas</span></a>
+        <a class="qa qa-wide" href="#folletos"><svg aria-hidden="true"><use href="#i-pdf"/></svg><b>Folletos 2026</b><span>Carga inmediata &middot; Dise&ntilde;o de sonrisa &middot; Blender</span></a>
     </nav>
 
     <!-- BONO -->
@@ -751,6 +764,28 @@
         <div class="note">&#8505; Los plazos corresponden &uacute;nicamente al tiempo de fabricaci&oacute;n en laboratorio. Para trabajos enviados por mensajer&iacute;a, a&ntilde;adir 2 d&iacute;as laborables (1 de recogida y 1 de entrega). Terminado directo mediante esc&aacute;ner intraoral iTero: plazo total de 8-9 d&iacute;as laborables incluyendo recogida y entrega.</div>
     </section>
 
+    <!-- FOLLETOS -->
+    <section class="card fade" id="folletos">
+        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-pdf"/></svg></div><div class="t"><b>Folletos 2026</b><span>Desc&aacute;rgalos en PDF para tu cl&iacute;nica</span></div></div>
+        <div class="folleto-grid">
+            <div class="folleto">
+                <a class="cover" href="folletos/folleto-carga-inmediata-2026.pdf" target="_blank"><img src="folletos/portada-carga-inmediata.jpg" alt="Folleto Carga inmediata 2026" loading="lazy"></a>
+                <b>Carga inmediata</b>
+                <a class="folleto-btn" href="folletos/folleto-carga-inmediata-2026.pdf" target="_blank">Ver PDF</a>
+            </div>
+            <div class="folleto">
+                <a class="cover" href="folletos/folleto-diseno-sonrisa-2026.pdf" target="_blank"><img src="folletos/portada-diseno-sonrisa.jpg" alt="Folleto Dise&ntilde;o de sonrisa 2026" loading="lazy"></a>
+                <b>Dise&ntilde;o de sonrisa</b>
+                <a class="folleto-btn" href="folletos/folleto-diseno-sonrisa-2026.pdf" target="_blank">Ver PDF</a>
+            </div>
+            <div class="folleto">
+                <a class="cover" href="folletos/folleto-blender-2026.pdf" target="_blank"><img src="folletos/portada-blender.jpg" alt="Folleto Sistema Blender 2026" loading="lazy"></a>
+                <b>Sistema Blender</b>
+                <a class="folleto-btn" href="folletos/folleto-blender-2026.pdf" target="_blank">Ver PDF</a>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACTO -->
     <section class="contact fade" id="contacto">
         <h2>Contacta con nosotros</h2>
@@ -851,6 +886,7 @@
             '<a href="#ortodoncia"><span>Ortodoncia</span><b>47</b></a>' +
             '<a href="#estetica"><span>Est\u00e9tica</span><b>11</b></a>' +
             '<a href="#tiempos"><span>Tiempos de entrega</span><b>4-5d</b></a>' +
+            '<a href="#folletos"><span>Folletos</span><b>PDF</b></a>' +
             '<a href="#contacto"><span>Contacto</span><b>&rsaquo;</b></a>';
         aside.appendChild(idx);
         document.querySelectorAll('.intro, section.card, section.contact').forEach(function (el) { main.appendChild(el); });
