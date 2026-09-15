@@ -1,0 +1,180 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Carga inmediata &middot; RB Dental Madrid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/base.css">
+<style>
+.shero { background:linear-gradient(150deg,var(--obs) 55%,var(--obs2)); color:#fff; position:relative; overflow:hidden; }
+.shero .in14 { display:flex; gap:50px; align-items:center; position:relative; padding:44px 44px 40px; }
+.bc { color:#8d97b4; font-size:.8rem; margin-bottom:12px; }
+.bc b { color:var(--gold2); font-weight:600; }
+.shero h1 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:4rem; letter-spacing:-.02em; line-height:1; margin:6px 0 10px; }
+.shero .sub1 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:1.3rem; color:#e8ebf5; }
+.shero p.d { color:#b9c2d8; max-width:480px; margin:10px 0 22px; }
+.hand { position:absolute; top:38px; right:44px; color:var(--gold2); font-style:italic; font-size:1.05rem; text-align:right; line-height:1.4; font-family:Georgia,serif; }
+.shero .im { width:480px; height:330px; background:#fff; border-radius:26px; display:flex; align-items:center; justify-content:center; padding:24px; flex-shrink:0; box-shadow:0 26px 60px rgba(0,0,0,.45); }
+.shero .im img { max-width:100%; max-height:100%; object-fit:contain; }
+.icorow { border-top:1px solid rgba(201,168,76,.25); }
+.icorow .in14 { display:flex; justify-content:space-between; gap:20px; padding:20px 44px 24px; }
+.ic1 { display:flex; gap:12px; align-items:center; }
+.ic1 .b { width:44px; height:44px; border-radius:50%; border:1.5px solid var(--gold); color:var(--gold2); display:flex; align-items:center; justify-content:center; font-size:1.15rem; flex-shrink:0; }
+.ic1 b { font-family:'Montserrat',sans-serif; color:#fff; font-size:.88rem; display:block; line-height:1.3; }
+/* que es con foto anotada */
+.que2 { display:flex; gap:56px; align-items:center; }
+.que2 .tx { flex:1; }
+.que2 h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; line-height:1.15; letter-spacing:-.02em; margin:8px 0 14px; }
+.que2 p { color:#4a5670; margin-bottom:16px; max-width:520px; }
+.anot { width:46%; flex-shrink:0; position:relative; }
+.anot img { width:100%; }
+.lbl { position:absolute; font-family:'Montserrat',sans-serif; font-size:.72rem; font-weight:700; color:var(--obs2); background:#fff; border:1px solid var(--gold); border-radius:8px; padding:5px 10px; box-shadow:0 6px 18px rgba(10,20,60,.12); }
+.lbl::before { content:''; position:absolute; width:34px; height:1.5px; background:var(--goldd); }
+.lbl.l::before { right:100%; top:50%; }
+.lbl.r::before { left:100%; top:50%; }
+/* ventajas obsidiana */
+.venta { background:linear-gradient(150deg,var(--obs) 55%,var(--obs2)); color:#fff; }
+.venta .eyebrow { color:var(--gold2); }
+.venta h2 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 26px; }
+.vgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:26px 34px; }
+.v1 { display:flex; gap:16px; align-items:flex-start; }
+.v1 .b { width:52px; height:52px; border-radius:50%; border:1.5px solid var(--gold); color:var(--gold2); display:flex; align-items:center; justify-content:center; font-size:1.25rem; flex-shrink:0; }
+.v1 b { font-family:'Montserrat',sans-serif; font-size:.98rem; display:block; margin-bottom:4px; }
+.v1 span { color:#9aa3bd; font-size:.85rem; line-height:1.55; }
+/* ejemplos */
+.ej h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 6px; }
+.ejgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:26px; }
+.ejc { border:1px solid var(--line); border-radius:16px; overflow:hidden; background:#fff; }
+.ejc img { width:100%; height:180px; object-fit:cover; display:block; }
+.ejc div { padding:12px 15px; }
+.ejc b { font-family:'Montserrat',sans-serif; color:var(--obs2); font-size:.9rem; display:block; }
+.ejc span { color:var(--mut); font-size:.8rem; }
+/* flujo */
+.flow { background:var(--soft); }
+.flow h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 26px; }
+.fgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.f1 { text-align:center; }
+.f1 .im { background:#fff; border:1px solid var(--line); border-radius:16px; height:170px; display:flex; align-items:center; justify-content:center; padding:14px; margin-bottom:12px; }
+.f1 img { max-width:100%; max-height:100%; object-fit:contain; }
+.f1 i { font-style:normal; font-family:'Montserrat',sans-serif; font-weight:800; color:var(--goldd); font-size:.95rem; }
+.f1 b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; font-size:.95rem; }
+.f1 span { color:var(--mut); font-size:.8rem; }
+</style></head><body>
+<div class="topbar">Laboratorio de pr&oacute;tesis dental digital &middot; Madrid &middot; Desde 1990</div>
+<nav class="top"><div class="in">
+  <a class="logo" href="../index.html" aria-label="Inicio"><img src="../img/logo-rb.png" alt="RB dental &middot; Laboratorio de Pr&oacute;tesis Dental Digital"></a>
+  <span class="sp"></span>
+  <div class="links"><a href="../quienes-somos.html">Qui&eacute;nes somos</a>
+    <a href="../nuestros-trabajos.html">Nuestros trabajos</a>
+    <a href="../como-enviar-un-caso.html">C&oacute;mo enviar un caso</a>
+    <a href="https://tarifas.laboratoriodentalrb.com" target="_blank" rel="noopener">Tarifas</a></div>
+  <a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar un caso</a>
+  <button class="mburger" type="button" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mmenu">
+  <a href="../index.html">Inicio</a>
+  <a href="../quienes-somos.html">Qui&eacute;nes somos</a>
+    <a href="../nuestros-trabajos.html">Nuestros trabajos</a>
+    <a href="../como-enviar-un-caso.html">C&oacute;mo enviar un caso</a>
+    <a href="https://tarifas.laboratoriodentalrb.com" target="_blank" rel="noopener">Tarifas</a>
+</div></nav>
+
+<header class="shero">
+<span class="hand">Precisi&oacute;n artesanal,<br>tecnolog&iacute;a digital.</span>
+<div class="in14">
+  <div style="flex:1;min-width:0">
+    <div class="bc">Inicio &rsaquo; Nuestros trabajos &rsaquo; <b>Carga inmediata</b></div>
+    <span class="eyebrow" style="color:var(--gold2)">Nuevo &middot; Implantolog&iacute;a</span>
+    <h1>CARGA INMEDIATA</h1>
+    <div class="sub1">Provisional fijo el mismo d&iacute;a de la cirug&iacute;a</div>
+    <p class="d">Con planificaci&oacute;n digital y f&eacute;rula quir&uacute;rgica a medida. El paciente sale de la cl&iacute;nica con dientes.</p>
+    <div class="ctas"><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar un caso &rarr;</a><a class="pill line" href="../como-enviar-un-caso.html">C&oacute;mo enviar un caso</a></div>
+  </div>
+  <div class="im"><img src="../img/carga-ferula-b.jpg"></div>
+</div>
+<div class="icorow"><div class="in14">
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-tooth"/></svg></span><b>Diente el<br>mismo d&iacute;a</b></div>
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-target"/></svg></span><b>M&aacute;xima<br>precisi&oacute;n</b></div>
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-scan"/></svg></span><b>Sin<br>esperas</b></div>
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-clock"/></svg></span><b>Entrega en<br>4-5 d&iacute;as</b></div>
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-gear"/></svg></span><b>Tecnolog&iacute;a<br>CAD-CAM</b></div>
+</div></div>
+</header>
+
+<section><div class="in14 que2">
+  <div class="tx">
+    <span class="eyebrow">&iquest;Qu&eacute; es la carga inmediata?</span>
+    <h2>El implante y el provisional fijo, en la misma sesi&oacute;n.</h2>
+    <p>Permite colocar el implante y un provisional fijo en la misma sesi&oacute;n. El laboratorio prepara el provisional antes de la cirug&iacute;a a partir de la planificaci&oacute;n digital y una f&eacute;rula quir&uacute;rgica a medida dise&ntilde;ada desde el esc&aacute;ner 3D y el CBCT del paciente.</p>
+    <a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Env&iacute;anos tu caso &rarr;</a>
+  </div>
+  <div class="anot">
+    <img src="../img/ferula-cut.png">
+    <span class="lbl r" style="top:18%;right:72%;">Casquillos met&aacute;licos gu&iacute;a</span>
+    <span class="lbl l" style="bottom:22%;left:72%;">Impresi&oacute;n 3D a medida</span>
+  </div>
+</div></section>
+
+<section class="venta"><div class="in14">
+  <span class="eyebrow">Ventajas de la carga inmediata</span>
+  <h2>M&aacute;s comodidad para tu paciente, m&aacute;s control para ti.</h2>
+  <div class="vgrid">
+    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-shield"/></svg></span><div><b>Diente el mismo d&iacute;a</b><span>Provisional fijo listo para colocar tras la cirug&iacute;a.</span></div></div>
+    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-chart"/></svg></span><div><b>Sin esperas</b><span>Sin los meses de espera del m&eacute;todo tradicional.</span></div></div>
+    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-lock"/></svg></span><div><b>M&aacute;xima precisi&oacute;n</b><span>La f&eacute;rula gu&iacute;a cada implante con exactitud.</span></div></div>
+    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-target"/></svg></span><div><b>Cirug&iacute;a m&aacute;s c&oacute;moda</b><span>T&eacute;cnica guiada, m&aacute;s r&aacute;pida y menos invasiva.</span></div></div>
+    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Planificaci&oacute;n digital</b><span>Caso planificado en 3D desde esc&aacute;ner y CBCT.</span></div></div>
+    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-tooth"/></svg></span><div><b>Resultado predecible</b><span>Menos sorpresas en cl&iacute;nica, mejor experiencia.</span></div></div>
+  </div>
+</div></section>
+
+<section class="ej"><div class="in14">
+  <span class="eyebrow">Ejemplos de aplicaci&oacute;n</span>
+  <h2>Flujo digital de cirug&iacute;a guiada.</h2>
+  <p class="sub">De la planificaci&oacute;n 3D al provisional fijo, todo desde el laboratorio.</p>
+  <div class="ejgrid">
+    <div class="ejc"><img src="../img/carga1.jpg"><div><b>Planificaci&oacute;n 3D del caso</b><span>Desde esc&aacute;ner y CBCT.</span></div></div>
+    <div class="ejc"><img src="../img/carga2.jpg"><div><b>Gu&iacute;a quir&uacute;rgica a medida</b><span>Impresa en 3D.</span></div></div>
+    <div class="ejc"><img src="../img/carga3.jpg"><div><b>Fresado guiado de precisi&oacute;n</b><span>Cada implante en su posici&oacute;n.</span></div></div>
+    <div class="ejc"><img src="../img/fija3.jpg"><div><b>Provisional fijo</b><span>El paciente sale con dientes.</span></div></div>
+  </div>
+</div></section>
+
+<section class="flow"><div class="in14">
+  <span class="eyebrow">Un flujo digital, un mejor resultado</span>
+  <h2>Del esc&aacute;ner a la sonrisa.</h2>
+  <div class="fgrid">
+    <div class="f1"><div class="im"><img src="../img/cad-exocad.jpg" style="border-radius:8px"></div><i>01</i><b>Recibimos tu caso</b><span>STL, escaneado o impresi&oacute;n.</span></div>
+    <div class="f1"><div class="im"><img src="../img/cad-wire-azul.png"></div><i>02</i><b>Dise&ntilde;amos en 3D</b><span>Planificaci&oacute;n digital.</span></div>
+    <div class="f1"><div class="im"><img src="../img/fresado-guiado.jpg"></div><i>03</i><b>Fabricamos</b><span>CAD-CAM de alta precisi&oacute;n.</span></div>
+    <div class="f1"><div class="im"><img src="../img/carga-ferula-b.jpg"></div><i>04</i><b>Resultado final</b><span>Est&eacute;tica y funcionalidad.</span></div>
+  </div>
+</div></section>
+
+<div class="cta"><div class="in14"><h2>Conf&iacute;a tu pr&oacute;ximo caso a RB Dental.</h2><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar un caso &rarr;</a><a class="pill line" href="tel:+34913292062">Contactar con el laboratorio</a></div></div>
+<footer><div class="in14"><span>RB dental &middot; Madrid &middot; Servicio a toda Espa&ntilde;a</span><span>91 329 20 62 &middot; info@laboratoriodentalrb.com</span></div></footer>
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+<symbol id="ic-cal2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+<symbol id="ic-truck" viewBox="0 0 24 24"><path d="M2 7h11v9H2zM13 10h5l3 3v3h-8z"/><circle cx="6.5" cy="18.5" r="1.8"/><circle cx="16.5" cy="18.5" r="1.8"/></symbol>
+<symbol id="ic-mon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></symbol>
+<symbol id="ic-diam" viewBox="0 0 24 24"><path d="M6 4h12l4 5-10 11L2 9l4-5Z"/><path d="M2 9h20M9 4l3 5 3-5M7 9l5 11 5-11"/></symbol>
+<symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+<symbol id="ic-tooth" viewBox="0 0 24 24"><path d="M8 3c1.5 0 2.5 1 4 1s2.5-1 4-1c2.4 0 4 1.9 4 4.4 0 4.5-2.5 5-3 8.6-.3 2.2-.8 5-2.3 5-1.4 0-1.2-3-2.7-3s-1.3 3-2.7 3c-1.5 0-2-2.8-2.3-5-.5-3.6-3-4.1-3-8.6C4 4.9 5.6 3 8 3Z"/></symbol>
+<symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></symbol>
+<symbol id="ic-chart" viewBox="0 0 24 24"><path d="M4 20V9M10 20V4M16 20v-8M21 20H3"/></symbol>
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.7 2.7L16.5 9"/></symbol>
+<symbol id="ic-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/></symbol>
+<symbol id="ic-scan" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16"/></symbol>
+<symbol id="ic-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M8.8 8.6c.3-.7.6-.7.9-.7h.7c.2 0 .5.1.7.6.2.6.8 2 .8 2.1 0 .2 0 .3-.1.5l-.5.7c-.1.2-.2.3 0 .6.2.3.8 1.2 1.7 1.9 1.1.9 2 .9 2.3.8.2-.1.4-.4.6-.7.2-.3.4-.3.7-.2.3.1 1.7.8 2 1"/></symbol>
+</svg>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var mb = document.querySelector('.mburger'), mm = document.querySelector('.mmenu');
+  if (mb && mm) mb.addEventListener('click', function () {
+    var open = mm.classList.toggle('open');
+    mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});
+</script>
+</body></html>

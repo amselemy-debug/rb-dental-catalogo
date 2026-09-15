@@ -1,0 +1,273 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>RB Dental &middot; Laboratorio de Pr&oacute;tesis Dental Digital &middot; Madrid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<style>
+.rev { background:var(--soft); }
+.novh { text-align:center; margin-bottom:28px; }
+.novh h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 6px; }
+.novgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; max-width:1250px; margin:0 auto; }
+.novc { background:#fff; border:1px solid var(--line); border-radius:20px; text-align:center; padding:26px 22px; box-shadow:0 12px 30px rgba(10,20,60,.07); text-decoration:none; display:block; }
+.novc .chip2 { display:inline-block; background:linear-gradient(120deg,var(--gold),var(--gold2)); color:var(--obs); font-family:'Montserrat',sans-serif; font-weight:700; font-size:.66rem; letter-spacing:.12em; border-radius:999px; padding:5px 14px; margin-bottom:12px; }
+.novc .nim { height:170px; display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+.novc .nim img { max-height:165px; max-width:100%; object-fit:contain; }
+.novc b { font-family:'Montserrat',sans-serif; color:var(--obs2); font-size:1.02rem; letter-spacing:.05em; display:block; }
+.novc p { color:var(--mut); font-size:.85rem; margin:6px 0 12px; }
+.novc u { text-decoration:none; color:var(--goldd); font-family:'Montserrat',sans-serif; font-weight:600; font-size:.84rem; }
+.pq h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 6px; }
+.pqgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:26px; }
+.pq1 { border:1px solid var(--line); border-radius:18px; padding:22px; background:#fff; box-shadow:0 10px 26px rgba(10,20,60,.05); }
+.pq1 .n { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--gold2); -webkit-text-stroke:1px var(--goldd); font-size:1.9rem; line-height:1; }
+.pq1 b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; margin:8px 0 6px; }
+.pq1 p { color:var(--mut); font-size:.86rem; }
+/* materiales y marcas */
+.mats { }
+.mhead { text-align:center; margin-bottom:28px; }
+.mhead h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 8px; }
+.mgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; max-width:1250px; margin:0 auto 30px; }
+.mc { border:1px solid var(--line); border-top:4px solid var(--gold); border-radius:16px; padding:20px 22px; background:#fff; box-shadow:0 10px 26px rgba(10,20,60,.05); }
+.mc .mim { height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; background:var(--soft); border-radius:12px; padding:10px; }
+.mc .mim img { max-height:135px; max-width:100%; object-fit:contain; }
+.mc b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; margin-bottom:6px; }
+.mc p { color:var(--mut); font-size:.85rem; }
+.logos { display:flex; align-items:center; justify-content:center; gap:38px; flex-wrap:wrap; max-width:1150px; margin:0 auto; padding:18px 0 4px; border-top:1px solid var(--line); }
+.logos img { height:30px; filter:grayscale(1); opacity:.65; }
+.logos span { color:var(--mut); font-size:.78rem; width:100%; text-align:center; font-family:'Montserrat',sans-serif; letter-spacing:.12em; text-transform:uppercase; }
+/* envia tu caso */
+.envio { background:linear-gradient(150deg,var(--obs2),var(--obs)); color:#fff; }
+.envio .eyebrow { color:var(--gold2); }
+.envio h2 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 24px; }
+.egrid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.e1 { border:1px solid rgba(201,168,76,.4); border-radius:18px; padding:22px; background:rgba(255,255,255,.03); }
+.e1 i { font-style:normal; font-family:'Montserrat',sans-serif; font-weight:800; color:var(--gold2); font-size:1.4rem; display:block; margin-bottom:8px; }
+.e1 b { font-family:'Montserrat',sans-serif; display:block; margin-bottom:6px; }
+.e1 p { color:#9aa3bd; font-size:.86rem; }
+.scanline { text-align:center; color:#9aa3bd; font-size:.85rem; margin-top:20px; }
+.scanline b { color:var(--gold2); font-family:'Montserrat',sans-serif; }
+.rhead { text-align:center; margin-bottom:28px; }
+.rhead h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 8px; }
+.gline { display:flex; align-items:center; justify-content:center; gap:10px; font-family:'Montserrat',sans-serif; font-weight:700; color:var(--obs2); }
+.gline .stars { color:#f5b400; letter-spacing:2px; font-size:1.1rem; }
+.gline img { height:24px; }
+.rgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:1250px; margin:0 auto 22px; }
+.rc { background:#fff; border:1px solid var(--line); border-radius:18px; padding:20px 22px; box-shadow:0 10px 26px rgba(10,20,60,.06); }
+.rc .who { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.rc .av { width:38px; height:38px; border-radius:50%; background:linear-gradient(120deg,var(--gold),var(--gold2)); color:var(--obs); font-family:'Montserrat',sans-serif; font-weight:800; display:flex; align-items:center; justify-content:center; }
+.rc b { font-family:'Montserrat',sans-serif; color:var(--obs2); font-size:.9rem; display:block; }
+.rc .st { color:#f5b400; font-size:.85rem; letter-spacing:1px; }
+.rc p { color:#4a5670; font-size:.88rem; }
+.rmore { text-align:center; }
+</style></head><body>
+<div class="topbar">&#9733; Laboratorio de pr&oacute;tesis dental digital &middot; Madrid &middot; Desde 1990 &middot; Servicio en toda Espa&ntilde;a</div>
+<nav class="top"><div class="in">
+  <a class="logo" href="index.html" aria-label="Inicio"><img src="img/logo-rb.png" alt="RB dental &middot; Laboratorio de Pr&oacute;tesis Dental Digital"></a>
+  <span class="sp"></span>
+  <div class="links"><a href="quienes-somos.html">Qui&eacute;nes somos</a>
+    <a href="nuestros-trabajos.html">Nuestros trabajos</a>
+    <a href="como-enviar-un-caso.html">C&oacute;mo enviar un caso</a>
+    <a href="https://tarifas.laboratoriodentalrb.com" target="_blank" rel="noopener">Tarifas</a></div>
+  <a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Cont&aacute;ctanos</a>
+  <button class="mburger" type="button" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mmenu">
+  <a href="index.html">Inicio</a>
+  <a href="quienes-somos.html">Qui&eacute;nes somos</a>
+    <a href="nuestros-trabajos.html">Nuestros trabajos</a>
+    <a href="como-enviar-un-caso.html">C&oacute;mo enviar un caso</a>
+    <a href="https://tarifas.laboratoriodentalrb.com" target="_blank" rel="noopener">Tarifas</a>
+</div></nav>
+
+<header class="hero"><div class="hgrid"></div>
+<div class="in">
+  <div style="flex:1;min-width:0">
+    <span class="eyebrow" style="color:var(--gold2)">Laboratorio Dental RB &middot; Madrid</span>
+    <h1>Todo lo que necesitas <br><i>para tu pr&oacute;ximo caso.</i></h1>
+    <p class="lead">Soluciones prot&eacute;sicas de alta precisi&oacute;n, fabricadas en Madrid para cl&iacute;nicas y odont&oacute;logos de toda Espa&ntilde;a.</p>
+    <div class="ctas"><a class="pill" href="quienes-somos.html">Con&oacute;cenos</a><a class="pill line" href="nuestros-trabajos.html">Nuestros trabajos</a></div>
+    <div class="hstatus">Preparando modelo de trabajo</div>
+  </div>
+  <figure style="margin:0">
+    <div class="hud">
+      <div class="frame"><i></i><i></i><i></i><i></i></div>
+      <div class="slides">
+        <img class="on" src="img/barra-oro-cut.png" alt="Barra de oro y puente ceramico" data-cap="Barra de oro y puente cer&aacute;mico sobre modelo &middot; trabajo real" data-st="Preparando modelo de trabajo">
+        <img src="img/barra-wire-gold.png" alt="Barra Blender del diseno 3D a la pieza real" data-cap="Del dise&ntilde;o 3D a la barra fresada &middot; trabajo real del laboratorio" data-st="Fresando estructura CAD-CAM" loading="lazy">
+        <img src="img/cad-wire-azul.png" alt="Diseno CAD" data-cap="Dise&ntilde;o CAD de rehabilitaci&oacute;n completa fija" data-st="Dise&ntilde;ando caso digital" loading="lazy">
+        <img src="img/cad-exocad.jpg" class="win" alt="Planificacion digital" data-cap="Planificaci&oacute;n digital del caso &middot; flujo exocad" data-st="Escaneando modelo 3D" loading="lazy">
+      </div>
+      <div class="scan" aria-hidden="true"></div>
+      <span class="htag" style="top:22%;left:26%">CAD &middot; 0.02 mm</span>
+      <span class="htag" style="top:68%;left:54%">ZIRCONIO &middot; A2</span>
+    </div>
+    <div class="hudcap" id="hero-cap">Barra de oro y puente cer&aacute;mico sobre modelo &middot; trabajo real</div>
+    <div class="dots" id="hero-dots"></div>
+  </figure>
+</div>
+<div class="hfeats">
+  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-clock"/></svg></span><div><b>Entrega en 4-5 d&iacute;as</b><span>recogida gratuita en Madrid</span></div></div>
+  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-truck"/></svg></span><div><b>Toda Espa&ntilde;a</b><span>servicio nacional</span></div></div>
+  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-mon"/></svg></span><div><b>Tecnolog&iacute;a CAD-CAM</b><span>flujo 100% digital</span></div></div>
+  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Calidad que se ve</b><span>+35 a&ntilde;os de experiencia</span></div></div>
+</div>
+</header>
+
+<section><div class="in14">
+  <div class="novh"><span class="eyebrow">Novedades 2026</span><h2>Soluciones innovadoras para tu cl&iacute;nica.</h2><p class="sub">&Uacute;ltima tecnolog&iacute;a, m&aacute;xima precisi&oacute;n.</p></div>
+  <div class="novgrid">
+    <a class="novc" href="trabajos/blender.html"><span class="chip2">NUEVO 2026</span><span class="nim"><img src="img/blender.jpg" alt="Barra Blender"></span><b>BLENDER</b><p>Estructuras fresadas de alta precisi&oacute;n</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+    <a class="novc" href="trabajos/carga-inmediata.html"><span class="chip2">NUEVO 2026</span><span class="nim"><img src="img/carga-ferula-b.jpg" alt="F&eacute;rula quir&uacute;rgica guiada"></span><b>CARGA INMEDIATA</b><p>Provisional fijo el mismo d&iacute;a de la cirug&iacute;a</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+    <a class="novc" href="trabajos/diseno-de-sonrisa.html"><span class="chip2">NUEVO 2026</span><span class="nim"><img src="img/sonrisa-app.jpg" alt="Dise&ntilde;o digital de sonrisa" style="border-radius:10px"></span><b>DISE&Ntilde;O DE SONRISA</b><p>Est&eacute;tica y funcionalidad en cada caso</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="in14 qs2">
+  <div class="foto"><img src="img/equipo-03.jpg"></div>
+  <div>
+    <span class="eyebrow">Sobre nosotros</span>
+    <h2>M&aacute;s de 30 a&ntilde;os de experiencia como laboratorio dental.</h2>
+    <p>Lo que comenz&oacute; en 1990 como un proyecto profesional de <b>Simon Amselen Garcia</b>, se ha convertido hoy en una realidad empresarial dedicada a dise&ntilde;ar y fabricar todo tipo de pr&oacute;tesis dentales con la &uacute;ltima tecnolog&iacute;a CAD-CAM y los materiales y t&eacute;cnicas m&aacute;s innovadores, logrando la mejor precisi&oacute;n y acabado en cada trabajo.</p>
+    <div class="firma">RB Dental &middot; Simon Amselen</div>
+    <div style="margin-top:18px"><a class="pill" href="quienes-somos.html">Conoce al equipo &rarr;</a></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="in14 sinfin">
+  <span class="eyebrow" style="color:var(--gold2)">Nuestros trabajos</span>
+  <h2>Lo que hacemos</h2>
+  <div class="mat">Fabricamos todo tipo de pr&oacute;tesis dentales en cualquier material: titanio, zirconio, cromo cobalto, sinterizado.<br>Pulsa en cada trabajo para ver qu&eacute; es, sus ventajas y fotos reales de laboratorio.</div>
+  <div class="singrid" style="grid-template-columns:repeat(4,1fr);">
+    <a class="sc" style="text-decoration:none" href="trabajos/protesis-fija.html"><span class="im"><img src="img/fija.jpg"></span><b>Pr&oacute;tesis fija<u>Qu&eacute; es y ventajas &rarr;</u></b></a>
+    <a class="sc" style="text-decoration:none" href="trabajos/all-on.html"><span class="im"><img src="img/allon.jpg"></span><b>All-on-4 / All-on-6<u>Qu&eacute; es y ventajas &rarr;</u></b></a>
+    <a class="sc" style="text-decoration:none" href="trabajos/blender.html"><span class="im"><img src="img/blender.jpg"></span><b>Blender<u>Qu&eacute; es y ventajas &rarr;</u></b></a>
+    <a class="sc" style="text-decoration:none" href="trabajos/carga-inmediata.html"><span class="im"><img src="img/carga-ferula-b.jpg"></span><b>Carga inmediata<u>Qu&eacute; es y ventajas &rarr;</u></b></a>
+    <a class="sc" style="text-decoration:none" href="trabajos/removible.html"><span class="im"><img src="img/removible.jpg"></span><b>Pr&oacute;tesis removibles<u>Qu&eacute; es y ventajas &rarr;</u></b></a>
+    <a class="sc" style="text-decoration:none" href="trabajos/diseno-de-sonrisa.html"><span class="im"><img src="img/sonrisa-app.jpg" style="border-radius:8px"></span><b>Dise&ntilde;o de sonrisa<u>Qu&eacute; es y ventajas &rarr;</u></b></a>
+    <a class="sc" style="text-decoration:none" href="trabajos/ortodoncia.html"><span class="im"><img src="img/ferulas4.jpg"></span><b>Ortodoncia y f&eacute;rulas<u>Qu&eacute; es y ventajas &rarr;</u></b></a>
+    <a class="sc" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border:1.5px solid rgba(201,168,76,.5);box-shadow:none" href="https://tarifas.laboratoriodentalrb.com" target="_blank" rel="noopener"><b style="color:#fff;padding:0 14px 6px">&iquest;Buscas precios?</b><span style="color:var(--gold2);font-family:'Montserrat',sans-serif;font-weight:600;font-size:.82rem">Toda la tarifa 2026 &rarr;</span></a>
+  </div>
+</div></section>
+
+<section class="mats"><div class="in14">
+  <div class="mhead"><span class="eyebrow">Materiales y marcas</span><h2>Materiales de primera, marcas de confianza.</h2><p class="sub">Trabajamos con los mismos materiales y sistemas que exigen las mejores cl&iacute;nicas.</p></div>
+  <div class="mgrid">
+    <div class="mc"><span class="mim"><img src="img/mat-zirconio.jpg" alt="Zirconio"></span><b>Zirconio</b><p>Monol&iacute;tico y estratificado, multicapa de alta translucidez para est&eacute;tica natural.</p></div>
+    <div class="mc"><span class="mim"><img src="img/mat-titanio.jpg" alt="Titanio"></span><b>Titanio</b><p>Estructuras y barras fresadas biocompatibles, ligeras y de m&aacute;xima resistencia.</p></div>
+    <div class="mc"><span class="mim"><img src="img/mat-cromocobalto.jpg" alt="Cromo-cobalto"></span><b>Cromo-cobalto</b><p>Esquel&eacute;ticos y estructuras sinterizadas de gran precisi&oacute;n y durabilidad.</p></div>
+    <div class="mc"><span class="mim"><img src="img/mat-resinas.jpg" alt="Resinas e impresi&oacute;n 3D"></span><b>Resinas e impresi&oacute;n 3D</b><p>Provisionales, f&eacute;rulas, gu&iacute;as quir&uacute;rgicas y modelos de trabajo.</p></div>
+  </div>
+  <div class="logos">
+    <span>Trabajamos con</span>
+    <img src="img/marcas/exocad.png"><img src="img/marcas/itero.png"><img src="img/marcas/medit.png"><img src="img/marcas/ivoclar.png"><img src="img/marcas/dentsply.png"><img src="img/marcas/noritake.png"><img src="img/marcas/bredent.png"><img src="img/marcas/dentaurum.png"><img src="img/marcas/schmidt.png">
+  </div>
+</div></section>
+
+<section class="pq"><div class="in14">
+  <div style="text-align:center"><span class="eyebrow">Por qu&eacute; elegir RB Dental</span><h2 style="text-align:center">Lo que nos diferencia, caso tras caso.</h2><p class="sub" style="text-align:center">Las razones por las que las cl&iacute;nicas nos conf&iacute;an sus casos &mdash; y por las que se quedan.</p></div>
+  <div class="pqgrid">
+    <div class="pq1"><span class="n">01</span><b>M&aacute;s de 30 a&ntilde;os de experiencia</b><p>Tres d&eacute;cadas fabricando pr&oacute;tesis, con Simon Amselen al frente desde 1990.</p></div>
+    <div class="pq1"><span class="n">02</span><b>Plazo fiable, 4-5 d&iacute;as</b><p>Sabes cu&aacute;ndo llega antes de empezar. Sin retrasos que descuadren tu agenda.</p></div>
+    <div class="pq1"><span class="n">03</span><b>Comunicaci&oacute;n directa con el t&eacute;cnico</b><p>Hablas con quien fabrica tu caso, sin intermediarios. Menos repeticiones.</p></div>
+    <div class="pq1"><span class="n">04</span><b>Garant&iacute;a de repeticiones</b><p>Si no ajusta, lo repetimos sin coste. La precisi&oacute;n para que no ocurra; el compromiso para cuando ocurra.</p></div>
+    <div class="pq1"><span class="n">05</span><b>100% flujo digital</b><p>Aceptamos cualquier esc&aacute;ner (3Shape, iTero, Medit) y digitalizamos tu impresi&oacute;n si trabajas en anal&oacute;gico.</p></div>
+    <div class="pq1"><span class="n">06</span><b>Licencia y control de calidad</b><p>Laboratorio autorizado (FP-00602) con revisi&oacute;n de cada trabajo antes de salir.</p></div>
+  </div>
+</div></section>
+
+<section class="envio"><div class="in14">
+  <span class="eyebrow">As&iacute; de f&aacute;cil</span>
+  <h2>Env&iacute;a tu caso en 3 pasos.</h2>
+  <div class="egrid">
+    <div class="e1"><i>01</i><b>Escanea o toma impresi&oacute;n</b><p>Aceptamos archivos STL de cualquier esc&aacute;ner intraoral, o recogemos tu impresi&oacute;n f&iacute;sica.</p></div>
+    <div class="e1"><i>02</i><b>Env&iacute;anos el caso</b><p>Por WhatsApp, email o tu plataforma de esc&aacute;ner. Recogida gratuita en Madrid capital y alrededores.</p></div>
+    <div class="e1"><i>03</i><b>Rec&iacute;belo en 4-5 d&iacute;as</b><p>Trabajo terminado y verificado, entregado en tu cl&iacute;nica. Env&iacute;os a toda Espa&ntilde;a.</p></div>
+  </div>
+  <div class="scanline">Compatibles con <b>iTero</b> &middot; <b>3Shape TRIOS</b> &middot; <b>Medit</b> &middot; cualquier STL &middot; dise&ntilde;o en <b>exocad</b></div>
+  <div style="text-align:center;margin-top:22px"><a class="pill" href="como-enviar-un-caso.html">Ver c&oacute;mo enviar un caso, paso a paso &rarr;</a></div>
+</div></section>
+
+<section class="rev"><div class="in14">
+  <div class="rhead">
+    <span class="eyebrow">Rese&ntilde;as</span>
+    <h2>Lo que dicen las cl&iacute;nicas que trabajan con nosotros.</h2>
+    <div class="gline"><span style="font-size:1.6rem">4,9</span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="color:var(--mut);font-weight:600;font-size:.85rem">&middot; Rese&ntilde;as de Google &middot; conectado a nuestro perfil</span></div>
+  </div>
+  <div class="rgrid">
+    <div class="rc"><div class="who"><span class="av">CD</span><div><b>Cl&iacute;nica Dental (ejemplo)</b><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div></div><p>&ldquo;Trabajos impecables y siempre en plazo. El ajuste de las estructuras es exacto.&rdquo;</p></div>
+    <div class="rc"><div class="who"><span class="av">DR</span><div><b>Dr. (ejemplo)</b><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div></div><p>&ldquo;La carga inmediata con f&eacute;rula guiada nos ha cambiado la consulta. Muy recomendable.&rdquo;</p></div>
+    <div class="rc"><div class="who"><span class="av">OD</span><div><b>Odont&oacute;loga (ejemplo)</b><span class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div></div><p>&ldquo;Comunicaci&oacute;n directa con el laboratorio y una est&eacute;tica de zirconio excelente.&rdquo;</p></div>
+  </div>
+  <div class="rmore"><a class="pill" style="background:none;border:1.5px solid var(--gold);color:var(--goldd) !important" href="https://www.google.com/search?q=RB+Dental+Laboratorio+Madrid+rese%C3%B1as" target="_blank" rel="noopener">Ver todas las rese&ntilde;as en Google &rarr;</a></div>
+</div></section>
+
+<div class="cta"><div class="in14"><h2>&iquest;Tienes un caso? Hablamos.</h2><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">WhatsApp &middot; 680 555 303</a><a class="pill line" href="tel:+34913292062">91 329 20 62</a></div></div>
+<footer><div class="in14"><span>RB dental &middot; Laboratorio de Pr&oacute;tesis Dental Digital &middot; Madrid</span><span>info@laboratoriodentalrb.com &middot; 91 329 20 62</span></div></footer>
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+<symbol id="ic-cal2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+<symbol id="ic-truck" viewBox="0 0 24 24"><path d="M2 7h11v9H2zM13 10h5l3 3v3h-8z"/><circle cx="6.5" cy="18.5" r="1.8"/><circle cx="16.5" cy="18.5" r="1.8"/></symbol>
+<symbol id="ic-mon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></symbol>
+<symbol id="ic-diam" viewBox="0 0 24 24"><path d="M6 4h12l4 5-10 11L2 9l4-5Z"/><path d="M2 9h20M9 4l3 5 3-5M7 9l5 11 5-11"/></symbol>
+<symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+<symbol id="ic-tooth" viewBox="0 0 24 24"><path d="M8 3c1.5 0 2.5 1 4 1s2.5-1 4-1c2.4 0 4 1.9 4 4.4 0 4.5-2.5 5-3 8.6-.3 2.2-.8 5-2.3 5-1.4 0-1.2-3-2.7-3s-1.3 3-2.7 3c-1.5 0-2-2.8-2.3-5-.5-3.6-3-4.1-3-8.6C4 4.9 5.6 3 8 3Z"/></symbol>
+<symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></symbol>
+<symbol id="ic-chart" viewBox="0 0 24 24"><path d="M4 20V9M10 20V4M16 20v-8M21 20H3"/></symbol>
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.7 2.7L16.5 9"/></symbol>
+<symbol id="ic-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/></symbol>
+<symbol id="ic-scan" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16"/></symbol>
+<symbol id="ic-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M8.8 8.6c.3-.7.6-.7.9-.7h.7c.2 0 .5.1.7.6.2.6.8 2 .8 2.1 0 .2 0 .3-.1.5l-.5.7c-.1.2-.2.3 0 .6.2.3.8 1.2 1.7 1.9 1.1.9 2 .9 2.3.8.2-.1.4-.4.6-.7.2-.3.4-.3.7-.2.3.1 1.7.8 2 1"/></symbol>
+</svg>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var mb = document.querySelector('.mburger'), mm = document.querySelector('.mmenu');
+  if (mb && mm) {
+    mb.addEventListener('click', function () {
+      var open = mm.classList.toggle('open');
+      mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+});
+</script>
+<style>
+.hgrid { animation:gridmove 16s linear infinite; }
+@keyframes gridmove { to { background-position:46px 46px; } }
+.hero .slides { position:absolute; inset:24px; }
+.hero .slides img { position:absolute; inset:0; margin:auto; max-width:100%; max-height:100%; object-fit:contain; opacity:0; transition:opacity .9s ease; filter:drop-shadow(0 26px 32px rgba(0,0,0,.55)); }
+.hero .slides img.on { opacity:1; }
+.hero .slides img.win { border-radius:14px; box-shadow:0 20px 50px rgba(0,0,0,.5); filter:none; }
+.hud .scan { animation:sweep 3.8s ease-in-out infinite; }
+@keyframes sweep { 0% { top:6%; } 50% { top:92%; } 100% { top:6%; } }
+.hstatus::after { content:'\258C'; animation:hblink 1s steps(1) infinite; }
+@keyframes hblink { 50% { opacity:0; } }
+.dots { display:flex; justify-content:center; gap:7px; margin-top:8px; }
+.dots button { width:9px; height:9px; border-radius:50%; border:none; background:rgba(201,168,76,.35); cursor:pointer; padding:0; }
+.dots button.on { background:var(--gold2); }
+@media (prefers-reduced-motion: reduce) { .hgrid, .hud .scan, .hstatus::after { animation:none; } }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var slides = document.querySelectorAll('.hero .slides img');
+  var cap = document.getElementById('hero-cap'), dotsBox = document.getElementById('hero-dots');
+  var st = document.querySelector('.hstatus');
+  if (!slides.length || !dotsBox) return;
+  var idx = 0, dots = [];
+  slides.forEach(function (_, i) {
+    var b = document.createElement('button');
+    b.setAttribute('aria-label', 'Imagen ' + (i + 1));
+    if (i === 0) b.classList.add('on');
+    b.addEventListener('click', function () { show(i); });
+    dotsBox.appendChild(b); dots.push(b);
+  });
+  function show(i) {
+    slides[idx].classList.remove('on'); dots[idx].classList.remove('on');
+    idx = i % slides.length;
+    slides[idx].classList.add('on'); dots[idx].classList.add('on');
+    if (cap) cap.innerHTML = slides[idx].getAttribute('data-cap');
+    if (st && slides[idx].getAttribute('data-st')) st.textContent = slides[idx].getAttribute('data-st');
+  }
+  setInterval(function () { show(idx + 1); }, 3800);
+});
+</script>
+</body></html>
