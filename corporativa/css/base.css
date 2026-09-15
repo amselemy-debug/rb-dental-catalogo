@@ -145,6 +145,15 @@ footer .in14 { display:flex; gap:30px; flex-wrap:wrap; justify-content:space-bet
   .logos img { height:22px; }
   footer .in14 { flex-direction:column; align-items:flex-start; gap:8px; }
 }
+@media (max-width:899px) {
+  /* materiales compactos en movil: foto pequena a la izquierda */
+  .mgrid { grid-template-columns:1fr !important; gap:10px; }
+  .mc { display:flex; gap:14px; align-items:center; padding:14px 16px; }
+  .mc .mim { width:86px; height:74px; flex-shrink:0; margin-bottom:0; padding:6px; }
+  .mc .mim img { max-height:62px; }
+  .mc b { margin-bottom:2px; }
+  .mc p { font-size:.8rem; }
+}
 @media (max-width:520px) {
   .hero h1 { font-size:1.9rem; }
   h2.sec, .novh h2, .mhead h2, .rhead h2, .pq h2, .envio h2 { font-size:1.6rem !important; }
