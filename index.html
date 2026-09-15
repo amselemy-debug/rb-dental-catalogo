@@ -207,6 +207,35 @@
         .folleto b { font-family: 'Montserrat', sans-serif; font-size: 0.66rem; color: var(--primary); line-height: 1.25; }
         .folleto-btn { display: block; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.6rem; text-decoration: none; border-radius: 999px; padding: 7px 4px; letter-spacing: 0.04em; }
         .folleto-btn:hover { background: var(--primary-2); }
+        /* Novedades */
+        .novedades { margin: 14px 16px 0; background: #000018; border-radius: 16px; padding: 14px 16px 15px; }
+        .novedades .nv-l { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.22em; color: #e3c76e; }
+        .nv-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .nv-pills a { border: 1px solid rgba(201,168,76,0.55); color: #fff; font-weight: 600; font-size: 0.74rem;
+            padding: 7px 13px; border-radius: 999px; text-decoration: none; }
+        .nv-pills a:hover { background: rgba(201,168,76,0.15); }
+        /* Bloques de presentacion (folleto) */
+        .fintro { margin: 6px 18px 14px; border-radius: 16px; overflow: hidden; border: 1px solid #e3eaf6; background: #fff; }
+        .fi-dark { background: #000018; padding: 18px 18px 16px; color: #fff; display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .fi-chip { display: inline-block; font-size: 0.58rem; letter-spacing: 0.16em; font-weight: 700; color: #e3c76e;
+            border: 1px solid rgba(201,168,76,0.6); padding: 4px 11px; border-radius: 999px; margin-bottom: 9px; }
+        .fi-dark h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.3rem; margin: 0; }
+        .fi-dark .fi-tag { color: #c7cdea; font-size: 0.76rem; margin-top: 6px; line-height: 1.45; max-width: 420px; }
+        .fi-dark .fi-img { flex-shrink: 0; }
+        .fi-dark .fi-img img { width: 130px; height: 104px; object-fit: contain; display: block; }
+        .fi-what { padding: 13px 16px 4px; display: grid; gap: 11px; }
+        .fi-what h4 { font-size: 0.82rem; color: #0f2060; margin: 0 0 3px; }
+        .fi-what h4 i { font-style: normal; color: #a8853b; }
+        .fi-what p { font-size: 0.76rem; line-height: 1.5; color: #4a5268; margin: 0; }
+        .fi-sub { display: block; padding: 10px 16px 0; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.14em; color: #a8853b; text-transform: uppercase; }
+        .fi-vents { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 14px; padding: 11px 16px 13px; }
+        .fi-v { display: flex; gap: 8px; align-items: flex-start; }
+        .fi-v .chk { width: 17px; height: 17px; border-radius: 50%; background: linear-gradient(135deg, #C9A84C, #e3c76e);
+            color: #000018; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+        .fi-v div { font-size: 0.68rem; line-height: 1.35; color: #6b7385; }
+        .fi-v b { display: block; font-size: 0.73rem; color: #0f2060; margin-bottom: 1px; }
+        .fi-pdf { display: inline-block; margin: 0 16px 14px; font-size: 0.72rem; font-weight: 700; color: #a8853b; text-decoration: none; }
+        .fi-pdf:hover { text-decoration: underline; }
         .note { margin: 8px 18px 12px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 9px 13px; font-size: 0.72rem; color: #92400e; }
 
         /* TIEMPOS */
@@ -307,6 +336,22 @@
             .hero .st:first-child { border-left: none; padding-left: 0; }
             .hero .st b { font-size: 1.7rem; }
             .grid { display: none; }
+            .novedades { margin: 18px 0 0; padding: 16px 26px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+            .novedades .nv-pills { margin-top: 0; }
+            .nv-pills a { font-size: 0.85rem; padding: 9px 18px; }
+            .novedades .nv-l { font-size: 0.85rem; }
+            .fi-dark { padding: 24px 26px 22px; }
+            .fi-dark h3 { font-size: 1.7rem; }
+            .fi-dark .fi-tag { font-size: 0.9rem; max-width: 560px; }
+            .fi-dark .fi-img img { width: 190px; height: 150px; }
+            .fi-what { grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px 22px 6px; }
+            .fi-what h4 { font-size: 0.95rem; }
+            .fi-what p { font-size: 0.85rem; }
+            .fi-vents { grid-template-columns: 1fr 1fr 1fr; padding: 13px 22px 16px; }
+            .fi-v div { font-size: 0.78rem; }
+            .fi-v b { font-size: 0.84rem; }
+            .fi-sub { padding: 12px 22px 0; }
+            .fi-pdf { margin: 0 22px 16px; font-size: 0.8rem; }
             .bono { display: flex; justify-content: center; align-items: baseline; gap: 12px; border-radius: 12px; padding: 13px 20px; }
             .bono .star { display: none; }
             .bono div { display: flex; align-items: baseline; gap: 12px; }
@@ -347,6 +392,7 @@
         <nav class="tn-links">
             <a href="#fija">Fija</a>
             <a href="#blender">Blender</a>
+            <a href="#carga">Carga inmediata</a>
             <a href="#removible">Removible</a>
             <a href="#ortodoncia">Ortodoncia</a>
             <a href="#estetica">Est&eacute;tica</a>
@@ -403,6 +449,11 @@
     <circle cx="12" cy="11" r="0.9"/>
     <circle cx="16" cy="12.2" r="0.9"/>
   </symbol>
+  <symbol id="i-carga" viewBox="0 0 24 24">
+    <path d="M8.5 2.8h7l-1.1 3.4H9.6L8.5 2.8Z"/>
+    <path d="M9.4 8.2h5.2M9.8 10.8h4.4M10.2 13.4h3.6M10.6 16h2.8"/>
+    <path d="M11.1 18.4h1.8L12 21.6l-.9-3.2Z"/>
+  </symbol>
   <symbol id="i-star" viewBox="0 0 24 24">
     <path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6L12 16.7l-5.4 2.9 1.1-6-4.5-4.2 6.1-.8L12 3Z"/>
   </symbol>
@@ -432,6 +483,16 @@
         </div>
     </header>
 
+
+    <!-- NOVEDADES -->
+    <div class="novedades fade" id="novedades">
+        <div class="nv-l">NOVEDADES 2026</div>
+        <nav class="nv-pills">
+            <a href="#blender">Sistema Blender</a>
+            <a href="#carga">Carga inmediata</a>
+            <a href="#estetica">Dise&ntilde;o de sonrisa</a>
+        </nav>
+    </div>
     <!-- BUSCADOR -->
     <div class="search-wrap">
         <input type="search" id="buscador" name="filtro-catalogo" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="&#128269;  &iquest;Qu&eacute; trabajo buscas? corona, f&eacute;rula, rebase&hellip;" aria-label="Buscar trabajo">
@@ -602,6 +663,31 @@
         </div>
         <div class="note">&#9888; La enc&iacute;a rosa se cobra aparte: 25 &euro; por pieza</div>
         <span class="ap" id="estetica" style="scroll-margin-top:14px">Est&eacute;tica</span>
+        <div class="fintro">
+            <div class="fi-dark">
+                <div>
+                    <span class="fi-chip">EST&Eacute;TICA DENTAL &middot; LABORATORIO</span>
+                    <h3>Dise&ntilde;o de sonrisa</h3>
+                    <div class="fi-tag">Tu sonrisa ideal, dise&ntilde;ada digitalmente y probada antes de empezar.</div>
+                </div>
+                <div class="fi-img"><img src="img/sonrisa-hero.jpg" alt="Dise&ntilde;o digital de sonrisa" loading="lazy"></div>
+            </div>
+            <div class="fi-what">
+                <div><h4>&iquest;Qu&eacute; es el <i>dise&ntilde;o digital de sonrisa</i>?</h4>
+                <p>Dise&ntilde;amos tu sonrisa en el ordenador a partir de tus fotos y un esc&aacute;ner 3D. Vemos juntos la forma, el tama&ntilde;o y la posici&oacute;n ideal de tus dientes antes de empezar.</p></div>
+                <div><h4>&iquest;Qu&eacute; es el <i>Mock-up</i>?</h4>
+                <p>Una prueba de tu nueva sonrisa colocada sobre tus dientes, sin tallar. Te la pruebas en la boca y ves el resultado en el espejo antes de decidir.</p></div>
+            </div>
+            <span class="fi-sub">Ventajas para ti</span>
+            <div class="fi-vents">
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Ves el resultado antes</b>Pruebas tu nueva sonrisa antes de empezar.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Dise&ntilde;o a tu medida</b>Pensado para tu cara y tu forma de sonre&iacute;r.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Sin sorpresas</b>Sabes c&oacute;mo quedar&aacute; y qu&eacute; cuesta desde el inicio.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>M&iacute;nimamente invasivo</b>Con carillas respetamos tu diente natural.</div></div>
+            </div>
+            <a class="fi-pdf" href="folletos/folleto-diseno-sonrisa-2026.pdf" target="_blank">Descargar folleto Dise&ntilde;o de sonrisa (PDF) &rsaquo;</a>
+        </div>
+        <div class="gal"><figure><a href="img/sonrisa-paso1.jpg" target="_blank"><img src="img/sonrisa-paso1.jpg" alt="Paso 1: sonrisa inicial" loading="lazy"></a><figcaption>1 &middot; Sonrisa inicial</figcaption></figure><figure><a href="img/sonrisa-paso2.jpg" target="_blank"><img src="img/sonrisa-paso2.jpg" alt="Paso 2: dise&ntilde;amos tu sonrisa" loading="lazy"></a><figcaption>2 &middot; Dise&ntilde;amos tu sonrisa</figcaption></figure><figure><a href="img/sonrisa-paso3.jpg" target="_blank"><img src="img/sonrisa-paso3.jpg" alt="Paso 3: preparamos el mock-up" loading="lazy"></a><figcaption>3 &middot; Preparamos el mock-up</figcaption></figure><figure><a href="img/sonrisa-paso4.jpg" target="_blank"><img src="img/sonrisa-paso4.jpg" alt="Paso 4: tu nueva sonrisa" loading="lazy"></a><figcaption>4 &middot; &iexcl;Tu nueva sonrisa!</figcaption></figure></div>
         <div class="gal"><figure><a href="img/estetica.jpg" target="_blank"><img src="img/estetica.jpg" alt="Incrustaciones" loading="lazy"></a><figcaption>Incrustaciones</figcaption></figure><figure><a href="img/fija.jpg" target="_blank"><img src="img/fija.jpg" alt="Coronas y carillas" loading="lazy"></a><figcaption>Coronas y carillas</figcaption></figure></div>
         <div class="rows" style="padding-bottom:16px">
             <div class="r"><span>Carillas de Composite sin cer&aacute;mica</span><b>60,00 &euro;</b></div>
@@ -621,6 +707,30 @@
     <!-- BLENDER -->
     <section class="card fade" id="blender">
         <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-blender"/></svg></div><div class="t"><b>Blender</b><span>Barras fresadas &middot; sobre implantes y sobre diente</span></div></div>
+        <div class="fintro">
+            <div class="fi-dark">
+                <div>
+                    <span class="fi-chip">SISTEMA &middot; PR&Oacute;TESIS FIJA FRESADA</span>
+                    <h3>BLENDER</h3>
+                    <div class="fi-tag">Barra fresada de titanio a medida para tus rehabilitaciones fijas, sobre implantes o sobre dientes.</div>
+                </div>
+                <div class="fi-img"><img src="img/blender-hero.jpg" alt="Barra Blender sobredentadura" loading="lazy"></div>
+            </div>
+            <div class="fi-what">
+                <div><h4>&iquest;Qu&eacute; es el sistema <i>Blender</i>?</h4>
+                <p>La barra Blender es la estructura interna, dise&ntilde;ada en CAD-CAM y fresada en titanio, que soporta la pr&oacute;tesis fija de tus pacientes. Combina la resistencia del titanio con la est&eacute;tica del zirconio, con ajuste pasivo y entrega en 4-5 d&iacute;as.</p></div>
+            </div>
+            <span class="fi-sub">Barra Blender para estructuras de zirconio</span>
+            <div class="fi-vents">
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>M&aacute;xima resistencia</b>Refuerzo interno para una mayor seguridad estructural.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Mejor distribuci&oacute;n de cargas</b>Transmisi&oacute;n m&aacute;s equilibrada de las fuerzas masticatorias.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Mayor estabilidad</b>Estructura r&iacute;gida y precisa para rehabilitaciones extensas.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Alta precisi&oacute;n</b>Fabricaci&oacute;n mecanizada para un ajuste preciso y fiable.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Menor riesgo de fracturas</b>Refuerzo adicional a la estructura de zirconio.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Rehabilitaciones completas</b>Resistencia estructural con la est&eacute;tica del zirconio.</div></div>
+            </div>
+            <a class="fi-pdf" href="folletos/folleto-blender-2026.pdf" target="_blank">Descargar folleto Blender (PDF) &rsaquo;</a>
+        </div>
         <span class="ap">Barra Blender &middot; sobre implantes</span>
         <div class="gal"><figure><a href="img/blender.jpg" target="_blank"><img src="img/blender.jpg" alt="Barra Blender" loading="lazy"></a><figcaption>Barra Blender</figcaption></figure><figure><a href="img/blender2.jpg" target="_blank"><img src="img/blender2.jpg" alt="Barra + estructura" loading="lazy"></a><figcaption>Barra + estructura</figcaption></figure><figure><a href="img/blender3.jpg" target="_blank"><img src="img/blender3.jpg" alt="Barra anodizada" loading="lazy"></a><figcaption>Barra anodizada</figcaption></figure><figure><a href="img/blender4.jpg" target="_blank"><img src="img/blender4.jpg" alt="Barra Blender Ti" loading="lazy"></a><figcaption>Barra Blender Ti</figcaption></figure><figure><a href="img/blender5.jpg" target="_blank"><img src="img/blender5.jpg" alt="Barra Blender sobredentadura" loading="lazy"></a><figcaption>Barra sobredentadura</figcaption></figure></div>
         <div class="rows">
@@ -643,6 +753,44 @@
             <div class="r"><span>Barra Blender fresada sobre 8 piezas*</span><b>432,00 &euro;</b></div>
         </div>
         <div class="note">* El precio incluye la barra Blender fresada + el anodizado y pulido de la estructura de titanio + Divisi&oacute;n Blender (extrusi&oacute;n)</div>
+    </section>
+
+    <!-- CARGA INMEDIATA -->
+    <section class="card fade" id="carga">
+        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-carga"/></svg></div><div class="t"><b>Carga inmediata</b><span>Implantolog&iacute;a &middot; cirug&iacute;a guiada</span></div></div>
+        <div class="fintro">
+            <div class="fi-dark">
+                <div>
+                    <span class="fi-chip">NUEVO &middot; IMPLANTOLOG&Iacute;A</span>
+                    <h3>Carga inmediata</h3>
+                    <div class="fi-tag">Provisional fijo el mismo d&iacute;a de la cirug&iacute;a, con planificaci&oacute;n digital y f&eacute;rula quir&uacute;rgica a medida.</div>
+                </div>
+                <div class="fi-img"><img src="img/carga-hero.jpg" alt="F&eacute;rula quir&uacute;rgica a medida" loading="lazy"></div>
+            </div>
+            <div class="fi-what">
+                <div><h4>&iquest;Qu&eacute; es la <i>carga inmediata</i>?</h4>
+                <p>Permite colocar el implante y un provisional fijo en la misma sesi&oacute;n. El laboratorio prepara el provisional antes de la cirug&iacute;a a partir de la planificaci&oacute;n digital, para que el paciente salga de la cl&iacute;nica con dientes.</p></div>
+                <div><h4>&iquest;Qu&eacute; es la <i>f&eacute;rula quir&uacute;rgica</i>?</h4>
+                <p>Una gu&iacute;a a medida dise&ntilde;ada desde el esc&aacute;ner 3D y el CBCT del paciente que marca la posici&oacute;n exacta de cada implante. M&aacute;xima precisi&oacute;n y una cirug&iacute;a m&aacute;s r&aacute;pida y predecible.</p></div>
+            </div>
+            <span class="fi-sub">Ventajas para tu cl&iacute;nica</span>
+            <div class="fi-vents">
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Diente el mismo d&iacute;a</b>Provisional fijo listo para colocar tras la cirug&iacute;a.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Sin esperas</b>Sin los meses de espera del m&eacute;todo tradicional.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>M&aacute;xima precisi&oacute;n</b>La f&eacute;rula gu&iacute;a cada implante con exactitud.</div></div>
+                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Cirug&iacute;a m&aacute;s c&oacute;moda</b>T&eacute;cnica guiada, m&aacute;s r&aacute;pida y menos invasiva.</div></div>
+            </div>
+            <a class="fi-pdf" href="folletos/folleto-carga-inmediata-2026.pdf" target="_blank">Descargar folleto Carga inmediata (PDF) &rsaquo;</a>
+        </div>
+        <div class="gal"><figure><a href="img/carga1.jpg" target="_blank"><img src="img/carga1.jpg" alt="Planificaci&oacute;n 3D del caso" loading="lazy"></a><figcaption>Planificaci&oacute;n 3D del caso</figcaption></figure><figure><a href="img/carga2.jpg" target="_blank"><img src="img/carga2.jpg" alt="Gu&iacute;a quir&uacute;rgica a medida" loading="lazy"></a><figcaption>Gu&iacute;a quir&uacute;rgica a medida</figcaption></figure><figure><a href="img/carga3.jpg" target="_blank"><img src="img/carga3.jpg" alt="Fresado guiado de precisi&oacute;n" loading="lazy"></a><figcaption>Fresado guiado</figcaption></figure></div>
+        <div class="rows">
+            <div class="r"><span>F&eacute;rula quir&uacute;rgica guiada &middot; 1 implante</span><b>180,00 &euro;</b></div>
+            <div class="r"><span>F&eacute;rula quir&uacute;rgica guiada &middot; 2 implantes</span><b>240,00 &euro;</b></div>
+            <div class="r"><span>F&eacute;rula quir&uacute;rgica guiada &middot; 3 implantes</span><b>294,00 &euro;</b></div>
+            <div class="r"><span>F&eacute;rula quir&uacute;rgica guiada &middot; 4 implantes</span><b>348,00 &euro;</b></div>
+            <div class="r"><span>F&eacute;rula quir&uacute;rgica guiada &middot; 5 o m&aacute;s implantes</span><b>408,00 &euro;</b></div>
+        </div>
+        <div class="note">&#8505; El precio de cada gu&iacute;a incluye: estudio y an&aacute;lisis de datos, planificaci&oacute;n del caso, confecci&oacute;n digital e impresi&oacute;n de la gu&iacute;a quir&uacute;rgica.</div>
     </section>
 
     <!-- REMOVIBLE -->
@@ -811,11 +959,11 @@
             });
             card.style.display = (q && vis === 0) ? 'none' : '';
             total += vis;
-            card.querySelectorAll('.ap, .discount-line, .note, .offer-grid, .allon-label, .gal, .galwrap').forEach(function (el) {
+            card.querySelectorAll('.ap, .discount-line, .note, .offer-grid, .allon-label, .gal, .galwrap, .fintro').forEach(function (el) {
                 el.style.display = q ? 'none' : '';
             });
         });
-        document.querySelectorAll('#accesos, .bono, .intro, #mas-pedidos').forEach(function (el) { el.style.display = q ? 'none' : ''; });
+        document.querySelectorAll('#accesos, .bono, .intro, #mas-pedidos, #novedades').forEach(function (el) { el.style.display = q ? 'none' : ''; });
         sinResultados.style.display = (q && total === 0) ? 'block' : 'none';
     });
 
@@ -859,6 +1007,7 @@
             '<a href="#fija"><span>Pr\u00f3tesis Fija</span><b>37</b></a>' +
             '<a href="#allon"><span>Ofertas All-on</span><b>-25/31%</b></a>' +
             '<a href="#blender"><span>Blender</span><b>14</b></a>' +
+            '<a href="#carga"><span>Carga inmediata</span><b>5</b></a>' +
             '<a href="#removible"><span>Pr\u00f3tesis Removible</span><b>20</b></a>' +
             '<a href="#ortodoncia"><span>Ortodoncia</span><b>47</b></a>' +
             '<a href="#estetica"><span>Est\u00e9tica</span><b>11</b></a>' +
