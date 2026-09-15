@@ -58,6 +58,49 @@
 .f1 i { font-style:normal; font-family:'Montserrat',sans-serif; font-weight:800; color:var(--goldd); font-size:.95rem; }
 .f1 b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; font-size:.95rem; }
 .f1 span { color:var(--mut); font-size:.8rem; }
+/* panel que-es estilo tarifas */
+.pres { border:1px solid var(--line); border-radius:20px; overflow:hidden; max-width:1250px; margin:0 auto; box-shadow:0 14px 36px rgba(10,20,60,.07); }
+.pres .ph { background:linear-gradient(150deg,var(--obs2),var(--obs)); color:#fff; padding:26px 30px; display:flex; justify-content:space-between; align-items:center; gap:22px; }
+.pres .chip { display:inline-block; font-family:'Montserrat',sans-serif; font-size:.64rem; letter-spacing:.16em; font-weight:700; color:var(--gold2); border:1px solid rgba(201,168,76,.6); padding:4px 12px; border-radius:999px; margin-bottom:10px; }
+.pres .ph h3 { color:#fff; font-family:'Montserrat',sans-serif; font-size:1.8rem; font-weight:800; letter-spacing:-.01em; }
+.pres .ph p { color:#c7cdea; font-size:.92rem; margin-top:8px; max-width:560px; line-height:1.6; }
+.pres .ph .im { flex-shrink:0; background:#fff; border-radius:16px; padding:10px; width:260px; }
+.pres .ph .im img { width:100%; height:160px; object-fit:contain; display:block; }
+.pres .body { padding:22px 26px 8px; }
+.pres .que.two { display:grid; grid-template-columns:1fr 1fr; gap:0 30px; }
+.pres .que h4 { font-family:'Montserrat',sans-serif; color:var(--obs2); font-size:1.12rem; margin-bottom:6px; }
+.pres .que h4 em { font-style:normal; color:var(--gold); }
+.pres .que p { color:var(--mut); font-size:.94rem; line-height:1.7; margin-bottom:14px; }
+.pres .que p b { color:var(--goldd); }
+.vents { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; padding:6px 26px 20px; }
+.vent { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; }
+.vent .vt { width:36px; height:36px; border-radius:10px; background:var(--obs); color:var(--gold2); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-weight:800; }
+.vent b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; font-size:.9rem; margin-bottom:2px; }
+.vent span { color:var(--mut); font-size:.8rem; line-height:1.5; }
+.flow2 { margin:0 26px 24px; background:linear-gradient(150deg,var(--obs2),var(--obs)); border-radius:12px; padding:14px 20px; }
+.flow2 b { display:block; font-family:'Montserrat',sans-serif; font-weight:700; font-size:.68rem; letter-spacing:.14em; color:var(--gold2); margin-bottom:5px; }
+.flow2 p { color:#dfe4f5; font-size:.88rem; line-height:1.55; }
+/* tipos y materiales */
+.tipos { background:var(--soft); }
+.tipos h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 24px; }
+.tpgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.tp { background:#fff; border:1px solid var(--line); border-top:4px solid var(--gold); border-radius:16px; padding:22px; }
+.tp b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; margin-bottom:6px; }
+.tp p { color:var(--mut); font-size:.88rem; margin-bottom:10px; }
+.tp .tag { display:inline-block; background:#fbf5e0; border:1px solid #eadfbe; color:#7c6425; border-radius:999px; padding:3px 12px; font-size:.72rem; font-family:'Montserrat',sans-serif; font-weight:700; margin-right:6px; }
+/* tiempos */
+.tiempos { background:linear-gradient(120deg,var(--goldd),var(--gold2) 45%,var(--goldd)); padding:38px 44px; }
+.tiempos .in14 { display:flex; gap:34px; align-items:center; flex-wrap:wrap; }
+.tiempos h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs); font-size:1.5rem; flex:1; min-width:240px; }
+.tstep { background:rgba(0,0,24,.88); border-radius:14px; padding:14px 20px; color:#fff; }
+.tstep b { font-family:'Montserrat',sans-serif; color:var(--gold2); display:block; font-size:1.05rem; }
+.tstep span { font-size:.8rem; color:#c9cfe2; }
+/* faq */
+.faq h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 20px; }
+.fq { border:1px solid var(--line); border-radius:14px; padding:18px 22px; margin-bottom:12px; background:#fff; }
+.fq b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; margin-bottom:6px; }
+.fq b::before { content:'? '; color:var(--goldd); font-weight:800; }
+.fq p { color:#4a5670; font-size:.92rem; }
 </style></head><body>
 <div class="topbar">Laboratorio de pr&oacute;tesis dental digital &middot; Madrid &middot; Desde 1990</div>
 <nav class="top"><div class="in">
@@ -85,8 +128,8 @@
     <div class="bc">Inicio &rsaquo; Nuestros trabajos &rsaquo; <b>Pr&oacute;tesis fija</b></div>
     <span class="eyebrow" style="color:var(--gold2)">Pr&oacute;tesis fija &middot; Laboratorio</span>
     <h1>PR&Oacute;TESIS FIJA</h1>
-    <div class="sub1">Coronas y puentes de zirconio</div>
-    <p class="d">Sobre diente y sobre implante. Dise&ntilde;o digital, fresado de precisi&oacute;n y acabado artesanal con el color de cada paciente.</p>
+    <div class="sub1">Coronas y puentes de alta precisi&oacute;n</div>
+    <p class="d">Coronas y puentes de zirconio y metal-porcelana, dise&ntilde;ados en CAD-CAM y terminados a mano, pieza a pieza.</p>
     <div class="ctas"><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar un caso &rarr;</a><a class="pill line" href="../como-enviar-un-caso.html">C&oacute;mo enviar un caso</a></div>
   </div>
   <div class="im"><img src="../img/fija.jpg"></div>
@@ -100,30 +143,37 @@
 </div></div>
 </header>
 
-<section><div class="in14 que2">
-  <div class="tx">
-    <span class="eyebrow">&iquest;Qu&eacute; es la pr&oacute;tesis fija?</span>
-    <h2>Coronas y puentes que restauran funci&oacute;n y est&eacute;tica.</h2>
-    <p>Coronas y puentes fijos fabricados en zirconio monol&iacute;tico o estratificado, sobre diente natural o sobre implante. Escaneado del caso, dise&ntilde;o CAD de la anatom&iacute;a, fresado y acabado a mano por nuestros t&eacute;cnicos ceramistas.</p>
-    <a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Env&iacute;anos tu caso &rarr;</a>
+<section><div class="in14">
+<div class="pres">
+  <div class="ph"><div>
+    <span class="chip">PR&Oacute;TESIS FIJA &middot; LABORATORIO</span>
+    <h3>M&aacute;xima precisi&oacute;n de ajuste y est&eacute;tica natural.</h3>
+    <p>Coronas y puentes de zirconio y metal-porcelana: dise&ntilde;o digital, fresado de precisi&oacute;n y <b style="color:var(--gold2)">acabado a mano</b> por t&eacute;cnicos ceramistas.</p>
+  </div><div class="im"><img src="../img/fija.jpg" alt="Pr&oacute;tesis fija"></div></div>
+  <div class="body"><div class="que two">
+    <div><h4>&iquest;Qu&eacute; es la pr&oacute;tesis fija<em>?</em></h4>
+    <p>Coronas y puentes fijos sobre diente o sobre implante, en zirconio monol&iacute;tico, estratificado o metal-porcelana. Restauran funci&oacute;n y est&eacute;tica con <b>m&aacute;xima durabilidad</b>.</p></div>
+    <div><h4>&iquest;C&oacute;mo lo hacemos<em>?</em></h4>
+    <p>Escaneado del caso, dise&ntilde;o CAD de la anatom&iacute;a, fresado y acabado artesanal. <b>Maquillaje y caracterizaci&oacute;n incluidos</b> sin coste adicional.</p></div>
+  </div></div>
+  <div class="vents">
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Est&eacute;tica natural</b><span>Color y translucidez a medida de cada paciente.</span></div></div>
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Ajuste preciso</b><span>Dise&ntilde;o y fresado digital con tolerancias m&iacute;nimas.</span></div></div>
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>M&aacute;xima resistencia</b><span>Zirconio monol&iacute;tico para la zona posterior.</span></div></div>
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Maquillaje incluido</b><span>Caracterizaci&oacute;n natural sin coste adicional.</span></div></div>
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Prueba previa</b><span>De metal o zirconio en casos extensos o exigentes.</span></div></div>
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Sobre diente e implante</b><span>Unitarias, puentes y arcadas completas.</span></div></div>
   </div>
-  <div class="anot">
-    <img src="../img/fija-cut.png">
-    <span class="lbl r" style="top:18%;right:72%;">Zirconio multicapa</span>
-    <span class="lbl l" style="bottom:22%;left:72%;">Anatom&iacute;a y color a medida</span>
-  </div>
+</div>
 </div></section>
 
-<section class="venta"><div class="in14">
-  <span class="eyebrow">Ventajas de nuestra pr&oacute;tesis fija</span>
-  <h2>Est&eacute;tica que no se distingue del diente natural.</h2>
-  <div class="vgrid">
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-shield"/></svg></span><div><b>Est&eacute;tica natural</b><span>Color y translucidez a medida de cada paciente.</span></div></div>
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-chart"/></svg></span><div><b>Ajuste preciso</b><span>Dise&ntilde;o y fresado digital con tolerancias m&iacute;nimas.</span></div></div>
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-lock"/></svg></span><div><b>M&aacute;xima resistencia</b><span>Zirconio de alta gama para larga durabilidad.</span></div></div>
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-target"/></svg></span><div><b>Biocompatible</b><span>Materiales certificados y seguros en boca.</span></div></div>
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Sobre diente e implante</b><span>Unitarias, puentes y rehabilitaciones completas.</span></div></div>
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-tooth"/></svg></span><div><b>Entrega en 4-5 d&iacute;as</b><span>Con recogida gratuita en Madrid.</span></div></div>
+<section class="tipos"><div class="in14">
+  <span class="eyebrow">Qu&eacute; fabricamos &middot; con qu&eacute; materiales</span>
+  <h2>Una corona para cada caso.</h2>
+  <div class="tpgrid">
+    <div class="tp"><b>Zirconio monol&iacute;tico &#11088;</b><p>La m&aacute;s pedida: m&aacute;xima resistencia para molares y premolares.</p><span class="tag">ZIRCONIO</span></div>
+    <div class="tp"><b>Zirconio estratificado</b><p>Para el sector anterior, cuando manda la est&eacute;tica.</p><span class="tag">ZIRCONIO</span></div>
+    <div class="tp"><b>Metal-porcelana y provisionales</b><p>La soluci&oacute;n cl&aacute;sica, m&aacute;s PMMA, mu&ntilde;ones, Maryland y ataches.</p><span class="tag">METAL-PORCELANA</span><span class="tag">PMMA</span></div>
   </div>
 </div></section>
 
@@ -150,8 +200,24 @@
   </div>
 </div></section>
 
+<div class="tiempos"><div class="in14">
+  <h2>Tiempos de entrega</h2>
+  <div class="tstep"><b>4 d&iacute;as</b><span>prueba de metal o zirconio</span></div>
+  <div class="tstep"><b>5 d&iacute;as</b><span>acabado en bizcocho + recogida y entrega</span></div>
+  <div class="tstep"><b>Madrid gratis</b><span>recogida y entrega &middot; env&iacute;os a toda Espa&ntilde;a</span></div>
+</div></div>
+
+<section class="faq"><div class="in14" style="max-width:1000px">
+  <span class="eyebrow">Preguntas frecuentes</span>
+  <h2>Lo que preguntan los dentistas.</h2>
+  <div class="fq"><b>&iquest;Zirconio monol&iacute;tico o estratificado para un molar?</b><p>Para un molar recomendamos monol&iacute;tico: m&aacute;xima resistencia frente a la carga masticatoria. El estratificado se reserva para el sector anterior, donde manda la est&eacute;tica.</p></div>
+  <div class="fq"><b>&iquest;Inclu&iacute;s el maquillaje y la caracterizaci&oacute;n?</b><p>S&iacute;, todas nuestras coronas y puentes incluyen maquillaje y caracterizaci&oacute;n para un resultado natural, sin coste adicional.</p></div>
+  <div class="fq"><b>&iquest;Puedo pedir una prueba antes del acabado?</b><p>S&iacute;, puedes solicitar prueba de metal o zirconio antes del acabado final, recomendable en casos extensos o de alta exigencia est&eacute;tica.</p></div>
+  <div class="fq"><b>&iquest;C&oacute;mo os env&iacute;o el caso?</b><p>Escanea con tu intraoral y s&uacute;benos el STL con fotos y prescripci&oacute;n. &iquest;Trabajas en anal&oacute;gico? Recogemos la impresi&oacute;n gratis en Madrid y la digitalizamos nosotros.</p></div>
+</div></section>
+
 <div class="cta"><div class="in14"><h2>Conf&iacute;a tu pr&oacute;ximo caso a RB Dental.</h2><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar un caso &rarr;</a><a class="pill line" href="tel:+34913292062">Contactar con el laboratorio</a></div></div>
-<footer><div class="in14"><span>RB dental &middot; Madrid &middot; Servicio a toda Espa&ntilde;a</span><span>91 329 20 62 &middot; info@laboratoriodentalrb.com</span></div></footer>
+<footer><div class="in14"><span>RB dental &middot; C/ Canal de Suez 42, 28042 Madrid &middot; Licencia sanitaria FP-00602</span><span>91 329 20 62 &middot; laboratorio@rbdental.es</span></div></footer>
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
 <symbol id="ic-cal2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
 <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>

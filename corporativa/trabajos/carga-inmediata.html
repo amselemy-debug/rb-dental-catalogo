@@ -58,6 +58,49 @@
 .f1 i { font-style:normal; font-family:'Montserrat',sans-serif; font-weight:800; color:var(--goldd); font-size:.95rem; }
 .f1 b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; font-size:.95rem; }
 .f1 span { color:var(--mut); font-size:.8rem; }
+/* panel que-es estilo tarifas */
+.pres { border:1px solid var(--line); border-radius:20px; overflow:hidden; max-width:1250px; margin:0 auto; box-shadow:0 14px 36px rgba(10,20,60,.07); }
+.pres .ph { background:linear-gradient(150deg,var(--obs2),var(--obs)); color:#fff; padding:26px 30px; display:flex; justify-content:space-between; align-items:center; gap:22px; }
+.pres .chip { display:inline-block; font-family:'Montserrat',sans-serif; font-size:.64rem; letter-spacing:.16em; font-weight:700; color:var(--gold2); border:1px solid rgba(201,168,76,.6); padding:4px 12px; border-radius:999px; margin-bottom:10px; }
+.pres .ph h3 { color:#fff; font-family:'Montserrat',sans-serif; font-size:1.8rem; font-weight:800; letter-spacing:-.01em; }
+.pres .ph p { color:#c7cdea; font-size:.92rem; margin-top:8px; max-width:560px; line-height:1.6; }
+.pres .ph .im { flex-shrink:0; background:#fff; border-radius:16px; padding:10px; width:260px; }
+.pres .ph .im img { width:100%; height:160px; object-fit:contain; display:block; }
+.pres .body { padding:22px 26px 8px; }
+.pres .que.two { display:grid; grid-template-columns:1fr 1fr; gap:0 30px; }
+.pres .que h4 { font-family:'Montserrat',sans-serif; color:var(--obs2); font-size:1.12rem; margin-bottom:6px; }
+.pres .que h4 em { font-style:normal; color:var(--gold); }
+.pres .que p { color:var(--mut); font-size:.94rem; line-height:1.7; margin-bottom:14px; }
+.pres .que p b { color:var(--goldd); }
+.vents { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; padding:6px 26px 20px; }
+.vent { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start; }
+.vent .vt { width:36px; height:36px; border-radius:10px; background:var(--obs); color:var(--gold2); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-weight:800; }
+.vent b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; font-size:.9rem; margin-bottom:2px; }
+.vent span { color:var(--mut); font-size:.8rem; line-height:1.5; }
+.flow2 { margin:0 26px 24px; background:linear-gradient(150deg,var(--obs2),var(--obs)); border-radius:12px; padding:14px 20px; }
+.flow2 b { display:block; font-family:'Montserrat',sans-serif; font-weight:700; font-size:.68rem; letter-spacing:.14em; color:var(--gold2); margin-bottom:5px; }
+.flow2 p { color:#dfe4f5; font-size:.88rem; line-height:1.55; }
+/* tipos y materiales */
+.tipos { background:var(--soft); }
+.tipos h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 24px; }
+.tpgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.tp { background:#fff; border:1px solid var(--line); border-top:4px solid var(--gold); border-radius:16px; padding:22px; }
+.tp b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; margin-bottom:6px; }
+.tp p { color:var(--mut); font-size:.88rem; margin-bottom:10px; }
+.tp .tag { display:inline-block; background:#fbf5e0; border:1px solid #eadfbe; color:#7c6425; border-radius:999px; padding:3px 12px; font-size:.72rem; font-family:'Montserrat',sans-serif; font-weight:700; margin-right:6px; }
+/* tiempos */
+.tiempos { background:linear-gradient(120deg,var(--goldd),var(--gold2) 45%,var(--goldd)); padding:38px 44px; }
+.tiempos .in14 { display:flex; gap:34px; align-items:center; flex-wrap:wrap; }
+.tiempos h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs); font-size:1.5rem; flex:1; min-width:240px; }
+.tstep { background:rgba(0,0,24,.88); border-radius:14px; padding:14px 20px; color:#fff; }
+.tstep b { font-family:'Montserrat',sans-serif; color:var(--gold2); display:block; font-size:1.05rem; }
+.tstep span { font-size:.8rem; color:#c9cfe2; }
+/* faq */
+.faq h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 20px; }
+.fq { border:1px solid var(--line); border-radius:14px; padding:18px 22px; margin-bottom:12px; background:#fff; }
+.fq b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; margin-bottom:6px; }
+.fq b::before { content:'? '; color:var(--goldd); font-weight:800; }
+.fq p { color:#4a5670; font-size:.92rem; }
 </style></head><body>
 <div class="topbar">Laboratorio de pr&oacute;tesis dental digital &middot; Madrid &middot; Desde 1990</div>
 <nav class="top"><div class="in">
@@ -95,35 +138,42 @@
   <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-tooth"/></svg></span><b>Diente el<br>mismo d&iacute;a</b></div>
   <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-target"/></svg></span><b>M&aacute;xima<br>precisi&oacute;n</b></div>
   <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-scan"/></svg></span><b>Sin<br>esperas</b></div>
-  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-clock"/></svg></span><b>Entrega en<br>4-5 d&iacute;as</b></div>
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-clock"/></svg></span><b>Cirug&iacute;a<br>guiada</b></div>
   <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-gear"/></svg></span><b>Tecnolog&iacute;a<br>CAD-CAM</b></div>
 </div></div>
 </header>
 
-<section><div class="in14 que2">
-  <div class="tx">
-    <span class="eyebrow">&iquest;Qu&eacute; es la carga inmediata?</span>
-    <h2>El implante y el provisional fijo, en la misma sesi&oacute;n.</h2>
-    <p>Permite colocar el implante y un provisional fijo en la misma sesi&oacute;n. El laboratorio prepara el provisional antes de la cirug&iacute;a a partir de la planificaci&oacute;n digital y una f&eacute;rula quir&uacute;rgica a medida dise&ntilde;ada desde el esc&aacute;ner 3D y el CBCT del paciente.</p>
-    <a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Env&iacute;anos tu caso &rarr;</a>
+<section><div class="in14">
+<div class="pres">
+  <div class="ph"><div>
+    <span class="chip">NUEVO &middot; IMPLANTOLOG&Iacute;A</span>
+    <h3>El implante y el provisional, en la misma sesi&oacute;n.</h3>
+    <p>El paciente sale de la cl&iacute;nica <b style="color:var(--gold2)">con dientes</b>: provisional fijo preparado antes de la cirug&iacute;a con planificaci&oacute;n digital.</p>
+  </div><div class="im"><img src="../img/carga-ferula-b.jpg" alt="Carga inmediata"></div></div>
+  <div class="body"><div class="que two">
+    <div><h4>&iquest;Qu&eacute; es la carga inmediata<em>?</em></h4>
+    <p>Permite colocar el implante y un <b>provisional fijo en la misma sesi&oacute;n</b>. El laboratorio prepara el provisional antes de la cirug&iacute;a a partir de la planificaci&oacute;n digital.</p></div>
+    <div><h4>&iquest;Qu&eacute; es la f&eacute;rula quir&uacute;rgica<em>?</em></h4>
+    <p>Una <b>gu&iacute;a a medida</b> dise&ntilde;ada desde el esc&aacute;ner 3D y el CBCT del paciente, que marca la posici&oacute;n exacta de cada implante. Cirug&iacute;a m&aacute;s r&aacute;pida y predecible.</p></div>
+  </div></div>
+  <div class="vents">
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Diente el mismo d&iacute;a</b><span>Provisional fijo listo para colocar tras la cirug&iacute;a.</span></div></div>
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Sin esperas</b><span>Sin los meses de espera del m&eacute;todo tradicional.</span></div></div>
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>M&aacute;xima precisi&oacute;n</b><span>La f&eacute;rula gu&iacute;a cada implante con exactitud.</span></div></div>
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Cirug&iacute;a m&aacute;s c&oacute;moda</b><span>T&eacute;cnica guiada, m&aacute;s r&aacute;pida y menos invasiva.</span></div></div>
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Planificaci&oacute;n digital</b><span>Caso planificado en 3D desde esc&aacute;ner y CBCT.</span></div></div>
+    <div class="vent"><span class="vt"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Resultado predecible</b><span>Menos sorpresas en cl&iacute;nica, mejor experiencia.</span></div></div>
   </div>
-  <div class="anot">
-    <img src="../img/ferula-cut.png">
-    <span class="lbl r" style="top:18%;right:72%;">Casquillos met&aacute;licos gu&iacute;a</span>
-    <span class="lbl l" style="bottom:22%;left:72%;">Impresi&oacute;n 3D a medida</span>
-  </div>
+</div>
 </div></section>
 
-<section class="venta"><div class="in14">
-  <span class="eyebrow">Ventajas de la carga inmediata</span>
-  <h2>M&aacute;s comodidad para tu paciente, m&aacute;s control para ti.</h2>
-  <div class="vgrid">
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-shield"/></svg></span><div><b>Diente el mismo d&iacute;a</b><span>Provisional fijo listo para colocar tras la cirug&iacute;a.</span></div></div>
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-chart"/></svg></span><div><b>Sin esperas</b><span>Sin los meses de espera del m&eacute;todo tradicional.</span></div></div>
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-lock"/></svg></span><div><b>M&aacute;xima precisi&oacute;n</b><span>La f&eacute;rula gu&iacute;a cada implante con exactitud.</span></div></div>
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-target"/></svg></span><div><b>Cirug&iacute;a m&aacute;s c&oacute;moda</b><span>T&eacute;cnica guiada, m&aacute;s r&aacute;pida y menos invasiva.</span></div></div>
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Planificaci&oacute;n digital</b><span>Caso planificado en 3D desde esc&aacute;ner y CBCT.</span></div></div>
-    <div class="v1"><span class="b"><svg class="ic"><use href="#ic-tooth"/></svg></span><div><b>Resultado predecible</b><span>Menos sorpresas en cl&iacute;nica, mejor experiencia.</span></div></div>
+<section class="tipos"><div class="in14">
+  <span class="eyebrow">Qu&eacute; incluye el servicio</span>
+  <h2>Todo preparado antes de la cirug&iacute;a.</h2>
+  <div class="tpgrid">
+    <div class="tp"><b>F&eacute;rula quir&uacute;rgica guiada</b><p>De 1 a 5 o m&aacute;s implantes, impresa en 3D con casquillos met&aacute;licos gu&iacute;a.</p><span class="tag">IMPRESI&Oacute;N 3D</span></div>
+    <div class="tp"><b>Provisional fijo inmediato</b><p>Preparado antes de la cirug&iacute;a para colocar el mismo d&iacute;a.</p><span class="tag">PMMA</span></div>
+    <div class="tp"><b>Planificaci&oacute;n del caso</b><p>Estudio y an&aacute;lisis de datos, planificaci&oacute;n y confecci&oacute;n digital.</p><span class="tag">DIGITAL</span></div>
   </div>
 </div></section>
 
@@ -150,8 +200,24 @@
   </div>
 </div></section>
 
+<div class="tiempos"><div class="in14">
+  <h2>Tiempos de entrega</h2>
+  <div class="tstep"><b>Antes de la cirug&iacute;a</b><span>f&eacute;rula y provisional preparados</span></div>
+  <div class="tstep"><b>El mismo d&iacute;a</b><span>el paciente sale con dientes fijos</span></div>
+  <div class="tstep"><b>Madrid gratis</b><span>recogida y entrega &middot; env&iacute;os a toda Espa&ntilde;a</span></div>
+</div></div>
+
+<section class="faq"><div class="in14" style="max-width:1000px">
+  <span class="eyebrow">Preguntas frecuentes</span>
+  <h2>Lo que preguntan los dentistas.</h2>
+  <div class="fq"><b>&iquest;Qu&eacute; incluye la gu&iacute;a quir&uacute;rgica?</b><p>El estudio y an&aacute;lisis de datos, la planificaci&oacute;n del caso, y la confecci&oacute;n digital e impresi&oacute;n de la gu&iacute;a.</p></div>
+  <div class="fq"><b>&iquest;Qu&eacute; necesit&aacute;is de la cl&iacute;nica?</b><p>El esc&aacute;ner 3D (o impresi&oacute;n) y el CBCT del paciente. Con eso planificamos el caso contigo antes de fabricar.</p></div>
+  <div class="fq"><b>&iquest;En qu&eacute; casos est&aacute; indicada?</b><p>En implantes unitarios y m&uacute;ltiples donde se busca provisional fijo inmediato y m&aacute;xima precisi&oacute;n en la posici&oacute;n del implante.</p></div>
+  <div class="fq"><b>&iquest;C&oacute;mo os env&iacute;o el caso?</b><p>STL + CBCT por v&iacute;a digital, o recogemos la impresi&oacute;n en tu cl&iacute;nica. Confirmamos contigo la planificaci&oacute;n antes de imprimir la gu&iacute;a.</p></div>
+</div></section>
+
 <div class="cta"><div class="in14"><h2>Conf&iacute;a tu pr&oacute;ximo caso a RB Dental.</h2><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar un caso &rarr;</a><a class="pill line" href="tel:+34913292062">Contactar con el laboratorio</a></div></div>
-<footer><div class="in14"><span>RB dental &middot; Madrid &middot; Servicio a toda Espa&ntilde;a</span><span>91 329 20 62 &middot; info@laboratoriodentalrb.com</span></div></footer>
+<footer><div class="in14"><span>RB dental &middot; C/ Canal de Suez 42, 28042 Madrid &middot; Licencia sanitaria FP-00602</span><span>91 329 20 62 &middot; laboratorio@rbdental.es</span></div></footer>
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
 <symbol id="ic-cal2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
 <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
