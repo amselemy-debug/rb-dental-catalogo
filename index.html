@@ -158,9 +158,13 @@
             letter-spacing: 1px; padding: 4px 12px; border-radius: 14px; text-transform: uppercase;
         }
         .rows { padding: 2px 18px 8px; }
-        .r { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 0.86rem; padding: 8px 0; border-bottom: 1px solid #f4f5f9; }
+        .r { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 0.86rem; padding: 8px 0; border-bottom: 1px solid #f4f5f9; position: relative; }
+        .r::after { content: ''; position: absolute; left: 0; right: 0; top: calc(50% + 3px); border-top: 2px dotted #e7e0cb; }
+        .r span, .r b { position: relative; z-index: 1; background: #fff; }
+        .r span { padding-right: 10px; }
         .r:last-child { border-bottom: none; }
-        .r b { font-family: 'Montserrat', sans-serif; color: var(--primary); font-weight: 800; white-space: nowrap; font-size: 0.88rem; }
+        .r b { font-family: 'Montserrat', sans-serif; color: var(--primary); font-weight: 800; white-space: nowrap; font-size: 0.88rem; padding-left: 10px; }
+        .r:hover b { color: #a8853b; }
         .discount-line {
             margin: 4px 18px 6px; background: var(--gold-light); border-radius: 10px;
             font-size: 0.68rem; color: var(--primary); font-weight: 700; text-align: center; padding: 7px;
@@ -278,6 +282,7 @@
         /* CONTACTO */
         .contact {
             margin: 0 22px 14px; background: linear-gradient(160deg, var(--primary), var(--primary-2));
+            border: 1px solid rgba(201,168,76,0.3);
             border-radius: var(--radius); color: #fff; padding: 24px 20px; text-align: center; scroll-margin-top: 14px;
         }
         .contact h2 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; }
@@ -291,8 +296,12 @@
         .cbtn.tel { background: #fff; color: var(--primary); }
         .cbtn.web { background: rgba(201,168,76,0.15); color: var(--gold); border: 1px solid rgba(201,168,76,0.4); }
 
-        footer { text-align: center; padding: 10px 22px 40px; font-size: 0.66rem; color: var(--text-light); }
-        footer strong { font-family: 'Montserrat', sans-serif; color: var(--primary); }
+        footer { margin: 4px 16px 26px; background: #000018; border: 1px solid rgba(201,168,76,0.3); border-radius: 16px;
+            padding: 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .ft-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; color: #ffffff; }
+        .ft-tag span { font-weight: 300; color: #e3c76e; }
+        .ft-sub { font-size: 0.62rem; color: #8890a5; margin-top: 7px; line-height: 1.7; }
+        footer img { width: 108px; height: auto; flex-shrink: 0; }
 
         /* WHATSAPP STICKY */
         .wa-bar {
@@ -367,6 +376,12 @@
             .hero .st:first-child { border-left: none; padding-left: 0; }
             .hero .st b { font-size: 1.7rem; }
             .grid { display: none; }
+            section.card, section.contact, .ap[id] { scroll-margin-top: 80px; }
+            .sideidx a.active { background: #faf7ee; box-shadow: inset 3px 0 0 #C9A84C; }
+            .sideidx a.active b { color: #a8853b; }
+            footer { margin: 8px 0 34px; padding: 24px 30px; }
+            footer img { width: 132px; }
+            .ft-sub { font-size: 0.7rem; }
             .hero .logo-img { width: 210px; }
             .tn-logo-img { height: 44px; width: auto; display: block; }
             .novedades { margin: 18px 0 0; padding: 16px 26px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
@@ -964,9 +979,11 @@
     </section>
 
     <footer>
-        <strong>RB Dental Digital</strong> &middot; Laboratorio de Pr&oacute;tesis Dental Digital<br>
-        N&ordm; Licencia Sanitaria FP-00602 &middot; Consejer&iacute;a de Sanidad C. de Madrid<br>
-        &copy; 2026 &middot; Precios actualizados Julio 2026
+        <div>
+            <div class="ft-tag">Precisi&oacute;n artesanal, <span>tecnolog&iacute;a digital</span></div>
+            <div class="ft-sub">RB Dental Digital &middot; Laboratorio de Pr&oacute;tesis Dental &middot; N&ordm; Licencia Sanitaria FP-00602 &middot; Consejer&iacute;a de Sanidad C. de Madrid<br>&copy; 2026 &middot; Precios actualizados Septiembre 2026</div>
+        </div>
+        <img src="img/logo-rb.png" alt="RB dental" loading="lazy">
     </footer>
 
 </div>
@@ -1059,6 +1076,22 @@
         aside.appendChild(idx);
         document.querySelectorAll('.intro, section.card, section.contact').forEach(function (el) { main.appendChild(el); });
         content.appendChild(aside); content.appendChild(main);
+
+        // Resaltar seccion activa en el indice
+        var spyIds = ['fija', 'allon', 'blender', 'carga', 'removible', 'ortodoncia', 'estetica', 'tiempos', 'contacto'];
+        var spyLinks = {};
+        idx.querySelectorAll('a').forEach(function (a) { spyLinks[a.getAttribute('href').slice(1)] = a; });
+        function spy() {
+            var current = null;
+            spyIds.forEach(function (id) {
+                var el = document.getElementById(id);
+                if (el && el.getBoundingClientRect().top <= 130) current = id;
+            });
+            idx.querySelectorAll('a').forEach(function (a) { a.classList.remove('active'); });
+            if (current && spyLinks[current]) spyLinks[current].classList.add('active');
+        }
+        window.addEventListener('scroll', spy, { passive: true });
+        spy();
     }
 </script>
 </body>
