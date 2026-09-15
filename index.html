@@ -220,15 +220,14 @@
         .folleto-btn { display: block; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.6rem; text-decoration: none; border-radius: 999px; padding: 7px 4px; letter-spacing: 0.04em; }
         .folleto-btn:hover { background: var(--primary-2); }
         /* Novedades */
-        .novedades { margin: 14px 16px 0; background: #000018; border-radius: 16px; padding: 16px 16px 46px;
-            border: 1px solid rgba(201,168,76,0.6); box-shadow: 0 8px 28px rgba(201,168,76,0.22); }
-        .novedades .nv-l { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.22em; color: #e3c76e; }
+        .novedades { margin: 14px 16px 0; background: #000018; border-radius: 16px; padding: 14px 16px 44px;
+            border: 1px solid rgba(201,168,76,0.35); }
+        .novedades .nv-l { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.22em; color: #e3c76e; }
         .novedades .nv-l::before { content: '\2726\00a0\00a0'; color: #C9A84C; }
-        .nv-pills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 12px; }
-        .nv-pills a { color: #000018; font-weight: 800; font-size: 0.78rem;
-            padding: 9px 16px; border-radius: 999px; text-decoration: none;
-            background: linear-gradient(120deg, #C9A84C, #e3c76e); box-shadow: 0 3px 10px rgba(201,168,76,0.35); }
-        .nv-pills a:hover { background: linear-gradient(120deg, #b8953f, #d4b85a); }
+        .nv-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .nv-pills a { border: 1px solid rgba(201,168,76,0.55); color: #fff; font-weight: 600; font-size: 0.74rem;
+            padding: 7px 13px; border-radius: 999px; text-decoration: none; background: rgba(201,168,76,0.08); }
+        .nv-pills a:hover { background: rgba(201,168,76,0.15); }
         /* Bloques de presentacion (folleto) */
         .fintro { margin: 6px 18px 14px; border-radius: 16px; overflow: hidden; border: 1px solid #e3eaf6; background: #fff; }
         .fi-dark { background: #000018; padding: 18px 18px 16px; color: #fff; display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
@@ -319,7 +318,7 @@
         .js .fade { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
         .js .fade.visible { opacity: 1; transform: none; }
         @media (min-width: 900px) {
-            .shell { max-width: none; padding: 0 34px; }
+            .shell { max-width: min(1280px, 94vw); }
             .hero h1 { font-size: 2.4rem; }
             .hero { border-radius: 0 0 28px 28px; }
             .grid { grid-template-columns: repeat(6, 1fr); gap: 12px; }
@@ -352,7 +351,7 @@
         .topnav, .hero-desk, .hero-photo, .st-desk { display: none; }
         @media (min-width: 1000px) {
             .topnav { display: block; position: sticky; top: 0; z-index: 60; background: #000018; box-shadow: 0 2px 14px rgba(0,0,0,0.35); }
-            .tn-in { max-width: none; margin: 0; display: flex; align-items: center; gap: 26px; padding: 12px 34px; }
+            .tn-in { max-width: min(1280px, 94vw); margin: 0 auto; display: flex; align-items: center; gap: 26px; padding: 12px 18px; }
             .tn-logo { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 1.25rem; color: #fff; }
             .tn-logo span { color: #C9A84C; }
             .tn-links { margin-left: auto; display: flex; gap: 22px; }
@@ -385,10 +384,10 @@
             .ft-sub { font-size: 0.7rem; }
             .hero .logo-img { width: 210px; }
             .tn-logo-img { height: 44px; width: auto; display: block; }
-            .novedades { margin: 18px 0 0; padding: 18px 30px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+            .novedades { margin: 18px 0 0; padding: 16px 26px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
             .novedades .nv-pills { margin-top: 0; }
-            .nv-pills a { font-size: 0.95rem; padding: 11px 24px; }
-            .novedades .nv-l { font-size: 1.05rem; }
+            .nv-pills a { font-size: 0.85rem; padding: 9px 18px; }
+            .novedades .nv-l { font-size: 0.85rem; }
             .fi-dark { padding: 24px 26px 22px; }
             .fi-dark h3 { font-size: 1.7rem; }
             .fi-dark .fi-tag { font-size: 0.9rem; max-width: 560px; }
