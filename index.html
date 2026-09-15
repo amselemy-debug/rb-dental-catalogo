@@ -34,7 +34,8 @@ nav.top .sp { flex:1; }
 .mmenu a { display:block; color:#fff; text-decoration:none; font-family:'Montserrat',sans-serif; font-weight:600; font-size:.95rem; padding:11px 4px; border-bottom:1px solid rgba(255,255,255,.07); }
 .mmenu a:last-child { border-bottom:none; }
 @media (min-width:1000px) { .mburger, .mmenu { display:none !important; } }
-@media (max-width:599px) { nav.top .pill { white-space:nowrap; font-size:.76rem; padding:9px 13px; } nav.top img { height:36px; } }
+nav.top .pill .pm { display:none; }
+@media (max-width:599px) { nav.top .pill { white-space:nowrap; font-size:.82rem; padding:10px 16px; } nav.top img { height:36px; } nav.top .pill .pd { display:none; } nav.top .pill .pm { display:inline; } }
 @media (min-width:1000px) {
   nav.top img { height:46px; }
   nav.top .links { display:flex; gap:22px; }
@@ -372,7 +373,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   <div class="links">
     <a href="#fija">Fija</a><a href="#allon">All-on</a><a href="#blender">Blender</a><a href="#carga">Carga inmediata</a><a href="#removible">Removible</a><a href="#estetica">Est&eacute;tica</a><a href="#ortodoncia">Ortodoncia</a><a href="#tiempos">Tiempos</a>
   </div>
-  <a class="pill gold" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas">WhatsApp &middot; 680 555 303</a>
+  <a class="pill gold" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas"><span class="pd">WhatsApp &middot; 680 555 303</span><span class="pm">Cont&aacute;ctanos</span></a>
   <button class="mburger" id="mburger" type="button" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
 <div class="mmenu" id="mmenu">
@@ -762,12 +763,40 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.nov, #mas-pedidos').forEach(function (el) { el.style.display = q ? 'none' : ''; });
     if (noRes) noRes.style.display = (q && total === 0) ? 'block' : 'none';
   }
+  // Al buscar desde la portada, bajar hasta la primera seccion con resultados
+  var scrollTimer = null;
+  function bajaAResultados() {
+    var q = inputs[0] ? inputs[0].value.trim() : '';
+    if (!q) return;
+    var target = null;
+    document.querySelectorAll('main.list .syssec').forEach(function (sec) {
+      if (target || sec.style.display === 'none') return;
+      var fila = sec.querySelector('tbody tr');
+      var tieneVisible = false;
+      sec.querySelectorAll('tbody tr').forEach(function (tr) { if (tr.style.display !== 'none') tieneVisible = true; });
+      if (fila && tieneVisible) target = sec;
+    });
+    if (!target && noRes && noRes.style.display === 'block') target = noRes;
+    if (target) {
+      var top = target.getBoundingClientRect().top;
+      if (top < 0 || top > window.innerHeight * 0.55) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
   inputs.forEach(function (inp) {
     inp.addEventListener('input', function () {
       inputs.forEach(function (o) { if (o !== inp) o.value = inp.value; });
       filtra(inp.value);
+      if (inp.id === 'buscador') {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(bajaAResultados, 700);
+      }
+    });
+    inp.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && inp.id === 'buscador') { clearTimeout(scrollTimer); bajaAResultados(); }
     });
   });
+  var btnBuscar = document.querySelector('.hero .search button');
+  if (btnBuscar) btnBuscar.addEventListener('click', function () { clearTimeout(scrollTimer); bajaAResultados(); });
   // Resaltar categoria activa
   var links = document.querySelectorAll('aside.cats a[data-spy]');
   function spy() {
