@@ -22,7 +22,7 @@ h1,h2,h3,h4 { font-family:'Montserrat',sans-serif; color:var(--obs2); }
 .pill.gold { background:linear-gradient(120deg,var(--gold),var(--gold2)); color:var(--obs); box-shadow:0 4px 14px rgba(201,168,76,.35); }
 .pill.linew { border:1.5px solid rgba(255,255,255,.6); color:#fff; }
 /* NAV */
-nav.top { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:50; }
+nav.top { background:var(--obs); border-bottom:1px solid rgba(201,168,76,.28); position:sticky; top:0; z-index:50; }
 nav.top .in { max-width:1400px; margin:0 auto; padding:12px 22px; display:flex; align-items:center; gap:20px; }
 nav.top img { height:40px; }
 nav.top .links { display:none; }
@@ -30,8 +30,8 @@ nav.top .sp { flex:1; }
 @media (min-width:1000px) {
   nav.top img { height:46px; }
   nav.top .links { display:flex; gap:22px; }
-  nav.top .links a { color:var(--obs2); text-decoration:none; font-weight:600; font-size:.93rem; font-family:'Montserrat',sans-serif; }
-  nav.top .links a:hover { color:var(--goldd); }
+  nav.top .links a { color:#fff; text-decoration:none; font-weight:600; font-size:.93rem; font-family:'Montserrat',sans-serif; }
+  nav.top .links a:hover { color:var(--gold2); }
   .chips { display:none; }
 }
 /* HERO */
@@ -165,12 +165,12 @@ td.p { text-align:right; font-family:'Montserrat',sans-serif; font-weight:400; c
 @media (min-width:800px) { .offer-grid { grid-template-columns:1fr 1fr; } }
 .offer-card { border:1px solid var(--line); border-radius:13px; overflow:hidden; background:#fff; }
 .offer-card .oh { background:linear-gradient(135deg,var(--obs2),var(--obs)); color:#fff; font-family:'Montserrat',sans-serif; font-weight:800; font-size:.78rem; padding:9px 12px; display:flex; justify-content:space-between; align-items:center; }
-.offer-card .oh.oferta { background:linear-gradient(135deg,#10b981,#059669); }
+.offer-card .oh.oferta { background:linear-gradient(120deg,var(--goldd),var(--gold2)); color:var(--obs); }
 .offer-card .oh .tagp { background:rgba(255,255,255,.2); border-radius:999px; padding:2px 9px; font-size:.68rem; }
 .offer-card .ro { display:flex; justify-content:space-between; gap:8px; padding:7px 12px; font-size:.82rem; border-top:1px solid #f1f3f8; }
-.offer-card .ro .free { color:#059669; font-weight:600; }
+.offer-card .ro .free { color:var(--goldd); font-weight:600; }
 .offer-card .total { display:flex; justify-content:space-between; gap:8px; padding:9px 12px; background:var(--soft); font-family:'Montserrat',sans-serif; font-weight:600; font-size:.85rem; color:var(--obs2); }
-.offer-card .total.oferta { background:#ecfdf5; color:#059669; }
+.offer-card .total.oferta { background:#fbf5e0; color:var(--obs2); }
 .offer-card .total s { color:var(--mut); font-weight:600; font-size:.72rem; }
 .discount-line { background:#fbf5e0; border-radius:10px; font-size:.75rem; color:var(--obs2); font-weight:700; text-align:center; padding:8px; margin:4px 0 10px; }
 .note { background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:9px 13px; font-size:.78rem; color:#92400e; margin:8px 0 12px; }
@@ -287,14 +287,16 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 }
 
 
-#mas-pedidos { background:linear-gradient(150deg,var(--obs2),var(--obs)); padding-bottom:40px; }
+#mas-pedidos { padding-bottom:44px; }
+.mp-panel { background:linear-gradient(150deg,var(--obs) 55%,var(--obs2)); border-radius:26px; padding:26px 20px 28px; }
+@media (min-width:900px) { .mp-panel { padding:34px 34px 38px; } }
 #mas-pedidos h2 { color:#fff; }
 #mas-pedidos .eyebrow { color:var(--gold2); }
-#mas-pedidos .t4 { background:var(--obs); border-color:rgba(201,168,76,.45); box-shadow:0 14px 34px rgba(0,0,0,.35); border-radius:16px; }
+#mas-pedidos .t4 { background:#fff; border:none; box-shadow:0 16px 40px rgba(0,0,0,.35); border-radius:18px; }
 #mas-pedidos .t4 .im { background:#fff; }
-#mas-pedidos .t4 b { color:#fff; }
-#mas-pedidos .t4 .d { color:var(--gold2); }
-#mas-pedidos .t4 .go { color:var(--gold2); }
+#mas-pedidos .t4 b { color:var(--obs2); }
+#mas-pedidos .t4 .d { color:var(--goldd); }
+#mas-pedidos .t4 .go { color:var(--goldd); }
 
 
 
@@ -321,7 +323,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 
 <div class="topbono">&#9733; BONO DE BIENVENIDA : 20% de descuento el primer mes en pr&oacute;tesis fija y removible</div>
 <nav class="top"><div class="in">
-  <img src="img/logo-rb-navy.png" alt="RB dental &middot; Laboratorio de Pr&oacute;tesis Dental Digital">
+  <img src="img/logo-rb.png" alt="RB dental &middot; Laboratorio de Pr&oacute;tesis Dental Digital">
   <span class="sp"></span>
   <div class="links">
     <a href="#fija">Fija</a><a href="#allon">All-on</a><a href="#blender">Blender</a><a href="#carga">Carga inmediata</a><a href="#removible">Removible</a><a href="#estetica">Est&eacute;tica</a><a href="#ortodoncia">Ortodoncia</a><a href="#tiempos">Tiempos</a>
@@ -359,12 +361,12 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   </div>
   <div class="ncards">
     <a class="nc" href="#blender"><span class="chip">NUEVO 2026</span><span class="im"><img src="img/blender.jpg" alt="Barra Blender" loading="lazy"></span><b>BLENDER</b><p>Estructuras fresadas de alta precisi&oacute;n</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
-    <a class="nc" href="#carga"><span class="chip">NUEVO 2026</span><span class="im"><img src="img/fija3.jpg" alt="Carga inmediata" loading="lazy"></span><b>CARGA INMEDIATA</b><p>Provisional fijo el mismo d&iacute;a de la cirug&iacute;a</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
-    <a class="nc" href="#estetica"><span class="chip">NUEVO 2026</span><span class="im"><img src="img/estetica-carillas-b.jpg" alt="Dise&ntilde;o de sonrisa" loading="lazy"></span><b>DISE&Ntilde;O DE SONRISA</b><p>Est&eacute;tica y funcionalidad en cada caso</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+    <a class="nc" href="#carga"><span class="chip">NUEVO 2026</span><span class="im"><img src="img/carga-ferula-b.jpg" alt="F&eacute;rula quir&uacute;rgica guiada" loading="lazy"></span><b>CARGA INMEDIATA</b><p>Provisional fijo el mismo d&iacute;a de la cirug&iacute;a</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+    <a class="nc" href="#estetica"><span class="chip">NUEVO 2026</span><span class="im"><img src="img/sonrisa-app.jpg" alt="Dise&ntilde;o digital de sonrisa" loading="lazy" style="border-radius:12px"></span><b>DISE&Ntilde;O DE SONRISA</b><p>Est&eacute;tica y funcionalidad en cada caso</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
   </div>
 </div></section>
 
-<section class="sec" id="mas-pedidos"><div class="wrap">
+<section class="sec" id="mas-pedidos"><div class="wrap"><div class="mp-panel">
   <div class="head"><div><span class="eyebrow">Los m&aacute;s pedidos</span><h2>Trabajos que marcan la diferencia.</h2></div></div>
   <div class="top4">
     <a class="t4" href="#fija"><span class="im"><img src="img/fija.jpg" alt="Corona de zirconio" loading="lazy"></span><span class="tx"><span><b>Corona de zirconio</b><span class="d">desde 100 &euro;</span></span><span class="go">&rarr;</span></span></a>
@@ -372,7 +374,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
     <a class="t4" href="#allon"><span class="im"><img src="img/allon.jpg" alt="All-on-4 / All-on-6" loading="lazy"></span><span class="tx"><span><b>All-on-4 / All-on-6</b><span class="d">desde 1.200 &euro;</span></span><span class="go">&rarr;</span></span></a>
     <a class="t4" href="#ortodoncia"><span class="im"><img src="img/ferulas4.jpg" alt="F&eacute;rula de descarga" loading="lazy"></span><span class="tx"><span><b>F&eacute;rula de descarga</b><span class="d">desde 70 &euro;</span></span><span class="go">&rarr;</span></span></a>
   </div>
-</div></section>
+</div></div></section>
 
 <div class="listwrap"><div class="layout">
   <aside class="cats">
