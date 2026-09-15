@@ -56,7 +56,13 @@
             content: '';
             position: absolute; top: -40%; right: -25%;
             width: 420px; height: 420px; border-radius: 50%;
-            background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(201,168,76,0.16) 0%, transparent 70%);
+        }
+        .hero::after {
+            content: '';
+            position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+            background: linear-gradient(90deg, transparent, #C9A84C 18%, #e3c76e 50%, #C9A84C 82%, transparent);
+            opacity: 0.9;
         }
         .hero > * { position: relative; }
         .logo { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 900; letter-spacing: -0.5px; }
@@ -86,6 +92,7 @@
 
         /* BUSCADOR FLOTANTE */
         .search-wrap { margin: -26px 22px 0; position: relative; z-index: 5; }
+        .search-wrap input:focus { outline: none; box-shadow: 0 10px 26px rgba(0,0,24,0.18), 0 0 0 2px rgba(201,168,76,0.55); }
         .search-wrap input {
             width: 100%; border: none; border-radius: 15px;
             padding: 15px 18px; font-size: 0.92rem;
@@ -208,11 +215,13 @@
         .folleto-btn { display: block; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.6rem; text-decoration: none; border-radius: 999px; padding: 7px 4px; letter-spacing: 0.04em; }
         .folleto-btn:hover { background: var(--primary-2); }
         /* Novedades */
-        .novedades { margin: 14px 16px 0; background: #000018; border-radius: 16px; padding: 14px 16px 44px; }
+        .novedades { margin: 14px 16px 0; background: #000018; border-radius: 16px; padding: 14px 16px 44px;
+            border: 1px solid rgba(201,168,76,0.35); }
         .novedades .nv-l { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.22em; color: #e3c76e; }
+        .novedades .nv-l::before { content: '\2726\00a0\00a0'; color: #C9A84C; }
         .nv-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
         .nv-pills a { border: 1px solid rgba(201,168,76,0.55); color: #fff; font-weight: 600; font-size: 0.74rem;
-            padding: 7px 13px; border-radius: 999px; text-decoration: none; }
+            padding: 7px 13px; border-radius: 999px; text-decoration: none; background: rgba(201,168,76,0.08); }
         .nv-pills a:hover { background: rgba(201,168,76,0.15); }
         /* Bloques de presentacion (folleto) */
         .fintro { margin: 6px 18px 14px; border-radius: 16px; overflow: hidden; border: 1px solid #e3eaf6; background: #fff; }
@@ -344,13 +353,16 @@
             .hero .kicker { letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.72rem; }
             .hero-desk { display: block; }
             .hero-desk h1 { font-size: 3.6rem; margin: 10px 0 14px; color: #fff; font-family: Montserrat, sans-serif; font-weight: 900; }
+            .hero-desk h1::after { content: ''; display: block; width: 74px; height: 5px; border-radius: 3px; margin-top: 14px;
+                background: linear-gradient(90deg, #C9A84C, #e3c76e); }
             .hero-desk p { color: #c7d0ea; font-size: 1.05rem; line-height: 1.65; margin: 0 0 26px; }
             .hero-photo { display: block; position: absolute; right: 30px; top: 42px; width: 400px; margin: 0; }
-            .hero-photo img { width: 100%; height: 290px; object-fit: contain; background: #fff; border-radius: 16px; display: block; }
-            .hero-photo figcaption { color: #9fb0d8; font-size: 0.75rem; margin-top: 8px; }
+            .hero-photo img { width: 100%; height: 290px; object-fit: contain; background: #fff; border-radius: 16px; display: block;
+                border: 1px solid rgba(201,168,76,0.45); box-shadow: 0 18px 44px rgba(0,0,0,0.45), 0 0 0 6px rgba(201,168,76,0.07); }
+            .hero-photo figcaption { color: #C9A84C; font-size: 0.75rem; margin-top: 10px; text-align: center; letter-spacing: 0.03em; }
             .st-desk { display: block; }
             .hero .stats { background: none; gap: 0; }
-            .hero .st { background: none; border: none; border-left: 1px solid rgba(255,255,255,0.18); padding: 2px 26px; text-align: left; }
+            .hero .st { background: none; border: none; border-left: 1px solid rgba(201,168,76,0.4); padding: 2px 26px; text-align: left; }
             .hero .st:first-child { border-left: none; padding-left: 0; }
             .hero .st b { font-size: 1.7rem; }
             .grid { display: none; }
