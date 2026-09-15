@@ -23,10 +23,18 @@ h1,h2,h3,h4 { font-family:'Montserrat',sans-serif; color:var(--obs2); }
 .pill.linew { border:1.5px solid rgba(255,255,255,.6); color:#fff; }
 /* NAV */
 nav.top { background:var(--obs); border-bottom:1px solid rgba(201,168,76,.28); position:sticky; top:0; z-index:50; }
-nav.top .in { max-width:1400px; margin:0 auto; padding:12px 22px; display:flex; align-items:center; gap:20px; }
+nav.top .in { max-width:1400px; margin:0 auto; padding:12px 16px 12px 22px; display:flex; align-items:center; gap:12px; }
 nav.top img { height:40px; }
 nav.top .links { display:none; }
 nav.top .sp { flex:1; }
+.mburger { display:flex; flex-direction:column; justify-content:center; gap:5px; background:none; border:none; cursor:pointer; padding:8px 6px; }
+.mburger span { width:22px; height:2px; background:#fff; border-radius:2px; display:block; }
+.mmenu { display:none; background:var(--obs); border-top:1px solid rgba(201,168,76,.25); padding:6px 22px 12px; }
+.mmenu.open { display:block; }
+.mmenu a { display:block; color:#fff; text-decoration:none; font-family:'Montserrat',sans-serif; font-weight:600; font-size:.95rem; padding:11px 4px; border-bottom:1px solid rgba(255,255,255,.07); }
+.mmenu a:last-child { border-bottom:none; }
+@media (min-width:1000px) { .mburger, .mmenu { display:none !important; } }
+@media (max-width:599px) { nav.top .pill { white-space:nowrap; font-size:.76rem; padding:9px 13px; } nav.top img { height:36px; } }
 @media (min-width:1000px) {
   nav.top img { height:46px; }
   nav.top .links { display:flex; gap:22px; }
@@ -50,6 +58,15 @@ nav.top .sp { flex:1; }
 .chips a { display:inline-block; border:1px solid rgba(201,168,76,.5); color:#fff; border-radius:999px; padding:6px 14px; font-size:.8rem; text-decoration:none; margin:0 6px 6px 0; font-family:'Montserrat',sans-serif; }
 .chips a:hover { background:rgba(201,168,76,.15); }
 .hero .ph { display:none; }
+@media (max-width:899px) {
+  .hero .in { flex-direction:column; align-items:stretch; }
+  .hero .ph { display:block; width:100%; margin-top:26px; }
+  .hud { height:235px; }
+  .hud .frame i { width:20px; height:20px; border-width:2px; }
+  .hero .ph .slides { inset:16px; }
+  .hero .ph figcaption { text-align:center; color:var(--gold2); font-size:.74rem; margin-top:8px; }
+  .htag { font-size:.56rem; padding:2px 6px; }
+}
 @media (min-width:1000px) {
   .hero .in { padding:52px 22px 56px; }
   .hero h1 { font-size:3.2rem; }
@@ -356,6 +373,17 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
     <a href="#fija">Fija</a><a href="#allon">All-on</a><a href="#blender">Blender</a><a href="#carga">Carga inmediata</a><a href="#removible">Removible</a><a href="#estetica">Est&eacute;tica</a><a href="#ortodoncia">Ortodoncia</a><a href="#tiempos">Tiempos</a>
   </div>
   <a class="pill gold" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas">WhatsApp &middot; 680 555 303</a>
+  <button class="mburger" id="mburger" type="button" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mmenu" id="mmenu">
+  <a href="#fija">Pr&oacute;tesis fija</a>
+  <a href="#allon">All-on-4 / All-on-6</a>
+  <a href="#blender">Blender</a>
+  <a href="#carga">Carga inmediata</a>
+  <a href="#removible">Removible</a>
+  <a href="#estetica">Est&eacute;tica</a>
+  <a href="#ortodoncia">Ortodoncia</a>
+  <a href="#tiempos">Tiempos de entrega</a>
 </div></nav>
 
 <header class="hero"><div class="hgrid" aria-hidden="true"></div><div class="in">
@@ -755,6 +783,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   window.addEventListener('scroll', spy, { passive: true });
   spy();
+
+  // Menu movil
+  var mb = document.getElementById('mburger'), mm = document.getElementById('mmenu');
+  if (mb && mm) {
+    mb.addEventListener('click', function () {
+      var open = mm.classList.toggle('open');
+      mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mm.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { mm.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); });
+    });
+  }
 
   // Carrusel del hero
   var slides = document.querySelectorAll('.hero .slides img');
