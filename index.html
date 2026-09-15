@@ -59,26 +59,28 @@ nav.top .sp { flex:1; }
 /* STRIP */
 .strip { border-bottom:1px solid var(--line); background:#fff; }
 .strip .in { max-width:1400px; margin:0 auto; padding:14px 22px; display:grid; grid-template-columns:1fr 1fr; gap:12px 20px; }
+.strip .stt:last-child { grid-column:1 / -1; }
+@media (min-width:1000px) { .strip .stt:last-child { grid-column:auto; } }
 @media (min-width:1000px) { .strip .in { display:flex; justify-content:space-between; padding:18px 22px; } }
 .stt { display:flex; gap:10px; align-items:center; }
 .stt svg { width:30px; height:30px; flex-shrink:0; }
 .stt b { font-family:'Poppins',sans-serif; color:var(--obs2); display:block; font-size:.88rem; }
 .stt span { color:var(--mut); font-size:.76rem; }
 /* NOVEDADES */
-.nov { background:linear-gradient(150deg,var(--obs2),var(--obs)); padding:34px 0 40px; }
+.nov { background:#fff; border-bottom:1px solid var(--line); padding:34px 0 40px; }
 .nov .in { max-width:1400px; margin:0 auto; padding:0 22px; display:flex; gap:26px; align-items:center; flex-wrap:wrap; }
 .nov .l { width:100%; }
-.nov .l h2 { color:#fff; font-size:1.6rem; font-weight:800; line-height:1.2; margin:8px 0 8px; }
-.nov .l p { color:#c7cdea; margin-bottom:16px; font-size:.9rem; }
+.nov .l h2 { color:var(--obs2); font-size:1.6rem; font-weight:800; line-height:1.2; margin:8px 0 8px; }
+.nov .l p { color:var(--mut); margin-bottom:16px; font-size:.9rem; }
 .ncards { display:grid; grid-template-columns:1fr; gap:14px; width:100%; }
 @media (min-width:700px) { .ncards { grid-template-columns:repeat(3,1fr); } }
 @media (min-width:1100px) { .nov .l { width:280px; flex-shrink:0; } .ncards { flex:1; width:auto; } }
-.nc { border:1px solid rgba(201,168,76,.45); border-radius:16px; padding:18px; background:rgba(255,255,255,.04); display:block; text-decoration:none; }
-.nc b { color:#fff; font-family:'Poppins',sans-serif; font-size:1rem; letter-spacing:.06em; }
-.nc p { color:#c7cdea; font-size:.82rem; margin:5px 0 10px; }
-.nc .im { background:#fff; border-radius:10px; height:110px; display:flex; align-items:center; justify-content:center; padding:8px; }
+.nc { border:1px solid var(--line); border-radius:16px; padding:18px; background:#fff; box-shadow:0 2px 10px rgba(10,20,60,.06); display:block; text-decoration:none; }
+.nc b { color:var(--obs2); font-family:'Poppins',sans-serif; font-size:1rem; letter-spacing:.06em; }
+.nc p { color:var(--mut); font-size:.82rem; margin:5px 0 10px; }
+.nc .im { background:var(--soft); border-radius:10px; height:110px; display:flex; align-items:center; justify-content:center; padding:8px; }
 .nc img { max-height:96px; max-width:100%; object-fit:contain; }
-.nc u { color:var(--gold2); font-family:'Poppins',sans-serif; font-weight:600; font-size:.82rem; text-decoration:none; display:block; margin-top:10px; }
+.nc u { color:var(--goldd); font-family:'Poppins',sans-serif; font-weight:600; font-size:.82rem; text-decoration:none; display:block; margin-top:10px; }
 /* MAS PEDIDOS */
 .sec { padding:36px 0 4px; }
 .sec .head { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:18px; gap:12px; flex-wrap:wrap; }
@@ -273,10 +275,10 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 
 
 /* Hero dinamico */
-.hero .ph .slides { position:relative; width:100%; height:330px; background:#fff; border-radius:22px; padding:14px;
-  border:1px solid rgba(201,168,76,.5); box-shadow:0 24px 54px rgba(0,0,0,.5); overflow:hidden; }
-.hero .ph .slides img { position:absolute; inset:14px; width:calc(100% - 28px); height:calc(100% - 28px);
-  object-fit:contain; opacity:0; transition:opacity .9s ease; background:#fff; border-radius:12px; padding:0; border:none; box-shadow:none; }
+.hero .ph .slides { position:relative; width:100%; height:330px; }
+.hero .ph .slides img { position:absolute; inset:0; width:100%; height:100%;
+  object-fit:contain; opacity:0; transition:opacity .9s ease;
+  filter:drop-shadow(0 22px 26px rgba(0,0,0,.55)); }
 .hero .ph .slides img.on { opacity:1; }
 .hero .dots { display:flex; justify-content:center; gap:7px; margin-top:10px; }
 .hero .dots button { width:9px; height:9px; border-radius:50%; border:none; background:rgba(201,168,76,.35); cursor:pointer; padding:0; }
@@ -296,11 +298,22 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   .reveal { opacity:1; transform:none; transition:none; }
 }
 
+
+#mas-pedidos { background:linear-gradient(150deg,var(--obs2),var(--obs)); padding-bottom:40px; }
+#mas-pedidos h2 { color:#fff; }
+#mas-pedidos .eyebrow { color:var(--gold2); }
+#mas-pedidos .t4 { background:#0c0e2a; border-color:rgba(201,168,76,.4); }
+#mas-pedidos .t4 .im { background:#fff; }
+#mas-pedidos .t4 b { color:#fff; }
+#mas-pedidos .t4 .d { color:var(--gold2); }
+#mas-pedidos .t4 .go { color:var(--gold2); }
+
 @media print { .hero .ph, .wa-float, aside.cats { display:none !important; } }
 </style>
 </head>
 <body>
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+<symbol id="ic-cal2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
 <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
 <symbol id="ic-truck" viewBox="0 0 24 24"><path d="M2 7h11v9H2zM13 10h5l3 3v3h-8z"/><circle cx="6.5" cy="18.5" r="1.8"/><circle cx="16.5" cy="18.5" r="1.8"/></symbol>
 <symbol id="ic-mon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></symbol>
@@ -337,10 +350,10 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   </div>
   <figure class="ph">
     <div class="slides">
-      <img class="on" src="img/hero.jpg" alt="Barra Blender fresada y anodizada" data-cap="Barra Blender fresada y anodizada &middot; trabajo real del laboratorio">
-      <img src="img/allon.jpg" alt="All-on-Six" data-cap="All-on-Six &middot; rehabilitaci&oacute;n completa fija" loading="lazy">
-      <img src="img/fija.jpg" alt="Coronas de zirconio" data-cap="Coronas de zirconio &middot; pr&oacute;tesis fija" loading="lazy">
-      <img src="img/estetica-carillas-b.jpg" alt="Dise&ntilde;o de sonrisa" data-cap="Dise&ntilde;o de sonrisa &middot; est&eacute;tica dental" loading="lazy">
+      <img class="on" src="img/hero-cut.png" alt="Barra Blender fresada y anodizada" data-cap="Barra Blender fresada y anodizada &middot; trabajo real del laboratorio">
+      <img src="img/allon-cut.png" alt="All-on-Six" data-cap="All-on-Six &middot; rehabilitaci&oacute;n completa fija" loading="lazy">
+      <img src="img/fija-cut.png" alt="Coronas de zirconio" data-cap="Coronas de zirconio &middot; pr&oacute;tesis fija" loading="lazy">
+      <img src="img/carillas-cut.png" alt="Dise&ntilde;o de sonrisa" data-cap="Dise&ntilde;o de sonrisa &middot; est&eacute;tica dental" loading="lazy">
     </div>
     <figcaption id="hero-cap">Barra Blender fresada y anodizada &middot; trabajo real del laboratorio</figcaption>
     <div class="dots" id="hero-dots"></div>
@@ -348,15 +361,16 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 </div></header>
 
 <div class="strip"><div class="in">
-  <div class="stt"><svg class="ic"><use href="#ic-truck"/></svg><div><b>Entrega en 4-5 d&iacute;as</b><span>y recogida gratis en Madrid</span></div></div>
-  <div class="stt"><svg class="ic"><use href="#ic-diam"/></svg><div><b>Calidad</b><span>que se ve</span></div></div>
-  <div class="stt"><svg class="ic"><use href="#ic-gear"/></svg><div><b>Tecnolog&iacute;a CAD-CAM</b><span>flujo 100% digital</span></div></div>
-  <div class="stt"><svg class="ic"><use href="#ic-check"/></svg><div><b>20% dto. primer mes</b><span>bono de bienvenida &middot; fija y removible</span></div></div>
+  <div class="stt"><svg class="ic"><use href="#ic-cal2"/></svg><div><b>+35 a&ntilde;os</b><span>de experiencia</span></div></div>
+  <div class="stt"><svg class="ic"><use href="#ic-clock"/></svg><div><b>4-5 d&iacute;as</b><span>entrega habitual</span></div></div>
+  <div class="stt"><svg class="ic"><use href="#ic-truck"/></svg><div><b>Toda Espa&ntilde;a</b><span>servicio nacional</span></div></div>
+  <div class="stt"><svg class="ic"><use href="#ic-mon"/></svg><div><b>CAD-CAM</b><span>flujo digital</span></div></div>
+  <div class="stt"><svg class="ic"><use href="#ic-check"/></svg><div><b>20% dto. primer mes</b><span>bono de bienvenida</span></div></div>
 </div></div>
 
 <section class="nov"><div class="in">
   <div class="l">
-    <span class="eyebrow" style="color:var(--gold2)">Novedades 2026</span>
+    <span class="eyebrow">Novedades 2026</span>
     <h2>Soluciones innovadoras para tu cl&iacute;nica.</h2>
     <p>&Uacute;ltima tecnolog&iacute;a, m&aacute;xima precisi&oacute;n.</p>
   </div>
