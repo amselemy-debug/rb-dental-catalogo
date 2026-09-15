@@ -264,14 +264,39 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 
 
 /* Hero dinamico */
-.hero .ph .slides { position:relative; width:100%; height:330px; background:#fff; border-radius:26px; box-shadow:0 26px 60px rgba(0,0,0,.45); overflow:hidden; }
-.hero .ph .slides img { position:absolute; inset:0; width:100%; height:100%;
-  object-fit:contain; padding:26px; opacity:0; transition:opacity .9s ease; }
+.hgrid { position:absolute; inset:0; background-image:linear-gradient(rgba(201,168,76,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,.055) 1px, transparent 1px); background-size:46px 46px; animation:gridmove 16s linear infinite; pointer-events:none; }
+@keyframes gridmove { to { background-position:46px 46px; } }
+.hero .in { position:relative; }
+.hstatus { margin-top:14px; font-family:'Montserrat',sans-serif; font-size:.76rem; color:var(--gold2); letter-spacing:.08em; min-height:18px; }
+.hstatus::after { content:'\258C'; animation:hblink 1s steps(1) infinite; }
+@keyframes hblink { 50% { opacity:0; } }
+.hud { position:relative; width:100%; height:340px; }
+.hud .frame i { position:absolute; width:30px; height:30px; border:2.5px solid var(--gold2); }
+.hud .frame i:nth-child(1) { top:0; left:0; border-right:none; border-bottom:none; }
+.hud .frame i:nth-child(2) { top:0; right:0; border-left:none; border-bottom:none; }
+.hud .frame i:nth-child(3) { bottom:0; left:0; border-right:none; border-top:none; }
+.hud .frame i:nth-child(4) { bottom:0; right:0; border-left:none; border-top:none; }
+.hero .ph .slides { position:absolute; inset:22px; }
+.hero .ph .slides img { position:absolute; inset:0; margin:auto; max-width:100%; max-height:100%; object-fit:contain; opacity:0; transition:opacity .9s ease; filter:drop-shadow(0 26px 32px rgba(0,0,0,.55)); }
 .hero .ph .slides img.on { opacity:1; }
+.hero .ph .slides img.win { border-radius:14px; box-shadow:0 20px 50px rgba(0,0,0,.5); filter:none; }
+.hud .scan { position:absolute; left:8px; right:8px; height:3px; background:linear-gradient(90deg,transparent,var(--gold2),transparent); box-shadow:0 0 18px 4px rgba(227,199,110,.4); animation:sweep 3.8s ease-in-out infinite; z-index:2; }
+@keyframes sweep { 0% { top:6%; } 50% { top:92%; } 100% { top:6%; } }
+.hdot { position:absolute; width:9px; height:9px; border-radius:50%; background:var(--gold2); z-index:2; }
+.hdot::after { content:''; position:absolute; inset:-6px; border-radius:50%; border:1.5px solid var(--gold2); animation:hping 1.9s ease-out infinite; }
+@keyframes hping { 0% { transform:scale(.5); opacity:1; } 100% { transform:scale(1.9); opacity:0; } }
+.htag { position:absolute; font-family:'Montserrat',sans-serif; font-size:.64rem; letter-spacing:.1em; color:var(--gold2); border:1px solid rgba(201,168,76,.5); background:rgba(0,0,24,.72); border-radius:6px; padding:3px 8px; z-index:2; }
+.hfeats { max-width:1400px; margin:0 auto; padding:20px 22px 26px; position:relative; display:grid; grid-template-columns:1fr 1fr; gap:14px 18px; border-top:1px solid rgba(201,168,76,.25); }
+@media (min-width:900px) { .hfeats { display:flex; gap:38px; justify-content:space-between; } }
+.ft { display:flex; gap:10px; align-items:center; }
+.ft .fic { width:36px; height:36px; border-radius:50%; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.ft .fic svg { width:17px; height:17px; stroke:var(--gold2); }
+.ft b { font-family:'Montserrat',sans-serif; color:#fff; font-size:.85rem; display:block; }
+.ft > div > span { color:#8d97b4; font-size:.75rem; }
 .hero .dots { display:flex; justify-content:center; gap:7px; margin-top:10px; }
 .hero .dots button { width:9px; height:9px; border-radius:50%; border:none; background:rgba(201,168,76,.35); cursor:pointer; padding:0; }
 .hero .dots button.on { background:var(--gold2); }
-@media (min-width:1200px) { .hero .ph .slides { height:370px; } }
+@media (min-width:1200px) { .hud { height:380px; } .hfeats { padding-left:44px; padding-right:44px; } }
 @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
 .hero .in > div > * { animation:fadeUp .7s ease both; }
 .hero .in > div > *:nth-child(2) { animation-delay:.08s; }
@@ -283,6 +308,8 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 .reveal.vis { opacity:1; transform:none; }
 @media (prefers-reduced-motion: reduce) {
   .hero .in > div > *, .hero .ph { animation:none; }
+  .hgrid, .hud .scan, .hstatus::after { animation:none; }
+  .hdot::after { animation:none; opacity:0; }
   .reveal { opacity:1; transform:none; transition:none; }
 }
 
@@ -331,26 +358,41 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   <a class="pill gold" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas">WhatsApp &middot; 680 555 303</a>
 </div></nav>
 
-<header class="hero"><div class="in">
+<header class="hero"><div class="hgrid" aria-hidden="true"></div><div class="in">
   <div style="flex:1; min-width:0">
     <span class="eyebrow" style="color:var(--gold2)">Tarifas 2026 &middot; Laboratorio Dental RB &middot; Madrid</span>
     <h1>Todo lo que necesitas<br><i>para tu pr&oacute;ximo caso.</i></h1>
     <p class="lead">Soluciones prot&eacute;sicas de alta precisi&oacute;n, fabricadas en Madrid para cl&iacute;nicas y odont&oacute;logos de toda Espa&ntilde;a.</p>
     <div class="search"><input type="search" id="buscador" autocomplete="off" placeholder="&iquest;Qu&eacute; trabajo buscas? (ej. corona, f&eacute;rula, blender...)" aria-label="Buscar trabajo"><button type="button">Buscar</button></div>
+    <div class="hstatus" id="hero-st" aria-hidden="true">Fresando estructura CAD-CAM</div>
     <div class="chips"><span>O navega por categor&iacute;as:</span>
       <a href="#fija">Pr&oacute;tesis fija</a><a href="#allon">All-on</a><a href="#blender">Blender</a><a href="#carga">Carga inmediata</a><a href="#removible">Removible</a><a href="#estetica">Est&eacute;tica</a><a href="#ortodoncia">Ortodoncia</a>
     </div>
   </div>
   <figure class="ph">
-    <div class="slides">
-      <img class="on" src="img/hero-cut.png" alt="Barra Blender fresada y anodizada" data-cap="Barra Blender fresada y anodizada &middot; trabajo real del laboratorio">
-      <img src="img/allon-cut.png" alt="All-on-Six" data-cap="All-on-Six &middot; rehabilitaci&oacute;n completa fija" loading="lazy">
-      <img src="img/fija-cut.png" alt="Coronas de zirconio" data-cap="Coronas de zirconio &middot; pr&oacute;tesis fija" loading="lazy">
-      <img src="img/carillas-cut.png" alt="Dise&ntilde;o de sonrisa" data-cap="Dise&ntilde;o de sonrisa &middot; est&eacute;tica dental" loading="lazy">
+    <div class="hud">
+      <div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="slides">
+        <img class="on" src="img/barra-wire-gold.png" alt="Barra Blender: del dise&ntilde;o 3D a la pieza real" data-cap="Del dise&ntilde;o 3D a la barra fresada &middot; trabajo real del laboratorio" data-st="Fresando estructura CAD-CAM">
+        <img src="img/cad-wire-azul.png" alt="Dise&ntilde;o CAD de rehabilitaci&oacute;n completa" data-cap="Dise&ntilde;o CAD de rehabilitaci&oacute;n completa fija" data-st="Dise&ntilde;ando caso digital" loading="lazy">
+        <img src="img/cad-exocad.jpg" class="win" alt="Planificaci&oacute;n digital del caso" data-cap="Planificaci&oacute;n digital del caso &middot; flujo exocad" data-st="Escaneando modelo 3D" loading="lazy">
+        <img src="img/cad-barra-azul.png" alt="Barra fresada y anodizada" data-cap="Barra fresada y anodizada &middot; acabado de precisi&oacute;n" data-st="Control de calidad digital" loading="lazy">
+      </div>
+      <div class="scan" aria-hidden="true"></div>
+      <span class="hdot" style="top:30%;left:22%" aria-hidden="true"></span>
+      <span class="hdot" style="top:60%;left:72%;animation-delay:.6s" aria-hidden="true"></span>
+      <span class="htag" style="top:22%;left:26%" aria-hidden="true">CAD &middot; 0.02 mm</span>
+      <span class="htag" style="top:68%;left:54%" aria-hidden="true">ZIRCONIO &middot; A2</span>
     </div>
-    <figcaption id="hero-cap">Barra Blender fresada y anodizada &middot; trabajo real del laboratorio</figcaption>
+    <figcaption id="hero-cap">Del dise&ntilde;o 3D a la barra fresada &middot; trabajo real del laboratorio</figcaption>
     <div class="dots" id="hero-dots"></div>
   </figure>
+</div>
+<div class="hfeats">
+  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-clock"/></svg></span><div><b>Entrega en 4-5 d&iacute;as</b><span>recogida gratuita en Madrid</span></div></div>
+  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-truck"/></svg></span><div><b>Toda Espa&ntilde;a</b><span>servicio nacional</span></div></div>
+  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-mon"/></svg></span><div><b>Tecnolog&iacute;a CAD-CAM</b><span>flujo 100% digital</span></div></div>
+  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Calidad que se ve</b><span>+35 a&ntilde;os de experiencia</span></div></div>
 </div></header>
 
 <section class="nov"><div class="in">
@@ -732,6 +774,8 @@ document.addEventListener('DOMContentLoaded', function () {
       idx = i % slides.length;
       slides[idx].classList.add('on'); dots[idx].classList.add('on');
       if (cap) cap.innerHTML = slides[idx].getAttribute('data-cap');
+      var st = document.getElementById('hero-st');
+      if (st && slides[idx].getAttribute('data-st')) st.textContent = slides[idx].getAttribute('data-st');
     }
     function reset() { clearInterval(timer); timer = setInterval(function () { go(idx + 1); }, 3800); }
     reset();
