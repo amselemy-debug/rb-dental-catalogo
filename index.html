@@ -1,649 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RB Dental Digital - Lista de Precios 2026</title>
-    <meta name="description" content="Laboratorio de Prótesis Dental Digital en Madrid. Tarifa 2026: zirconio, removible y ortodoncia. 35 años de experiencia, CAD-CAM y sinterizado SLM.">
-    <meta property="og:title" content="RB Dental Digital - Tarifas 2026">
-    <meta property="og:description" content="Laboratorio de Prótesis Dental Digital. 35 años de experiencia. Precios actualizados 2026.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tarifas.laboratoriodentalrb.com/">
-    <meta name="theme-color" content="#000018">
-    <link rel="canonical" href="https://tarifas.laboratoriodentalrb.com/">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%B7%3C/text%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #000018;
-            --primary-2: #0d0e30;
-            --gold: #C9A84C;
-            --gold-2: #b8953f;
-            --gold-light: #fbf5e0;
-            --bg: #f4f1e9;
-            --white: #ffffff;
-            --text: #16182e;
-            --text-mid: #556;
-            --text-light: #8890a5;
-            --border: #e7e8ef;
-            --wa: #25d366;
-            --radius: 18px;
-            --shadow: 0 6px 22px rgba(0,0,60,0.08);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.55;
-            -webkit-font-smoothing: antialiased;
-        }
-        .shell { max-width: 560px; margin: 0 auto; }
-
-        /* HERO */
-        .hero {
-            background: var(--primary);
-            color: #fff;
-            border-radius: 0 0 30px 30px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-in { max-width: 560px; margin: 0 auto; padding: 26px 22px 58px; position: relative; }
-        .prebar { background: linear-gradient(120deg, var(--gold), #e3c76e); color: var(--primary);
-            font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.72rem; text-align: center;
-            padding: 9px 14px; letter-spacing: 0.02em; }
-        .hero-cta { display: none; }
-        .hero::before {
-            content: '';
-            position: absolute; top: -40%; right: -25%;
-            width: 420px; height: 420px; border-radius: 50%;
-            background: radial-gradient(circle, rgba(201,168,76,0.16) 0%, transparent 70%);
-        }
-        .hero::after {
-            content: '';
-            position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
-            background: linear-gradient(90deg, transparent, #C9A84C 18%, #e3c76e 50%, #C9A84C 82%, transparent);
-            opacity: 0.9;
-        }
-        .hero-in > * { position: relative; }
-        .logo-img { width: 195px; height: auto; display: block; }
-        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 900; letter-spacing: -0.5px; }
-        .logo span { color: var(--gold); font-weight: 700; }
-        .logo-digital { font-family: 'Montserrat', sans-serif; font-size: 0.42rem; font-weight: 700; letter-spacing: 6px; color: var(--gold); margin-top: 2px; }
-        .hero .kicker { font-size: 0.74rem; color: #9aa3c7; margin-top: 8px; }
-        .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem; font-weight: 900; line-height: 1.28;
-            margin-top: 14px;
-        }
-        .hero h1 i { color: var(--gold); font-style: normal; }
-        .stats { display: flex; gap: 8px; margin-top: 18px; }
-        .st {
-            flex: 1; background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(201,168,76,0.25);
-            border-radius: 13px; text-align: center; padding: 9px 4px;
-        }
-        .st b { display: block; font-family: 'Montserrat', sans-serif; color: var(--gold); font-size: 1rem; font-weight: 900; }
-        .st span { font-size: 0.5rem; color: #9aa3c7; letter-spacing: 1.5px; font-weight: 700; }
-        .hero-year {
-            position: absolute; top: 26px; right: 22px;
-            border: 1px solid rgba(201,168,76,0.5); color: var(--gold);
-            font-family: 'Montserrat', sans-serif; font-size: 0.58rem; font-weight: 800;
-            letter-spacing: 2px; padding: 4px 11px; border-radius: 20px;
-        }
-
-        /* BUSCADOR FLOTANTE */
-        .search-wrap { margin: -26px 22px 0; position: relative; z-index: 5; }
-        .search-wrap input:focus { outline: none; box-shadow: 0 10px 26px rgba(0,0,24,0.18), 0 0 0 2px rgba(201,168,76,0.55); }
-        .search-wrap input {
-            width: 100%; border: none; border-radius: 15px;
-            padding: 15px 18px; font-size: 0.92rem;
-            font-family: 'Nunito Sans', sans-serif;
-            box-shadow: 0 12px 30px rgba(0,0,60,0.18); outline: none;
-        }
-        .search-wrap input:focus { box-shadow: 0 12px 30px rgba(0,0,60,0.18), 0 0 0 2px var(--gold); }
-        .no-results { display: none; text-align: center; padding: 1.6rem 1rem; color: var(--text-light); font-size: 0.85rem; }
-
-        /* QUICK ACTIONS */
-        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 18px 22px 4px; }
-        .qa {
-            background: var(--white); border-radius: 16px; text-align: center;
-            padding: 15px 6px 13px; box-shadow: 0 4px 16px rgba(0,0,60,0.06);
-            text-decoration: none; color: var(--text);
-            transition: transform 0.15s, box-shadow 0.15s;
-            cursor: pointer; border: none; font-family: inherit; display: block; width: 100%;
-        }
-        .qa:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,60,0.12); }
-        .qa svg { width: 36px; height: 36px; display: block; margin: 0 auto 6px; stroke: #a8853b; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-        .qa b { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; color: var(--primary); display: block; }
-        .qa span { display: block; font-size: 0.56rem; color: var(--text-light); margin-top: 1px; }
-
-        /* BONO */
-        .bono {
-            margin: 13px 22px; background: linear-gradient(135deg, var(--gold), var(--gold-2));
-            border-radius: var(--radius); color: var(--primary);
-            padding: 15px 18px; display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 8px 24px rgba(201,168,76,0.35);
-        }
-        .bono b { font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 900; display: block; }
-        .bono span { font-size: 0.68rem; font-weight: 700; opacity: 0.85; }
-        .bono .star svg { width: 30px; height: 30px; stroke: var(--primary); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-
-        /* INTRO CAD-CAM */
-        .intro {
-            margin: 0 22px 13px; background: var(--white); border-left: 4px solid var(--gold);
-            border-radius: 12px; padding: 13px 16px; font-size: 0.78rem; color: var(--text-mid);
-            box-shadow: var(--shadow);
-        }
-        .intro strong { display: block; font-family: 'Montserrat', sans-serif; color: var(--primary); font-size: 0.8rem; margin-bottom: 2px; }
-
-        /* CARDS DE CATALOGO */
-        .card {
-            margin: 0 22px 14px; background: var(--white); border-radius: var(--radius);
-            box-shadow: var(--shadow); overflow: hidden; scroll-margin-top: 14px;
-        }
-        .card-h { display: flex; align-items: center; gap: 13px; padding: 16px 18px 12px; }
-        .card-h .ico svg { width: 24px; height: 24px; stroke: var(--gold); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-        .card-h .ico {
-            width: 44px; height: 44px; border-radius: 13px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-2));
-            color: var(--gold); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;
-            border: 1px solid rgba(201,168,76,0.35);
-        }
-        .card-h .t b { display: block; font-family: 'Montserrat', sans-serif; font-size: 1rem; color: var(--primary); font-weight: 800; }
-        .card-h .t span { font-size: 0.7rem; color: var(--text-light); }
-        .ap {
-            margin: 10px 18px 2px; display: inline-block;
-            background: var(--gold-light); color: var(--primary);
-            font-family: 'Montserrat', sans-serif; font-size: 0.62rem; font-weight: 800;
-            letter-spacing: 1px; padding: 4px 12px; border-radius: 14px; text-transform: uppercase;
-        }
-        .rows { padding: 2px 18px 8px; }
-        .r { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 0.86rem; padding: 8px 0; border-bottom: 1px solid #f4f5f9; position: relative; }
-        .r::after { content: ''; position: absolute; left: 0; right: 0; top: calc(50% + 3px); border-top: 2px dotted #e7e0cb; }
-        .r span, .r b { position: relative; z-index: 1; background: #fff; }
-        .r span { padding-right: 10px; }
-        .r:last-child { border-bottom: none; }
-        .r b { font-family: 'Montserrat', sans-serif; color: var(--primary); font-weight: 800; white-space: nowrap; font-size: 0.88rem; padding-left: 10px; }
-        .r:hover b { color: #a8853b; }
-        .discount-line {
-            margin: 4px 18px 6px; background: var(--gold-light); border-radius: 10px;
-            font-size: 0.68rem; color: var(--primary); font-weight: 700; text-align: center; padding: 7px;
-        }
-
-        /* ALL-ON OFERTAS (doble tarjeta) */
-        .allon-label { margin: 8px 18px 2px; font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800; color: var(--primary); }
-        .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin: 6px 18px 4px; }
-        @media (max-width: 350px) { .offer-grid { grid-template-columns: 1fr; } }
-        .offer-card { border: 1px solid var(--border); border-radius: 13px; overflow: hidden; background: #fff; }
-        .offer-card .oh {
-            background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #fff;
-            font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 800;
-            text-align: center; padding: 8px 6px; letter-spacing: 0.4px;
-        }
-        .offer-card .oh.oferta { background: linear-gradient(135deg, #10b981, #059669); }
-        .offer-card .oh .badge { background: #ffffff2e; border-radius: 12px; padding: 1px 7px; margin-left: 5px; font-size: 0.62rem; }
-        .offer-card .ro { display: flex; justify-content: space-between; gap: 6px; font-size: 0.63rem; padding: 5.5px 10px; border-bottom: 1px solid #f4f5f9; }
-        .offer-card .ro b { font-family: 'Montserrat', sans-serif; color: var(--primary); white-space: nowrap; }
-        .offer-card .ro .free { color: #059669; font-weight: 800; }
-        .offer-card .total { display: flex; justify-content: space-between; gap: 8px; padding: 8px 10px; background: #f0f1f6; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 0.78rem; color: var(--primary); }
-        .offer-card .total.oferta { background: #ecfdf5; color: #059669; }
-        .offer-card .total s { color: var(--text-light); font-weight: 600; font-size: 0.66rem; }
-
-        /* ALL-ON DETAILS */
-        details.allon { margin: 6px 18px; border: 1px solid var(--border); border-radius: 13px; overflow: hidden; }
-        details.allon summary {
-            list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
-            padding: 12px 14px; font-size: 0.8rem; font-weight: 800; font-family: 'Montserrat', sans-serif; color: var(--primary);
-            background: #f8f9fc;
-        }
-        details.allon summary::-webkit-details-marker { display: none; }
-        details.allon summary .price-tag { color: var(--gold-2); }
-        details.allon summary .price-tag s { color: var(--text-light); font-weight: 600; margin-right: 6px; font-size: 0.72rem; }
-        details.allon .rows { padding: 2px 14px 8px; }
-        details.allon .r { font-size: 0.78rem; padding: 6px 0; }
-        .qa-wide { grid-column: 1 / -1; }
-        .gal { display: flex; gap: 10px; overflow-x: auto; padding: 10px 18px 2px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-        .gal::-webkit-scrollbar { display: none; }
-        .gal figure { flex-shrink: 0; margin: 0; scroll-snap-align: start; background: #fff; border: 1px solid #e3eaf6; border-radius: 14px; padding: 6px 6px 2px; box-shadow: 0 2px 8px rgba(10,22,40,0.05); }
-        .gal img { width: 178px; height: 124px; object-fit: cover; border-radius: 10px; display: block; }
-        .galwrap { position: relative; }
-        .gal-prev, .gal-next { position: absolute; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; border-radius: 50%; border: 1px solid #e3eaf6; background: #fff; color: #0f2060; font-size: 1.35rem; font-weight: 700; line-height: 1; box-shadow: 0 2px 10px rgba(10,22,40,0.18); cursor: pointer; z-index: 2; display: flex; align-items: center; justify-content: center; padding: 0 0 2px; }
-        .gal-next { right: 6px; }
-        .gal-prev { left: 6px; }
-        .gal-prev[hidden], .gal-next[hidden] { display: none; }
-        .gal figcaption { font-size: 0.66rem; font-weight: 700; color: #0f2060; text-align: center; padding: 5px 2px 4px; letter-spacing: 0.02em; }
-        .folleto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 12px 18px 18px; }
-        .folleto { background: #fff; border: 1px solid #e3eaf6; border-radius: 14px; padding: 7px 7px 9px; text-align: center; box-shadow: 0 2px 8px rgba(10,22,40,0.05); display: flex; flex-direction: column; gap: 7px; }
-        .folleto .cover { display: block; }
-        .folleto img { width: 100%; aspect-ratio: 210 / 297; object-fit: cover; border-radius: 9px; border: 1px solid #eef2fa; display: block; }
-        .folleto b { font-family: 'Montserrat', sans-serif; font-size: 0.66rem; color: var(--primary); line-height: 1.25; }
-        .folleto-btn { display: block; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.6rem; text-decoration: none; border-radius: 999px; padding: 7px 4px; letter-spacing: 0.04em; }
-        .folleto-btn:hover { background: var(--primary-2); }
-        /* Novedades */
-        .novedades { margin: 14px 16px 0; background: #000018; border-radius: 16px; padding: 14px 16px 44px;
-            border: 1px solid rgba(201,168,76,0.35); }
-        .novedades .nv-l { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.22em; color: #e3c76e; }
-        .novedades .nv-l::before { content: '\2726\00a0\00a0'; color: #C9A84C; }
-        .nv-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-        .nv-pills a { border: 1px solid rgba(201,168,76,0.55); color: #fff; font-weight: 600; font-size: 0.74rem;
-            padding: 7px 13px; border-radius: 999px; text-decoration: none; background: rgba(201,168,76,0.08); }
-        .nv-pills a:hover { background: rgba(201,168,76,0.15); }
-        /* Bloques de presentacion (folleto) */
-        .fintro { margin: 6px 18px 14px; border-radius: 16px; overflow: hidden; border: 1px solid #e3eaf6; background: #fff; }
-        .fi-dark { background: #000018; padding: 18px 18px 16px; color: #fff; display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-        .fi-chip { display: inline-block; font-size: 0.58rem; letter-spacing: 0.16em; font-weight: 700; color: #e3c76e;
-            border: 1px solid rgba(201,168,76,0.6); padding: 4px 11px; border-radius: 999px; margin-bottom: 9px; }
-        .fi-dark h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.3rem; margin: 0; }
-        .fi-dark .fi-tag { color: #c7cdea; font-size: 0.76rem; margin-top: 6px; line-height: 1.45; max-width: 420px; }
-        .fi-dark .fi-img { flex-shrink: 0; }
-        .fi-dark .fi-img img { width: 130px; height: 104px; object-fit: contain; display: block; }
-        .fi-what { padding: 13px 16px 4px; display: grid; gap: 11px; }
-        .fi-what h4 { font-size: 0.82rem; color: #0f2060; margin: 0 0 3px; }
-        .fi-what h4 i { font-style: normal; color: #a8853b; }
-        .fi-what p { font-size: 0.76rem; line-height: 1.5; color: #4a5268; margin: 0; }
-        .fi-sub { display: block; padding: 10px 16px 0; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.14em; color: #a8853b; text-transform: uppercase; }
-        .fi-vents { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 10px; padding: 11px 16px 13px; }
-        .fi-v { display: flex; gap: 10px; align-items: flex-start; background: #f4f5f9; border: 1px solid #e9ecf5;
-            border-radius: 12px; padding: 11px 12px; }
-        .fi-v .chk { width: 26px; height: 26px; border-radius: 8px; background: #000018;
-            color: #e3c76e; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; }
-        .fi-v div { font-size: 0.68rem; line-height: 1.35; color: #6b7385; }
-        .fi-v b { display: block; font-size: 0.73rem; color: #0f2060; margin-bottom: 1px; }
-        .fi-ico { width: 26px; height: 26px; border-radius: 8px; background: #000018; display: inline-flex;
-            align-items: center; justify-content: center; flex-shrink: 0; }
-        .fi-ico svg { width: 14px; height: 14px; stroke: #e3c76e; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-        .fi-what h4 { display: flex; align-items: center; gap: 9px; }
-        .fi-what h4.fiq { display: block; font-size: 1.02rem; }
-        .fi-what h4 em { font-style: normal; color: #C9A84C; }
-        .fi-what p b { color: #a8853b; font-weight: 700; }
-        .fi-flow { margin: 2px 16px 14px; background: #000018; border-radius: 12px; padding: 12px 15px; }
-        .fi-flow b { display: block; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.64rem;
-            letter-spacing: 0.14em; color: #e3c76e; margin-bottom: 5px; }
-        .fi-flow p { margin: 0; font-size: 0.72rem; line-height: 1.5; color: #dfe4f5; }
-        .gal.pasos figure { position: relative; }
-        .gal.pasos .pnum { position: absolute; top: 11px; right: 11px; width: 24px; height: 24px; border-radius: 50%;
-            background: linear-gradient(135deg, #C9A84C, #e3c76e); color: #000018; font-weight: 800; font-size: 0.78rem;
-            display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,24,0.25); }
-        .gal.pasos figcaption b { display: block; font-size: 0.68rem; color: #0f2060; }
-        .gal.pasos figcaption span { display: block; font-size: 0.6rem; font-weight: 400; color: #8890a5; margin-top: 1px; }
-        .fi-pdf { display: inline-block; margin: 0 16px 14px; font-size: 0.72rem; font-weight: 700; color: #a8853b; text-decoration: none; }
-        .fi-pdf:hover { text-decoration: underline; }
-        .note { margin: 8px 18px 12px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 9px 13px; font-size: 0.72rem; color: #92400e; }
-
-        /* TIEMPOS */
-        .time-r { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.82rem; padding: 8px 0; border-bottom: 1px solid #f4f5f9; }
-        .time-r:last-child { border-bottom: none; }
-        .time-badge {
-            background: var(--gold-light); color: var(--primary);
-            font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.68rem;
-            padding: 3px 11px; border-radius: 20px; white-space: nowrap;
-        }
-
-        /* CONTACTO */
-        .contact {
-            margin: 0 22px 14px; background: linear-gradient(160deg, var(--primary), var(--primary-2));
-            border: 1px solid rgba(201,168,76,0.3);
-            border-radius: var(--radius); color: #fff; padding: 24px 20px; text-align: center; scroll-margin-top: 14px;
-        }
-        .contact h2 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; }
-        .contact p { color: #9aa3c7; font-size: 0.76rem; margin: 7px 0 14px; }
-        .cbtn {
-            display: flex; align-items: center; justify-content: center; gap: 8px;
-            border-radius: 14px; padding: 13px; font-weight: 800; font-size: 0.85rem;
-            text-decoration: none; margin-bottom: 9px; font-family: 'Montserrat', sans-serif;
-        }
-        .cbtn.wa { background: var(--wa); color: #fff; }
-        .cbtn.tel { background: #fff; color: var(--primary); }
-        .cbtn.web { background: rgba(201,168,76,0.15); color: var(--gold); border: 1px solid rgba(201,168,76,0.4); }
-
-        footer { margin: 4px 16px 26px; background: #000018; border: 1px solid rgba(201,168,76,0.3); border-radius: 16px;
-            padding: 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-        .ft-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; color: #ffffff; }
-        .ft-tag span { font-weight: 300; color: #e3c76e; }
-        .ft-sub { font-size: 0.62rem; color: #8890a5; margin-top: 7px; line-height: 1.7; }
-        footer img { width: 108px; height: auto; flex-shrink: 0; }
-
-        /* WHATSAPP STICKY */
-        .wa-bar {
-            position: fixed; bottom: 18px; right: 18px; z-index: 200;
-            width: 54px; height: 54px; border-radius: 50%;
-            background: var(--wa); color: #fff;
-            display: flex; align-items: center; justify-content: center;
-            text-decoration: none; box-shadow: 0 8px 22px rgba(0,0,0,0.3);
-            transition: transform 0.15s;
-        }
-        .wa-bar:hover { transform: scale(1.08); }
-
-        /* ANIMACIONES */
-        .js .fade { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
-        .js .fade.visible { opacity: 1; transform: none; }
-        @media (min-width: 900px) {
-            .shell { max-width: min(1280px, 94vw); }
-            .hero h1 { font-size: 2.4rem; }
-            .hero { border-radius: 0 0 28px 28px; }
-            .grid { grid-template-columns: repeat(6, 1fr); gap: 12px; }
-            .qa { padding: 18px 8px 14px; }
-            .qa svg { width: 34px; height: 34px; }
-            .qa b { font-size: 1rem; }
-            .qa span { font-size: 0.78rem; }
-            .bono div b { font-size: 1.25rem; }
-            .bono div span { font-size: 0.92rem; }
-            .intro { font-size: 0.95rem; }
-            .ap { font-size: 0.8rem; }
-            .gal { justify-content: center; }
-            .gal figure { flex: 0 1 300px; }
-            .gal img { width: 100%; height: 200px; }
-            .gal figcaption { font-size: 0.74rem; }
-            .folleto-grid { gap: 16px; padding: 16px 22px 22px; }
-            .folleto { padding: 10px 10px 13px; gap: 9px; }
-            .folleto b { font-size: 0.88rem; }
-            .folleto-btn { font-size: 0.76rem; padding: 9px 6px; }
-            .r { padding: 13px 0; }
-            .r span { font-size: 1rem; }
-            .r b { font-size: 1.05rem; }
-            .card-h .t b { font-size: 1.25rem; }
-            .card-h .t span { font-size: 0.85rem; }
-            .note { font-size: 0.82rem; }
-            .ro span, .ro b { font-size: 0.85rem; }
-            .total { font-size: 0.95rem; }
-            .time-r span { font-size: 0.95rem; }
-        }
-        .topnav, .hero-desk, .hero-photo, .st-desk { display: none; }
-        @media (min-width: 1000px) {
-            .topnav { display: block; position: sticky; top: 0; z-index: 60; background: #000018; box-shadow: 0 2px 14px rgba(0,0,0,0.35); }
-            .tn-in { max-width: min(1280px, 94vw); margin: 0 auto; display: flex; align-items: center; gap: 26px; padding: 12px 18px; }
-            .tn-logo { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 1.25rem; color: #fff; }
-            .tn-logo span { color: #C9A84C; }
-            .tn-links { margin-left: auto; display: flex; gap: 22px; }
-            .tn-links a { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.92rem; opacity: 0.9; }
-            .tn-links a:hover { opacity: 1; color: #C9A84C; }
-            .tn-wa { background: linear-gradient(120deg, #C9A84C, #e3c76e); color: #000018; font-weight: 800; font-size: 0.9rem; text-decoration: none; padding: 9px 18px; border-radius: 999px; }
-            .hero-in { min-height: 470px; padding-right: 520px !important; }
-            .hero .logo, .hero .logo-digital, .hero-year, .hero-in > h1 { display: none; }
-            .hero .kicker { letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.72rem; }
-            .hero-desk { display: block; }
-            .hero-desk h1 { font-size: 4.5rem; margin: 10px 0 16px; color: #fff; font-family: Montserrat, sans-serif; font-weight: 900; letter-spacing: -1.5px; }
-            .hero-desk h1 i { font-style: normal; color: #e3c76e; }
-            .prebar { font-size: 0.9rem; padding: 11px; }
-            .hero { border-radius: 0; }
-            .hero-in { max-width: min(1280px, 94vw); padding: 64px 22px 60px; }
-            .hero-cta { display: flex; gap: 16px; margin: 30px 0 6px; }
-            .hpill { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1rem; text-decoration: none;
-                border-radius: 999px; padding: 15px 32px; }
-            .hpill.gold { background: linear-gradient(120deg, var(--gold), #e3c76e); color: var(--primary); }
-            .hpill.line { border: 2px solid rgba(255,255,255,0.5); color: #fff; }
-            .hpill.line:hover { border-color: #e3c76e; color: #e3c76e; }
-            .hero-desk p { color: #c7d0ea; font-size: 1.05rem; line-height: 1.65; margin: 0 0 26px; }
-            .hero-photo { display: block; position: absolute; right: 22px; top: 60px; width: 460px; margin: 0;
-                background: #fff; border-radius: 24px; padding: 16px 16px 12px; border: 1px solid rgba(201,168,76,0.5);
-                box-shadow: 0 26px 60px rgba(0,0,0,0.5); }
-            .hero-photo img { width: 100%; height: 320px; object-fit: contain; background: #fff; border-radius: 12px; display: block; }
-            .hero-photo figcaption { color: #a8853b; font-size: 0.78rem; margin-top: 8px; text-align: center; letter-spacing: 0.03em; font-weight: 600; }
-            .st-desk { display: block; }
-            .hero .stats { background: none; gap: 0; }
-            .hero .st { background: none; border: none; border-left: 1px solid rgba(201,168,76,0.4); padding: 2px 26px; text-align: left; }
-            .hero .st:first-child { border-left: none; padding-left: 0; }
-            .hero .st b { font-size: 2rem; white-space: nowrap; }
-            .hero .st span { font-size: 0.62rem; letter-spacing: 2px; }
-            .hero .stats { margin-top: 32px; padding-top: 26px; border-top: 1px solid rgba(201,168,76,0.3); }
-            .grid { display: none; }
-            section.card, section.contact, .ap[id] { scroll-margin-top: 80px; }
-            .sideidx a.active { background: #faf7ee; box-shadow: inset 3px 0 0 #C9A84C; }
-            .sideidx a.active b { color: #a8853b; }
-            footer { margin: 40px calc(50% - 50vw) 0; border-radius: 0; border-left: none; border-right: none;
-                padding: 30px calc(50vw - 50% + 34px) 34px; }
-            footer img { width: 132px; }
-            .ft-sub { font-size: 0.7rem; }
-            .hero .logo-img { width: 210px; }
-            .tn-logo-img { height: 44px; width: auto; display: block; }
-            .novedades { margin: 18px 0 0; padding: 16px 26px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-            .novedades .nv-pills { margin-top: 0; }
-            .nv-pills a { font-size: 0.85rem; padding: 9px 18px; }
-            .novedades .nv-l { font-size: 0.85rem; }
-            .fi-dark { padding: 24px 26px 22px; }
-            .fi-dark h3 { font-size: 1.7rem; }
-            .fi-dark .fi-tag { font-size: 0.9rem; max-width: 560px; }
-            .fi-dark .fi-img img { width: 190px; height: 150px; }
-            .fi-what { grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px 22px 6px; }
-            .fi-what h4 { font-size: 0.95rem; }
-            .fi-what p { font-size: 0.85rem; }
-            .fi-vents { grid-template-columns: 1fr 1fr 1fr; padding: 13px 22px 16px; }
-            .fi-v div { font-size: 0.78rem; }
-            .fi-v b { font-size: 0.84rem; }
-            .fi-v { padding: 13px 15px; }
-            .fi-v .chk, .fi-ico { width: 30px; height: 30px; border-radius: 9px; }
-            .fi-ico svg { width: 16px; height: 16px; }
-            .fi-flow { margin: 4px 22px 16px; padding: 14px 18px; }
-            .fi-flow b { font-size: 0.72rem; }
-            .fi-flow p { font-size: 0.82rem; }
-            .gal.pasos figcaption b { font-size: 0.78rem; }
-            .gal.pasos figcaption span { font-size: 0.68rem; }
-            .fi-sub { padding: 12px 22px 0; }
-            .fi-pdf { margin: 0 22px 16px; font-size: 0.8rem; }
-            .bono { display: flex; justify-content: center; align-items: baseline; gap: 12px; border-radius: 12px; padding: 13px 20px; }
-            .bono .star { display: none; }
-            .bono div { display: flex; align-items: baseline; gap: 12px; }
-            .content { display: flex; gap: 26px; align-items: flex-start; margin-top: 18px; }
-            .sidenav { position: sticky; top: 74px; width: 265px; flex-shrink: 0; }
-            .shell > .search-wrap { margin: 18px 0 0; padding: 0; }
-            .shell > .search-wrap input { height: 54px; font-size: 1rem; }
-            .maincol { flex: 1; min-width: 0; }
-            .sideidx { background: #fff; border: 1px solid #e3eaf6; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(10,22,40,0.05); }
-            .sideidx a { display: flex; justify-content: space-between; align-items: center; padding: 13px 16px; text-decoration: none; color: #0a1628; font-weight: 600; font-size: 0.93rem; border-bottom: 1px solid #eef2fa; }
-            .sideidx a:last-child { border-bottom: none; }
-            .sideidx a:hover { background: #f5f8ff; }
-            .sideidx b { color: #a8853b; font-size: 0.8rem; font-weight: 700; }
-            #mas-pedidos .rows { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 4px 18px 18px; }
-            #mas-pedidos .r { display: block; border: 1px solid #e3eaf6; border-radius: 16px; padding: 16px; }
-            #mas-pedidos .r span { display: block; font-weight: 700; margin-bottom: 12px; }
-            #mas-pedidos .r b { font-size: 1.45rem; color: #0f2060; }
-        }
-        @media (prefers-reduced-motion: reduce) { .js .fade { opacity: 1; transform: none; transition: none; } }
-
-        /* IMPRESION */
-        @media print {
-            .search-wrap, .grid, .wa-bar, .contact .cbtn, .no-results { display: none !important; }
-            .js .fade { opacity: 1 !important; transform: none !important; }
-            body { background: #fff; }
-            .hero, .bono, .card-h .ico, .contact, .time-badge, .ap {
-                -webkit-print-color-adjust: exact; print-color-adjust: exact;
-            }
-            .card { box-shadow: none; border: 1px solid var(--border); break-inside: avoid; }
-            .shell { max-width: 100%; }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarifas 2026 &middot; RB Dental &middot; Laboratorio de Pr&oacute;tesis Dental Digital</title>
+<meta name="description" content="Tarifa 2026 del Laboratorio Dental RB (Madrid). Pr&oacute;tesis fija, removible, sistema Blender, carga inmediata, dise&ntilde;o de sonrisa y ortodoncia. Recogida gratuita en Madrid y entrega en 4-5 d&iacute;as.">
+<meta name="theme-color" content="#000018">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root { --obs:#000018; --obs2:#0b0d29; --gold:#C9A84C; --gold2:#e3c76e; --goldd:#a8853b; --ink:#101128; --mut:#5b6478; --line:#e7eaf2; --soft:#f6f7fa; --wa:#25d366; }
+html { scroll-behavior:smooth; }
+body { font-family:'Nunito Sans',system-ui,sans-serif; color:#26314f; background:#fff; }
+h1,h2,h3,h4 { font-family:'Poppins',sans-serif; color:var(--obs2); }
+.wrap { max-width:1320px; margin:0 auto; padding:0 22px; }
+.ic { stroke:var(--gold); fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.eyebrow { font-family:'Poppins'; font-weight:700; letter-spacing:.2em; font-size:.72rem; color:var(--goldd); text-transform:uppercase; }
+.pill { display:inline-block; border-radius:999px; padding:11px 22px; font-weight:700; font-family:'Poppins'; text-decoration:none; font-size:.9rem; }
+.pill.gold { background:linear-gradient(120deg,var(--gold),var(--gold2)); color:var(--obs); box-shadow:0 4px 14px rgba(201,168,76,.35); }
+.pill.linew { border:1.5px solid rgba(255,255,255,.6); color:#fff; }
+/* NAV */
+nav.top { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:50; }
+nav.top .in { max-width:1320px; margin:0 auto; padding:10px 22px; display:flex; align-items:center; gap:20px; }
+nav.top img { height:40px; }
+nav.top .links { display:none; }
+nav.top .sp { flex:1; }
+@media (min-width:1000px) {
+  nav.top img { height:46px; }
+  nav.top .links { display:flex; gap:22px; }
+  nav.top .links a { color:var(--obs2); text-decoration:none; font-weight:600; font-size:.93rem; font-family:'Poppins'; }
+  nav.top .links a:hover { color:var(--goldd); }
+}
+/* HERO */
+.hero { background:linear-gradient(150deg,var(--obs2),var(--obs) 70%); color:#fff; position:relative; overflow:hidden; }
+.hero::after { content:''; position:absolute; left:0; right:0; bottom:0; height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold) 18%,var(--gold2) 50%,var(--gold) 82%,transparent); }
+.hero .in { max-width:1320px; margin:0 auto; padding:38px 22px 44px; display:flex; gap:44px; align-items:center; }
+.hero h1 { color:#fff; font-size:2rem; font-weight:800; line-height:1.12; letter-spacing:-.5px; margin-top:8px; }
+.hero h1 i { font-style:normal; color:var(--gold2); }
+.hero p.lead { color:#c7cdea; font-size:.95rem; margin:12px 0 18px; max-width:520px; line-height:1.6; }
+.search { display:flex; background:#fff; border-radius:999px; overflow:hidden; max-width:560px; box-shadow:0 8px 30px rgba(0,0,0,.35); }
+.search input { flex:1; border:none; outline:none; padding:14px 20px; font-size:1rem; font-family:'Nunito Sans'; min-width:0; }
+.search button { background:linear-gradient(120deg,var(--gold),var(--gold2)); border:none; font-family:'Poppins'; font-weight:700; padding:0 24px; font-size:.9rem; color:var(--obs); cursor:pointer; }
+.chips { margin-top:14px; }
+.chips span { color:#9fb0d8; font-size:.78rem; display:block; margin-bottom:8px; }
+.chips a { display:inline-block; border:1px solid rgba(201,168,76,.5); color:#fff; border-radius:999px; padding:6px 14px; font-size:.8rem; text-decoration:none; margin:0 6px 6px 0; font-family:'Poppins'; }
+.chips a:hover { background:rgba(201,168,76,.15); }
+.hero .ph { display:none; }
+@media (min-width:1000px) {
+  .hero .in { padding:52px 22px 56px; }
+  .hero h1 { font-size:3.2rem; }
+  .hero p.lead { font-size:1.08rem; }
+  .hero .ph { display:block; flex-shrink:0; width:460px; position:relative; }
+  .hero .ph img { width:100%; height:330px; object-fit:contain; background:#fff; border-radius:22px; padding:14px;
+    border:1px solid rgba(201,168,76,.5); box-shadow:0 24px 54px rgba(0,0,0,.5); }
+  .hero .ph figcaption { text-align:center; color:var(--gold2); font-size:.78rem; margin-top:10px; }
+}
+/* STRIP */
+.strip { border-bottom:1px solid var(--line); background:#fff; }
+.strip .in { max-width:1320px; margin:0 auto; padding:14px 22px; display:grid; grid-template-columns:1fr 1fr; gap:12px 20px; }
+@media (min-width:1000px) { .strip .in { display:flex; justify-content:space-between; padding:18px 22px; } }
+.stt { display:flex; gap:10px; align-items:center; }
+.stt svg { width:30px; height:30px; flex-shrink:0; }
+.stt b { font-family:'Poppins'; color:var(--obs2); display:block; font-size:.88rem; }
+.stt span { color:var(--mut); font-size:.76rem; }
+/* NOVEDADES */
+.nov { background:linear-gradient(150deg,var(--obs2),var(--obs)); padding:34px 0 40px; }
+.nov .in { max-width:1320px; margin:0 auto; padding:0 22px; display:flex; gap:26px; align-items:center; flex-wrap:wrap; }
+.nov .l { width:100%; }
+.nov .l h2 { color:#fff; font-size:1.6rem; font-weight:800; line-height:1.2; margin:8px 0 8px; }
+.nov .l p { color:#c7cdea; margin-bottom:16px; font-size:.9rem; }
+.ncards { display:grid; grid-template-columns:1fr; gap:14px; width:100%; }
+@media (min-width:700px) { .ncards { grid-template-columns:repeat(3,1fr); } }
+@media (min-width:1100px) { .nov .l { width:280px; flex-shrink:0; } .ncards { flex:1; width:auto; } }
+.nc { border:1px solid rgba(201,168,76,.45); border-radius:16px; padding:18px; background:rgba(255,255,255,.04); display:block; text-decoration:none; }
+.nc b { color:#fff; font-family:'Poppins'; font-size:1rem; letter-spacing:.06em; }
+.nc p { color:#c7cdea; font-size:.82rem; margin:5px 0 10px; }
+.nc .im { background:#fff; border-radius:10px; height:110px; display:flex; align-items:center; justify-content:center; padding:8px; }
+.nc img { max-height:96px; max-width:100%; object-fit:contain; }
+.nc u { color:var(--gold2); font-family:'Poppins'; font-weight:600; font-size:.82rem; text-decoration:none; display:block; margin-top:10px; }
+/* MAS PEDIDOS */
+.sec { padding:36px 0 4px; }
+.sec .head { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:18px; gap:12px; flex-wrap:wrap; }
+.sec h2 { font-size:1.55rem; font-weight:800; letter-spacing:-.4px; }
+@media (min-width:1000px) { .sec h2 { font-size:2rem; } }
+.top4 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (min-width:900px) { .top4 { grid-template-columns:repeat(4,1fr); gap:16px; } }
+.t4 { border:1px solid var(--line); border-radius:16px; overflow:hidden; text-decoration:none; display:block; }
+.t4 .im { background:var(--soft); height:120px; display:flex; align-items:center; justify-content:center; padding:10px; }
+@media (min-width:900px) { .t4 .im { height:150px; } }
+.t4 img { max-height:100%; max-width:100%; object-fit:contain; }
+.t4 .tx { padding:12px 14px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+.t4 b { font-family:'Poppins'; color:var(--obs2); display:block; font-size:.9rem; }
+.t4 .d { color:var(--goldd); font-family:'Poppins'; font-weight:700; font-size:.85rem; }
+.t4 .go { width:32px; height:32px; border-radius:50%; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; color:var(--goldd); flex-shrink:0; }
+/* LISTA */
+.listwrap { padding:10px 0 30px; }
+.layout { max-width:1320px; margin:0 auto; padding:20px 22px 0; display:flex; gap:28px; align-items:flex-start; }
+aside.cats { display:none; }
+@media (min-width:1000px) {
+  aside.cats { display:block; width:255px; flex-shrink:0; background:var(--soft); border-radius:16px; padding:14px; position:sticky; top:76px; }
+  aside.cats input { width:100%; background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 14px; color:var(--ink); font-size:.88rem; margin-bottom:10px; font-family:'Nunito Sans'; outline:none; }
+  aside.cats a { display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:10px; text-decoration:none; color:var(--obs2); font-family:'Poppins'; font-weight:600; font-size:.88rem; }
+  aside.cats a svg { width:20px; height:20px; }
+  aside.cats a.on { background:linear-gradient(120deg,var(--gold),var(--gold2)); color:var(--obs); }
+  aside.cats a.on svg { stroke:var(--obs); }
+  aside.cats .help { background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:12px; text-align:center; }
+  aside.cats .help b { font-family:'Poppins'; color:var(--obs2); display:block; margin-bottom:3px; font-size:.9rem; }
+  aside.cats .help span { color:var(--mut); font-size:.78rem; }
+  aside.cats .help a { display:inline-block; border:1.5px solid var(--gold); border-radius:999px; padding:8px 18px; color:var(--goldd); font-weight:700; margin-top:10px; font-size:.82rem; }
+}
+main.list { flex:1; min-width:0; }
+.syssec { margin-bottom:34px; scroll-margin-top:76px; }
+.shead { margin:6px 0 14px; }
+.shead h2 { font-size:1.5rem; font-weight:800; }
+@media (min-width:1000px) { .shead h2 { font-size:1.9rem; } }
+.shead .sub { color:var(--mut); font-size:.9rem; margin-top:2px; }
+/* presentacion */
+.pres { border:1px solid var(--line); border-radius:18px; overflow:hidden; margin-bottom:16px; }
+.pres .ph { background:linear-gradient(150deg,var(--obs2),var(--obs)); color:#fff; padding:20px 22px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+.pres .chip { display:inline-block; font-family:'Poppins'; font-size:.6rem; letter-spacing:.16em; font-weight:700; color:var(--gold2); border:1px solid rgba(201,168,76,.6); padding:4px 11px; border-radius:999px; margin-bottom:8px; }
+.pres .ph h3 { color:#fff; font-size:1.5rem; font-weight:800; letter-spacing:.5px; }
+.pres .ph p { color:#c7cdea; font-size:.85rem; margin-top:6px; max-width:480px; line-height:1.5; }
+.pres .ph .im { display:none; }
+@media (min-width:800px) { .pres .ph .im { display:block; flex-shrink:0; background:#fff; border-radius:14px; padding:8px; width:210px; }
+  .pres .ph .im img { width:100%; height:130px; object-fit:contain; display:block; } }
+.pres .body { padding:16px 18px 6px; }
+.pres .que h4 { font-size:1.05rem; margin-bottom:6px; }
+.pres .que h4 em { font-style:normal; color:var(--gold); }
+.pres .que p { color:var(--mut); font-size:.9rem; line-height:1.65; margin-bottom:12px; }
+.pres .que p b { color:var(--goldd); }
+@media (min-width:900px) { .pres .que.two { display:grid; grid-template-columns:1fr 1fr; gap:0 26px; } }
+.vents { display:grid; grid-template-columns:1fr; gap:10px; padding:4px 18px 16px; }
+@media (min-width:700px) { .vents { grid-template-columns:1fr 1fr; } }
+@media (min-width:1100px) { .vents.v3 { grid-template-columns:1fr 1fr 1fr; } }
+.vent { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:12px 14px; display:flex; gap:11px; align-items:flex-start; }
+.vent .vt { width:34px; height:34px; border-radius:9px; background:var(--obs); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.vent .vt svg { width:17px; height:17px; stroke:var(--gold2); }
+.vent b { font-family:'Poppins'; color:var(--obs2); display:block; font-size:.86rem; margin-bottom:2px; }
+.vent span { color:var(--mut); font-size:.78rem; line-height:1.45; }
+.flow { margin:0 18px 16px; background:linear-gradient(150deg,var(--obs2),var(--obs)); border-radius:12px; padding:12px 16px; }
+.flow b { display:block; font-family:'Poppins'; font-weight:700; font-size:.66rem; letter-spacing:.14em; color:var(--gold2); margin-bottom:4px; }
+.flow p { color:#dfe4f5; font-size:.82rem; line-height:1.5; }
+/* galerias */
+.gal { display:flex; gap:12px; overflow-x:auto; padding:2px 2px 12px; scroll-snap-type:x mandatory; scrollbar-width:none; }
+.gal::-webkit-scrollbar { display:none; }
+.g { flex:0 0 170px; scroll-snap-align:start; background:#fff; border:1px solid var(--line); border-radius:14px; padding:8px; margin:0; }
+@media (min-width:1000px) { .g { flex:1 1 0; } }
+.g img { width:100%; height:120px; object-fit:contain; display:block; }
+@media (min-width:1000px) { .g img { height:150px; } }
+.g figcaption { font-family:'Poppins'; font-weight:600; font-size:.72rem; color:var(--obs2); text-align:center; padding-top:6px; }
+.g .pnum { position:relative; }
+/* tablas */
+.tblwrap { border:1px solid var(--line); border-radius:14px; overflow:hidden; margin-bottom:16px; }
+table { width:100%; border-collapse:collapse; }
+thead th { background:linear-gradient(120deg,var(--obs2),var(--obs)); color:#fff; text-align:left; font-family:'Poppins'; font-size:.9rem; padding:12px 16px; }
+thead th i { font-style:normal; color:var(--gold2); }
+thead th.pr { text-align:right; color:var(--gold2); letter-spacing:.2em; font-size:.66rem; }
+td { padding:10px 16px; font-size:.88rem; color:#33405f; border-top:1px solid #f1f3f8; }
+tr.z td { background:var(--soft); }
+td.p { text-align:right; font-family:'Poppins'; font-weight:700; color:var(--goldd); white-space:nowrap; }
+.badge { background:var(--gold-light,#fbf5e0); border:1px solid #eadfbe; color:#7c6425; border-radius:999px; padding:3px 12px; font-size:.78rem; font-weight:700; font-family:'Poppins'; }
+.notei { display:flex; gap:10px; align-items:flex-start; border:1px solid var(--line); border-radius:12px; padding:12px 14px; color:var(--mut); font-size:.82rem; margin-bottom:16px; line-height:1.5; }
+.notei .i { width:24px; height:24px; border-radius:50%; border:1.5px solid var(--gold); color:var(--goldd); display:flex; align-items:center; justify-content:center; font-weight:800; flex-shrink:0; font-size:.75rem; }
+.noresults { display:none; text-align:center; color:var(--mut); padding:30px 0; font-size:1rem; }
+/* ALLON legacy styles */
+.allon-label { font-family:'Poppins'; font-size:.8rem; font-weight:800; color:var(--obs2); margin:8px 0 4px; }
+.offer-grid { display:grid; grid-template-columns:1fr; gap:10px; margin:6px 0 14px; }
+@media (min-width:800px) { .offer-grid { grid-template-columns:1fr 1fr; } }
+.offer-card { border:1px solid var(--line); border-radius:13px; overflow:hidden; background:#fff; }
+.offer-card .oh { background:linear-gradient(135deg,var(--obs2),var(--obs)); color:#fff; font-family:'Poppins'; font-weight:800; font-size:.78rem; padding:9px 12px; display:flex; justify-content:space-between; align-items:center; }
+.offer-card .oh.oferta { background:linear-gradient(135deg,#10b981,#059669); }
+.offer-card .oh .tagp { background:rgba(255,255,255,.2); border-radius:999px; padding:2px 9px; font-size:.68rem; }
+.offer-card .ro { display:flex; justify-content:space-between; gap:8px; padding:7px 12px; font-size:.82rem; border-top:1px solid #f1f3f8; }
+.offer-card .ro .free { color:#059669; font-weight:800; }
+.offer-card .total { display:flex; justify-content:space-between; gap:8px; padding:9px 12px; background:var(--soft); font-family:'Poppins'; font-weight:800; font-size:.85rem; color:var(--obs2); }
+.offer-card .total.oferta { background:#ecfdf5; color:#059669; }
+.offer-card .total s { color:var(--mut); font-weight:600; font-size:.72rem; }
+.discount-line { background:#fbf5e0; border-radius:10px; font-size:.75rem; color:var(--obs2); font-weight:700; text-align:center; padding:8px; margin:4px 0 10px; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:9px 13px; font-size:.78rem; color:#92400e; margin:8px 0 12px; }
+/* CTA + footer */
+.cta { background:linear-gradient(150deg,var(--obs2),var(--obs)); padding:30px 0; }
+.cta .in { max-width:1320px; margin:0 auto; padding:0 22px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+.cta h2 { color:#fff; font-size:1.5rem; font-weight:800; flex:1; min-width:220px; }
+.cta h2 span { display:block; font-weight:400; font-size:.95rem; color:#c7cdea; margin-top:4px; }
+footer { border-top:1px solid var(--line); padding:22px 0; }
+footer .in { max-width:1320px; margin:0 auto; padding:0 22px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+footer img { height:44px; }
+footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-height:1.7; }
+.wa-float { position:fixed; right:16px; bottom:16px; width:54px; height:54px; border-radius:50%; background:var(--wa); display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(0,0,0,.3); z-index:60; }
+.wa-float svg { width:26px; height:26px; stroke:#fff; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+@media print { .hero .ph, .wa-float, aside.cats { display:none !important; } }
+</style>
 </head>
 <body>
-<div class="prebar">&#9733; BONO DE BIENVENIDA &middot; 20% de descuento el primer mes &middot; pr&oacute;tesis fija y removible</div>
-<header class="topnav">
-    <div class="tn-in">
-        <img class="tn-logo-img" src="img/logo-rb.png" alt="RB dental">
-        <nav class="tn-links">
-            <a href="#fija">Fija</a>
-            <a href="#blender">Blender</a>
-            <a href="#carga">Carga inmediata</a>
-            <a href="#removible">Removible</a>
-            <a href="#ortodoncia">Ortodoncia</a>
-            <a href="#estetica">Est&eacute;tica</a>
-            <a href="#tiempos">Tiempos</a>
-        </nav>
-        <a class="tn-wa" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas">WhatsApp &middot; 680 555 303</a>
-    </div>
-</header>
-<header class="hero">
-  <div class="hero-in">
-    <span class="hero-year">TARIFA 2026</span>
-    <img class="logo-img" src="img/logo-rb.png" alt="RB dental &middot; Laboratorio de Pr&oacute;tesis Dental Digital">
-    <div class="kicker">Madrid &middot; Desde 1990</div>
-    <h1>35 a&ntilde;os de experiencia.<br>Hoy, <i>100% digitales.</i></h1>
-    <div class="hero-desk">
-        <h1>Tarifa <i>2026.</i></h1>
-        <p>Treinta y cinco a&ntilde;os garantizando resultados, no promesas.<br>
-        Precisi&oacute;n CAD-CAM para que no tengas que repetir el trabajo.</p>
-        <div class="hero-cta"><a class="hpill gold" href="#novedades">Ver novedades 2026</a><a class="hpill line" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas">WhatsApp &middot; 680 555 303</a></div>
-    </div>
-    <figure class="hero-photo">
-        <img src="img/hero.jpg" alt="Barra Blender fresada y anodizada con coronas">
-        <figcaption>Barra Blender fresada y anodizada &middot; trabajo real del laboratorio</figcaption>
-    </figure>
-    <div class="stats">
-        <div class="st"><b>+35</b><span>A&Ntilde;OS</span></div>
-        <div class="st"><b>CAD-CAM</b><span>SLM &middot; iTERO</span></div>
-        <div class="st"><b>4-5d</b><span>FABRICACI&Oacute;N</span></div>
-        <div class="st st-desk"><b>Gratis</b><span>RECOGIDA MADRID</span></div>
-    </div>
-  </div>
-</header>
-<div class="shell">
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="i-fija" viewBox="0 0 24 24">
-    <path d="M8.2 2.8c1.1 0 1.9.5 2.6.9.4.2.8.4 1.2.4s.8-.2 1.2-.4c.7-.4 1.5-.9 2.6-.9 2 0 3.4 1.6 3.4 3.9 0 1.9-.8 3.3-1.7 4.3-.5.6-1 1.2-1.2 1.8h-8.6c-.2-.6-.7-1.2-1.2-1.8-.9-1-1.7-2.4-1.7-4.3 0-2.3 1.4-3.9 3.4-3.9Z"/>
-    <path d="M9 15h6l-.7 2.2h-4.6L9 15Zm1.1 4.4h3.8l-.8 1.8c-.2.5-.6.8-1.1.8s-.9-.3-1.1-.8l-.8-1.8Z"/>
-  </symbol>
-  <symbol id="i-removible" viewBox="0 0 24 24">
-    <path d="M2.5 9.5c2.6-3.4 6-5 9.5-5s6.9 1.6 9.5 5c.6.8.4 1.9-.4 2.6-2.6 2.2-5.7 3.4-9.1 3.4s-6.5-1.2-9.1-3.4c-.8-.7-1-1.8-.4-2.6Z"/>
-    <path d="M5.5 11.8V8.6M8.5 13.2V6.9M12 13.8V6.3M15.5 13.2V6.9M18.5 11.8V8.6"/>
-  </symbol>
-  <symbol id="i-orto" viewBox="0 0 24 24">
-    <rect x="2" y="8" width="5" height="8" rx="2"/>
-    <rect x="9.5" y="8" width="5" height="8" rx="2"/>
-    <rect x="17" y="8" width="5" height="8" rx="2"/>
-    <path d="M2 12h20"/>
-    <rect x="3.6" y="10.7" width="1.8" height="2.6" rx="0.4"/>
-    <rect x="11.1" y="10.7" width="1.8" height="2.6" rx="0.4"/>
-    <rect x="18.6" y="10.7" width="1.8" height="2.6" rx="0.4"/>
-  </symbol>
-  <symbol id="i-tiempos" viewBox="0 0 24 24">
-    <circle cx="12" cy="13" r="7.5"/>
-    <path d="M12 9v4.2l2.8 1.6M4.5 5 7 3M19.5 5 17 3M6 19.5l-1.5 2M18 19.5l1.5 2"/>
-  </symbol>
-  <symbol id="i-pdf" viewBox="0 0 24 24">
-    <path d="M6 2.5h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-17a1 1 0 0 1 1-1Z"/>
-    <path d="M14 2.5v4h4M8.5 15h7M8.5 18h7"/>
-    <path d="M12.5 8.2c-1.4 0-2.4 1-2.4 2.2s1 2.2 2.4 2.2M9.3 9.6h2.6M9.3 11.2h2.6"/>
-  </symbol>
-  <symbol id="i-wa" viewBox="0 0 24 24">
-    <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/>
-    <path d="M9.1 8.2c-.4.4-.6 1-.4 1.7.5 2 2.1 3.9 4.1 4.7.6.3 1.3.2 1.8-.2l.7-.6c.3-.3.3-.7 0-1l-1.3-1c-.2-.2-.6-.2-.8 0l-.6.4c-.8-.5-1.5-1.2-1.9-2l.5-.6c.2-.2.2-.6 0-.8l-1-1.3c-.3-.3-.7-.3-1-.1l-.1.8Z"/>
-  </symbol>
-  <symbol id="i-van" viewBox="0 0 24 24">
-    <path d="M2 7.5h11.5V16H2zM13.5 10h4.2l3.3 3v3h-7.5z"/>
-    <circle cx="6.3" cy="17.8" r="1.9"/>
-    <circle cx="17.2" cy="17.8" r="1.9"/>
-    <path d="M2 13h3M15.5 12h2.8"/>
-  </symbol>
-  <symbol id="i-estetica" viewBox="0 0 24 24">
-    <path d="M12 3.5c.5 3.8 2 6.4 6.5 7-4.5.6-6 3.2-6.5 7-.5-3.8-2-6.4-6.5-7 4.5-.6 6-3.2 6.5-7Z"/>
-    <path d="M19 15.5c.25 1.7 1 2.9 3 3.2-2 .3-2.75 1.5-3 3.2-.25-1.7-1-2.9-3-3.2 2-.3 2.75-1.5 3-3.2Z"/>
-  </symbol>
-  <symbol id="i-blender" viewBox="0 0 24 24">
-    <path d="M3.5 14.5c0-5 3.8-8.5 8.5-8.5s8.5 3.5 8.5 8.5c0 1.6-1.3 2.9-2.9 2.9h-1c-.9 0-1.6-.7-1.6-1.6 0-.8-.7-1.5-1.5-1.5h-3c-.8 0-1.5.7-1.5 1.5 0 .9-.7 1.6-1.6 1.6h-1c-1.6 0-2.9-1.3-2.9-2.9Z"/>
-    <circle cx="8" cy="12.2" r="0.9"/>
-    <circle cx="12" cy="11" r="0.9"/>
-    <circle cx="16" cy="12.2" r="0.9"/>
-  </symbol>
-  <symbol id="i-carga" viewBox="0 0 24 24">
-    <path d="M8.5 2.8h7l-1.1 3.4H9.6L8.5 2.8Z"/>
-    <path d="M9.4 8.2h5.2M9.8 10.8h4.4M10.2 13.4h3.6M10.6 16h2.8"/>
-    <path d="M11.1 18.4h1.8L12 21.6l-.9-3.2Z"/>
-  </symbol>
-  <symbol id="i-star" viewBox="0 0 24 24">
-    <path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6L12 16.7l-5.4 2.9 1.1-6-4.5-4.2 6.1-.8L12 3Z"/>
-  </symbol>
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+<symbol id="ic-truck" viewBox="0 0 24 24"><path d="M2 7h11v9H2zM13 10h5l3 3v3h-8z"/><circle cx="6.5" cy="18.5" r="1.8"/><circle cx="16.5" cy="18.5" r="1.8"/></symbol>
+<symbol id="ic-mon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></symbol>
+<symbol id="ic-diam" viewBox="0 0 24 24"><path d="M6 4h12l4 5-10 11L2 9l4-5Z"/><path d="M2 9h20M9 4l3 5 3-5M7 9l5 11 5-11"/></symbol>
+<symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+<symbol id="ic-tooth" viewBox="0 0 24 24"><path d="M8 3c1.5 0 2.5 1 4 1s2.5-1 4-1c2.4 0 4 1.9 4 4.4 0 4.5-2.5 5-3 8.6-.3 2.2-.8 5-2.3 5-1.4 0-1.2-3-2.7-3s-1.3 3-2.7 3c-1.5 0-2-2.8-2.3-5-.5-3.6-3-4.1-3-8.6C4 4.9 5.6 3 8 3Z"/></symbol>
+<symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></symbol>
+<symbol id="ic-chart" viewBox="0 0 24 24"><path d="M4 20V9M10 20V4M16 20v-8M21 20H3"/></symbol>
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.7 2.7L16.5 9"/></symbol>
+<symbol id="ic-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/></symbol>
+<symbol id="ic-scan" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16"/></symbol>
+<symbol id="ic-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M8.8 8.6c.3-.7.6-.7.9-.7h.7c.2 0 .5.1.7.6.2.6.8 2 .8 2.1 0 .2 0 .3-.1.5l-.5.7c-.1.2-.2.3 0 .6.2.3.8 1.2 1.7 1.9 1.1.9 2 .9 2.3.8.2-.1.4-.4.6-.7.2-.3.4-.3.7-.2.3.1 1.7.8 2 1"/></symbol>
 </svg>
 
-    <!-- HERO -->
+<nav class="top"><div class="in">
+  <img src="img/logo-rb-navy.png" alt="RB dental &middot; Laboratorio de Pr&oacute;tesis Dental Digital">
+  <span class="sp"></span>
+  <div class="links">
+    <a href="#fija">Fija</a><a href="#allon">All-on</a><a href="#blender">Blender</a><a href="#carga">Carga inmediata</a><a href="#removible">Removible</a><a href="#estetica">Est&eacute;tica</a><a href="#ortodoncia">Ortodoncia</a><a href="#tiempos">Tiempos</a>
+  </div>
+  <a class="pill gold" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas">WhatsApp &middot; 680 555 303</a>
+</div></nav>
 
-
-    <!-- NOVEDADES -->
-    <div class="novedades fade" id="novedades">
-        <div class="nv-l">NOVEDADES 2026</div>
-        <nav class="nv-pills">
-            <a href="#blender">Sistema Blender</a>
-            <a href="#carga">Carga inmediata</a>
-            <a href="#estetica">Dise&ntilde;o de sonrisa</a>
-        </nav>
+<header class="hero"><div class="in">
+  <div style="flex:1; min-width:0">
+    <span class="eyebrow" style="color:var(--gold2)">Tarifas 2026 &middot; Laboratorio Dental RB &middot; Madrid</span>
+    <h1>Todo lo que necesitas<br><i>para tu pr&oacute;ximo caso.</i></h1>
+    <p class="lead">Soluciones prot&eacute;sicas de alta precisi&oacute;n, fabricadas en Madrid para cl&iacute;nicas y odont&oacute;logos de toda Espa&ntilde;a.</p>
+    <div class="search"><input type="search" id="buscador" autocomplete="off" placeholder="&iquest;Qu&eacute; trabajo buscas? (ej. corona, f&eacute;rula, blender...)" aria-label="Buscar trabajo"><button type="button">Buscar</button></div>
+    <div class="chips"><span>O navega por categor&iacute;as:</span>
+      <a href="#fija">Pr&oacute;tesis fija</a><a href="#allon">All-on</a><a href="#blender">Blender</a><a href="#carga">Carga inmediata</a><a href="#removible">Removible</a><a href="#estetica">Est&eacute;tica</a><a href="#ortodoncia">Ortodoncia</a>
     </div>
-    <!-- BUSCADOR -->
-    <div class="search-wrap">
-        <input type="search" id="buscador" name="filtro-catalogo" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="&#128269;  &iquest;Qu&eacute; trabajo buscas? corona, f&eacute;rula, rebase&hellip;" aria-label="Buscar trabajo">
-    </div>
-    <div class="no-results" id="sin-resultados">No se encontr&oacute; ning&uacute;n trabajo con ese nombre.</div>
+  </div>
+  <figure class="ph"><img src="img/hero.jpg" alt="Barra Blender fresada y anodizada con coronas"><figcaption>Barra Blender fresada y anodizada &middot; trabajo real del laboratorio</figcaption></figure>
+</div></header>
 
-    <!-- QUICK ACTIONS -->
-    <nav class="grid" id="accesos">
-        <a class="qa" href="#fija"><svg aria-hidden="true"><use href="#i-fija"/></svg><b>Fija</b><span>37 trabajos</span></a>
-        <a class="qa" href="#removible"><svg aria-hidden="true"><use href="#i-removible"/></svg><b>Removible</b><span>20 trabajos</span></a>
-        <a class="qa" href="#ortodoncia"><svg aria-hidden="true"><use href="#i-orto"/></svg><b>Ortodoncia</b><span>47 trabajos</span></a>
-        <a class="qa" href="#tiempos"><svg aria-hidden="true"><use href="#i-tiempos"/></svg><b>Tiempos</b><span>4-5 d&iacute;as</span></a>
-        <a class="qa" href="#contacto"><svg aria-hidden="true"><use href="#i-van"/></svg><b>Recogida y entrega</b><span>gratis en Madrid</span></a>
-        <a class="qa" href="#estetica"><svg aria-hidden="true"><use href="#i-estetica"/></svg><b>Est&eacute;tica</b><span>11 trabajos</span></a>
-        <a class="qa qa-wide" href="#blender"><svg aria-hidden="true"><use href="#i-blender"/></svg><b>Blender</b><span>14 trabajos &middot; barras fresadas</span></a>
-    </nav>
+<div class="strip"><div class="in">
+  <div class="stt"><svg class="ic"><use href="#ic-truck"/></svg><div><b>Entrega en 4-5 d&iacute;as</b><span>y recogida gratis en Madrid</span></div></div>
+  <div class="stt"><svg class="ic"><use href="#ic-diam"/></svg><div><b>Calidad</b><span>que se ve</span></div></div>
+  <div class="stt"><svg class="ic"><use href="#ic-gear"/></svg><div><b>Tecnolog&iacute;a CAD-CAM</b><span>flujo 100% digital</span></div></div>
+  <div class="stt"><svg class="ic"><use href="#ic-check"/></svg><div><b>20% dto. primer mes</b><span>bono de bienvenida &middot; fija y removible</span></div></div>
+</div></div>
 
-    <!-- BONO -->
-    <!-- INTRO CAD-CAM -->
-    <div class="intro fade">
-        <strong>&#9881; Tecnolog&iacute;a CAD/CAM</strong>
-        Todos nuestros trabajos se fabrican mediante tecnolog&iacute;a CAD/CAM. Realizamos el dise&ntilde;o digital y el escaneado, mientras que las estructuras met&aacute;licas son producidas mediante sinterizado l&aacute;ser (SLM) en un centro de fresado especializado.
-    </div>
+<section class="nov"><div class="in">
+  <div class="l">
+    <span class="eyebrow" style="color:var(--gold2)">Novedades 2026</span>
+    <h2>Soluciones innovadoras para tu cl&iacute;nica.</h2>
+    <p>&Uacute;ltima tecnolog&iacute;a, m&aacute;xima precisi&oacute;n.</p>
+  </div>
+  <div class="ncards">
+    <a class="nc" href="#blender"><b>BLENDER</b><p>Estructuras fresadas de alta precisi&oacute;n</p><span class="im"><img src="img/blender.jpg" alt="Barra Blender" loading="lazy"></span><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+    <a class="nc" href="#carga"><b>CARGA INMEDIATA</b><p>Provisional fijo el mismo d&iacute;a de la cirug&iacute;a</p><span class="im"><img src="img/fija3.jpg" alt="Carga inmediata" loading="lazy"></span><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+    <a class="nc" href="#estetica"><b>DISE&Ntilde;O DE SONRISA</b><p>Est&eacute;tica y funcionalidad en cada caso</p><span class="im"><img src="img/estetica-carillas-b.jpg" alt="Dise&ntilde;o de sonrisa" loading="lazy"></span><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+  </div>
+</div></section>
 
-    <!-- MAS PEDIDOS -->
-    <section class="card fade" id="mas-pedidos">
-        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-star"/></svg></div><div class="t"><b>Los m&aacute;s pedidos</b><span>Nuestros trabajos estrella</span></div></div>
-        <div class="rows">
-            <div class="r"><span>Corona de Zirconio Monol&iacute;tico</span><b>100,00 &euro;</b></div>
-            <div class="r"><span>F&eacute;rula de Descarga</span><b>70,00 &euro;</b></div>
-            <div class="r"><span>Completa de Resina</span><b>130,00 &euro;</b></div>
-            <div class="r"><span>Corona sobre Implante Atornillada</span><b>110,00 &euro;</b></div>
-        </div>
+<section class="sec" id="mas-pedidos"><div class="wrap">
+  <div class="head"><div><span class="eyebrow">Los m&aacute;s pedidos</span><h2>Trabajos que marcan la diferencia.</h2></div></div>
+  <div class="top4">
+    <a class="t4" href="#fija"><span class="im"><img src="img/fija.jpg" alt="Corona de zirconio" loading="lazy"></span><span class="tx"><span><b>Corona de zirconio</b><span class="d">desde 100 &euro;</span></span><span class="go">&rarr;</span></span></a>
+    <a class="t4" href="#fija"><span class="im"><img src="img/fija2.jpg" alt="Corona sobre implante" loading="lazy"></span><span class="tx"><span><b>Corona sobre implante</b><span class="d">desde 110 &euro;</span></span><span class="go">&rarr;</span></span></a>
+    <a class="t4" href="#allon"><span class="im"><img src="img/allon.jpg" alt="All-on-4 / All-on-6" loading="lazy"></span><span class="tx"><span><b>All-on-4 / All-on-6</b><span class="d">desde 1.200 &euro;</span></span><span class="go">&rarr;</span></span></a>
+    <a class="t4" href="#ortodoncia"><span class="im"><img src="img/ferulas4.jpg" alt="F&eacute;rula de descarga" loading="lazy"></span><span class="tx"><span><b>F&eacute;rula de descarga</b><span class="d">desde 70 &euro;</span></span><span class="go">&rarr;</span></span></a>
+  </div>
+</div></section>
+
+<div class="listwrap"><div class="layout">
+  <aside class="cats">
+    <input type="search" id="buscador2" autocomplete="off" placeholder="&#128269; &iquest;Qu&eacute; trabajo buscas?" aria-label="Buscar trabajo">
+    <a href="#fija" data-spy><svg class="ic"><use href="#ic-tooth"/></svg>Pr&oacute;tesis fija</a>
+    <a href="#allon" data-spy><svg class="ic"><use href="#ic-diam"/></svg>All-on-4 / All-on-6</a>
+    <a href="#blender" data-spy><svg class="ic"><use href="#ic-chart"/></svg>Blender</a>
+    <a href="#carga" data-spy><svg class="ic"><use href="#ic-scan"/></svg>Carga inmediata</a>
+    <a href="#removible" data-spy><svg class="ic"><use href="#ic-tooth"/></svg>Removible</a>
+    <a href="#estetica" data-spy><svg class="ic"><use href="#ic-target"/></svg>Est&eacute;tica</a>
+    <a href="#ortodoncia" data-spy><svg class="ic"><use href="#ic-shield"/></svg>Ortodoncia</a>
+    <a href="#tiempos" data-spy><svg class="ic"><use href="#ic-clock"/></svg>Tiempos de entrega</a>
+    <div class="help"><b>&iquest;No encuentras lo que buscas?</b><span>Te asesoramos personalmente.</span><br><a href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas">Contactar &rarr;</a></div>
+  </aside>
+  <main class="list">
+    <div class="noresults" id="sin-resultados">No se encontr&oacute; ning&uacute;n trabajo con ese nombre.</div>
+
+    <section class="syssec" id="fija">
+      <div class="shead"><span class="eyebrow">Tarifas 2026</span><h2>Pr&oacute;tesis fija</h2><div class="sub">Coronas, puentes y estructuras &middot; sobre diente y sobre implante</div></div>
+      <div class="tblwrap"><table>
+<thead><tr><th>Pr&oacute;tesis fija &middot; <i>sobre diente</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>Corona de Zirconio Monol&iacute;tico</td><td class="p">100,00 &euro;</td></tr><tr class="z"><td>Corona de Zirconio Estratificado</td><td class="p">110,00 &euro;</td></tr><tr><td>Corona Metal Porcelana</td><td class="p">60,00 &euro;</td></tr><tr class="z"><td>Corona Metal Completa</td><td class="p">36,00 &euro;</td></tr><tr><td>Coronas Provisionales</td><td class="p">15,00 &euro;</td></tr><tr class="z"><td>Perno Mu&ntilde;&oacute;n Colado</td><td class="p">30,00 &euro;</td></tr><tr><td>Puente Maryland (cada pieza)</td><td class="p">52,00 &euro;</td></tr><tr class="z"><td>Atache + Montaje (unidad)</td><td class="p">17,00 &euro;</td></tr><tr><td>Dise&ntilde;o Digital de Mock Up (PMMA) unidad</td><td class="p">25,00 &euro;</td></tr><tr class="z"><td>Compostura Porcelana</td><td class="p">30,00 &euro;</td></tr></tbody></table></div>
+<div class="tblwrap"><table>
+<thead><tr><th>Pr&oacute;tesis fija &middot; <i>sobre implante</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>Corona s/Implante Zirconio Monol&iacute;tico</td><td class="p">130,00 &euro;</td></tr><tr class="z"><td>Corona s/Implante Zirconio Estratificado</td><td class="p">130,00 &euro;</td></tr><tr><td>Corona sobre Implante Atornillada</td><td class="p">110,00 &euro;</td></tr><tr class="z"><td>Corona sobre Implante Cementada</td><td class="p">110,00 &euro;</td></tr><tr><td>Provisional sobre Implante</td><td class="p">25,00 &euro;</td></tr><tr class="z"><td>Enc&iacute;a Rosa (por pieza)</td><td class="p">25,00 &euro;</td></tr><tr><td>Prueba de Pasividad por IOI</td><td class="p">15,00 &euro;</td></tr><tr class="z"><td>Confecci&oacute;n Barra Ackerman sobre 2 IOI</td><td class="p">200,00 &euro;</td></tr><tr><td>Confecci&oacute;n Barra Ackerman sobre 3 IOI</td><td class="p">250,00 &euro;</td></tr><tr class="z"><td>Confecci&oacute;n Barra Ackerman sobre 4 IOI</td><td class="p">350,00 &euro;</td></tr><tr><td>Confecci&oacute;n Barra Ackerman sobre 5 IOI</td><td class="p">350,00 &euro;</td></tr><tr class="z"><td>Barra sobre 6 Implantes</td><td class="p">350,00 &euro;</td></tr><tr><td>Caballito sobre Barra de Implantes</td><td class="p">25,00 &euro;</td></tr><tr class="z"><td>Sobredentadura Implanto-mucosoportada</td><td class="p">250,00 &euro;</td></tr><tr><td>Sobredentadura Implanto-mucosoportada (H&iacute;brida)</td><td class="p">450,00 &euro;</td></tr><tr class="z"><td>Supraestructura</td><td class="p">60,00 &euro;</td></tr></tbody></table></div>
+      <div class="notei"><span class="i">i</span>&#9888; La enc&iacute;a rosa se cobra aparte: 25 &euro; por pieza.</div>
     </section>
 
-    <!-- FIJA -->
-    <section class="card fade" id="fija">
-        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-fija"/></svg></div><div class="t"><b>Pr&oacute;tesis Fija</b><span>Sobre diente &middot; sobre implante &middot; All-on &middot; est&eacute;tica</span></div></div>
-        <div class="gal"><figure><a href="img/fija.jpg" target="_blank"><img src="img/fija.jpg" alt="Coronas de zirconio" loading="lazy"></a><figcaption>Coronas de zirconio</figcaption></figure><figure><a href="img/fija2.jpg" target="_blank"><img src="img/fija2.jpg" alt="Zirconio cementado" loading="lazy"></a><figcaption>Zirconio cementado</figcaption></figure><figure><a href="img/fija3.jpg" target="_blank"><img src="img/fija3.jpg" alt="Carga inmediata" loading="lazy"></a><figcaption>Carga inmediata</figcaption></figure><figure><a href="img/fija4.jpg" target="_blank"><img src="img/fija4.jpg" alt="Rehabilitaci&oacute;n en zirconio" loading="lazy"></a><figcaption>Rehabilitaci&oacute;n en zirconio</figcaption></figure></div>
-        <div class="discount-line">&#9733; 20% dto. el primer mes en esta secci&oacute;n</div>
-        <span class="ap">Sobre diente</span>
-        <div class="rows">
-            <div class="r"><span>Corona de Zirconio Monol&iacute;tico</span><b>100,00 &euro;</b></div>
-            <div class="r"><span>Corona de Zirconio Estratificado</span><b>110,00 &euro;</b></div>
-            <div class="r"><span>Corona Metal Porcelana</span><b>60,00 &euro;</b></div>
-            <div class="r"><span>Corona Metal Completa</span><b>36,00 &euro;</b></div>
-            <div class="r"><span>Coronas Provisionales</span><b>15,00 &euro;</b></div>
-            <div class="r"><span>Perno Mu&ntilde;&oacute;n Colado</span><b>30,00 &euro;</b></div>
-            <div class="r"><span>Puente Maryland (cada pieza)</span><b>52,00 &euro;</b></div>
-            <div class="r"><span>Atache + Montaje (unidad)</span><b>17,00 &euro;</b></div>
-            <div class="r"><span>Dise&ntilde;o Digital de Mock Up (PMMA) unidad</span><b>25,00 &euro;</b></div>
-            <div class="r"><span>Compostura Porcelana</span><b>30,00 &euro;</b></div>
-        </div>
-        <span class="ap">Sobre implante</span>
-        <div class="gal"><figure><a href="img/implantes.jpg" target="_blank"><img src="img/implantes.jpg" alt="Sobre implantes" loading="lazy"></a><figcaption>Sobre implantes</figcaption></figure><figure><a href="img/implantes2.jpg" target="_blank"><img src="img/implantes2.jpg" alt="Zirconio s/ interfase" loading="lazy"></a><figcaption>Zirconio s/ interfase</figcaption></figure><figure><a href="img/implantes3.jpg" target="_blank"><img src="img/implantes3.jpg" alt="Metal cer&aacute;mica" loading="lazy"></a><figcaption>Metal cer&aacute;mica</figcaption></figure><figure><a href="img/implantes4.jpg" target="_blank"><img src="img/implantes4.jpg" alt="Estructura sobre implantes" loading="lazy"></a><figcaption>Estructura s/ implantes</figcaption></figure></div>
-        <div class="rows">
-            <div class="r"><span>Corona s/Implante Zirconio Monol&iacute;tico</span><b>130,00 &euro;</b></div>
-            <div class="r"><span>Corona s/Implante Zirconio Estratificado</span><b>130,00 &euro;</b></div>
-            <div class="r"><span>Corona sobre Implante Atornillada</span><b>110,00 &euro;</b></div>
-            <div class="r"><span>Corona sobre Implante Cementada</span><b>110,00 &euro;</b></div>
-            <div class="r"><span>Provisional sobre Implante</span><b>25,00 &euro;</b></div>
-            <div class="r"><span>Enc&iacute;a Rosa (por pieza)</span><b>25,00 &euro;</b></div>
-            <div class="r"><span>Prueba de Pasividad por IOI</span><b>15,00 &euro;</b></div>
-            <div class="r"><span>Confecci&oacute;n Barra Ackerman sobre 2 IOI</span><b>200,00 &euro;</b></div>
-            <div class="r"><span>Confecci&oacute;n Barra Ackerman sobre 3 IOI</span><b>250,00 &euro;</b></div>
-            <div class="r"><span>Confecci&oacute;n Barra Ackerman sobre 4 IOI</span><b>350,00 &euro;</b></div>
-            <div class="r"><span>Confecci&oacute;n Barra Ackerman sobre 5 IOI</span><b>350,00 &euro;</b></div>
-            <div class="r"><span>Barra sobre 6 Implantes</span><b>350,00 &euro;</b></div>
-            <div class="r"><span>Caballito sobre Barra de Implantes</span><b>25,00 &euro;</b></div>
-            <div class="r"><span>Sobredentadura Implanto-mucosoportada</span><b>250,00 &euro;</b></div>
-            <div class="r"><span>Sobredentadura Implanto-mucosoportada (H&iacute;brida)</span><b>450,00 &euro;</b></div>
-            <div class="r"><span>Supraestructura</span><b>60,00 &euro;</b></div>
-        </div>
-        <span class="ap" id="allon" style="scroll-margin-top:70px">All-on-Four / All-on-Six &middot; ofertas</span>
-        <div class="gal"><figure><a href="img/allon.jpg" target="_blank"><img src="img/allon.jpg" alt="All-on-Six" loading="lazy"></a><figcaption>All-on-Six</figcaption></figure><figure><a href="img/allon4.jpg" target="_blank"><img src="img/allon4.jpg" alt="All-on-Four" loading="lazy"></a><figcaption>All-on-Four</figcaption></figure><figure><a href="img/allon6b.jpg" target="_blank"><img src="img/allon6b.jpg" alt="All-on-Six" loading="lazy"></a><figcaption>All-on-Six</figcaption></figure><figure><a href="img/allon4b.jpg" target="_blank"><img src="img/allon4b.jpg" alt="All-on-Four" loading="lazy"></a><figcaption>All-on-Four</figcaption></figure></div>
-        <div class="allon-label">ALL-ON-FOUR &middot; Metal Cer&aacute;mica</div>
+    <section class="syssec" id="allon">
+      <div class="shead"><span class="eyebrow">Ofertas &middot; hasta -31%</span><h2>All-on-4 / All-on-6</h2><div class="sub">Rehabilitaci&oacute;n completa fija &middot; packs cerrados en oferta</div></div>
+      <div class="pres" data-pres>
+  <div class="ph"><div>
+    <span class="chip">OFERTA &middot; REHABILITACI&Oacute;N COMPLETA</span>
+    <h3>ALL-ON-4 / ALL-ON-6</h3>
+    <p>Arcada completa fija sobre 4 o 6 implantes, con packs cerrados en oferta de hasta el 31% de descuento.</p>
+  </div><div class="im"><img src="img/allon.jpg" alt="All-on-4 / All-on-6"></div></div>
+  <div class="body"><div class="que">
+    <h4>&iquest;Qu&eacute; es el All-on-4 / All-on-6<em>?</em></h4>
+    <p>Una <b>rehabilitaci&oacute;n completa fija</b> que devuelve toda la arcada del paciente apoyada sobre <b>4 o 6 implantes</b>. El pack incluye todo lo necesario: fundas o zirconio, multi-units, interfases, an&aacute;logos digitales y modelos impresos, con <b>precio cerrado</b> y sin sorpresas.</p>
+  </div></div>
+  <div class="vents">
+    <div class="vent"><span class="vt"><svg><use href="#ic-tooth"/></svg></span><div><b>Arcada completa fija</b><span>Metal cer&aacute;mica o zirconio monol&iacute;tico, a elegir.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-check"/></svg></span><div><b>Pack cerrado</b><span>Multi-units, interfases, an&aacute;logos y modelos incluidos.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-diam"/></svg></span><div><b>Hasta un 31% de ahorro</b><span>Precio de oferta frente a los conceptos por separado.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-gear"/></svg></span><div><b>Flujo 100% digital</b><span>Planificado y fabricado con CAD-CAM de precisi&oacute;n.</span></div></div>
+  </div>
+</div>
+              <div class="allon-label">ALL-ON-FOUR &middot; Metal Cer&aacute;mica</div>
         <div class="offer-grid">
             <div class="offer-card">
                 <div class="oh">PRECIO TARIFA</div>
@@ -731,385 +398,199 @@
                 <div class="total oferta"><span>Total <s>2.172 &euro;</s></span><span>1.500 &euro;</span></div>
             </div>
         </div>
-        <div class="note">&#9888; La enc&iacute;a rosa se cobra aparte: 25 &euro; por pieza</div>
-        <span class="ap" id="estetica" style="scroll-margin-top:14px">Est&eacute;tica</span>
-        <div class="fintro">
-            <div class="fi-dark">
-                <div>
-                    <span class="fi-chip">EST&Eacute;TICA DENTAL &middot; LABORATORIO</span>
-                    <h3>Dise&ntilde;o de sonrisa</h3>
-                    <div class="fi-tag">Tu sonrisa ideal, dise&ntilde;ada digitalmente y probada antes de empezar.</div>
-                </div>
-                <div class="fi-img"><img src="img/sonrisa-hero.jpg" alt="Dise&ntilde;o digital de sonrisa" loading="lazy"></div>
-            </div>
-            <div class="fi-what">
-                <div><h4><span class="fi-ico"><svg aria-hidden="true"><use href="#i-estetica"/></svg></span>&iquest;Qu&eacute; es el dise&ntilde;o digital de sonrisa?</h4>
-                <p>Dise&ntilde;amos tu sonrisa en el ordenador a partir de tus <b>fotos y un esc&aacute;ner 3D</b>. Vemos juntos la forma, el tama&ntilde;o y la posici&oacute;n ideal de tus dientes antes de empezar.</p></div>
-                <div><h4><span class="fi-ico"><svg aria-hidden="true"><use href="#i-fija"/></svg></span>&iquest;Qu&eacute; es el Mock-up?</h4>
-                <p>Una <b>prueba de tu nueva sonrisa</b> colocada sobre tus dientes, sin tallar. Te la pruebas en la boca y ves el resultado en el espejo antes de decidir.</p></div>
-            </div>
-            <span class="fi-sub">Ventajas para ti</span>
-            <div class="fi-vents">
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Ves el resultado antes</b>Pruebas tu nueva sonrisa antes de empezar.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Dise&ntilde;o a tu medida</b>Pensado para tu cara y tu forma de sonre&iacute;r.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Sin sorpresas</b>Sabes c&oacute;mo quedar&aacute; y qu&eacute; cuesta desde el inicio.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>M&iacute;nimamente invasivo</b>Con carillas respetamos tu diente natural.</div></div>
-            </div>
-            <a class="fi-pdf" href="folletos/folleto-diseno-sonrisa-2026.pdf" target="_blank">Descargar folleto Dise&ntilde;o de sonrisa (PDF) &rsaquo;</a>
-        </div>
-        <span class="fi-sub" style="padding-left:18px">Tu nueva sonrisa en 4 pasos</span>
-        <div class="gal pasos"><figure><span class="pnum">1</span><a href="img/sonrisa-paso1.jpg" target="_blank"><img src="img/sonrisa-paso1.jpg" alt="Paso 1: sonrisa inicial" loading="lazy"></a><figcaption><b>Sonrisa inicial</b><span>Estudiamos tu punto de partida.</span></figcaption></figure><figure><span class="pnum">2</span><a href="img/sonrisa-paso2.jpg" target="_blank"><img src="img/sonrisa-paso2.jpg" alt="Paso 2: dise&ntilde;amos tu sonrisa" loading="lazy"></a><figcaption><b>Dise&ntilde;amos tu sonrisa</b><span>Creamos tu sonrisa ideal.</span></figcaption></figure><figure><span class="pnum">3</span><a href="img/sonrisa-paso3.jpg" target="_blank"><img src="img/sonrisa-paso3.jpg" alt="Paso 3: preparamos el mock-up" loading="lazy"></a><figcaption><b>Preparamos el mock-up</b><span>Con una f&eacute;rula a medida.</span></figcaption></figure><figure><span class="pnum">4</span><a href="img/sonrisa-paso4.jpg" target="_blank"><img src="img/sonrisa-paso4.jpg" alt="Paso 4: tu nueva sonrisa" loading="lazy"></a><figcaption><b>&iexcl;Tu nueva sonrisa!</b><span>Colocamos el resultado final.</span></figcaption></figure></div>
-        <div class="gal"><figure><a href="img/estetica.jpg" target="_blank"><img src="img/estetica.jpg" alt="Incrustaciones" loading="lazy"></a><figcaption>Incrustaciones</figcaption></figure><figure><a href="img/fija.jpg" target="_blank"><img src="img/fija.jpg" alt="Coronas y carillas" loading="lazy"></a><figcaption>Coronas y carillas</figcaption></figure></div>
-        <div class="rows" style="padding-bottom:16px">
-            <div class="r"><span>Carillas de Composite sin cer&aacute;mica</span><b>60,00 &euro;</b></div>
-            <div class="r"><span>Carillas de Composite con cer&aacute;mica</span><b>85,00 &euro;</b></div>
-            <div class="r"><span>Carillas de Disilicato de Litio</span><b>90,00 &euro;</b></div>
-            <div class="r"><span>Corona de Zirconio Monol&iacute;tico</span><b>100,00 &euro;</b></div>
-            <div class="r"><span>Corona de Zirconio Estratificado</span><b>110,00 &euro;</b></div>
-            <div class="r"><span>Incrustaciones de Composite (por pieza)</span><b>90,00 &euro;</b></div>
-            <div class="r"><span>Incrustaciones de Disilicato de Litio</span><b>100,00 &euro;</b></div>
-            <div class="r"><span>Dise&ntilde;o de Sonrisa (por pieza) &middot; Modelo 3D incluido</span><b>30,00 &euro;</b></div>
-            <div class="r"><span>Llave de silicona para el Mock Up (por arcada)</span><b>20,00 &euro;</b></div>
-            <div class="r"><span>Llave para carillas inyectadas (por arcada)</span><b>40,00 &euro;</b></div>
-            <div class="r"><span>Llave para Carillas</span><b>30,00 &euro;</b></div>
-        </div>
+        
     </section>
 
-    <!-- BLENDER -->
-    <section class="card fade" id="blender">
-        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-blender"/></svg></div><div class="t"><b>Blender</b><span>Barras fresadas &middot; sobre implantes y sobre diente</span></div></div>
-        <div class="fintro">
-            <div class="fi-dark">
-                <div>
-                    <span class="fi-chip">SISTEMA &middot; PR&Oacute;TESIS FIJA FRESADA</span>
-                    <h3>BLENDER</h3>
-                    <div class="fi-tag">Barra fresada de titanio a medida para tus rehabilitaciones fijas, sobre implantes o sobre dientes.</div>
-                </div>
-                <div class="fi-img"><img src="img/blender-hero.jpg" alt="Barra Blender sobredentadura" loading="lazy"></div>
-            </div>
-            <div class="fi-what">
-                <div><h4 class="fiq">&iquest;Qu&eacute; es el sistema Blender<em>.</em></h4>
-                <p>La <b>barra Blender</b> es la estructura interna, dise&ntilde;ada en <b>CAD-CAM</b> y fresada en <b>titanio</b>, que soporta la pr&oacute;tesis fija de tus pacientes. Combina la resistencia del titanio con la est&eacute;tica del <b>zirconio</b>, con ajuste pasivo y entrega en <b>4-5 d&iacute;as</b>.</p></div>
-            </div>
-            <span class="fi-sub">Barra Blender para estructuras de zirconio</span>
-            <div class="fi-vents">
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>M&aacute;xima resistencia</b>Refuerzo interno para una mayor seguridad estructural.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Mejor distribuci&oacute;n de cargas</b>Transmisi&oacute;n m&aacute;s equilibrada de las fuerzas masticatorias.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Mayor estabilidad</b>Estructura r&iacute;gida y precisa para rehabilitaciones extensas.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Alta precisi&oacute;n</b>Fabricaci&oacute;n mecanizada para un ajuste preciso y fiable.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Menor riesgo de fracturas</b>Refuerzo adicional a la estructura de zirconio.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Rehabilitaciones completas</b>Resistencia estructural con la est&eacute;tica del zirconio.</div></div>
-            </div>
-            <a class="fi-pdf" href="folletos/folleto-blender-2026.pdf" target="_blank">Descargar folleto Blender (PDF) &rsaquo;</a>
-        </div>
-        <span class="ap">Barra Blender &middot; sobre implantes</span>
-        <div class="gal"><figure><a href="img/blender.jpg" target="_blank"><img src="img/blender.jpg" alt="Barra Blender" loading="lazy"></a><figcaption>Barra Blender</figcaption></figure><figure><a href="img/blender2.jpg" target="_blank"><img src="img/blender2.jpg" alt="Barra + estructura" loading="lazy"></a><figcaption>Barra + estructura</figcaption></figure><figure><a href="img/blender3.jpg" target="_blank"><img src="img/blender3.jpg" alt="Barra anodizada" loading="lazy"></a><figcaption>Barra anodizada</figcaption></figure><figure><a href="img/blender4.jpg" target="_blank"><img src="img/blender4.jpg" alt="Barra Blender Ti" loading="lazy"></a><figcaption>Barra Blender Ti</figcaption></figure><figure><a href="img/blender5.jpg" target="_blank"><img src="img/blender5.jpg" alt="Barra Blender sobredentadura" loading="lazy"></a><figcaption>Barra sobredentadura</figcaption></figure></div>
-        <div class="rows">
-            <div class="r"><span>Barra Blender fresada Ti sobre 2 Implantes*</span><b>215,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada Ti sobre 3 Implantes*</span><b>245,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada Ti sobre 4 Implantes*</span><b>350,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada Ti sobre 5 Implantes*</span><b>380,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada Ti sobre 6 Implantes*</span><b>400,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada Ti sobre 7 Implantes*</span><b>420,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada Ti sobre 8 Implantes*</span><b>440,00 &euro;</b></div>
-        </div>
-        <span class="ap">Barra Blender &middot; sobre diente</span>
-        <div class="rows">
-            <div class="r"><span>Barra Blender fresada sobre 2 piezas*</span><b>180,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada sobre 3 piezas*</span><b>204,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada sobre 4 piezas*</span><b>228,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada sobre 5 piezas*</span><b>324,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada sobre 6 piezas*</span><b>360,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada sobre 7 piezas*</span><b>396,00 &euro;</b></div>
-            <div class="r"><span>Barra Blender fresada sobre 8 piezas*</span><b>432,00 &euro;</b></div>
-        </div>
-        <div class="note">* El precio incluye la barra Blender fresada + el anodizado y pulido de la estructura de titanio + Divisi&oacute;n Blender (extrusi&oacute;n)</div>
-    </section>
-
-    <!-- CARGA INMEDIATA -->
-    <section class="card fade" id="carga">
-        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-carga"/></svg></div><div class="t"><b>Carga inmediata</b><span>Implantolog&iacute;a &middot; cirug&iacute;a guiada</span></div></div>
-        <div class="fintro">
-            <div class="fi-dark">
-                <div>
-                    <span class="fi-chip">NUEVO &middot; IMPLANTOLOG&Iacute;A</span>
-                    <h3>Carga inmediata</h3>
-                    <div class="fi-tag">Provisional fijo el mismo d&iacute;a de la cirug&iacute;a, con planificaci&oacute;n digital y f&eacute;rula quir&uacute;rgica a medida.</div>
-                </div>
-                <div class="fi-img"><img src="img/carga-hero.jpg" alt="F&eacute;rula quir&uacute;rgica a medida" loading="lazy"></div>
-            </div>
-            <div class="fi-what">
-                <div><h4><span class="fi-ico"><svg aria-hidden="true"><use href="#i-carga"/></svg></span>&iquest;Qu&eacute; es la carga inmediata?</h4>
-                <p>Permite colocar el implante y un <b>provisional fijo en la misma sesi&oacute;n</b>. El laboratorio prepara el provisional antes de la cirug&iacute;a a partir de la planificaci&oacute;n digital, para que el paciente salga de la cl&iacute;nica con dientes.</p></div>
-                <div><h4><span class="fi-ico"><svg aria-hidden="true"><use href="#i-fija"/></svg></span>&iquest;Qu&eacute; es la f&eacute;rula quir&uacute;rgica?</h4>
-                <p>Una <b>gu&iacute;a a medida</b> dise&ntilde;ada desde el esc&aacute;ner 3D y el CBCT del paciente que marca la posici&oacute;n exacta de cada implante. M&aacute;xima precisi&oacute;n y una cirug&iacute;a m&aacute;s r&aacute;pida y predecible.</p></div>
-            </div>
-            <span class="fi-sub">Ventajas para tu cl&iacute;nica</span>
-            <div class="fi-vents">
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Diente el mismo d&iacute;a</b>Provisional fijo listo para colocar tras la cirug&iacute;a.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Sin esperas</b>Sin los meses de espera del m&eacute;todo tradicional.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>M&aacute;xima precisi&oacute;n</b>La f&eacute;rula gu&iacute;a cada implante con exactitud.</div></div>
-                <div class="fi-v"><span class="chk">&#10003;</span><div><b>Cirug&iacute;a m&aacute;s c&oacute;moda</b>T&eacute;cnica guiada, m&aacute;s r&aacute;pida y menos invasiva.</div></div>
-            </div>
-            <div class="fi-flow"><b>FLUJO DIGITAL COMPLETO</b>
-            <p>Esc&aacute;ner intraoral + CBCT &rarr; planificaci&oacute;n 3D &rarr; f&eacute;rula quir&uacute;rgica &rarr; provisional de carga inmediata. Todo desde el laboratorio, con recogida gratuita en Madrid.</p></div>
-            <a class="fi-pdf" href="folletos/folleto-carga-inmediata-2026.pdf" target="_blank">Descargar folleto Carga inmediata (PDF) &rsaquo;</a>
-        </div>
-        <div class="gal"><figure><a href="img/carga1.jpg" target="_blank"><img src="img/carga1.jpg" alt="Planificaci&oacute;n 3D del caso" loading="lazy"></a><figcaption>Planificaci&oacute;n 3D del caso</figcaption></figure><figure><a href="img/carga2.jpg" target="_blank"><img src="img/carga2.jpg" alt="Gu&iacute;a quir&uacute;rgica a medida" loading="lazy"></a><figcaption>Gu&iacute;a quir&uacute;rgica a medida</figcaption></figure><figure><a href="img/carga3.jpg" target="_blank"><img src="img/carga3.jpg" alt="Fresado guiado de precisi&oacute;n" loading="lazy"></a><figcaption>Fresado guiado</figcaption></figure></div>
-        <div class="rows">
-            <div class="r"><span>F&eacute;rula quir&uacute;rgica guiada &middot; 1 implante</span><b>180,00 &euro;</b></div>
-            <div class="r"><span>F&eacute;rula quir&uacute;rgica guiada &middot; 2 implantes</span><b>240,00 &euro;</b></div>
-            <div class="r"><span>F&eacute;rula quir&uacute;rgica guiada &middot; 3 implantes</span><b>294,00 &euro;</b></div>
-            <div class="r"><span>F&eacute;rula quir&uacute;rgica guiada &middot; 4 implantes</span><b>348,00 &euro;</b></div>
-            <div class="r"><span>F&eacute;rula quir&uacute;rgica guiada &middot; 5 o m&aacute;s implantes</span><b>408,00 &euro;</b></div>
-        </div>
-        <div class="note">&#8505; El precio de cada gu&iacute;a incluye: estudio y an&aacute;lisis de datos, planificaci&oacute;n del caso, confecci&oacute;n digital e impresi&oacute;n de la gu&iacute;a quir&uacute;rgica.</div>
-    </section>
-
-    <!-- REMOVIBLE -->
-    <section class="card fade" id="removible">
-        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-removible"/></svg></div><div class="t"><b>Pr&oacute;tesis Removible</b><span>Acr&iacute;lica &middot; flexible &middot; esquel&eacute;tico &middot; arreglos</span></div></div>
-        <div class="gal"><figure><a href="img/removible.jpg" target="_blank"><img src="img/removible.jpg" alt="Completa de resina" loading="lazy"></a><figcaption>Completa de resina</figcaption></figure><figure><a href="img/removible2.jpg" target="_blank"><img src="img/removible2.jpg" alt="Completa superior" loading="lazy"></a><figcaption>Completa superior</figcaption></figure><figure><a href="img/removible3.jpg" target="_blank"><img src="img/removible3.jpg" alt="Esquel&eacute;tico flexible" loading="lazy"></a><figcaption>Esquel&eacute;tico flexible</figcaption></figure></div>
-        <div class="discount-line">&#9733; 20% dto. el primer mes en esta secci&oacute;n</div>
-        <span class="ap">Acr&iacute;lica</span>
-        <div class="rows">
-            <div class="r"><span>Completa Superior o Inferior de Resina</span><b>130,00 &euro;</b></div>
-            <div class="r"><span>Parciales de Resina de 1 a 9 piezas</span><b>100,00 &euro;</b></div>
-        </div>
-        <span class="ap">Flexible</span>
-        <div class="rows">
-            <div class="r"><span>Valplast de 1 a 2 piezas</span><b>Consultar</b></div>
-            <div class="r"><span>Valplast de 3 a 5 piezas</span><b>Consultar</b></div>
-            <div class="r"><span>Valplast de m&aacute;s de 6 piezas</span><b>Consultar</b></div>
-            <div class="r"><span>Esquel&eacute;tico Valplast 1 a 5 piezas</span><b>210,00 &euro;</b></div>
-            <div class="r"><span>Esquel&eacute;tico Valplast 6 a 9 piezas</span><b>250,00 &euro;</b></div>
-        </div>
-        <span class="ap">Esquel&eacute;tico</span>
-        <div class="rows">
-            <div class="r"><span>Esquel&eacute;tico de 1 a 2 piezas</span><b>Consultar</b></div>
-            <div class="r"><span>Esquel&eacute;tico de 3 a 5 piezas</span><b>Consultar</b></div>
-            <div class="r"><span>Esquel&eacute;tico de m&aacute;s de 6 piezas</span><b>225,00 &euro;</b></div>
-            <div class="r"><span>Compostura Colada para Esquel&eacute;tico</span><b>40,00 &euro;</b></div>
-            <div class="r"><span>A&ntilde;adir Pieza Esquel&eacute;tico</span><b>30,00 &euro;</b></div>
-            <div class="r"><span>Estructura de Esquel&eacute;tico</span><b>75,00 &euro;</b></div>
-            <div class="r"><span>Pieza Esquel&eacute;tico</span><b>30,00 &euro;</b></div>
-            <div class="r"><span>Solchapa Unidad</span><b>40,00 &euro;</b></div>
-        </div>
-        <span class="ap">Arreglos y resina</span>
-        <div class="rows" style="padding-bottom:16px">
-            <div class="r"><span>Rebase</span><b>40,00 &euro;</b></div>
-            <div class="r"><span>Compostura Simple</span><b>30,00 &euro;</b></div>
-            <div class="r"><span>A&ntilde;adir Pieza o Gancho</span><b>30,00 &euro;</b></div>
-            <div class="r"><span>Soldadura</span><b>40,00 &euro;</b></div>
-            <div class="r"><span>Cubeta Individual de Resina</span><b>15,00 &euro;</b></div>
-        </div>
-    </section>
-
-    <!-- ORTODONCIA -->
-    <section class="card fade" id="ortodoncia">
-        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-orto"/></svg></div><div class="t"><b>Ortodoncia</b><span>F&eacute;rulas, retenedores y aparatolog&iacute;a</span></div></div>
-        <div class="gal"><figure><a href="img/ortodoncia.jpg" target="_blank"><img src="img/ortodoncia.jpg" alt="Aparatolog&iacute;a" loading="lazy"></a><figcaption>Aparatolog&iacute;a</figcaption></figure><figure><a href="img/ortodoncia2.jpg" target="_blank"><img src="img/ortodoncia2.jpg" alt="Placa de expansi&oacute;n" loading="lazy"></a><figcaption>Placa de expansi&oacute;n</figcaption></figure><figure><a href="img/ortodoncia3.jpg" target="_blank"><img src="img/ortodoncia3.jpg" alt="Expansor" loading="lazy"></a><figcaption>Expansor</figcaption></figure><figure><a href="img/ortodoncia4.jpg" target="_blank"><img src="img/ortodoncia4.jpg" alt="Placa de retenci&oacute;n Hawley" loading="lazy"></a><figcaption>Placa de retenci&oacute;n Hawley</figcaption></figure></div>
-        <span class="ap">F&eacute;rulas y retenedores</span>
-        <div class="gal"><figure><a href="img/ferulas.jpg" target="_blank"><img src="img/ferulas.jpg" alt="F&eacute;rula fresada" loading="lazy"></a><figcaption>F&eacute;rula fresada</figcaption></figure><figure><a href="img/ferulas2.jpg" target="_blank"><img src="img/ferulas2.jpg" alt="F&eacute;rulas de descarga" loading="lazy"></a><figcaption>F&eacute;rulas de descarga</figcaption></figure><figure><a href="img/ferulas3.jpg" target="_blank"><img src="img/ferulas3.jpg" alt="F&eacute;rula de descarga" loading="lazy"></a><figcaption>F&eacute;rula de descarga</figcaption></figure><figure><a href="img/ferulas4.jpg" target="_blank"><img src="img/ferulas4.jpg" alt="Retenedor Essix" loading="lazy"></a><figcaption>Retenedor Essix</figcaption></figure></div>
-        <div class="rows">
-            <div class="r"><span>F&eacute;rula de Descarga</span><b>70,00 &euro;</b></div>
-            <div class="r"><span>F&eacute;rula de Descarga Fresada</span><b>90,00 &euro;</b></div>
-            <div class="r"><span>F&eacute;rula de Blanqueamiento (por arcada)</span><b>35,00 &euro;</b></div>
-            <div class="r"><span>F&eacute;rula Contenci&oacute;n (Essix) por arcada</span><b>39,00 &euro;</b></div>
-            <div class="r"><span>F&eacute;rula de Descarga Mixta</span><b>58,00 &euro;</b></div>
-            <div class="r"><span>F&eacute;rula (Boxeo)</span><b>85,00 &euro;</b></div>
-        </div>
-        <span class="ap">Aparatolog&iacute;a</span>
-        <div class="rows" style="padding-bottom:16px">
-            <div class="r"><span>Ganchos Adams</span><b>10,00 &euro;</b></div>
-            <div class="r"><span>Tornillos Din&aacute;micos</span><b>25,00 &euro;</b></div>
-            <div class="r"><span>Herbst de Biela Oclusal</span><b>121,00 &euro;</b></div>
-            <div class="r"><span>HBO</span><b>297,00 &euro;</b></div>
-            <div class="r"><span>Tubos</span><b>12,00 &euro;</b></div>
-            <div class="r"><span>Activador de Klammt</span><b>297,00 &euro;</b></div>
-            <div class="r"><span>Disyuntor MCNamara</span><b>100,00 &euro;</b></div>
-            <div class="r"><span>Bandas</span><b>20,00 &euro;</b></div>
-            <div class="r"><span>Arco Progenie</span><b>15,00 &euro;</b></div>
-            <div class="r"><span>Ganchos de Tracci&oacute;n</span><b>12,00 &euro;</b></div>
-            <div class="r"><span>Rejilla Met&aacute;lica de Refuerzo</span><b>30,00 &euro;</b></div>
-            <div class="r"><span>Modelo de Estudio</span><b>30,00 &euro;</b></div>
-            <div class="r"><span>Placa de Expansi&oacute;n</span><b>48,00 &euro;</b></div>
-            <div class="r"><span>Quad-Helix</span><b>35,00 &euro;</b></div>
-            <div class="r"><span>Barra Transpalatina</span><b>32,00 &euro;</b></div>
-            <div class="r"><span>Gancho Bola</span><b>8,00 &euro;</b></div>
-            <div class="r"><span>Disyuntor</span><b>75,00 &euro;</b></div>
-            <div class="r"><span>Hexa-Helix</span><b>75,00 &euro;</b></div>
-            <div class="r"><span>Bot&oacute;n de Nance</span><b>42,00 &euro;</b></div>
-            <div class="r"><span>P&eacute;ndulo</span><b>75,00 &euro;</b></div>
-            <div class="r"><span>Twin Block</span><b>120,00 &euro;</b></div>
-            <div class="r"><span>Levante de Mordida</span><b>15,00 &euro;</b></div>
-            <div class="r"><span>Rejilla Lingual</span><b>35,00 &euro;</b></div>
-            <div class="r"><span>Arco con Resina</span><b>14,00 &euro;</b></div>
-            <div class="r"><span>Arco Soldado a Adams</span><b>14,00 &euro;</b></div>
-            <div class="r"><span>Set Up</span><b>15,00 &euro;</b></div>
-            <div class="r"><span>Bionator</span><b>108,00 &euro;</b></div>
-            <div class="r"><span>Gancho M&aacute;scara Facial</span><b>10,00 &euro;</b></div>
-            <div class="r"><span>Escudo Labial</span><b>14,00 &euro;</b></div>
-            <div class="r"><span>Arco Vestibular</span><b>14,00 &euro;</b></div>
-            <div class="r"><span>Placa Hawley</span><b>45,00 &euro;</b></div>
-            <div class="r"><span>Placa Schwartz</span><b>35,00 &euro;</b></div>
-            <div class="r"><span>Placa Circunferencial</span><b>45,00 &euro;</b></div>
-            <div class="r"><span>Arco Lingual</span><b>33,00 &euro;</b></div>
-            <div class="r"><span>Resortes</span><b>13,00 &euro;</b></div>
-            <div class="r"><span>Mantenedor de Espacio</span><b>35,00 &euro;</b></div>
-            <div class="r"><span>Bumper</span><b>26,00 &euro;</b></div>
-            <div class="r"><span>Sander</span><b>62,00 &euro;</b></div>
-            <div class="r"><span>Cajetines</span><b>15,00 &euro;</b></div>
-            <div class="r"><span>Soldadura</span><b>40,00 &euro;</b></div>
-            <div class="r"><span>Extrusi&oacute;n</span><b>50,00 &euro;</b></div>
-        </div>
-    </section>
-
-    <!-- TIEMPOS -->
-    <section class="card fade" id="tiempos">
-        <div class="card-h"><div class="ico"><svg aria-hidden="true"><use href="#i-tiempos"/></svg></div><div class="t"><b>Tiempos de entrega</b><span>Fabricaci&oacute;n en laboratorio</span></div></div>
-        <div class="rows" style="padding-bottom:6px">
-            <div class="time-r"><span>Compostura (a&ntilde;adir porcelana)</span><span class="time-badge">4-5 d&iacute;as</span></div>
-            <div class="time-r"><span>Pernos &middot; Prueba de metal</span><span class="time-badge">5 d&iacute;as</span></div>
-            <div class="time-r"><span>Prueba de bizcocho o terminado</span><span class="time-badge">5 d&iacute;as</span></div>
-            <div class="time-r"><span>Cubetas &middot; Rodetes &middot; Prueba de dientes</span><span class="time-badge">4-5 d&iacute;as</span></div>
-            <div class="time-r"><span>Pr&oacute;tesis inmediata (acabado directo)</span><span class="time-badge">5 d&iacute;as</span></div>
-            <div class="time-r"><span>Terminaci&oacute;n de resina</span><span class="time-badge">4-5 d&iacute;as</span></div>
-            <div class="time-r"><span>Terminaci&oacute;n de estructuras de esquel&eacute;ticos</span><span class="time-badge">4-5 d&iacute;as</span></div>
-            <div class="time-r"><span>Rebases &middot; Composturas</span><span class="time-badge">4-5 d&iacute;as</span></div>
-            <div class="time-r"><span>F&eacute;rulas blandas, de descarga y Essix</span><span class="time-badge">4-5 d&iacute;as</span></div>
-            <div class="time-r"><span>Terminado directo mediante iTero</span><span class="time-badge">6-7 d&iacute;as</span></div>
-        </div>
-        <div class="note">&#8505; Los plazos corresponden &uacute;nicamente al tiempo de fabricaci&oacute;n en laboratorio. Para trabajos enviados por mensajer&iacute;a, a&ntilde;adir 2 d&iacute;as laborables (1 de recogida y 1 de entrega). Terminado directo mediante esc&aacute;ner intraoral iTero: plazo total de 8-9 d&iacute;as laborables incluyendo recogida y entrega.</div>
-    </section>
-
-
-    <!-- CONTACTO -->
-    <section class="contact fade" id="contacto">
-        <h2>Contacta con nosotros</h2>
-        <p>Mensajer&iacute;a propia gratuita en Madrid capital y alrededores.<br>Env&iacute;os a toda Espa&ntilde;a.</p>
-        <a href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas" class="cbtn wa">&#128172; WhatsApp: 680 555 303</a>
-        <a href="tel:+34913292062" class="cbtn tel">&#128222; Llamar: 91 329 20 62</a>
-        <a href="https://www.laboratoriodentalrb.com" class="cbtn web" target="_blank">&#127760; laboratoriodentalrb.com</a>
-    </section>
-
-    <footer>
-        <div>
-            <div class="ft-tag">Precisi&oacute;n artesanal, <span>tecnolog&iacute;a digital</span></div>
-            <div class="ft-sub">RB Dental Digital &middot; Laboratorio de Pr&oacute;tesis Dental &middot; N&ordm; Licencia Sanitaria FP-00602 &middot; Consejer&iacute;a de Sanidad C. de Madrid<br>&copy; 2026 &middot; Precios actualizados Septiembre 2026</div>
-        </div>
-        <img src="img/logo-rb.png" alt="RB dental" loading="lazy">
-    </footer>
-
+    <section class="syssec" id="blender">
+      <div class="shead"><span class="eyebrow">Sistema propio</span><h2>Blender</h2><div class="sub">Barras fresadas &middot; sobre implantes y sobre diente</div></div>
+      <div class="pres" data-pres>
+  <div class="ph"><div>
+    <span class="chip">SISTEMA &middot; PR&Oacute;TESIS FIJA FRESADA</span>
+    <h3>BLENDER</h3>
+    <p>Barra fresada de titanio a medida para tus rehabilitaciones fijas, sobre implantes o sobre dientes.</p>
+  </div><div class="im"><img src="img/blender5.jpg" alt="Barra Blender"></div></div>
+  <div class="body"><div class="que">
+    <h4>&iquest;Qu&eacute; es el sistema Blender<em>.</em></h4>
+    <p>La <b>barra Blender</b> es la estructura interna, dise&ntilde;ada en <b>CAD-CAM</b> y fresada en <b>titanio</b>, que soporta la pr&oacute;tesis fija de tus pacientes. Combina la resistencia del titanio con la est&eacute;tica del <b>zirconio</b>, con ajuste pasivo y entrega en <b>4-5 d&iacute;as</b>.</p>
+  </div></div>
+  <div class="vents v3">
+    <div class="vent"><span class="vt"><svg><use href="#ic-shield"/></svg></span><div><b>M&aacute;xima resistencia</b><span>Refuerzo interno para una mayor seguridad estructural.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-chart"/></svg></span><div><b>Mejor distribuci&oacute;n de cargas</b><span>Transmisi&oacute;n m&aacute;s equilibrada de las fuerzas masticatorias.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-lock"/></svg></span><div><b>Mayor estabilidad</b><span>Estructura r&iacute;gida y precisa para rehabilitaciones extensas.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-target"/></svg></span><div><b>Alta precisi&oacute;n</b><span>Fabricaci&oacute;n mecanizada para un ajuste preciso y fiable.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-check"/></svg></span><div><b>Menor riesgo de fracturas</b><span>Refuerzo adicional a la estructura de zirconio.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-tooth"/></svg></span><div><b>Rehabilitaciones completas</b><span>Resistencia estructural con la est&eacute;tica del zirconio.</span></div></div>
+  </div>
 </div>
+<div class="gal" data-pres>
+  <figure class="g"><img src="img/blender.jpg" alt="Barra Blender" loading="lazy"><figcaption>Barra Blender</figcaption></figure><figure class="g"><img src="img/blender2.jpg" alt="Barra + estructura" loading="lazy"><figcaption>Barra + estructura</figcaption></figure><figure class="g"><img src="img/blender3.jpg" alt="Barra anodizada" loading="lazy"><figcaption>Barra anodizada</figcaption></figure><figure class="g"><img src="img/blender4.jpg" alt="Barra Blender Ti" loading="lazy"><figcaption>Barra Blender Ti</figcaption></figure><figure class="g"><img src="img/blender5.jpg" alt="Barra sobredentadura" loading="lazy"><figcaption>Barra sobredentadura</figcaption></figure>
+</div>
+      <div class="tblwrap"><table>
+<thead><tr><th>Barra Blender &middot; <i>sobre implantes</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>Barra Blender fresada Ti sobre 2 Implantes*</td><td class="p">215,00 &euro;</td></tr><tr class="z"><td>Barra Blender fresada Ti sobre 3 Implantes*</td><td class="p">245,00 &euro;</td></tr><tr><td>Barra Blender fresada Ti sobre 4 Implantes*</td><td class="p">350,00 &euro;</td></tr><tr class="z"><td>Barra Blender fresada Ti sobre 5 Implantes*</td><td class="p">380,00 &euro;</td></tr><tr><td>Barra Blender fresada Ti sobre 6 Implantes*</td><td class="p">400,00 &euro;</td></tr><tr class="z"><td>Barra Blender fresada Ti sobre 7 Implantes*</td><td class="p">420,00 &euro;</td></tr><tr><td>Barra Blender fresada Ti sobre 8 Implantes*</td><td class="p">440,00 &euro;</td></tr></tbody></table></div>
+<div class="tblwrap"><table>
+<thead><tr><th>Barra Blender &middot; <i>sobre diente</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>Barra Blender fresada sobre 2 piezas*</td><td class="p">180,00 &euro;</td></tr><tr class="z"><td>Barra Blender fresada sobre 3 piezas*</td><td class="p">204,00 &euro;</td></tr><tr><td>Barra Blender fresada sobre 4 piezas*</td><td class="p">228,00 &euro;</td></tr><tr class="z"><td>Barra Blender fresada sobre 5 piezas*</td><td class="p">324,00 &euro;</td></tr><tr><td>Barra Blender fresada sobre 6 piezas*</td><td class="p">360,00 &euro;</td></tr><tr class="z"><td>Barra Blender fresada sobre 7 piezas*</td><td class="p">396,00 &euro;</td></tr><tr><td>Barra Blender fresada sobre 8 piezas*</td><td class="p">432,00 &euro;</td></tr></tbody></table></div>
+      <div class="notei"><span class="i">i</span>* El precio incluye la barra Blender fresada + el anodizado y pulido de la estructura de titanio + Divisi&oacute;n Blender (extrusi&oacute;n).</div>
+    </section>
 
-<a href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas" class="wa-bar" aria-label="WhatsApp"><svg aria-hidden="true" style="width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round"><use href="#i-wa"/></svg></a>
+    <section class="syssec" id="carga">
+      <div class="shead"><span class="eyebrow">Implantolog&iacute;a</span><h2>Carga inmediata</h2><div class="sub">Cirug&iacute;a guiada &middot; f&eacute;rulas quir&uacute;rgicas a medida</div></div>
+      <div class="pres" data-pres>
+  <div class="ph"><div>
+    <span class="chip">NUEVO &middot; IMPLANTOLOG&Iacute;A</span>
+    <h3>CARGA INMEDIATA</h3>
+    <p>Provisional fijo el mismo d&iacute;a de la cirug&iacute;a, con planificaci&oacute;n digital y f&eacute;rula quir&uacute;rgica a medida.</p>
+  </div><div class="im"><img src="img/fija3.jpg" alt="Carga inmediata"></div></div>
+  <div class="body"><div class="que two">
+    <div><h4>&iquest;Qu&eacute; es la carga inmediata<em>?</em></h4>
+    <p>Permite colocar el implante y un <b>provisional fijo en la misma sesi&oacute;n</b>. El laboratorio prepara el provisional antes de la cirug&iacute;a a partir de la planificaci&oacute;n digital, para que el paciente salga de la cl&iacute;nica con dientes.</p></div>
+    <div><h4>&iquest;Qu&eacute; es la f&eacute;rula quir&uacute;rgica<em>?</em></h4>
+    <p>Una <b>gu&iacute;a a medida</b> dise&ntilde;ada desde el esc&aacute;ner 3D y el CBCT del paciente que marca la posici&oacute;n exacta de cada implante. M&aacute;xima precisi&oacute;n y una cirug&iacute;a m&aacute;s r&aacute;pida y predecible.</p></div>
+  </div></div>
+  <div class="vents">
+    <div class="vent"><span class="vt"><svg><use href="#ic-tooth"/></svg></span><div><b>Diente el mismo d&iacute;a</b><span>Provisional fijo listo para colocar tras la cirug&iacute;a.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-clock"/></svg></span><div><b>Sin esperas</b><span>Sin los meses de espera del m&eacute;todo tradicional.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-target"/></svg></span><div><b>M&aacute;xima precisi&oacute;n</b><span>La f&eacute;rula gu&iacute;a cada implante con exactitud.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-shield"/></svg></span><div><b>Cirug&iacute;a m&aacute;s c&oacute;moda</b><span>T&eacute;cnica guiada, m&aacute;s r&aacute;pida y menos invasiva.</span></div></div>
+  </div>
+  <div class="flow"><b>FLUJO DIGITAL COMPLETO</b>
+  <p>Esc&aacute;ner intraoral + CBCT &rarr; planificaci&oacute;n 3D &rarr; f&eacute;rula quir&uacute;rgica &rarr; provisional de carga inmediata. Todo desde el laboratorio, con recogida gratuita en Madrid.</p></div>
+</div>
+<div class="gal" data-pres>
+  <figure class="g"><img src="img/carga1.jpg" alt="Planificaci&oacute;n 3D del caso" loading="lazy"><figcaption>Planificaci&oacute;n 3D del caso</figcaption></figure><figure class="g"><img src="img/carga2.jpg" alt="Gu&iacute;a quir&uacute;rgica a medida" loading="lazy"><figcaption>Gu&iacute;a quir&uacute;rgica a medida</figcaption></figure><figure class="g"><img src="img/carga3.jpg" alt="Fresado guiado" loading="lazy"><figcaption>Fresado guiado</figcaption></figure>
+</div>
+      <div class="tblwrap"><table>
+<thead><tr><th>F&eacute;rula quir&uacute;rgica guiada &middot; <i>cirug&iacute;a guiada</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>F&eacute;rula quir&uacute;rgica guiada &middot; 1 implante</td><td class="p">180,00 &euro;</td></tr><tr class="z"><td>F&eacute;rula quir&uacute;rgica guiada &middot; 2 implantes</td><td class="p">240,00 &euro;</td></tr><tr><td>F&eacute;rula quir&uacute;rgica guiada &middot; 3 implantes</td><td class="p">294,00 &euro;</td></tr><tr class="z"><td>F&eacute;rula quir&uacute;rgica guiada &middot; 4 implantes</td><td class="p">348,00 &euro;</td></tr><tr><td>F&eacute;rula quir&uacute;rgica guiada &middot; 5 o m&aacute;s implantes</td><td class="p">408,00 &euro;</td></tr></tbody></table></div>
+      <div class="notei"><span class="i">i</span>El precio de cada gu&iacute;a incluye: estudio y an&aacute;lisis de datos, planificaci&oacute;n del caso, confecci&oacute;n digital e impresi&oacute;n de la gu&iacute;a quir&uacute;rgica.</div>
+    </section>
+
+    <section class="syssec" id="removible">
+      <div class="shead"><span class="eyebrow">Tarifas 2026</span><h2>Pr&oacute;tesis removible</h2><div class="sub">Acr&iacute;lica, flexible, esquel&eacute;ticos y arreglos</div></div>
+      <div class="tblwrap"><table>
+<thead><tr><th>Pr&oacute;tesis removible &middot; <i>acr&iacute;lica</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>Completa Superior o Inferior de Resina</td><td class="p">130,00 &euro;</td></tr><tr class="z"><td>Parciales de Resina de 1 a 9 piezas</td><td class="p">100,00 &euro;</td></tr></tbody></table></div>
+<div class="tblwrap"><table>
+<thead><tr><th>Pr&oacute;tesis removible &middot; <i>flexible</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>Valplast de 1 a 2 piezas</td><td class="p">Consultar</td></tr><tr class="z"><td>Valplast de 3 a 5 piezas</td><td class="p">Consultar</td></tr><tr><td>Valplast de m&aacute;s de 6 piezas</td><td class="p">Consultar</td></tr><tr class="z"><td>Esquel&eacute;tico Valplast 1 a 5 piezas</td><td class="p">210,00 &euro;</td></tr><tr><td>Esquel&eacute;tico Valplast 6 a 9 piezas</td><td class="p">250,00 &euro;</td></tr></tbody></table></div>
+<div class="tblwrap"><table>
+<thead><tr><th>Pr&oacute;tesis removible &middot; <i>esquel&eacute;tico</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>Esquel&eacute;tico de 1 a 2 piezas</td><td class="p">Consultar</td></tr><tr class="z"><td>Esquel&eacute;tico de 3 a 5 piezas</td><td class="p">Consultar</td></tr><tr><td>Esquel&eacute;tico de m&aacute;s de 6 piezas</td><td class="p">225,00 &euro;</td></tr><tr class="z"><td>Compostura Colada para Esquel&eacute;tico</td><td class="p">40,00 &euro;</td></tr><tr><td>A&ntilde;adir Pieza Esquel&eacute;tico</td><td class="p">30,00 &euro;</td></tr><tr class="z"><td>Estructura de Esquel&eacute;tico</td><td class="p">75,00 &euro;</td></tr><tr><td>Pieza Esquel&eacute;tico</td><td class="p">30,00 &euro;</td></tr><tr class="z"><td>Solchapa Unidad</td><td class="p">40,00 &euro;</td></tr></tbody></table></div>
+<div class="tblwrap"><table>
+<thead><tr><th>Pr&oacute;tesis removible &middot; <i>arreglos y resina</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>Rebase</td><td class="p">40,00 &euro;</td></tr><tr class="z"><td>Compostura Simple</td><td class="p">30,00 &euro;</td></tr><tr><td>A&ntilde;adir Pieza o Gancho</td><td class="p">30,00 &euro;</td></tr><tr class="z"><td>Soldadura</td><td class="p">40,00 &euro;</td></tr><tr><td>Cubeta Individual de Resina</td><td class="p">15,00 &euro;</td></tr></tbody></table></div>
+    </section>
+
+    <section class="syssec" id="estetica">
+      <div class="shead"><span class="eyebrow">Est&eacute;tica dental</span><h2>Dise&ntilde;o de sonrisa y est&eacute;tica</h2><div class="sub">Dise&ntilde;o digital, mock-up, carillas y llaves</div></div>
+      <div class="pres" data-pres>
+  <div class="ph"><div>
+    <span class="chip">EST&Eacute;TICA DENTAL &middot; LABORATORIO</span>
+    <h3>DISE&Ntilde;O DE SONRISA</h3>
+    <p>Tu sonrisa ideal, dise&ntilde;ada digitalmente y probada antes de empezar.</p>
+  </div><div class="im"><img src="img/estetica-carillas-b.jpg" alt="Dise&ntilde;o de sonrisa"></div></div>
+  <div class="body"><div class="que two">
+    <div><h4>&iquest;Qu&eacute; es el dise&ntilde;o digital de sonrisa<em>?</em></h4>
+    <p>Dise&ntilde;amos la sonrisa en el ordenador a partir de <b>fotos y un esc&aacute;ner 3D</b>. La cl&iacute;nica y el paciente ven la forma, el tama&ntilde;o y la posici&oacute;n ideal de los dientes antes de empezar.</p></div>
+    <div><h4>&iquest;Qu&eacute; es el Mock-up<em>?</em></h4>
+    <p>Una <b>prueba de la nueva sonrisa</b> colocada sobre los dientes, sin tallar. El paciente se la prueba en la boca y ve el resultado en el espejo antes de decidir.</p></div>
+  </div></div>
+  <div class="vents">
+    <div class="vent"><span class="vt"><svg><use href="#ic-check"/></svg></span><div><b>El resultado, antes</b><span>El paciente prueba su nueva sonrisa antes de empezar.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-target"/></svg></span><div><b>Dise&ntilde;o a medida</b><span>Pensado para cada cara y cada forma de sonre&iacute;r.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-shield"/></svg></span><div><b>Sin sorpresas</b><span>Se sabe c&oacute;mo quedar&aacute; y qu&eacute; cuesta desde el inicio.</span></div></div>
+    <div class="vent"><span class="vt"><svg><use href="#ic-diam"/></svg></span><div><b>M&iacute;nimamente invasivo</b><span>Con carillas se respeta el diente natural.</span></div></div>
+  </div>
+</div>
+<div class="gal pasos" data-pres>
+  <figure class="g"><img src="img/sonrisa-paso1.jpg" alt="1 &middot; Sonrisa inicial" loading="lazy"><figcaption>1 &middot; Sonrisa inicial</figcaption></figure><figure class="g"><img src="img/sonrisa-paso2.jpg" alt="2 &middot; Dise&ntilde;amos tu sonrisa" loading="lazy"><figcaption>2 &middot; Dise&ntilde;amos tu sonrisa</figcaption></figure><figure class="g"><img src="img/sonrisa-paso3.jpg" alt="3 &middot; Preparamos el mock-up" loading="lazy"><figcaption>3 &middot; Preparamos el mock-up</figcaption></figure><figure class="g"><img src="img/sonrisa-paso4.jpg" alt="4 &middot; &iexcl;Tu nueva sonrisa!" loading="lazy"><figcaption>4 &middot; &iexcl;Tu nueva sonrisa!</figcaption></figure>
+</div>
+      <div class="tblwrap"><table>
+<thead><tr><th>Est&eacute;tica &middot; <i>dise&ntilde;o de sonrisa, carillas y llaves</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>Carillas de Composite sin cer&aacute;mica</td><td class="p">60,00 &euro;</td></tr><tr class="z"><td>Carillas de Composite con cer&aacute;mica</td><td class="p">85,00 &euro;</td></tr><tr><td>Carillas de Disilicato de Litio</td><td class="p">90,00 &euro;</td></tr><tr class="z"><td>Corona de Zirconio Monol&iacute;tico</td><td class="p">100,00 &euro;</td></tr><tr><td>Corona de Zirconio Estratificado</td><td class="p">110,00 &euro;</td></tr><tr class="z"><td>Incrustaciones de Composite (por pieza)</td><td class="p">90,00 &euro;</td></tr><tr><td>Incrustaciones de Disilicato de Litio</td><td class="p">100,00 &euro;</td></tr><tr class="z"><td>Dise&ntilde;o de Sonrisa (por pieza) &middot; Modelo 3D incluido</td><td class="p">30,00 &euro;</td></tr><tr><td>Llave de silicona para el Mock Up (por arcada)</td><td class="p">20,00 &euro;</td></tr><tr class="z"><td>Llave para carillas inyectadas (por arcada)</td><td class="p">40,00 &euro;</td></tr><tr><td>Llave para Carillas</td><td class="p">30,00 &euro;</td></tr></tbody></table></div>
+    </section>
+
+    <section class="syssec" id="ortodoncia">
+      <div class="shead"><span class="eyebrow">Tarifas 2026</span><h2>Ortodoncia</h2><div class="sub">F&eacute;rulas, retenedores y aparatolog&iacute;a</div></div>
+      <div class="tblwrap"><table>
+<thead><tr><th>Ortodoncia &middot; <i>f&eacute;rulas y retenedores</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>F&eacute;rula de Descarga</td><td class="p">70,00 &euro;</td></tr><tr class="z"><td>F&eacute;rula de Descarga Fresada</td><td class="p">90,00 &euro;</td></tr><tr><td>F&eacute;rula de Blanqueamiento (por arcada)</td><td class="p">35,00 &euro;</td></tr><tr class="z"><td>F&eacute;rula Contenci&oacute;n (Essix) por arcada</td><td class="p">39,00 &euro;</td></tr><tr><td>F&eacute;rula de Descarga Mixta</td><td class="p">58,00 &euro;</td></tr><tr class="z"><td>F&eacute;rula (Boxeo)</td><td class="p">85,00 &euro;</td></tr></tbody></table></div>
+<div class="tblwrap"><table>
+<thead><tr><th>Ortodoncia &middot; <i>aparatolog&iacute;a</i></th><th class="pr">PRECIO</th></tr></thead>
+<tbody><tr><td>Ganchos Adams</td><td class="p">10,00 &euro;</td></tr><tr class="z"><td>Tornillos Din&aacute;micos</td><td class="p">25,00 &euro;</td></tr><tr><td>Herbst de Biela Oclusal</td><td class="p">121,00 &euro;</td></tr><tr class="z"><td>HBO</td><td class="p">297,00 &euro;</td></tr><tr><td>Tubos</td><td class="p">12,00 &euro;</td></tr><tr class="z"><td>Activador de Klammt</td><td class="p">297,00 &euro;</td></tr><tr><td>Disyuntor MCNamara</td><td class="p">100,00 &euro;</td></tr><tr class="z"><td>Bandas</td><td class="p">20,00 &euro;</td></tr><tr><td>Arco Progenie</td><td class="p">15,00 &euro;</td></tr><tr class="z"><td>Ganchos de Tracci&oacute;n</td><td class="p">12,00 &euro;</td></tr><tr><td>Rejilla Met&aacute;lica de Refuerzo</td><td class="p">30,00 &euro;</td></tr><tr class="z"><td>Modelo de Estudio</td><td class="p">30,00 &euro;</td></tr><tr><td>Placa de Expansi&oacute;n</td><td class="p">48,00 &euro;</td></tr><tr class="z"><td>Quad-Helix</td><td class="p">35,00 &euro;</td></tr><tr><td>Barra Transpalatina</td><td class="p">32,00 &euro;</td></tr><tr class="z"><td>Gancho Bola</td><td class="p">8,00 &euro;</td></tr><tr><td>Disyuntor</td><td class="p">75,00 &euro;</td></tr><tr class="z"><td>Hexa-Helix</td><td class="p">75,00 &euro;</td></tr><tr><td>Bot&oacute;n de Nance</td><td class="p">42,00 &euro;</td></tr><tr class="z"><td>P&eacute;ndulo</td><td class="p">75,00 &euro;</td></tr><tr><td>Twin Block</td><td class="p">120,00 &euro;</td></tr><tr class="z"><td>Levante de Mordida</td><td class="p">15,00 &euro;</td></tr><tr><td>Rejilla Lingual</td><td class="p">35,00 &euro;</td></tr><tr class="z"><td>Arco con Resina</td><td class="p">14,00 &euro;</td></tr><tr><td>Arco Soldado a Adams</td><td class="p">14,00 &euro;</td></tr><tr class="z"><td>Set Up</td><td class="p">15,00 &euro;</td></tr><tr><td>Bionator</td><td class="p">108,00 &euro;</td></tr><tr class="z"><td>Gancho M&aacute;scara Facial</td><td class="p">10,00 &euro;</td></tr><tr><td>Escudo Labial</td><td class="p">14,00 &euro;</td></tr><tr class="z"><td>Arco Vestibular</td><td class="p">14,00 &euro;</td></tr><tr><td>Placa Hawley</td><td class="p">45,00 &euro;</td></tr><tr class="z"><td>Placa Schwartz</td><td class="p">35,00 &euro;</td></tr><tr><td>Placa Circunferencial</td><td class="p">45,00 &euro;</td></tr><tr class="z"><td>Arco Lingual</td><td class="p">33,00 &euro;</td></tr><tr><td>Resortes</td><td class="p">13,00 &euro;</td></tr><tr class="z"><td>Mantenedor de Espacio</td><td class="p">35,00 &euro;</td></tr><tr><td>Bumper</td><td class="p">26,00 &euro;</td></tr><tr class="z"><td>Sander</td><td class="p">62,00 &euro;</td></tr><tr><td>Cajetines</td><td class="p">15,00 &euro;</td></tr><tr class="z"><td>Soldadura</td><td class="p">40,00 &euro;</td></tr><tr><td>Extrusi&oacute;n</td><td class="p">50,00 &euro;</td></tr></tbody></table></div>
+    </section>
+
+    <section class="syssec" id="tiempos">
+      <div class="shead"><span class="eyebrow">Plazos</span><h2>Tiempos de entrega</h2><div class="sub">Fabricaci&oacute;n en laboratorio</div></div>
+      <div class="tblwrap"><table><thead><tr><th>Tiempos de entrega &middot; <i>fabricaci&oacute;n en laboratorio</i></th><th class="pr">PLAZO</th></tr></thead><tbody><tr><td>Compostura (a&ntilde;adir porcelana)</td><td class="p"><span class="badge">4-5 d&iacute;as</span></td></tr><tr><td>Pernos &middot; Prueba de metal</td><td class="p"><span class="badge">5 d&iacute;as</span></td></tr><tr><td>Prueba de bizcocho o terminado</td><td class="p"><span class="badge">5 d&iacute;as</span></td></tr><tr><td>Cubetas &middot; Rodetes &middot; Prueba de dientes</td><td class="p"><span class="badge">4-5 d&iacute;as</span></td></tr><tr><td>Pr&oacute;tesis inmediata (acabado directo)</td><td class="p"><span class="badge">5 d&iacute;as</span></td></tr><tr><td>Terminaci&oacute;n de resina</td><td class="p"><span class="badge">4-5 d&iacute;as</span></td></tr><tr><td>Terminaci&oacute;n de estructuras de esquel&eacute;ticos</td><td class="p"><span class="badge">4-5 d&iacute;as</span></td></tr><tr><td>Rebases &middot; Composturas</td><td class="p"><span class="badge">4-5 d&iacute;as</span></td></tr><tr><td>F&eacute;rulas blandas, de descarga y Essix</td><td class="p"><span class="badge">4-5 d&iacute;as</span></td></tr><tr><td>Terminado directo mediante iTero</td><td class="p"><span class="badge">6-7 d&iacute;as</span></td></tr></tbody></table></div>
+      <div class="notei"><span class="i">i</span>Los plazos corresponden &uacute;nicamente al tiempo de fabricaci&oacute;n en laboratorio. Para trabajos enviados por mensajer&iacute;a, a&ntilde;adir 2 d&iacute;as laborables (1 de recogida y 1 de entrega). Terminado directo mediante esc&aacute;ner intraoral iTero: plazo total de 8-9 d&iacute;as laborables incluyendo recogida y entrega.</div>
+    </section>
+  </main>
+</div></div>
+
+<div class="cta" id="contacto"><div class="in">
+  <h2>&iquest;Tienes un caso?<span>Env&iacute;anos tu caso y te asesoramos. Mensajer&iacute;a propia gratuita en Madrid capital y alrededores &middot; env&iacute;os a toda Espa&ntilde;a.</span></h2>
+  <a class="pill gold" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas">WhatsApp &middot; 680 555 303</a>
+  <a class="pill linew" href="tel:+34913292062">Llamar &middot; 91 329 20 62</a>
+</div></div>
+
+<footer><div class="in">
+  <img src="img/logo-rb-navy.png" alt="RB dental">
+  <div class="c"><strong>Precisi&oacute;n artesanal, tecnolog&iacute;a digital.</strong><br>RB Dental Digital &middot; Laboratorio de Pr&oacute;tesis Dental &middot; N&ordm; Licencia Sanitaria FP-00602 &middot; Consejer&iacute;a de Sanidad C. de Madrid &middot; &copy; 2026 &middot; Precios actualizados Septiembre 2026</div>
+  <a href="https://www.laboratoriodentalrb.com" style="color:var(--goldd);font-family:Poppins;font-weight:600;font-size:.85rem;text-decoration:none">laboratoriodentalrb.com</a>
+</div></footer>
+
+<a class="wa-float" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas" aria-label="WhatsApp"><svg><use href="#ic-wa"/></svg></a>
 
 <script>
-    document.documentElement.classList.add('js');
-
-    // Aparicion suave
-    var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-            if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-        });
-    }, { threshold: 0.06 });
-    document.querySelectorAll('.fade').forEach(function (el) { io.observe(el); });
-
-    // Buscador
-    var buscador = document.getElementById('buscador');
-    var sinResultados = document.getElementById('sin-resultados');
-    function normaliza(s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
-    buscador.addEventListener('input', function () {
-        var q = normaliza(buscador.value.trim());
-        var total = 0;
-        document.querySelectorAll('section.card').forEach(function (card) {
-            var filas = card.querySelectorAll('.r');
-            if (!filas.length) { card.style.display = q ? 'none' : ''; return; }
-            var vis = 0;
-            filas.forEach(function (r) {
-                var ok = !q || normaliza(r.textContent).indexOf(q) !== -1;
-                r.style.display = ok ? '' : 'none';
-                if (ok) vis++;
-            });
-            card.style.display = (q && vis === 0) ? 'none' : '';
-            total += vis;
-            card.querySelectorAll('.ap, .discount-line, .note, .offer-grid, .allon-label, .gal, .galwrap, .fintro').forEach(function (el) {
-                el.style.display = q ? 'none' : '';
-            });
-        });
-        document.querySelectorAll('#accesos, .intro, #mas-pedidos, #novedades').forEach(function (el) { el.style.display = q ? 'none' : ''; });
-        sinResultados.style.display = (q && total === 0) ? 'block' : 'none';
+document.addEventListener('DOMContentLoaded', function () {
+  // Buscador (hero + sidebar sincronizados)
+  var inputs = [document.getElementById('buscador'), document.getElementById('buscador2')].filter(Boolean);
+  var noRes = document.getElementById('sin-resultados');
+  function normaliza(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+  function filtra(q) {
+    q = normaliza(q.trim());
+    var total = 0;
+    document.querySelectorAll('main.list .syssec').forEach(function (sec) {
+      var vis = 0;
+      sec.querySelectorAll('tbody tr').forEach(function (tr) {
+        var ok = !q || normaliza(tr.textContent).indexOf(q) !== -1;
+        tr.style.display = ok ? '' : 'none';
+        if (ok) vis++;
+      });
+      sec.querySelectorAll('[data-pres], .allon-label, .offer-grid, .discount-line, .note').forEach(function (el) {
+        el.style.display = q ? 'none' : '';
+      });
+      var hasRows = sec.querySelectorAll('tbody tr').length > 0;
+      sec.style.display = (q && hasRows && vis === 0) ? 'none' : '';
+      total += vis;
     });
-
-    // Flechas de scroll en los carruseles de fotos
-    document.querySelectorAll('.gal').forEach(function (gal) {
-        if (gal.scrollWidth <= gal.clientWidth + 10) return;
-        var wrap = document.createElement('div');
-        wrap.className = 'galwrap';
-        gal.parentNode.insertBefore(wrap, gal);
-        wrap.appendChild(gal);
-        var prev = document.createElement('button');
-        prev.className = 'gal-prev'; prev.innerHTML = '&#8249;'; prev.hidden = true;
-        prev.setAttribute('aria-label', 'Fotos anteriores');
-        var next = document.createElement('button');
-        next.className = 'gal-next'; next.innerHTML = '&#8250;';
-        next.setAttribute('aria-label', 'M\u00e1s fotos');
-        wrap.appendChild(prev); wrap.appendChild(next);
-        function paso() { return gal.querySelector('figure').offsetWidth + 10; }
-        prev.addEventListener('click', function () { gal.scrollBy({ left: -paso(), behavior: 'smooth' }); });
-        next.addEventListener('click', function () { gal.scrollBy({ left: paso(), behavior: 'smooth' }); });
-        gal.addEventListener('scroll', function () {
-            prev.hidden = gal.scrollLeft < 10;
-            next.hidden = gal.scrollLeft > gal.scrollWidth - gal.clientWidth - 10;
-        }, { passive: true });
+    document.querySelectorAll('.nov, #mas-pedidos').forEach(function (el) { el.style.display = q ? 'none' : ''; });
+    if (noRes) noRes.style.display = (q && total === 0) ? 'block' : 'none';
+  }
+  inputs.forEach(function (inp) {
+    inp.addEventListener('input', function () {
+      inputs.forEach(function (o) { if (o !== inp) o.value = inp.value; });
+      filtra(inp.value);
     });
-
-    // Maquetación de escritorio: sidebar con buscador e índice
-    if (window.matchMedia('(min-width: 1000px)').matches) {
-        var shell = document.querySelector('.shell');
-        var content = document.createElement('div'); content.className = 'content';
-        var aside = document.createElement('aside'); aside.className = 'sidenav';
-        var main = document.createElement('div'); main.className = 'maincol';
-        var nov = document.querySelector('.novedades');
-        shell.insertBefore(content, nov.nextSibling);
-        var sw = document.querySelector('.search-wrap');
-        var nr = document.getElementById('sin-resultados');
-        shell.insertBefore(sw, content);
-        shell.insertBefore(nr, content);
-        var idx = document.createElement('nav'); idx.className = 'sideidx';
-        idx.innerHTML =
-            '<a href="#fija"><span>Pr\u00f3tesis Fija</span><b>37</b></a>' +
-            '<a href="#allon"><span>Ofertas All-on</span><b>-25/31%</b></a>' +
-            '<a href="#blender"><span>Blender</span><b>14</b></a>' +
-            '<a href="#carga"><span>Carga inmediata</span><b>5</b></a>' +
-            '<a href="#removible"><span>Pr\u00f3tesis Removible</span><b>20</b></a>' +
-            '<a href="#ortodoncia"><span>Ortodoncia</span><b>47</b></a>' +
-            '<a href="#estetica"><span>Est\u00e9tica</span><b>11</b></a>' +
-            '<a href="#tiempos"><span>Tiempos de entrega</span><b>4-5d</b></a>' +
-            '<a href="#contacto"><span>Contacto</span><b>&rsaquo;</b></a>';
-        aside.appendChild(idx);
-        document.querySelectorAll('.intro, section.card, section.contact').forEach(function (el) { main.appendChild(el); });
-        content.appendChild(aside); content.appendChild(main);
-
-        // Resaltar seccion activa en el indice
-        var spyIds = ['fija', 'allon', 'blender', 'carga', 'removible', 'ortodoncia', 'estetica', 'tiempos', 'contacto'];
-        var spyLinks = {};
-        idx.querySelectorAll('a').forEach(function (a) { spyLinks[a.getAttribute('href').slice(1)] = a; });
-        function spy() {
-            var current = null, best = -Infinity;
-            spyIds.forEach(function (id) {
-                var el = document.getElementById(id);
-                if (!el) return;
-                var top = el.getBoundingClientRect().top;
-                if (top <= 130 && top > best) { best = top; current = id; }
-            });
-            idx.querySelectorAll('a').forEach(function (a) { a.classList.remove('active'); });
-            if (current && spyLinks[current]) spyLinks[current].classList.add('active');
-        }
-        window.addEventListener('scroll', spy, { passive: true });
-        spy();
-    }
+  });
+  // Resaltar categoria activa
+  var links = document.querySelectorAll('aside.cats a[data-spy]');
+  function spy() {
+    var current = null, best = -Infinity;
+    links.forEach(function (a) {
+      var el = document.getElementById(a.getAttribute('href').slice(1));
+      if (!el) return;
+      var top = el.getBoundingClientRect().top;
+      if (top <= 140 && top > best) { best = top; current = a; }
+    });
+    links.forEach(function (a) { a.classList.remove('on'); });
+    if (current) current.classList.add('on');
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+});
 </script>
 </body>
 </html>
