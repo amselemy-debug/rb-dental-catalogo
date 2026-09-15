@@ -54,8 +54,6 @@ nav.top .sp { flex:1; }
   .hero h1 { font-size:3.2rem; }
   .hero p.lead { font-size:1.08rem; }
   .hero .ph { display:block; flex-shrink:0; width:460px; position:relative; }
-  .hero .ph img { width:100%; height:330px; object-fit:contain; background:#fff; border-radius:22px; padding:14px;
-    border:1px solid rgba(201,168,76,.5); box-shadow:0 24px 54px rgba(0,0,0,.5); }
   .hero .ph figcaption { text-align:center; color:var(--gold2); font-size:.78rem; margin-top:10px; }
 }
 /* STRIP */
@@ -208,7 +206,6 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   .chips a { font-size:.88rem; padding:8px 17px; }
   .chips span { font-size:.85rem; }
   .hero .ph { width:520px; }
-  .hero .ph img { height:370px; }
   .hero .ph figcaption { font-size:.85rem; }
   .strip .in { padding-top:20px; padding-bottom:20px; }
   .stt svg { width:34px; height:34px; }
@@ -274,6 +271,31 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   footer .c { font-size:.86rem; }
 }
 
+
+/* Hero dinamico */
+.hero .ph .slides { position:relative; width:100%; height:330px; background:#fff; border-radius:22px; padding:14px;
+  border:1px solid rgba(201,168,76,.5); box-shadow:0 24px 54px rgba(0,0,0,.5); overflow:hidden; }
+.hero .ph .slides img { position:absolute; inset:14px; width:calc(100% - 28px); height:calc(100% - 28px);
+  object-fit:contain; opacity:0; transition:opacity .9s ease; background:#fff; border-radius:12px; padding:0; border:none; box-shadow:none; }
+.hero .ph .slides img.on { opacity:1; }
+.hero .dots { display:flex; justify-content:center; gap:7px; margin-top:10px; }
+.hero .dots button { width:9px; height:9px; border-radius:50%; border:none; background:rgba(201,168,76,.35); cursor:pointer; padding:0; }
+.hero .dots button.on { background:var(--gold2); }
+@media (min-width:1200px) { .hero .ph .slides { height:370px; } }
+@keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+.hero .in > div > * { animation:fadeUp .7s ease both; }
+.hero .in > div > *:nth-child(2) { animation-delay:.08s; }
+.hero .in > div > *:nth-child(3) { animation-delay:.16s; }
+.hero .in > div > *:nth-child(4) { animation-delay:.24s; }
+.hero .in > div > *:nth-child(5) { animation-delay:.32s; }
+.hero .ph { animation:fadeUp .8s ease .2s both; }
+.reveal { opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.vis { opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce) {
+  .hero .in > div > *, .hero .ph { animation:none; }
+  .reveal { opacity:1; transform:none; transition:none; }
+}
+
 @media print { .hero .ph, .wa-float, aside.cats { display:none !important; } }
 </style>
 </head>
@@ -313,7 +335,16 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
       <a href="#fija">Pr&oacute;tesis fija</a><a href="#allon">All-on</a><a href="#blender">Blender</a><a href="#carga">Carga inmediata</a><a href="#removible">Removible</a><a href="#estetica">Est&eacute;tica</a><a href="#ortodoncia">Ortodoncia</a>
     </div>
   </div>
-  <figure class="ph"><img src="img/hero.jpg" alt="Barra Blender fresada y anodizada con coronas"><figcaption>Barra Blender fresada y anodizada &middot; trabajo real del laboratorio</figcaption></figure>
+  <figure class="ph">
+    <div class="slides">
+      <img class="on" src="img/hero.jpg" alt="Barra Blender fresada y anodizada" data-cap="Barra Blender fresada y anodizada &middot; trabajo real del laboratorio">
+      <img src="img/allon.jpg" alt="All-on-Six" data-cap="All-on-Six &middot; rehabilitaci&oacute;n completa fija" loading="lazy">
+      <img src="img/fija.jpg" alt="Coronas de zirconio" data-cap="Coronas de zirconio &middot; pr&oacute;tesis fija" loading="lazy">
+      <img src="img/estetica-carillas-b.jpg" alt="Dise&ntilde;o de sonrisa" data-cap="Dise&ntilde;o de sonrisa &middot; est&eacute;tica dental" loading="lazy">
+    </div>
+    <figcaption id="hero-cap">Barra Blender fresada y anodizada &middot; trabajo real del laboratorio</figcaption>
+    <div class="dots" id="hero-dots"></div>
+  </figure>
 </div></header>
 
 <div class="strip"><div class="in">
@@ -364,9 +395,12 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 
     <section class="syssec" id="fija">
       <div class="shead"><span class="eyebrow">Tarifas 2026</span><h2>Pr&oacute;tesis fija</h2><div class="sub">Coronas, puentes y estructuras &middot; sobre diente y sobre implante</div></div>
+<div class="gal" data-pres><figure class="g"><img src="img/fija.jpg" alt="" loading="lazy"><figcaption>Coronas de zirconio</figcaption></figure><figure class="g"><img src="img/fija2.jpg" alt="" loading="lazy"><figcaption>Zirconio cementado</figcaption></figure><figure class="g"><img src="img/fija3.jpg" alt="" loading="lazy"><figcaption>Carga inmediata</figcaption></figure><figure class="g"><img src="img/fija4.jpg" alt="" loading="lazy"><figcaption>Rehabilitaci&oacute;n en zirconio</figcaption></figure></div>
+
       <div class="tblwrap"><table>
 <thead><tr><th>Pr&oacute;tesis fija &middot; <i>sobre diente</i></th><th class="pr">PRECIO</th></tr></thead>
 <tbody><tr><td>Corona de Zirconio Monol&iacute;tico</td><td class="p">100,00 &euro;</td></tr><tr class="z"><td>Corona de Zirconio Estratificado</td><td class="p">110,00 &euro;</td></tr><tr><td>Corona Metal Porcelana</td><td class="p">60,00 &euro;</td></tr><tr class="z"><td>Corona Metal Completa</td><td class="p">36,00 &euro;</td></tr><tr><td>Coronas Provisionales</td><td class="p">15,00 &euro;</td></tr><tr class="z"><td>Perno Mu&ntilde;&oacute;n Colado</td><td class="p">30,00 &euro;</td></tr><tr><td>Puente Maryland (cada pieza)</td><td class="p">52,00 &euro;</td></tr><tr class="z"><td>Atache + Montaje (unidad)</td><td class="p">17,00 &euro;</td></tr><tr><td>Dise&ntilde;o Digital de Mock Up (PMMA) unidad</td><td class="p">25,00 &euro;</td></tr><tr class="z"><td>Compostura Porcelana</td><td class="p">30,00 &euro;</td></tr></tbody></table></div>
+<div class="gal" data-pres><figure class="g"><img src="img/implantes.jpg" alt="" loading="lazy"><figcaption>Sobre implantes</figcaption></figure><figure class="g"><img src="img/implantes2.jpg" alt="" loading="lazy"><figcaption>Zirconio s/ interfase</figcaption></figure><figure class="g"><img src="img/implantes3.jpg" alt="" loading="lazy"><figcaption>Metal cer&aacute;mica</figcaption></figure><figure class="g"><img src="img/implantes4.jpg" alt="" loading="lazy"><figcaption>Estructura s/ implantes</figcaption></figure></div>
 <div class="tblwrap"><table>
 <thead><tr><th>Pr&oacute;tesis fija &middot; <i>sobre implante</i></th><th class="pr">PRECIO</th></tr></thead>
 <tbody><tr><td>Corona s/Implante Zirconio Monol&iacute;tico</td><td class="p">130,00 &euro;</td></tr><tr class="z"><td>Corona s/Implante Zirconio Estratificado</td><td class="p">130,00 &euro;</td></tr><tr><td>Corona sobre Implante Atornillada</td><td class="p">110,00 &euro;</td></tr><tr class="z"><td>Corona sobre Implante Cementada</td><td class="p">110,00 &euro;</td></tr><tr><td>Provisional sobre Implante</td><td class="p">25,00 &euro;</td></tr><tr class="z"><td>Enc&iacute;a Rosa (por pieza)</td><td class="p">25,00 &euro;</td></tr><tr><td>Prueba de Pasividad por IOI</td><td class="p">15,00 &euro;</td></tr><tr class="z"><td>Confecci&oacute;n Barra Ackerman sobre 2 IOI</td><td class="p">200,00 &euro;</td></tr><tr><td>Confecci&oacute;n Barra Ackerman sobre 3 IOI</td><td class="p">250,00 &euro;</td></tr><tr class="z"><td>Confecci&oacute;n Barra Ackerman sobre 4 IOI</td><td class="p">350,00 &euro;</td></tr><tr><td>Confecci&oacute;n Barra Ackerman sobre 5 IOI</td><td class="p">350,00 &euro;</td></tr><tr class="z"><td>Barra sobre 6 Implantes</td><td class="p">350,00 &euro;</td></tr><tr><td>Caballito sobre Barra de Implantes</td><td class="p">25,00 &euro;</td></tr><tr class="z"><td>Sobredentadura Implanto-mucosoportada</td><td class="p">250,00 &euro;</td></tr><tr><td>Sobredentadura Implanto-mucosoportada (H&iacute;brida)</td><td class="p">450,00 &euro;</td></tr><tr class="z"><td>Supraestructura</td><td class="p">60,00 &euro;</td></tr></tbody></table></div>
@@ -392,7 +426,8 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
     <div class="vent"><span class="vt"><svg><use href="#ic-gear"/></svg></span><div><b>Flujo 100% digital</b><span>Planificado y fabricado con CAD-CAM de precisi&oacute;n.</span></div></div>
   </div>
 </div>
-              <div class="allon-label">ALL-ON-FOUR &middot; Metal Cer&aacute;mica</div>
+              <div class="gal" data-pres><figure class="g"><img src="img/allon.jpg" alt="" loading="lazy"><figcaption>All-on-Six</figcaption></figure><figure class="g"><img src="img/allon4.jpg" alt="" loading="lazy"><figcaption>All-on-Four</figcaption></figure><figure class="g"><img src="img/allon6b.jpg" alt="" loading="lazy"><figcaption>All-on-Six</figcaption></figure><figure class="g"><img src="img/allon4b.jpg" alt="" loading="lazy"><figcaption>All-on-Four</figcaption></figure></div>
+<div class="allon-label">ALL-ON-FOUR &middot; Metal Cer&aacute;mica</div>
         <div class="offer-grid">
             <div class="offer-card">
                 <div class="oh">PRECIO TARIFA</div>
@@ -550,6 +585,8 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 
     <section class="syssec" id="removible">
       <div class="shead"><span class="eyebrow">Tarifas 2026</span><h2>Pr&oacute;tesis removible</h2><div class="sub">Acr&iacute;lica, flexible, esquel&eacute;ticos y arreglos</div></div>
+<div class="gal" data-pres><figure class="g"><img src="img/removible.jpg" alt="" loading="lazy"><figcaption>Completa de resina</figcaption></figure><figure class="g"><img src="img/removible2.jpg" alt="" loading="lazy"><figcaption>Completa superior</figcaption></figure><figure class="g"><img src="img/removible3.jpg" alt="" loading="lazy"><figcaption>Esquel&eacute;tico flexible</figcaption></figure></div>
+
       <div class="tblwrap"><table>
 <thead><tr><th>Pr&oacute;tesis removible &middot; <i>acr&iacute;lica</i></th><th class="pr">PRECIO</th></tr></thead>
 <tbody><tr><td>Completa Superior o Inferior de Resina</td><td class="p">130,00 &euro;</td></tr><tr class="z"><td>Parciales de Resina de 1 a 9 piezas</td><td class="p">100,00 &euro;</td></tr></tbody></table></div>
@@ -588,6 +625,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 <div class="gal pasos" data-pres>
   <figure class="g"><img src="img/sonrisa-paso1.jpg" alt="1 &middot; Sonrisa inicial" loading="lazy"><figcaption>1 &middot; Sonrisa inicial</figcaption></figure><figure class="g"><img src="img/sonrisa-paso2.jpg" alt="2 &middot; Dise&ntilde;amos tu sonrisa" loading="lazy"><figcaption>2 &middot; Dise&ntilde;amos tu sonrisa</figcaption></figure><figure class="g"><img src="img/sonrisa-paso3.jpg" alt="3 &middot; Preparamos el mock-up" loading="lazy"><figcaption>3 &middot; Preparamos el mock-up</figcaption></figure><figure class="g"><img src="img/sonrisa-paso4.jpg" alt="4 &middot; &iexcl;Tu nueva sonrisa!" loading="lazy"><figcaption>4 &middot; &iexcl;Tu nueva sonrisa!</figcaption></figure>
 </div>
+<div class="gal" data-pres><figure class="g"><img src="img/estetica.jpg" alt="" loading="lazy"><figcaption>Incrustaciones</figcaption></figure><figure class="g"><img src="img/fija.jpg" alt="" loading="lazy"><figcaption>Coronas y carillas</figcaption></figure></div>
       <div class="tblwrap"><table>
 <thead><tr><th>Est&eacute;tica &middot; <i>dise&ntilde;o de sonrisa, carillas y llaves</i></th><th class="pr">PRECIO</th></tr></thead>
 <tbody><tr><td>Carillas de Composite sin cer&aacute;mica</td><td class="p">60,00 &euro;</td></tr><tr class="z"><td>Carillas de Composite con cer&aacute;mica</td><td class="p">85,00 &euro;</td></tr><tr><td>Carillas de Disilicato de Litio</td><td class="p">90,00 &euro;</td></tr><tr class="z"><td>Corona de Zirconio Monol&iacute;tico</td><td class="p">100,00 &euro;</td></tr><tr><td>Corona de Zirconio Estratificado</td><td class="p">110,00 &euro;</td></tr><tr class="z"><td>Incrustaciones de Composite (por pieza)</td><td class="p">90,00 &euro;</td></tr><tr><td>Incrustaciones de Disilicato de Litio</td><td class="p">100,00 &euro;</td></tr><tr class="z"><td>Dise&ntilde;o de Sonrisa (por pieza) &middot; Modelo 3D incluido</td><td class="p">30,00 &euro;</td></tr><tr><td>Llave de silicona para el Mock Up (por arcada)</td><td class="p">20,00 &euro;</td></tr><tr class="z"><td>Llave para carillas inyectadas (por arcada)</td><td class="p">40,00 &euro;</td></tr><tr><td>Llave para Carillas</td><td class="p">30,00 &euro;</td></tr></tbody></table></div>
@@ -595,9 +633,12 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 
     <section class="syssec" id="ortodoncia">
       <div class="shead"><span class="eyebrow">Tarifas 2026</span><h2>Ortodoncia</h2><div class="sub">F&eacute;rulas, retenedores y aparatolog&iacute;a</div></div>
+<div class="gal" data-pres><figure class="g"><img src="img/ferulas.jpg" alt="" loading="lazy"><figcaption>F&eacute;rula fresada</figcaption></figure><figure class="g"><img src="img/ferulas2.jpg" alt="" loading="lazy"><figcaption>F&eacute;rulas de descarga</figcaption></figure><figure class="g"><img src="img/ferulas3.jpg" alt="" loading="lazy"><figcaption>F&eacute;rula de descarga</figcaption></figure><figure class="g"><img src="img/ferulas4.jpg" alt="" loading="lazy"><figcaption>Retenedor Essix</figcaption></figure></div>
+
       <div class="tblwrap"><table>
 <thead><tr><th>Ortodoncia &middot; <i>f&eacute;rulas y retenedores</i></th><th class="pr">PRECIO</th></tr></thead>
 <tbody><tr><td>F&eacute;rula de Descarga</td><td class="p">70,00 &euro;</td></tr><tr class="z"><td>F&eacute;rula de Descarga Fresada</td><td class="p">90,00 &euro;</td></tr><tr><td>F&eacute;rula de Blanqueamiento (por arcada)</td><td class="p">35,00 &euro;</td></tr><tr class="z"><td>F&eacute;rula Contenci&oacute;n (Essix) por arcada</td><td class="p">39,00 &euro;</td></tr><tr><td>F&eacute;rula de Descarga Mixta</td><td class="p">58,00 &euro;</td></tr><tr class="z"><td>F&eacute;rula (Boxeo)</td><td class="p">85,00 &euro;</td></tr></tbody></table></div>
+<div class="gal" data-pres><figure class="g"><img src="img/ortodoncia.jpg" alt="" loading="lazy"><figcaption>Aparatolog&iacute;a</figcaption></figure><figure class="g"><img src="img/ortodoncia2.jpg" alt="" loading="lazy"><figcaption>Placa de expansi&oacute;n</figcaption></figure><figure class="g"><img src="img/ortodoncia3.jpg" alt="" loading="lazy"><figcaption>Expansor</figcaption></figure><figure class="g"><img src="img/ortodoncia4.jpg" alt="" loading="lazy"><figcaption>Placa de retenci&oacute;n Hawley</figcaption></figure></div>
 <div class="tblwrap"><table>
 <thead><tr><th>Ortodoncia &middot; <i>aparatolog&iacute;a</i></th><th class="pr">PRECIO</th></tr></thead>
 <tbody><tr><td>Ganchos Adams</td><td class="p">10,00 &euro;</td></tr><tr class="z"><td>Tornillos Din&aacute;micos</td><td class="p">25,00 &euro;</td></tr><tr><td>Herbst de Biela Oclusal</td><td class="p">121,00 &euro;</td></tr><tr class="z"><td>HBO</td><td class="p">297,00 &euro;</td></tr><tr><td>Tubos</td><td class="p">12,00 &euro;</td></tr><tr class="z"><td>Activador de Klammt</td><td class="p">297,00 &euro;</td></tr><tr><td>Disyuntor MCNamara</td><td class="p">100,00 &euro;</td></tr><tr class="z"><td>Bandas</td><td class="p">20,00 &euro;</td></tr><tr><td>Arco Progenie</td><td class="p">15,00 &euro;</td></tr><tr class="z"><td>Ganchos de Tracci&oacute;n</td><td class="p">12,00 &euro;</td></tr><tr><td>Rejilla Met&aacute;lica de Refuerzo</td><td class="p">30,00 &euro;</td></tr><tr class="z"><td>Modelo de Estudio</td><td class="p">30,00 &euro;</td></tr><tr><td>Placa de Expansi&oacute;n</td><td class="p">48,00 &euro;</td></tr><tr class="z"><td>Quad-Helix</td><td class="p">35,00 &euro;</td></tr><tr><td>Barra Transpalatina</td><td class="p">32,00 &euro;</td></tr><tr class="z"><td>Gancho Bola</td><td class="p">8,00 &euro;</td></tr><tr><td>Disyuntor</td><td class="p">75,00 &euro;</td></tr><tr class="z"><td>Hexa-Helix</td><td class="p">75,00 &euro;</td></tr><tr><td>Bot&oacute;n de Nance</td><td class="p">42,00 &euro;</td></tr><tr class="z"><td>P&eacute;ndulo</td><td class="p">75,00 &euro;</td></tr><tr><td>Twin Block</td><td class="p">120,00 &euro;</td></tr><tr class="z"><td>Levante de Mordida</td><td class="p">15,00 &euro;</td></tr><tr><td>Rejilla Lingual</td><td class="p">35,00 &euro;</td></tr><tr class="z"><td>Arco con Resina</td><td class="p">14,00 &euro;</td></tr><tr><td>Arco Soldado a Adams</td><td class="p">14,00 &euro;</td></tr><tr class="z"><td>Set Up</td><td class="p">15,00 &euro;</td></tr><tr><td>Bionator</td><td class="p">108,00 &euro;</td></tr><tr class="z"><td>Gancho M&aacute;scara Facial</td><td class="p">10,00 &euro;</td></tr><tr><td>Escudo Labial</td><td class="p">14,00 &euro;</td></tr><tr class="z"><td>Arco Vestibular</td><td class="p">14,00 &euro;</td></tr><tr><td>Placa Hawley</td><td class="p">45,00 &euro;</td></tr><tr class="z"><td>Placa Schwartz</td><td class="p">35,00 &euro;</td></tr><tr><td>Placa Circunferencial</td><td class="p">45,00 &euro;</td></tr><tr class="z"><td>Arco Lingual</td><td class="p">33,00 &euro;</td></tr><tr><td>Resortes</td><td class="p">13,00 &euro;</td></tr><tr class="z"><td>Mantenedor de Espacio</td><td class="p">35,00 &euro;</td></tr><tr><td>Bumper</td><td class="p">26,00 &euro;</td></tr><tr class="z"><td>Sander</td><td class="p">62,00 &euro;</td></tr><tr><td>Cajetines</td><td class="p">15,00 &euro;</td></tr><tr class="z"><td>Soldadura</td><td class="p">40,00 &euro;</td></tr><tr><td>Extrusi&oacute;n</td><td class="p">50,00 &euro;</td></tr></tbody></table></div>
@@ -672,6 +713,36 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   window.addEventListener('scroll', spy, { passive: true });
   spy();
+
+  // Carrusel del hero
+  var slides = document.querySelectorAll('.hero .slides img');
+  var cap = document.getElementById('hero-cap');
+  var dotsBox = document.getElementById('hero-dots');
+  if (slides.length && dotsBox) {
+    var idx = 0, timer;
+    slides.forEach(function (_, i) {
+      var b = document.createElement('button');
+      b.setAttribute('aria-label', 'Foto ' + (i + 1));
+      if (i === 0) b.classList.add('on');
+      b.addEventListener('click', function () { go(i); reset(); });
+      dotsBox.appendChild(b);
+    });
+    var dots = dotsBox.querySelectorAll('button');
+    function go(i) {
+      slides[idx].classList.remove('on'); dots[idx].classList.remove('on');
+      idx = i % slides.length;
+      slides[idx].classList.add('on'); dots[idx].classList.add('on');
+      if (cap) cap.innerHTML = slides[idx].getAttribute('data-cap');
+    }
+    function reset() { clearInterval(timer); timer = setInterval(function () { go(idx + 1); }, 3800); }
+    reset();
+  }
+  // Aparicion suave al hacer scroll
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.nov, #mas-pedidos, .syssec, .cta').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+
 });
 </script>
 </body>
