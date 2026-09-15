@@ -2,32 +2,123 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
 <style>
-.hist { display:flex; gap:54px; align-items:flex-start; }
-.hist .tx { flex:1; }
-.hist h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; line-height:1.15; letter-spacing:-.02em; margin:8px 0 14px; }
-.hist p { color:#4a5670; margin-bottom:14px; line-height:1.8; }
-.hist .foto2 { width:44%; flex-shrink:0; border-radius:24px; overflow:hidden; box-shadow:0 24px 60px rgba(10,20,60,.14); }
-.hist .foto2 img { width:100%; display:block; }
-.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; max-width:1250px; margin:0 auto; }
-.st1 { text-align:center; border:1px solid var(--line); border-radius:18px; padding:22px 14px; background:#fff; }
-.st1 b { font-family:'Montserrat',sans-serif; font-weight:800; font-size:2.2rem; color:var(--goldd); display:block; line-height:1; }
-.st1 span { font-size:.85rem; color:var(--mut); }
-.fundador { display:flex; gap:54px; align-items:center; }
-.fund-card { width:340px; flex-shrink:0; }
-.fund-ph { aspect-ratio:3/4; border-radius:22px; border:2.5px solid var(--gold); background:linear-gradient(150deg,var(--soft),#fff); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; box-shadow:0 24px 60px rgba(10,20,60,.12); }
+.script { font-family:'Great Vibes',cursive; color:var(--goldd); font-size:2rem; line-height:1.1; }
+.rv { opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+.rv.on { opacity:1; transform:none; }
+h2.big2 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:2.3rem; line-height:1.1; letter-spacing:-.025em; color:var(--obs2); margin:10px 0 14px; }
+h2.big2 em { font-style:normal; color:var(--goldd); }
+.egrid2 { position:absolute; inset:0; background-image:linear-gradient(rgba(201,168,76,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,.05) 1px, transparent 1px); background-size:46px 46px; animation:gm 16s linear infinite; }
+@keyframes gm { to { background-position:46px 46px; } }
+/* hero con foto a sangre */
+.qhero { background:linear-gradient(150deg,var(--obs) 58%,var(--obs2)); color:#fff; position:relative; overflow:hidden; border-bottom:2px solid var(--gold); }
+.qhero .split { display:flex; min-height:470px; max-width:1500px; margin:0 auto; position:relative; }
+.qhero .lft { flex:1; padding:56px 50px 46px 60px; position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; }
+.qhero h1 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:3rem; line-height:1.05; letter-spacing:-.025em; margin:8px 0 14px; }
+.qhero h1 em { font-style:normal; color:var(--gold2); }
+.qhero p.lead { color:#b9c2d8; max-width:500px; margin-bottom:24px; font-size:1.02rem; line-height:1.7; }
+.qhero .rgt { width:46%; position:relative; }
+.qhero .rgt img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.qhero .rgt::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, var(--obs) 0%, rgba(0,0,24,.2) 40%, transparent 65%); z-index:1; }
+.qhero .scriptr { position:absolute; top:34px; right:44px; z-index:2; transform:rotate(-4deg); text-align:right; }
+.qhero .scriptr .script { color:var(--gold2); font-size:1.8rem; text-shadow:0 2px 14px rgba(0,0,24,.6); }
+.icrow { border-top:1px solid rgba(201,168,76,.25); position:relative; z-index:2; background:rgba(0,0,24,.55); }
+.icrow .in { max-width:1500px; margin:0 auto; display:flex; justify-content:space-between; gap:18px; padding:18px 60px 22px; flex-wrap:wrap; }
+.ic1 { display:flex; gap:11px; align-items:center; }
+.ic1 .b { width:42px; height:42px; border-radius:50%; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.ic1 .b svg { width:22px; height:22px; }
+.ic1 b { font-family:'Montserrat',sans-serif; color:#fff; font-size:.85rem; display:block; line-height:1.3; font-weight:600; }
+.ic1 b small { display:block; color:#8d97b4; font-weight:400; font-size:.72rem; }
+/* historia */
+.hist2 { position:relative; overflow:hidden; padding:70px 44px 56px; }
+.hist2 .in14 { display:flex; gap:60px; align-items:center; position:relative; z-index:2; }
+.fund-card { width:330px; flex-shrink:0; }
+.fund-ph { aspect-ratio:3/4; border-radius:22px; border:2.5px solid var(--gold); background:linear-gradient(150deg,var(--soft),#fff); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; box-shadow:0 24px 60px rgba(10,20,60,.12); overflow:hidden; }
 .fund-ph .circ { width:92px; height:92px; border-radius:50%; background:linear-gradient(120deg,var(--gold),var(--gold2)); color:var(--obs); font-family:'Montserrat',sans-serif; font-weight:800; font-size:2rem; display:flex; align-items:center; justify-content:center; }
 .fund-ph span { color:var(--mut); font-size:.85rem; font-style:italic; }
 .fund-cap { text-align:center; margin-top:14px; }
 .fund-cap b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; }
 .fund-cap span { color:var(--goldd); font-size:.85rem; font-family:'Montserrat',sans-serif; }
-.vals { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:1250px; margin:26px auto 0; }
-.val { border:1px solid var(--line); border-radius:18px; padding:22px; background:#fff; }
-.val .b { width:44px; height:44px; border-radius:12px; background:linear-gradient(120deg,var(--gold),var(--gold2)); color:var(--obs); display:flex; align-items:center; justify-content:center; font-size:1.2rem; margin-bottom:12px; }
-.val b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; margin-bottom:6px; }
-.val p { color:var(--mut); font-size:.88rem; }
+.hist2 .tx p { color:#4a5670; margin-bottom:14px; line-height:1.8; max-width:640px; }
+.hist2 .tx p b { color:var(--obs2); }
+.hist2 .scripttop { position:absolute; top:30px; right:44px; transform:rotate(-5deg); text-align:center; z-index:2; }
+.hist2 .scripttop::after { content:''; display:block; width:120px; height:2px; background:var(--goldd); margin:8px auto 0; transform:rotate(3deg); }
+.firma2 { margin-top:10px; }
+.firma2 .script { font-size:2.2rem; }
+/* cifras contadores */
+.nums { display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:32px 10px; }
+.n1 { text-align:center; flex:1; border-left:1px solid var(--line); padding:0 8px; }
+.n1:first-child { border-left:none; }
+.n1 b { font-family:'Montserrat',sans-serif; font-weight:800; font-size:2.9rem; color:var(--goldd); display:block; line-height:1.1; }
+.n1 span { color:var(--mut); font-size:.88rem; }
+/* lo que nos importa */
+.cgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:30px; }
+.cc { background:#fff; border:1px solid var(--line); border-radius:18px; padding:24px; box-shadow:0 14px 34px rgba(10,20,60,.06); display:flex; gap:16px; transition:transform .35s ease, box-shadow .35s ease; }
+.cc:hover { transform:translateY(-6px); box-shadow:0 24px 50px rgba(10,20,60,.12); }
+.cc .ib { width:58px; height:58px; border-radius:50%; background:#f7efdb; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cc .ib svg { width:26px; height:26px; stroke:var(--goldd); }
+.cc i { font-style:normal; font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; color:var(--goldd); display:block; line-height:1; margin-bottom:5px; }
+.cc b { font-family:'Montserrat',sans-serif; font-size:.98rem; color:var(--obs2); display:block; margin-bottom:4px; line-height:1.3; }
+.cc p { color:#5b6478; font-size:.84rem; line-height:1.55; }
+/* panel obsidiana criterio */
+.crit { background:linear-gradient(150deg,var(--obs) 55%,var(--obs2)); color:#fff; position:relative; overflow:hidden; padding:0; }
+.crit .split { display:flex; min-height:440px; max-width:1500px; margin:0 auto; position:relative; }
+.crit .lft { flex:1; padding:64px 50px 56px 60px; position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
+.crit h2 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:2.4rem; line-height:1.08; letter-spacing:-.025em; color:#fff; margin:12px 0 16px; }
+.crit h2 em { font-style:normal; color:var(--gold2); }
+.crit .sub { color:#a8b2cd; max-width:480px; margin-bottom:28px; line-height:1.75; }
+.crit .rgt { width:46%; position:relative; }
+.crit .rgt img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.crit .rgt::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg, var(--obs) 0%, rgba(0,0,24,.15) 38%, transparent 62%); z-index:1; }
+.crit .scriptr { position:absolute; top:40px; right:44px; z-index:2; transform:rotate(-4deg); text-align:right; }
+.crit .scriptr .script { color:var(--gold2); text-shadow:0 2px 14px rgba(0,0,24,.6); }
+/* laboratorio por dentro */
+.pgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:26px; }
+.pc { position:relative; border-radius:18px; overflow:hidden; height:250px; transition:transform .35s ease; background:#fff; border:1px solid var(--line); }
+.pc:hover { transform:translateY(-6px); }
+.pc img { width:100%; height:100%; object-fit:cover; display:block; }
+.pc .cap { position:absolute; left:0; right:0; bottom:0; padding:44px 16px 13px; background:linear-gradient(180deg, transparent, rgba(0,0,24,.85)); color:#fff; font-family:'Montserrat',sans-serif; font-weight:600; font-size:.85rem; line-height:1.35; }
+.tfoot { display:flex; justify-content:space-between; align-items:center; margin-top:28px; gap:20px; flex-wrap:wrap; }
+.scriptb { transform:rotate(-4deg); text-align:right; }
+.scriptb::before { content:''; display:block; width:110px; height:2px; background:var(--goldd); margin:0 0 8px auto; transform:rotate(3deg); }
+@media (prefers-reduced-motion: reduce) { .egrid2 { animation:none; } }
+@media (max-width:899px) {
+  .qhero .split { flex-direction:column; min-height:0; }
+  .qhero .lft { padding:30px 20px 26px; }
+  .qhero h1 { font-size:1.95rem; }
+  .qhero .rgt { width:100%; height:230px; }
+  .qhero .rgt::before { background:linear-gradient(180deg, var(--obs) 0%, rgba(0,0,24,.15) 40%, transparent 70%); }
+  .qhero .scriptr { top:auto; bottom:16px; right:18px; }
+  .qhero .scriptr .script { font-size:1.5rem; }
+  .icrow .in { display:grid; grid-template-columns:1fr 1fr; gap:12px 14px; padding:16px 20px 20px; }
+  .hist2 { padding:38px 20px 30px; }
+  .hist2 .in14 { flex-direction:column; gap:30px; }
+  .hist2 .scripttop { position:static; transform:rotate(-4deg); margin-bottom:6px; }
+  .fund-card { width:100%; max-width:320px; margin:0 auto; }
+  h2.big2 { font-size:1.6rem; }
+  .nums { flex-wrap:wrap; gap:0; padding:16px 0; }
+  .n1 { flex:1 1 45%; padding:12px 6px; }
+  .n1:nth-child(odd) { border-left:none; }
+  .n1 b { font-size:2rem; }
+  .cgrid { grid-template-columns:1fr; gap:12px; }
+  .cc { padding:17px 16px; }
+  .cc .ib { width:48px; height:48px; }
+  .cc .ib svg { width:22px; height:22px; }
+  .crit .split { flex-direction:column; min-height:0; }
+  .crit .lft { padding:32px 20px 28px; }
+  .crit h2 { font-size:1.7rem; }
+  .crit .rgt { width:100%; height:230px; }
+  .crit .rgt::before { background:linear-gradient(180deg, var(--obs) 0%, rgba(0,0,24,.15) 40%, transparent 70%); }
+  .crit .scriptr { top:auto; bottom:16px; right:18px; }
+  .crit .scriptr .script { font-size:1.5rem; }
+  .pgrid { grid-template-columns:1fr 1fr; gap:12px; }
+  .pc { height:165px; }
+  .pc .cap { padding:30px 12px 10px; font-size:.76rem; }
+  .tfoot { flex-direction:column; align-items:flex-start; }
+  .scriptb { align-self:flex-end; }
+}
 </style></head><body>
 <div class="topbar">&#9733; Laboratorio de pr&oacute;tesis dental digital &middot; Madrid &middot; Desde 1990</div>
 <nav class="top"><div class="in">
@@ -47,54 +138,98 @@
     <a href="como-enviar-un-caso.html">C&oacute;mo enviar un caso</a>
     <a href="https://tarifas.laboratoriodentalrb.com" target="_blank" rel="noopener">Tarifas</a>
 </div></nav>
-<header class="shero"><div class="hgrid"></div>
-<span class="hand">Precisi&oacute;n artesanal,<br>tecnolog&iacute;a digital.</span>
-<div class="in14">
-  <div style="flex:1;min-width:0">
+
+<header class="qhero"><div class="egrid2"></div>
+<div class="split">
+  <div class="lft">
     <div class="bc">Inicio &rsaquo; <b>Qui&eacute;nes somos</b></div>
-    <span class="eyebrow" style="color:var(--gold2)">Sobre nosotros</span>
-    <h1>M&aacute;s de 30 a&ntilde;os de experiencia como laboratorio dental.</h1>
-    <p class="d">Un laboratorio familiar de Madrid, con el fundador al frente y un equipo de t&eacute;cnicos especializados en cada &aacute;rea.</p>
-    <a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Cont&aacute;ctanos &rarr;</a>
+    <span class="eyebrow" style="color:var(--gold2)">Qui&eacute;nes somos</span>
+    <h1>Un laboratorio con <em>nombre y apellidos.</em></h1>
+    <p class="lead">RB Dental es un laboratorio familiar de Madrid. Desde 1990 fabricamos pr&oacute;tesis para cl&iacute;nicas que quieren hablar con quien de verdad hace su trabajo: el t&eacute;cnico, no un comercial.</p>
+    <div class="ctas"><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Habla con nosotros &rarr;</a><a class="pill line" href="como-enviar-un-caso.html">C&oacute;mo trabajamos</a></div>
   </div>
-  <div class="im" style="padding:0"><img src="img/equipo-03.jpg" style="object-fit:cover;width:100%;height:100%"></div>
+  <div class="rgt"><img src="img/equipo-03.jpg" alt="El equipo de RB Dental"></div>
+  <div class="scriptr"><span class="script">Desde 1990,<br>en Madrid</span></div>
 </div>
+<div class="icrow"><div class="in">
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-cal2"/></svg></span><b>Desde 1990<small>m&aacute;s de tres d&eacute;cadas de oficio</small></b></div>
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-tooth"/></svg></span><b>Laboratorio completo<small>todas las especialidades</small></b></div>
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-shield"/></svg></span><b>Licencia FP-00602<small>autorizaci&oacute;n sanitaria oficial</small></b></div>
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-truck"/></svg></span><b>Madrid y toda Espa&ntilde;a<small>mensajer&iacute;a propia gratuita</small></b></div>
+  <div class="ic1"><span class="b"><svg class="ic"><use href="#ic-mon"/></svg></span><b>100% flujo digital<small>esc&aacute;ner, exocad y fresado</small></b></div>
+</div></div>
 </header>
 
-<section><div class="in14 hist fundador">
-  <div class="fund-card">
-    <div class="fund-ph"><span class="circ">SA</span><span>Aqu&iacute; va la foto de Simon</span></div>
-    <div class="fund-cap"><b>Simon Amselen Garcia</b><span>Fundador &middot; al frente desde 1990</span></div>
+<section class="hist2">
+  <div class="scripttop rv"><span class="script">Treinta a&ntilde;os<br>de oficio</span></div>
+  <div class="in14">
+    <div class="fund-card rv">
+      <div class="fund-ph"><span class="circ">SA</span><span>Aqu&iacute; va la foto de Simon</span></div>
+      <div class="fund-cap"><b>Simon Amselen Garcia</b><span>Fundador &middot; al frente desde 1990</span></div>
+    </div>
+    <div class="tx">
+      <span class="eyebrow rv">Nuestra historia</span>
+      <h2 class="big2 rv">De la escayola y la cera al <em>flujo 100% digital.</em></h2>
+      <p class="rv">En 1990, <b>Simon Amselen Garcia</b> abri&oacute; un peque&ntilde;o taller de pr&oacute;tesis en Madrid. Entonces todo era escayola, cera y horas de banco: cada corona sal&iacute;a de las manos, no de una m&aacute;quina.</p>
+      <p class="rv">Hoy ese taller es RB Dental: dise&ntilde;amos en pantalla, fresamos titanio y zirconio e imprimimos en 3D. Ha cambiado la tecnolog&iacute;a, pero no el criterio &mdash; <b>cada trabajo pasa por las mismas manos y el mismo control</b> antes de salir del laboratorio, con Simon todav&iacute;a al frente.</p>
+      <p class="rv">Somos un equipo peque&ntilde;o a prop&oacute;sito. As&iacute;, cuando llamas, te responde el t&eacute;cnico que tiene tu caso encima de la mesa.</p>
+      <div class="firma2 rv"><span class="script">Simon Amselen &middot; RB Dental</span></div>
+    </div>
   </div>
-  <div class="tx">
-    <span class="eyebrow">Nuestra historia</span>
-    <h2>De un proyecto profesional a una realidad empresarial.</h2>
-    <p>Lo que comenz&oacute; en 1990 como un proyecto profesional de <b>Simon Amselen Garcia</b>, se ha convertido hoy en una realidad empresarial, dedicada a dise&ntilde;ar y fabricar todo tipo de pr&oacute;tesis dentales con la &uacute;ltima tecnolog&iacute;a en sistemas de dise&ntilde;o y fabricaci&oacute;n CAD-CAM, con los materiales y t&eacute;cnicas m&aacute;s innovadores.</p>
-    <p>Logramos la mejor precisi&oacute;n y acabado en cada trabajo de laboratorio realizado, combinando el oficio artesanal de tres d&eacute;cadas con un flujo 100% digital: esc&aacute;ner 3D, dise&ntilde;o en exocad, fresado e impresi&oacute;n de &uacute;ltima generaci&oacute;n.</p>
-    <div class="firma">RB Dental &middot; Simon Amselen</div>
-  </div>
-</div></section>
-<section style="padding-top:0"><div class="in14" style="max-width:1250px">
-  <div class="foto2" style="width:100%"><img src="img/equipo-01.jpg" style="width:100%;max-height:520px;object-fit:cover;display:block"></div>
-  <div style="text-align:center;color:var(--mut);font-size:.85rem;margin-top:10px">El equipo de RB Dental en el laboratorio de Madrid</div>
-</div></section>
+</section>
 
 <section style="padding-top:0"><div class="in14">
-  <div class="stats">
-    <div class="st1"><b>+35</b><span>a&ntilde;os de experiencia</span></div>
-    <div class="st1"><b>4 mil</b><span>trabajos anuales</span></div>
-    <div class="st1"><b>4-5</b><span>d&iacute;as de entrega</span></div>
-    <div class="st1"><b>100%</b><span>flujo digital CAD-CAM</span></div>
-  </div>
-  <div class="vals">
-    <div class="val"><span class="b"><svg class="ic"><use href="#ic-check"/></svg></span><b>Trato directo</b><p>Hablas con el t&eacute;cnico que hace tu trabajo, no con un intermediario.</p></div>
-    <div class="val"><span class="b"><svg class="ic"><use href="#ic-gear"/></svg></span><b>Tecnolog&iacute;a propia</b><p>Esc&aacute;ner, fresadora e impresi&oacute;n 3D en nuestro laboratorio de Madrid.</p></div>
-    <div class="val"><span class="b"><svg class="ic"><use href="#ic-truck"/></svg></span><b>Recogida y env&iacute;os</b><p>Mensajer&iacute;a propia gratuita en Madrid y env&iacute;os a toda Espa&ntilde;a.</p></div>
+  <div class="nums rv">
+    <div class="n1"><b><span data-count="35" data-prefix="+">+35</span></b><span>a&ntilde;os de experiencia</span></div>
+    <div class="n1"><b><span data-count="4000" data-prefix="+">+4.000</span></b><span>trabajos al a&ntilde;o</span></div>
+    <div class="n1"><b>4-5</b><span>d&iacute;as de entrega</span></div>
+    <div class="n1"><b><span data-count="100" data-suffix="%">100%</span></b><span>flujo digital CAD-CAM</span></div>
   </div>
 </div></section>
 
-<div class="cta"><div class="in14"><h2>Conf&iacute;a tu pr&oacute;ximo caso a RB Dental.</h2><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar un caso &rarr;</a><a class="pill line" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">WhatsApp &middot; 680 555 303</a></div></div>
-<footer><div class="in14"><span>RB dental &middot; Madrid &middot; Servicio a toda Espa&ntilde;a</span><span>91 329 20 62 &middot; info@laboratoriodentalrb.com</span></div></footer>
+<section style="padding-top:16px"><div class="in14">
+  <span class="eyebrow rv">Lo que nos importa</span>
+  <h2 class="big2 rv">As&iacute; se trabaja <em>en esta casa.</em></h2>
+  <div class="cgrid">
+    <div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-diam"/></svg></span><div><i>01</i><b>Oficio artesanal</b><p>El acabado final siempre es a mano: maquillaje, textura y pulido de cada pieza.</p></div></div>
+    <div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-gear"/></svg></span><div><i>02</i><b>Tecnolog&iacute;a en casa</b><p>Esc&aacute;ner, fresadora e impresoras 3D propias. Tu caso no se externaliza.</p></div></div>
+    <div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-wa"/></svg></span><div><i>03</i><b>Trato directo</b><p>Hablas con el t&eacute;cnico que fabrica tu trabajo, de principio a fin.</p></div></div>
+    <div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-clock"/></svg></span><div><i>04</i><b>Palabra cumplida</b><p>Si decimos 4-5 d&iacute;as, son 4-5 d&iacute;as. Tu agenda no se descuadra.</p></div></div>
+    <div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-shield"/></svg></span><div><i>05</i><b>Control de calidad</b><p>Cada trabajo se revisa pieza a pieza antes de salir. Licencia sanitaria FP-00602.</p></div></div>
+    <div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-tooth"/></svg></span><div><i>06</i><b>Esp&iacute;ritu de familia</b><p>Somos un laboratorio familiar: tu cl&iacute;nica nunca es un n&uacute;mero m&aacute;s.</p></div></div>
+  </div>
+</div></section>
+
+<section class="crit"><div class="egrid2"></div>
+<div class="split">
+  <div class="lft">
+    <span class="eyebrow" style="color:var(--gold2)">C&oacute;mo entendemos el oficio</span>
+    <h2 class="rv">La tecnolog&iacute;a no sustituye <em>el criterio.</em></h2>
+    <p class="sub rv">El esc&aacute;ner no decide d&oacute;nde ajustar una oclusi&oacute;n ni c&oacute;mo dar naturalidad a un frente est&eacute;tico. Por eso en RB Dental cada caso lo termina un t&eacute;cnico, no una m&aacute;quina.</p>
+    <a class="pill rv" href="como-enviar-un-caso.html">Mira c&oacute;mo trabajamos &rarr;</a>
+  </div>
+  <div class="rgt"><img src="img/tecnico-modelo.jpg" alt="T&eacute;cnico trabajando sobre modelo"></div>
+  <div class="scriptr rv"><span class="script">M&aacute;quinas precisas,<br>manos expertas</span></div>
+</div>
+</section>
+
+<section><div class="in14">
+  <span class="eyebrow rv">El laboratorio por dentro</span>
+  <h2 class="big2 rv">Donde se fabrica <em>cada sonrisa.</em></h2>
+  <div class="pgrid">
+    <div class="pc rv"><img src="img/fl-fresado.jpg" alt="Fresado CAD-CAM"><span class="cap">Fresado CAD-CAM en curso</span></div>
+    <div class="pc rv"><img src="img/fl-acabado-artesanal.jpg" alt="Acabado artesanal"><span class="cap">Acabado artesanal, pieza a pieza</span></div>
+    <div class="pc rv"><img src="img/fl-control-calidad.jpg" alt="Control de calidad"><span class="cap">Control de calidad final</span></div>
+    <div class="pc rv"><img src="img/equipo-01.jpg" alt="El equipo de RB Dental"><span class="cap">El equipo, en el laboratorio de Madrid</span></div>
+  </div>
+  <div class="tfoot">
+    <a class="pill rv" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Env&iacute;a tu primer caso &rarr;</a>
+    <div class="scriptb rv"><span class="script">M&aacute;s que un laboratorio,<br>parte de tu equipo.</span></div>
+  </div>
+</div></section>
+
+<div class="cta"><div class="in14"><h2>Conf&iacute;a tu pr&oacute;ximo caso a RB Dental.</h2><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar un caso &rarr;</a><a class="pill line" href="tel:+34913292062">91 329 20 62</a></div></div>
+<footer><div class="in14"><span>RB dental &middot; C/ Canal de Suez 42, 28042 Madrid &middot; Licencia sanitaria FP-00602</span><span>91 329 20 62 &middot; laboratorio@rbdental.es</span></div></footer>
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
 <symbol id="ic-cal2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
 <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
@@ -114,12 +249,43 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var mb = document.querySelector('.mburger'), mm = document.querySelector('.mmenu');
-  if (mb && mm) {
-    mb.addEventListener('click', function () {
-      var open = mm.classList.toggle('open');
-      mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if (mb && mm) mb.addEventListener('click', function () {
+    var open = mm.classList.toggle('open');
+    mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      var sibs = Array.prototype.slice.call(el.parentElement.querySelectorAll(':scope > .rv'));
+      var k = Math.max(0, sibs.indexOf(el));
+      setTimeout(function () { el.classList.add('on'); }, (k % 6) * 110);
+      io.unobserve(el);
     });
-  }
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+  var counted = false;
+  var io2 = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting || counted) return;
+      counted = true;
+      document.querySelectorAll('[data-count]').forEach(function (el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var pre = el.getAttribute('data-prefix') || '', suf = el.getAttribute('data-suffix') || '';
+        var t0 = null;
+        function fmt(v) { return v >= 1000 ? v.toLocaleString('es-ES') : v; }
+        function step(ts) {
+          if (!t0) t0 = ts;
+          var p = Math.min((ts - t0) / 1500, 1);
+          el.textContent = pre + fmt(Math.round(target * (1 - Math.pow(1 - p, 3)))) + suf;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    });
+  }, { threshold: 0.4 });
+  var nums = document.querySelector('.nums');
+  if (nums) io2.observe(nums);
 });
 </script>
 </body></html>
