@@ -60,20 +60,20 @@ nav.top .sp { flex:1; }
 /* STRIP */
 .topbono { background:linear-gradient(120deg,var(--goldd),var(--gold2) 45%,var(--goldd)); color:var(--obs); font-family:'Montserrat',sans-serif; font-weight:600; font-size:.72rem; letter-spacing:.05em; text-align:center; padding:7px 14px; }
 /* NOVEDADES */
-.nov { background:#fff; border-bottom:1px solid var(--line); padding:34px 0 40px; }
-.nov .in { max-width:1400px; margin:0 auto; padding:0 22px; display:flex; gap:26px; align-items:center; flex-wrap:wrap; }
-.nov .l { width:100%; }
-.nov .l h2 { color:var(--obs2); font-family:'Montserrat',sans-serif; font-size:1.6rem; font-weight:800; line-height:1.2; margin:8px 0 8px; }
-.nov .l p { color:var(--mut); margin-bottom:16px; font-size:.9rem; }
-.ncards { display:grid; grid-template-columns:1fr; gap:14px; width:100%; }
+.nov { background:#fff; border-bottom:1px solid var(--line); padding:36px 0 44px; }
+.nov .in { max-width:1400px; margin:0 auto; padding:0 22px; }
+.nhead { text-align:center; margin-bottom:24px; }
+.nhead h2 { color:var(--obs2); font-family:'Montserrat',sans-serif; font-size:1.7rem; font-weight:800; line-height:1.2; letter-spacing:-.02em; margin:6px 0 4px; }
+.nhead p { color:var(--mut); font-size:.9rem; }
+.ncards { display:grid; grid-template-columns:1fr; gap:16px; max-width:1250px; margin:0 auto; }
 @media (min-width:700px) { .ncards { grid-template-columns:repeat(3,1fr); } }
-@media (min-width:1100px) { .nov .l { width:280px; flex-shrink:0; } .ncards { flex:1; width:auto; } }
-.nc { border:1px solid rgba(201,168,76,.4); border-radius:16px; padding:18px; background:var(--obs); box-shadow:0 8px 22px rgba(10,20,60,.22); display:block; text-decoration:none; }
-.nc b { color:#fff; font-family:'Montserrat',sans-serif; font-size:1rem; letter-spacing:.06em; }
-.nc p { color:#9aa3bd; font-size:.82rem; margin:5px 0 10px; }
-.nc .im { background:#fff; border-radius:14px; height:110px; display:flex; align-items:center; justify-content:center; padding:8px; }
-.nc img { max-height:96px; max-width:100%; object-fit:contain; }
-.nc u { color:var(--gold2); font-family:'Montserrat',sans-serif; font-weight:600; font-size:.82rem; text-decoration:none; display:block; margin-top:10px; }
+.nc { text-align:center; border:1px solid var(--line); border-radius:20px; padding:24px 20px; background:#fff; box-shadow:0 12px 30px rgba(10,20,60,.07); display:block; text-decoration:none; }
+.nc .chip { display:inline-block; background:linear-gradient(120deg,var(--gold),var(--gold2)); color:var(--obs); font-family:'Montserrat',sans-serif; font-weight:700; font-size:.66rem; letter-spacing:.12em; border-radius:999px; padding:5px 14px; margin-bottom:12px; }
+.nc .im { height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
+.nc img { max-height:145px; max-width:100%; object-fit:contain; }
+.nc b { color:var(--obs2); font-family:'Montserrat',sans-serif; font-size:1rem; letter-spacing:.05em; display:block; }
+.nc p { color:var(--mut); font-size:.84rem; margin:6px 0 12px; }
+.nc u { color:var(--goldd); font-family:'Montserrat',sans-serif; font-weight:600; font-size:.82rem; text-decoration:none; display:block; }
 /* MAS PEDIDOS */
 .sec { padding:36px 0 4px; }
 .sec .head { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:18px; gap:12px; flex-wrap:wrap; }
@@ -82,10 +82,10 @@ nav.top .sp { flex:1; }
 .top4 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 @media (min-width:900px) { .top4 { grid-template-columns:repeat(4,1fr); gap:16px; } }
 .t4 { border:1px solid var(--line); border-radius:16px; overflow:hidden; text-decoration:none; display:block; }
-.t4 .im { background:var(--soft); height:120px; display:flex; align-items:center; justify-content:center; padding:10px; }
-@media (min-width:900px) { .t4 .im { height:150px; } }
+.t4 .im { background:var(--soft); height:140px; display:flex; align-items:center; justify-content:center; padding:14px; }
+@media (min-width:900px) { .t4 .im { height:180px; } }
 .t4 img { max-height:100%; max-width:100%; object-fit:contain; }
-.t4 .tx { padding:12px 14px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+.t4 .tx { padding:15px 17px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
 .t4 b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; font-size:.9rem; }
 .t4 .d { color:var(--goldd); font-family:'Montserrat',sans-serif; font-weight:400; font-size:.85rem; }
 .t4 .go { width:32px; height:32px; border-radius:50%; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; color:var(--goldd); flex-shrink:0; }
@@ -201,20 +201,21 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   .hero .ph { width:520px; }
   .hero .ph figcaption { font-size:.8rem; }
   .topbono { font-size:.8rem; padding:8px 14px; }
-  .nov { padding:44px 0 50px; }
-  .nov .l h2 { font-size:1.9rem; }
-  .nov .l p { font-size:.92rem; }
-  .nc { padding:22px; }
-  .nc b { font-size:1rem; }
-  .nc p { font-size:.84rem; }
-  .nc .im { height:135px; }
-  .nc img { max-height:118px; }
-  .nc u { font-size:.84rem; }
+  .nov { padding:48px 0 54px; }
+  .nhead h2 { font-size:2.1rem; }
+  .nhead p { font-size:.95rem; }
+  .nhead { margin-bottom:30px; }
+  .nc { padding:28px 24px; }
+  .nc b { font-size:1.02rem; }
+  .nc p { font-size:.86rem; }
+  .nc .im { height:175px; }
+  .nc img { max-height:168px; }
+  .nc u { font-size:.85rem; }
   .sec { padding:48px 0 6px; }
   .sec h2 { font-size:2.25rem; }
   .eyebrow { font-size:.75rem; }
-  .t4 .im { height:175px; }
-  .t4 b { font-size:.93rem; }
+  .t4 .im { height:200px; }
+  .t4 b { font-size:.95rem; }
   .t4 .d { font-size:.87rem; }
   .layout { gap:34px; }
   aside.cats { width:275px; padding:16px; }
@@ -289,7 +290,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 #mas-pedidos { background:linear-gradient(150deg,var(--obs2),var(--obs)); padding-bottom:40px; }
 #mas-pedidos h2 { color:#fff; }
 #mas-pedidos .eyebrow { color:var(--gold2); }
-#mas-pedidos .t4 { background:#0c0e2a; border-color:rgba(201,168,76,.4); }
+#mas-pedidos .t4 { background:var(--obs); border-color:rgba(201,168,76,.45); box-shadow:0 14px 34px rgba(0,0,0,.35); border-radius:16px; }
 #mas-pedidos .t4 .im { background:#fff; }
 #mas-pedidos .t4 b { color:#fff; }
 #mas-pedidos .t4 .d { color:var(--gold2); }
@@ -351,15 +352,15 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 </div></header>
 
 <section class="nov"><div class="in">
-  <div class="l">
+  <div class="nhead">
     <span class="eyebrow">Novedades 2026</span>
     <h2>Soluciones innovadoras para tu cl&iacute;nica.</h2>
     <p>&Uacute;ltima tecnolog&iacute;a, m&aacute;xima precisi&oacute;n.</p>
   </div>
   <div class="ncards">
-    <a class="nc" href="#blender"><b>BLENDER</b><p>Estructuras fresadas de alta precisi&oacute;n</p><span class="im"><img src="img/blender.jpg" alt="Barra Blender" loading="lazy"></span><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
-    <a class="nc" href="#carga"><b>CARGA INMEDIATA</b><p>Provisional fijo el mismo d&iacute;a de la cirug&iacute;a</p><span class="im"><img src="img/fija3.jpg" alt="Carga inmediata" loading="lazy"></span><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
-    <a class="nc" href="#estetica"><b>DISE&Ntilde;O DE SONRISA</b><p>Est&eacute;tica y funcionalidad en cada caso</p><span class="im"><img src="img/estetica-carillas-b.jpg" alt="Dise&ntilde;o de sonrisa" loading="lazy"></span><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+    <a class="nc" href="#blender"><span class="chip">NUEVO 2026</span><span class="im"><img src="img/blender.jpg" alt="Barra Blender" loading="lazy"></span><b>BLENDER</b><p>Estructuras fresadas de alta precisi&oacute;n</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+    <a class="nc" href="#carga"><span class="chip">NUEVO 2026</span><span class="im"><img src="img/fija3.jpg" alt="Carga inmediata" loading="lazy"></span><b>CARGA INMEDIATA</b><p>Provisional fijo el mismo d&iacute;a de la cirug&iacute;a</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
+    <a class="nc" href="#estetica"><span class="chip">NUEVO 2026</span><span class="im"><img src="img/estetica-carillas-b.jpg" alt="Dise&ntilde;o de sonrisa" loading="lazy"></span><b>DISE&Ntilde;O DE SONRISA</b><p>Est&eacute;tica y funcionalidad en cada caso</p><u>M&aacute;s informaci&oacute;n &rarr;</u></a>
   </div>
 </div></section>
 
