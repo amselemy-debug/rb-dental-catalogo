@@ -355,3 +355,19 @@ details.fq summary:hover { color:var(--goldd); }
   .envsplit { flex-direction:column; gap:22px; }
   .envvid { width:100%; }
 }
+
+
+/* ================= envia tu caso: foto grande + pasos ================= */
+.envh { display:flex; gap:42px; align-items:center; margin-top:26px; }
+.envfoto { width:44%; flex-shrink:0; border-radius:20px; overflow:hidden; box-shadow:0 24px 54px rgba(0,0,0,.45); }
+.envfoto img { width:100%; height:330px; object-fit:cover; display:block; }
+.envlista { flex:1; display:flex; flex-direction:column; gap:14px; }
+.envp { display:flex; gap:16px; align-items:flex-start; background:rgba(255,255,255,.05); border:1px solid rgba(201,168,76,.3); border-left:3px solid var(--gold); border-radius:12px; padding:16px 20px; }
+.envp i { font-style:normal; font-family:'Montserrat',sans-serif; font-weight:800; color:var(--gold2); font-size:1.3rem; min-width:32px; line-height:1.2; }
+.envp b { font-family:'Montserrat',sans-serif; color:#fff; display:block; margin-bottom:3px; font-size:.98rem; }
+.envp p { color:#9aa3bd; font-size:.86rem; line-height:1.5; }
+@media (max-width:899px) {
+  .envh { flex-direction:column; gap:20px; }
+  .envfoto { width:100%; }
+  .envfoto img { height:210px; }
+}
