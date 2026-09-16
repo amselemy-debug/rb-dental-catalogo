@@ -197,7 +197,7 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
     <span class="eyebrow rv">ORTODONCIA &middot; LABORATORIO</span>
     <h2 class="big2 rv">Toda la aparatolog&iacute;a, del retenedor al <em>disyuntor.</em></h2>
     <p class="intro rv">Aparatolog&iacute;a a medida con <b>dise&ntilde;o digital</b> sobre el modelo exacto del paciente, con todos los complementos incluidos.</p>
-    <div class="qcols"><div class="rv"><h4>&iquest;Qu&eacute; fabricamos?</h4><p>Retenci&oacute;n removible y fija (Essix, Hawley, 3-3), mantenimiento de espacio (arco lingual, bot&oacute;n de Nance), expansi&oacute;n y placas activas (disyuntores, Quad-Helix, Schwarz) y <b>aparatolog&iacute;a funcional</b> (Twin Block, Bionator, Klammt...).</p></div><div class="rv"><h4>&iquest;C&oacute;mo lo dise&ntilde;amos?</h4><p>Sobre el modelo digital exacto del paciente, con el <b>set-up del caso</b> como parte del servicio. Guardamos cada dise&ntilde;o: si un aparato se pierde o se rompe, lo rehacemos sin nueva toma.</p></div></div>
+    <div class="qcols" data-plegar="Ver m&aacute;s detalles"><div class="rv"><h4>&iquest;Qu&eacute; fabricamos?</h4><p>Retenci&oacute;n removible y fija (Essix, Hawley, 3-3), mantenimiento de espacio (arco lingual, bot&oacute;n de Nance), expansi&oacute;n y placas activas (disyuntores, Quad-Helix, Schwarz) y <b>aparatolog&iacute;a funcional</b> (Twin Block, Bionator, Klammt...).</p></div><div class="rv"><h4>&iquest;C&oacute;mo lo dise&ntilde;amos?</h4><p>Sobre el modelo digital exacto del paciente, con el <b>set-up del caso</b> como parte del servicio. Guardamos cada dise&ntilde;o: si un aparato se pierde o se rompe, lo rehacemos sin nueva toma.</p></div></div>
     
   </div>
 </section>
@@ -288,6 +288,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.2 });
   document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+  var movil = window.matchMedia('(max-width:760px)').matches;
+  if (movil) {
+    document.querySelectorAll('[data-plegar]').forEach(function (el) {
+      var txt = el.getAttribute('data-plegar') || 'Ver mas';
+      var pts = el.classList.contains('diag');
+      if (!pts) el.classList.add('plegable');
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'vermas'; b.textContent = txt;
+      b.setAttribute('aria-expanded', 'false');
+      el.parentNode.insertBefore(b, el);
+      b.addEventListener('click', function () {
+        var abierto = el.classList.toggle('on');
+        b.classList.toggle('on', abierto);
+        b.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+        b.textContent = abierto ? 'Ver menos' : txt;
+      });
+    });
+  }
   var i = 0, ids = ['s1','s2','s3','s4'], pb = document.getElementById('pb');
   if (pb) setInterval(function () {
     ids.forEach(function (id, k) { document.getElementById(id).classList.toggle('on', k <= i); });

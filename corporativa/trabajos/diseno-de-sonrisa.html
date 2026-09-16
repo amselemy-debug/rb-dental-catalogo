@@ -195,7 +195,7 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
     <span class="eyebrow rv">EST&Eacute;TICA DENTAL &middot; LABORATORIO</span>
     <h2 class="big2 rv">El paciente ve su nueva sonrisa antes de <em>empezar.</em></h2>
     <p class="intro rv">Dise&ntilde;amos el caso en digital, lo pasamos a <b style="color:var(--gold2)">encerado 3D</b> y te enviamos la llave: haces el mock-up en boca, sin tallar, y decid&iacute;s sobre el proyecto real.</p>
-    <div class="qcols"><div class="rv"><h4>&iquest;Qu&eacute; es el dise&ntilde;o digital de sonrisa<em>?</em></h4><p>Dise&ntilde;amos la sonrisa a partir de <b>fotos y esc&aacute;ner 3D</b>. La cl&iacute;nica y el paciente ven la forma, el tama&ntilde;o y la posici&oacute;n ideal de los dientes antes de empezar.</p></div><div class="rv"><h4>&iquest;Qu&eacute; es el mock-up<em>?</em></h4><p>La <b>prueba en boca del proyecto</b>: se coloca en cl&iacute;nica con resina bisacr&iacute;lica sobre la llave de silicona del encerado, de forma aditiva y sin tallar, y se retira al terminar.</p></div></div>
+    <div class="qcols" data-plegar="Ver m&aacute;s detalles"><div class="rv"><h4>&iquest;Qu&eacute; es el dise&ntilde;o digital de sonrisa<em>?</em></h4><p>Dise&ntilde;amos la sonrisa a partir de <b>fotos y esc&aacute;ner 3D</b>. La cl&iacute;nica y el paciente ven la forma, el tama&ntilde;o y la posici&oacute;n ideal de los dientes antes de empezar.</p></div><div class="rv"><h4>&iquest;Qu&eacute; es el mock-up<em>?</em></h4><p>La <b>prueba en boca del proyecto</b>: se coloca en cl&iacute;nica con resina bisacr&iacute;lica sobre la llave de silicona del encerado, de forma aditiva y sin tallar, y se retira al terminar.</p></div></div>
     <div class="cgrid"><div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-diam"/></svg></span><div><i>01</i><b>Previsible</b><p>Forma y posici&oacute;n se validan en boca antes de tallar.</p></div></div><div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-clock"/></svg></span><div><i>02</i><b>Sin tallar</b><p>El mock-up se prueba sobre el diente intacto.</p></div></div><div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-check"/></svg></span><div><i>03</i><b>Decisi&oacute;n conjunta</b><p>Cl&iacute;nica y paciente deciden con el resultado a la vista.</p></div></div><div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-shield"/></svg></span><div><i>04</i><b>Carillas de alta gama</b><p>Composite de laboratorio, disilicato de litio y feldesp&aacute;tica estratificada.</p></div></div><div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-gear"/></svg></span><div><i>05</i><b>Llaves de inyecci&oacute;n</b><p>Silicona transparente para composite inyectado en cl&iacute;nica.</p></div></div><div class="cc rv"><span class="ib"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-target"/></svg></span><div><i>06</i><b>Flujo 100% digital</b><p>Fotos + esc&aacute;ner + dise&ntilde;o CAD.</p></div></div></div>
   </div>
 </section>
@@ -279,6 +279,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.2 });
   document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+  var movil = window.matchMedia('(max-width:760px)').matches;
+  if (movil) {
+    document.querySelectorAll('[data-plegar]').forEach(function (el) {
+      var txt = el.getAttribute('data-plegar') || 'Ver mas';
+      var pts = el.classList.contains('diag');
+      if (!pts) el.classList.add('plegable');
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'vermas'; b.textContent = txt;
+      b.setAttribute('aria-expanded', 'false');
+      el.parentNode.insertBefore(b, el);
+      b.addEventListener('click', function () {
+        var abierto = el.classList.toggle('on');
+        b.classList.toggle('on', abierto);
+        b.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+        b.textContent = abierto ? 'Ver menos' : txt;
+      });
+    });
+  }
   var i = 0, ids = ['s1','s2','s3','s4'], pb = document.getElementById('pb');
   if (pb) setInterval(function () {
     ids.forEach(function (id, k) { document.getElementById(id).classList.toggle('on', k <= i); });

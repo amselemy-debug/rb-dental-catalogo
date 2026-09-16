@@ -372,3 +372,15 @@ details.fq summary:hover { color:var(--goldd); }
   .envfoto { width:100%; }
   .envfoto img { height:210px; }
 }
+
+/* --- plegar texto secundario en movil --- */
+.vermas { display:none; }
+@media (max-width:760px) {
+  .vermas { display:inline-flex; align-items:center; gap:9px; margin:4px 0 2px; background:none; border:0; padding:8px 0; color:var(--goldd); font-family:'Montserrat',sans-serif; font-weight:700; font-size:.82rem; letter-spacing:.03em; text-transform:uppercase; cursor:pointer; }
+  .vermas::after { content:''; width:7px; height:7px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:translateY(-3px) rotate(45deg); transition:transform .25s ease; }
+  .vermas.on::after { transform:translateY(1px) rotate(-135deg); }
+  .plegable { display:none !important; }
+  .plegable.on { display:grid !important; }
+  .diag:not(.on) .cal .tx span { display:none; }
+  .diag:not(.on) .cal .tx b { margin-bottom:0; }
+}
