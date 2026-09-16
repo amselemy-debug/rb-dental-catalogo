@@ -456,3 +456,25 @@ details.fq summary:hover { color:var(--goldd); }
   .plazos .prow span { font-size:.9rem; }
   .plazos .prow b { font-size:.8rem; padding:5px 12px; }
 }
+
+/* --- donde estamos (mapa) --- */
+.donde { background:#fff; border-top:1px solid var(--line); }
+.donde .dgrid { display:grid; grid-template-columns:1fr 1.15fr; gap:44px; align-items:center; max-width:1200px; margin:0 auto; }
+.donde h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 12px; }
+.donde h2 em { font-style:normal; color:var(--goldd); }
+.donde p { color:var(--mut); font-size:.98rem; line-height:1.7; margin:0 0 14px; }
+.donde .dir { display:flex; gap:12px; align-items:flex-start; margin:18px 0 6px; }
+.donde .dir .b { width:42px; height:42px; border-radius:50%; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.donde .dir .b svg { width:21px; height:21px; }
+.donde .dir b { font-family:'Montserrat',sans-serif; font-weight:700; color:var(--obs2); font-size:1rem; display:block; }
+.donde .dir span { color:var(--mut); font-size:.92rem; display:block; line-height:1.5; }
+.donde .dbtn { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+.donde .dbtn .pill.line2 { background:none; border:1.5px solid var(--gold); color:var(--goldd) !important; }
+.donde .mapa { position:relative; border:1px solid rgba(201,168,76,.5); border-radius:20px; overflow:hidden; box-shadow:0 14px 34px rgba(10,20,60,.09); background:var(--soft); aspect-ratio:16/11; }
+.donde .mapa iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+.donde .mapa .tag { position:absolute; left:14px; bottom:14px; background:linear-gradient(150deg,var(--obs2),var(--obs)); color:#fff; font-family:'Montserrat',sans-serif; font-weight:600; font-size:.8rem; padding:8px 14px; border-radius:999px; pointer-events:none; }
+@media (max-width:760px) {
+  .donde .dgrid { grid-template-columns:1fr; gap:22px; }
+  .donde h2 { font-size:1.55rem; }
+  .donde .mapa { aspect-ratio:4/3; border-radius:16px; }
+}
