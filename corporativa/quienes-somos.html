@@ -50,6 +50,10 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
 .hist2 .tx p b { color:var(--obs2); }
 .hist2 .scripttop { position:absolute; top:30px; right:44px; transform:rotate(-5deg); text-align:center; z-index:2; }
 .hist2 .scripttop::after { content:''; display:block; width:120px; height:2px; background:var(--goldd); margin:8px auto 0; transform:rotate(3deg); }
+.hist2 .scripttop.sans35 { transform:none; text-align:right; }
+.hist2 .scripttop.sans35 b { display:block; font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.55rem; letter-spacing:-.01em; color:var(--goldd); line-height:1.1; }
+.hist2 .scripttop.sans35 span { display:block; font-family:'Montserrat',sans-serif; font-weight:700; font-size:.74rem; letter-spacing:.2em; text-transform:uppercase; color:var(--mut); margin-top:4px; }
+.hist2 .scripttop.sans35::after { transform:none; margin:10px 0 0 auto; width:90px; }
 .firma2 { margin-top:10px; }
 .firma2 .script { font-size:2.2rem; }
 /* cifras contadores */
@@ -110,6 +114,8 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
   .hist2 { padding:38px 20px 30px; }
   .hist2 .in14 { flex-direction:column; gap:30px; }
   .hist2 .scripttop { position:static; transform:rotate(-4deg); margin-bottom:6px; }
+  .hist2 .scripttop.sans35 { transform:none; text-align:left; margin-bottom:14px; }
+  .hist2 .scripttop.sans35::after { margin:10px 0 0; }
   .fund-card { width:100%; max-width:320px; margin:0 auto; }
   h2.big2 { font-size:1.6rem; }
   .nums { flex-wrap:wrap; gap:0; padding:16px 0; }
@@ -168,7 +174,7 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
 </header>
 
 <section class="hist2">
-  <div class="scripttop rv"><span class="script">M&aacute;s de 35 a&ntilde;os<br>de experiencia</span></div>
+  <div class="scripttop sans35 rv"><b>M&aacute;s de 35 a&ntilde;os</b><span>de experiencia</span></div>
   <div class="in14">
     <div class="fund-card rv">
       <div class="fund-ph"><span class="circ">SA</span><span>Aqu&iacute; va la foto de Simon</span></div>
