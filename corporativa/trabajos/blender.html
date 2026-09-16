@@ -155,6 +155,12 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
   .tfoot { flex-direction:column; align-items:flex-start; }
   .scriptb { align-self:flex-end; }
 }
+
+
+/* portada: la foto llena la caja sin bandas blancas */
+.lhud .ph { padding:0; }
+.lhud .ph img { width:100%; height:100%; max-width:none; max-height:none; object-fit:cover; }
+@media (max-width:760px) { .lhud .ph { height:auto; aspect-ratio:16/10; padding:0; } }
 </style></head><body>
 <div class="topbar">Laboratorio de pr&oacute;tesis dental digital &middot; Madrid &middot; Desde 1990</div>
 <nav class="top"><div class="in">
@@ -187,7 +193,7 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
   </div>
   <div class="lhud">
     <span class="frame"><i></i><i></i><i></i><i></i></span>
-    <div class="ph"><img src="../img/blender.jpg" alt="Barra Blender"><span class="scan"></span></div>
+    <div class="ph"><img src="../img/blender-portada.jpg" alt="Barra Blender de titanio anodizado en oro con la arcada"><span class="scan"></span></div>
     <div class="cap">Barra Blender &middot; RB Dental</div>
   </div>
   <div class="scriptr"><span class="script">Precisi&oacute;n artesanal, tecnolog&iacute;a digital.</span></div>
