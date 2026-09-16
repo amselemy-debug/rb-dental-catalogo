@@ -121,7 +121,8 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
   .scriptr { display:none; }
   .lhud { width:100%; }
   .lhud .ph { height:215px; }
-  .icrow .in { display:grid; grid-template-columns:1fr 1fr; gap:12px 14px; padding:16px 20px 20px; }
+  .icrow .in { display:grid; grid-template-columns:1fr 1fr; gap:12px 14px; padding:16px 20px 20px; justify-items:center; }
+  .icrow .in .ic1:last-child:nth-child(odd) { grid-column:1 / -1; }
   .ques { padding:38px 20px 34px; }
   .ques .topimg { position:relative; width:calc(100% + 40px); margin:-38px -20px 0; height:150px; }
   .ques .topimg::before { background:linear-gradient(90deg, rgba(255,255,255,.35), rgba(255,255,255,0) 45%); }
