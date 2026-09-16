@@ -123,8 +123,11 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
   .scriptr { display:none; }
   .lhud { width:100%; }
   .lhud .ph { height:215px; }
-  .icrow .in { display:grid; grid-template-columns:1fr 1fr; gap:12px 14px; padding:16px 20px 20px; justify-items:center; }
-  .icrow .in .ic1:last-child:nth-child(odd) { grid-column:1 / -1; }
+  .icrow .in { display:grid; grid-template-columns:repeat(2,1fr); justify-items:start; gap:18px 18px; padding:20px 14px 24px; max-width:390px; margin-left:auto; margin-right:auto; }
+  .icrow .in .ic1:last-child:nth-child(odd) { grid-column:1 / -1; justify-self:center; }
+  .ic1 .b { width:46px; height:46px; }
+  .ic1 .b svg { width:24px; height:24px; }
+  .ic1 b { font-size:.9rem; }
   .ques { padding:38px 20px 34px; }
   .ques .topimg { position:relative; width:calc(100% + 40px); margin:-38px -20px 0; height:150px; }
   .ques .topimg::before { background:linear-gradient(90deg, rgba(255,255,255,.35), rgba(255,255,255,0) 45%); }
@@ -188,7 +191,7 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
   </div>
   <div class="scriptr"><span class="script">Precisi&oacute;n artesanal, tecnolog&iacute;a digital.</span></div>
 </div>
-<div class="icrow"><div class="in"><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-diam"/></svg></span><b>Michigan fresada<br>en PMMA</b></div><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-target"/></svg></span><b>Ajuste<br>comprobado</b></div><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-clock"/></svg></span><b>Entrega en<br>4-5 d&iacute;as</b></div><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-shield"/></svg></span><b>Dise&ntilde;o<br>guardado</b></div><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-gear"/></svg></span><b>Tecnolog&iacute;a<br>CAD-CAM</b></div></div></div>
+<div class="icrow"><div class="in"><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-diam"/></svg></span><b>Michigan fresada<br>en PMMA</b></div><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-target"/></svg></span><b>Ajuste<br>comprobado</b></div><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-clock"/></svg></span><b>Entrega en<br>4-5 d&iacute;as</b></div><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-shield"/></svg></span><b>Dise&ntilde;o<br>guardado</b></div></div></div>
 </header>
 
 <section class="mat3"><div class="egrid2"></div><div class="in14">

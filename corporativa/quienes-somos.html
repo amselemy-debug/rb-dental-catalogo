@@ -92,8 +92,11 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
   .qhero .rgt::before { background:linear-gradient(180deg, var(--obs) 0%, rgba(0,0,24,.15) 40%, transparent 70%); }
   .qhero .scriptr { top:auto; bottom:16px; right:18px; }
   .qhero .scriptr .script { font-size:1.5rem; }
-  .icrow .in { display:grid; grid-template-columns:1fr 1fr; gap:12px 14px; padding:16px 20px 20px; justify-items:center; }
-  .icrow .in .ic1:last-child:nth-child(odd) { grid-column:1 / -1; }
+  .icrow .in { display:grid; grid-template-columns:repeat(2,1fr); justify-items:start; gap:18px 18px; padding:20px 14px 24px; max-width:390px; margin-left:auto; margin-right:auto; }
+  .icrow .in .ic1:last-child:nth-child(odd) { grid-column:1 / -1; justify-self:center; }
+  .ic1 .b { width:46px; height:46px; }
+  .ic1 .b svg { width:24px; height:24px; }
+  .ic1 b { font-size:.9rem; }
   .hist2 { padding:38px 20px 30px; }
   .hist2 .in14 { flex-direction:column; gap:30px; }
   .hist2 .scripttop { position:static; transform:rotate(-4deg); margin-bottom:6px; }
