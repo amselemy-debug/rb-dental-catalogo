@@ -338,3 +338,20 @@ details.fq summary:hover { color:var(--goldd); }
   .rstop > span:last-child { padding:0; }
   .rextra { grid-template-columns:1fr; gap:12px; margin-top:26px; }
 }
+
+
+/* ================= envia tu caso: video + pasos ================= */
+.envsplit { display:flex; gap:40px; align-items:center; margin-top:26px; }
+.envsplit .egrid { flex:1; display:grid !important; grid-template-columns:1fr; gap:14px; margin-top:0 !important; }
+.envvid { width:400px; flex-shrink:0; position:relative; }
+.envvid video { width:100%; border-radius:18px; display:block; box-shadow:0 22px 50px rgba(10,20,60,.22); }
+.envvid .fr i { position:absolute; width:26px; height:26px; border:2.5px solid var(--gold); z-index:2; }
+.envvid .fr i:nth-child(1) { top:-9px; left:-9px; border-right:none; border-bottom:none; }
+.envvid .fr i:nth-child(2) { top:-9px; right:-9px; border-left:none; border-bottom:none; }
+.envvid .fr i:nth-child(3) { bottom:25px; left:-9px; border-right:none; border-top:none; }
+.envvid .fr i:nth-child(4) { bottom:25px; right:-9px; border-left:none; border-top:none; }
+.envvid .cap { text-align:center; color:var(--goldd); font-size:.78rem; margin-top:10px; font-family:'Montserrat',sans-serif; letter-spacing:.05em; }
+@media (max-width:899px) {
+  .envsplit { flex-direction:column; gap:22px; }
+  .envvid { width:100%; }
+}
