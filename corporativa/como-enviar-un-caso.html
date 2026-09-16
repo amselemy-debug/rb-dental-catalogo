@@ -89,20 +89,25 @@
 </div></section>
 
 <section class="compat"><div class="in14">
-  <div class="chead">
-    <span class="eyebrow rv">Compatibilidad</span>
-    <h2 class="rv">Trabajamos con <em>tu esc&aacute;ner.</em></h2>
-    <p class="rv">No hace falta que cambies de sistema. Si tu esc&aacute;ner intraoral exporta un archivo STL, nosotros lo abrimos, lo dise&ntilde;amos en exocad y lo fabricamos.</p>
+  <div class="csplit">
+    <div class="clft">
+      <span class="eyebrow rv">Compatibilidad</span>
+      <h2 class="rv">Trabajamos con <em>tu esc&aacute;ner.</em></h2>
+      <p class="rv">No hace falta que cambies de sistema ni que compres nada. Si tu esc&aacute;ner intraoral exporta un <b>archivo STL</b>, nosotros lo abrimos, lo dise&ntilde;amos en exocad y lo fabricamos.</p>
+      <div class="anal rv"><b>&iquest;Trabajas en anal&oacute;gico?</b><span>Tambi&eacute;n. Recogemos la impresi&oacute;n o el modelo en tu cl&iacute;nica de Madrid y lo digitalizamos nosotros, sin coste.</span></div>
+      <a class="pill rv" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar mi primer caso &rarr;</a>
+    </div>
+    <div class="stlcard">
+      <span class="sgrid" aria-hidden="true"></span>
+      <span class="fr"><i></i><i></i><i></i><i></i></span>
+      <span class="scanline" aria-hidden="true"></span>
+      <div class="ext">.STL</div>
+      <div class="lbl">EL &Uacute;NICO REQUISITO</div>
+      <div class="sep"></div>
+      <div class="note">Lo abrimos en <b>exocad</b>, dise&ntilde;amos el caso y lo fresamos o imprimimos aqu&iacute;, en Madrid.</div>
+    </div>
   </div>
-  <div class="wheel">
-    <div class="ring" aria-hidden="true"></div>
-    <div class="hub"><b>STL</b><span>CUALQUIER ESC&Aacute;NER</span></div>
-    <div class="wn" style="left:230px;top:58px"><img src="img/marcas/itero.png" alt="iTero"><span>Alineaci&oacute;n directa</span></div><div class="wn" style="left:379px;top:144px"><b>3Shape</b><span>TRIOS y Dental System</span></div><div class="wn" style="left:379px;top:316px"><img src="img/marcas/medit.png" alt="Medit"><span>i500, i600 y i700</span></div><div class="wn" style="left:230px;top:402px"><img src="img/marcas/dentsply.png" alt="Dentsply Sirona"><span>Primescan y Omnicam</span></div><div class="wn" style="left:81px;top:316px"><b>Shining 3D</b><span>Aoralscan</span></div><div class="wn" style="left:81px;top:144px"><b>&iquest;Otro esc&aacute;ner?</b><span>Si exporta STL, nos vale</span></div>
-  </div>
-  <div class="cfoot">
-    <p class="rv">&iquest;Trabajas en anal&oacute;gico? Tambi&eacute;n. Recogemos la impresi&oacute;n o el modelo en tu cl&iacute;nica de Madrid y lo digitalizamos nosotros, sin coste.</p>
-    <a class="pill rv" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar mi primer caso &rarr;</a>
-  </div>
+  <div class="chips"><div class="chip2"><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 13 4.5 4.5L19 7"/></svg></span><img src="img/marcas/itero.png" alt="iTero"></div><div class="chip2"><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 13 4.5 4.5L19 7"/></svg></span><b>3Shape</b><i>TRIOS</i></div><div class="chip2"><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 13 4.5 4.5L19 7"/></svg></span><img src="img/marcas/medit.png" alt="Medit"></div><div class="chip2"><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 13 4.5 4.5L19 7"/></svg></span><img src="img/marcas/dentsply.png" alt="Dentsply Sirona"></div><div class="chip2"><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 13 4.5 4.5L19 7"/></svg></span><b>Shining 3D</b><i>Aoralscan</i></div><div class="chip2"><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 13 4.5 4.5L19 7"/></svg></span><b>Panda</b><i>y otros</i></div></div>
 </div></section>
 
 <section class="log" style="padding-top:0"><div class="in14">
@@ -151,13 +156,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var iow = new IntersectionObserver(function (es) {
     es.forEach(function (e) {
       if (!e.isIntersecting) return;
-      Array.prototype.slice.call(e.target.querySelectorAll('.wn')).forEach(function (n, k) {
+      Array.prototype.slice.call(e.target.querySelectorAll('.chip2')).forEach(function (n, k) {
         setTimeout(function () { n.classList.add('on'); }, k * 130);
       });
       iow.unobserve(e.target);
     });
   }, { threshold: 0.25 });
-  var wh = document.querySelector('.wheel');
+  var wh = document.querySelector('.chips');
   if (wh) iow.observe(wh);
   if (mb && mm) mb.addEventListener('click', function () {
     var open = mm.classList.toggle('open');
