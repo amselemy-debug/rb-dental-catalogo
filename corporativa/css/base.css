@@ -160,3 +160,72 @@ footer .in14 { display:flex; gap:30px; flex-wrap:wrap; justify-content:space-bet
   .egrid, .fgrid, .singrid { grid-template-columns:1fr !important; }
   .stats { grid-template-columns:1fr 1fr !important; }
 }
+
+
+/* ================= despiece de producto: tarjetas con foto y diagrama de llamadas ================= */
+/* --- tarjetas de tipo con foto --- */
+.tpph { background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden; box-shadow:0 12px 30px rgba(10,20,60,.05); transition:transform .35s ease, box-shadow .35s ease; display:flex; flex-direction:column; }
+.tpph:hover { transform:translateY(-6px); box-shadow:0 22px 46px rgba(10,20,60,.1); }
+.tpph .ph3 { height:180px; background:linear-gradient(160deg,#f7f8fc,#fff); display:flex; align-items:center; justify-content:center; padding:14px; border-bottom:1px solid var(--line); }
+.tpph .ph3 img { max-width:100%; max-height:100%; object-fit:contain; }
+.tpph .bd { padding:20px 22px 22px; }
+.tpph i { font-style:normal; font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.15rem; color:var(--goldd); display:block; line-height:1; margin-bottom:7px; }
+.tpph b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; margin-bottom:6px; }
+.tpph p { color:var(--mut); font-size:.88rem; margin-bottom:12px; }
+/* --- diagrama de materiales con lineas de llamada --- */
+.mat3 { background:linear-gradient(150deg,var(--obs) 55%,var(--obs2)); color:#fff; position:relative; overflow:hidden; }
+.mat3 .in14 { position:relative; z-index:2; }
+.mat3 .mhead2 { text-align:center; margin-bottom:10px; }
+.mat3 h2 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:2.3rem; line-height:1.1; letter-spacing:-.025em; color:#fff; margin:10px 0 12px; }
+.mat3 h2 em { font-style:normal; color:var(--gold2); }
+.mat3 .msub { color:#a8b2cd; max-width:640px; margin:0 auto 18px; text-align:center; }
+.diag { display:flex; align-items:center; justify-content:center; gap:0; max-width:1240px; margin:0 auto; }
+.dcol { flex:1 1 340px; display:flex; flex-direction:column; gap:30px; max-width:340px; }
+.dcol.l { align-items:flex-end; text-align:right; }
+.dcol.r { align-items:flex-start; text-align:left; }
+.cal { display:flex; align-items:center; gap:10px; opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+.cal.on { opacity:1; transform:none; }
+.dcol.r .cal { flex-direction:row; }
+.cal .tx { max-width:210px; }
+.cal b { font-family:'Montserrat',sans-serif; font-size:.92rem; color:#fff; display:block; line-height:1.25; }
+.cal span { color:#8d97b4; font-size:.78rem; line-height:1.45; display:block; margin-top:2px; }
+.cal .ln { flex-shrink:0; display:flex; align-items:center; }
+.dcol.l .ln { flex-direction:row; }
+.cal .ln::before { content:''; width:96px; height:0; border-top:2px dotted rgba(201,168,76,.75); display:block; }
+.cal .ln::after { content:''; width:11px; height:11px; border-radius:50%; border:2px solid var(--gold2); background:var(--obs); display:block; flex-shrink:0; }
+.dcol.r .cal .ln { flex-direction:row-reverse; }
+.dphoto { flex-shrink:0; width:400px; position:relative; margin:0 -14px; }
+.dphoto img { width:100%; display:block; filter:drop-shadow(0 26px 44px rgba(0,0,0,.6)); }
+.dphoto .halo { position:absolute; inset:-8% -4%; background:radial-gradient(ellipse at center, rgba(201,168,76,.16), transparent 68%); z-index:-1; }
+.dphoto.oncard { background:#fff; border-radius:22px; padding:16px; box-shadow:0 26px 60px rgba(0,0,0,.5); }
+.dphoto.oncard img { filter:none; border-radius:12px; }
+.dphoto.oncard .fr i { position:absolute; width:26px; height:26px; border:2.5px solid var(--gold2); z-index:2; }
+.dphoto.oncard .fr i:nth-child(1) { top:-10px; left:-10px; border-right:none; border-bottom:none; }
+.dphoto.oncard .fr i:nth-child(2) { top:-10px; right:-10px; border-left:none; border-bottom:none; }
+.dphoto.oncard .fr i:nth-child(3) { bottom:-10px; left:-10px; border-right:none; border-top:none; }
+.dphoto.oncard .fr i:nth-child(4) { bottom:-10px; right:-10px; border-left:none; border-top:none; }
+/* cajas de materiales */
+.mboxes { display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:900px; margin:18px auto 0; }
+.mbox { border:1px solid rgba(201,168,76,.4); border-radius:18px; padding:22px 24px; background:rgba(255,255,255,.04); }
+.mbox h4 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:.72rem; letter-spacing:.18em; color:var(--gold2); margin-bottom:12px; }
+.mbox ul { list-style:none; }
+.mbox li { color:#dfe4f5; font-size:.92rem; padding:6px 0 6px 20px; position:relative; border-bottom:1px solid rgba(255,255,255,.07); }
+.mbox li:last-child { border-bottom:none; }
+.mbox li::before { content:''; position:absolute; left:0; top:14px; width:7px; height:7px; border-radius:50%; background:var(--gold); }
+.mbox li u { display:block; text-decoration:none; color:#8d97b4; font-size:.78rem; }
+@media (max-width:899px) {
+  .tp2grid.ph { grid-template-columns:1fr !important; }
+  .tpph .ph3 { height:150px; }
+  .mat3 h2 { font-size:1.6rem; }
+  .diag { flex-direction:column; gap:20px; }
+  .dphoto { width:78%; max-width:320px; order:-1; }
+  .dcol, .dcol.l, .dcol.r { flex:0 0 auto; max-width:100%; width:100%; align-items:stretch; text-align:left; gap:10px; }
+  .dcol.r .cal { flex-direction:row; }
+  .dcol.l .cal { flex-direction:row-reverse; }
+  .dcol.l .cal, .dcol.r .cal { gap:12px; border:1px solid rgba(201,168,76,.3); border-radius:12px; padding:11px 14px; background:rgba(255,255,255,.04); justify-content:flex-end; }
+  .dcol.l .cal .tx, .dcol.r .cal .tx { flex:1; }
+  .cal .tx { max-width:none; }
+  .cal .ln::before { display:none; }
+  .dcol.l .ln, .dcol.r .ln { flex-direction:row; }
+  .mboxes { grid-template-columns:1fr; gap:12px; margin-top:26px; }
+}
