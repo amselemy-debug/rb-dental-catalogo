@@ -473,9 +473,22 @@ details.fq summary:hover { color:var(--goldd); }
 .donde .dbtn .pill.line2 { background:none; border:1.5px solid var(--gold); color:var(--goldd) !important; }
 .donde .mapa { position:relative; border:1px solid rgba(201,168,76,.5); border-radius:20px; overflow:hidden; box-shadow:0 14px 34px rgba(10,20,60,.09); background:var(--soft); aspect-ratio:16/11; }
 .donde .mapa iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+.donde .mapbtn { position:absolute; inset:0; width:100%; border:0; cursor:pointer; background:linear-gradient(150deg,#eef1f8,#f8f9fc); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:24px; text-align:center; }
+.donde .mapbtn b { font-family:'Montserrat',sans-serif; font-weight:700; color:var(--obs); background:linear-gradient(120deg,var(--gold),var(--gold2)); border-radius:999px; padding:12px 22px; font-size:.92rem; }
+.donde .mapbtn span { color:var(--mut); font-size:.8rem; max-width:320px; line-height:1.5; }
+.donde .mapbtn span a { color:var(--goldd); }
 .donde .mapa .tag { position:absolute; left:14px; bottom:14px; background:linear-gradient(150deg,var(--obs2),var(--obs)); color:#fff; font-family:'Montserrat',sans-serif; font-weight:600; font-size:.8rem; padding:8px 14px; border-radius:999px; pointer-events:none; }
 @media (max-width:760px) {
   .donde .dgrid { grid-template-columns:1fr; gap:22px; }
   .donde h2 { font-size:1.55rem; }
   .donde .mapa { aspect-ratio:4/3; border-radius:16px; }
 }
+
+/* --- paginas legales --- */
+.legal { background:#fff; }
+.legal .in14 { max-width:860px; }
+.legal h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:1.35rem; margin:34px 0 10px; }
+.legal p, .legal li { color:#3b4560; font-size:.96rem; line-height:1.75; margin:0 0 12px; }
+.legal ul { padding-left:22px; margin:0 0 12px; }
+.legal .fecha { color:var(--mut); font-size:.82rem; }
+footer .fbottom .flegal a { color:#a9b2cc; margin-right:12px; }
