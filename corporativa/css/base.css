@@ -20,7 +20,7 @@ nav.top a:hover { color:var(--gold2); }
 .hero .eyebrow { color:var(--gold2); }
 .hero h1 { font-family:'Montserrat',sans-serif; font-size:3.4rem; font-weight:800; line-height:1.08; letter-spacing:-.025em; margin-top:8px; }
 .hero h1 i { font-style:normal; color:var(--gold2); }
-.hero p.lead { color:#b9c2d8; font-size:1.05rem; line-height:1.7; max-width:520px; margin:16px 0 24px; }
+.hero p.lead { color:#b9c2d8; font-size:1.05rem; line-height:1.9; max-width:640px; margin:16px 0 24px; }
 .ctas { display:flex; gap:14px; flex-wrap:wrap; }
 .hud { width:520px; flex-shrink:0; position:relative; height:380px; }
 .hud .frame i { position:absolute; width:30px; height:30px; border:2.5px solid var(--gold2); }
@@ -390,13 +390,13 @@ details.fq summary:hover { color:var(--goldd); }
 }
 
 /* --- sello de antiguedad en la portada --- */
-.sello { display:flex; width:fit-content; align-items:center; gap:14px; margin:22px 0 22px; }
-.sello b { font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.75rem; line-height:1; color:var(--gold2); letter-spacing:.01em; }
-.sello span { font-family:'Montserrat',sans-serif; font-weight:600; font-size:.8rem; line-height:1.45; color:rgba(255,255,255,.85); border-left:1px solid rgba(201,168,76,.4); padding-left:15px; }
+.sello { display:inline-flex; align-items:baseline; gap:11px; white-space:nowrap; }
+.sello b { font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.15rem; line-height:1; color:var(--gold2); letter-spacing:.01em; }
+.sello span { font-family:'Montserrat',sans-serif; font-weight:600; font-size:.82rem; color:rgba(255,255,255,.88); border-left:1px solid rgba(201,168,76,.45); padding-left:11px; }
 @media (max-width:760px) {
-  .sello { gap:12px; margin:18px 0 20px; }
-  .sello b { font-size:1.5rem; }
-  .sello span { font-size:.76rem; padding-left:12px; }
+  .sello { gap:9px; white-space:normal; }
+  .sello b { font-size:1.05rem; }
+  .sello span { font-size:.76rem; padding-left:9px; }
 }
 
 /* --- variante de tarjeta con foto de ambiente, a sangre dentro del marco --- */
