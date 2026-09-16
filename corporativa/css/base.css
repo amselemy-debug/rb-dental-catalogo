@@ -394,3 +394,9 @@ details.fq summary:hover { color:var(--goldd); }
   .sello b { font-size:1.5rem; }
   .sello span { font-size:.76rem; padding-left:12px; }
 }
+
+/* --- variante de tarjeta con foto de ambiente, a sangre dentro del marco --- */
+.tpph .ph3.llena { padding:0; }
+.tpph .ph3.llena img { flex:1 1 auto; min-height:0; width:100%; height:100%; object-fit:cover; margin:0; }
+.tpph .ph3.llena .cap3 { margin:0; }
+@media (max-width:760px) { .tpph .ph3.llena { padding:0; } .tpph .ph3.llena .cap3 { margin:0; } }
