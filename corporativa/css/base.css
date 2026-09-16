@@ -390,11 +390,11 @@ details.fq summary:hover { color:var(--goldd); }
 }
 
 /* --- sello de antiguedad en la portada --- */
-.sello { display:flex; width:fit-content; align-items:center; gap:15px; margin:24px 0 20px; padding:11px 20px 11px 17px; border:1px solid rgba(201,168,76,.5); border-radius:15px; background:rgba(201,168,76,.08); }
+.sello { display:flex; width:fit-content; align-items:center; gap:14px; margin:22px 0 22px; }
 .sello b { font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.75rem; line-height:1; color:var(--gold2); letter-spacing:.01em; }
 .sello span { font-family:'Montserrat',sans-serif; font-weight:600; font-size:.8rem; line-height:1.45; color:rgba(255,255,255,.85); border-left:1px solid rgba(201,168,76,.4); padding-left:15px; }
 @media (max-width:760px) {
-  .sello { gap:12px; margin:20px 0 18px; padding:10px 16px 10px 14px; }
+  .sello { gap:12px; margin:18px 0 20px; }
   .sello b { font-size:1.5rem; }
   .sello span { font-size:.76rem; padding-left:12px; }
 }
