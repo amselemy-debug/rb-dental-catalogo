@@ -242,7 +242,7 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
     <div class="dir"><span class="b"><svg class="ic" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg></span><div><b>Recogida y entrega gratuitas</b><span>Mensajer&iacute;a propia en Madrid capital y alrededores &middot; env&iacute;os a toda Espa&ntilde;a</span></div></div>
     <div class="dbtn"><a class="pill" href="https://www.google.com/maps/dir/?api=1&amp;destination=C%2F+Canal+de+Suez+42%2C+28042+Madrid" target="_blank" rel="noopener">C&oacute;mo llegar &rarr;</a><a class="pill line2" href="tel:+34913292062">91 329 20 62</a></div>
   </div>
-  <div class="mapa" data-mapa="https://maps.google.com/maps?q=C%2F+Canal+de+Suez+42%2C+28042+Madrid&amp;z=15&amp;hl=es&amp;output=embed"><button type="button" class="mapbtn"><b>Cargar el mapa de Google</b><span>Al cargarlo, Google puede instalar cookies. <a href="cookies.html">M&aacute;s informaci&oacute;n</a></span></button><span class="tag">RB Dental &middot; Canal de Suez 42</span></div>
+  <div class="mapa"><iframe src="https://maps.google.com/maps?q=C%2F+Canal+de+Suez+42%2C+28042+Madrid&amp;z=15&amp;hl=es&amp;output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Mapa: RB Dental, Canal de Suez 42, Madrid"></iframe><span class="tag">RB Dental &middot; Canal de Suez 42</span></div>
 </div></div></section>
 <div class="cta"><div class="in14"><h2>Conf&iacute;a tu pr&oacute;ximo caso a RB Dental.</h2><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Enviar un caso &rarr;</a><a class="pill line" href="tel:+34913292062">91 329 20 62</a></div></div>
 <footer><div class="in14">
@@ -289,16 +289,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { threshold: 0.2 });
   document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
   var counted = false;
-});
-</script>
-<script>
-document.querySelectorAll('.mapa[data-mapa] .mapbtn').forEach(function (b) {
-  b.addEventListener('click', function () {
-    var box = b.parentNode, f = document.createElement('iframe');
-    f.src = box.getAttribute('data-mapa'); f.title = 'Mapa: RB Dental, Canal de Suez 42, Madrid';
-    f.setAttribute('allowfullscreen', ''); f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
-    box.replaceChild(f, b);
-  });
 });
 </script>
 </body></html>
