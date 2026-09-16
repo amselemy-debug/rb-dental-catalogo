@@ -165,12 +165,6 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
   <div class="rgt"><img src="img/equipo-03.jpg" alt="El equipo de RB Dental"></div>
   <div class="scriptr"><span class="script">Desde 1990,<br>en Madrid</span></div>
 </div>
-<div class="icrow"><div class="in nums">
-  <div class="n1"><b><span data-count="35" data-prefix="+">+35</span></b><span>a&ntilde;os de experiencia</span></div>
-  <div class="n1"><b><span data-count="4000" data-prefix="+">+4.000</span></b><span>trabajos al a&ntilde;o</span></div>
-  <div class="n1"><b>4-5</b><span>d&iacute;as de entrega</span></div>
-  <div class="n1"><b><span data-count="100" data-suffix="%">100%</span></b><span>flujo digital CAD-CAM</span></div>
-</div></div>
 </header>
 
 <section class="hist2">
@@ -289,27 +283,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { threshold: 0.2 });
   document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
   var counted = false;
-  var io2 = new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting || counted) return;
-      counted = true;
-      document.querySelectorAll('[data-count]').forEach(function (el) {
-        var target = parseInt(el.getAttribute('data-count'), 10);
-        var pre = el.getAttribute('data-prefix') || '', suf = el.getAttribute('data-suffix') || '';
-        var t0 = null;
-        function fmt(v) { return String(v).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
-        function step(ts) {
-          if (!t0) t0 = ts;
-          var p = Math.min((ts - t0) / 1500, 1);
-          el.textContent = pre + fmt(Math.round(target * (1 - Math.pow(1 - p, 3)))) + suf;
-          if (p < 1) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-      });
-    });
-  }, { threshold: 0.4 });
-  var nums = document.querySelector('.nums');
-  if (nums) io2.observe(nums);
 });
 </script>
 </body></html>

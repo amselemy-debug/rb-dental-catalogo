@@ -105,11 +105,11 @@
     <div class="dots" id="hero-dots"></div>
   </figure>
 </div>
-<div class="hfeats">
-  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-clock"/></svg></span><div><b>Entrega en 4-5 d&iacute;as</b><span>recogida gratuita en Madrid</span></div></div>
-  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-truck"/></svg></span><div><b>Toda Espa&ntilde;a</b><span>servicio nacional</span></div></div>
-  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-mon"/></svg></span><div><b>Tecnolog&iacute;a CAD-CAM</b><span>flujo 100% digital</span></div></div>
-  <div class="ft"><span class="fic"><svg class="ic"><use href="#ic-check"/></svg></span><div><b>Calidad que se ve</b><span>+35 a&ntilde;os de experiencia</span></div></div>
+<div class="hnums">
+  <div class="hn"><b><span data-count="35" data-prefix="+">+35</span></b><span>a&ntilde;os de experiencia</span></div>
+  <div class="hn"><b><span data-count="4000" data-prefix="+">+4.000</span></b><span>trabajos al a&ntilde;o</span></div>
+  <div class="hn"><b>4-5</b><span>d&iacute;as de entrega</span></div>
+  <div class="hn"><b><span data-count="100" data-suffix="%">100%</span></b><span>flujo digital CAD-CAM</span></div>
 </div>
 </header>
 
@@ -280,6 +280,32 @@ document.addEventListener('DOMContentLoaded', function () {
     if (st && slides[idx].getAttribute('data-st')) st.textContent = slides[idx].getAttribute('data-st');
   }
   setInterval(function () { show(idx + 1); }, 3800);
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var hn = document.querySelector('.hnums');
+  if (!hn || !('IntersectionObserver' in window)) return;
+  var io2 = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      io2.unobserve(e.target);
+      hn.querySelectorAll('[data-count]').forEach(function (el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var pre = el.getAttribute('data-prefix') || '', suf = el.getAttribute('data-suffix') || '';
+        var t0 = null;
+        function fmt(v) { return String(v).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+        function step(ts) {
+          if (!t0) t0 = ts;
+          var p = Math.min((ts - t0) / 1500, 1);
+          el.textContent = pre + fmt(Math.round(target * (1 - Math.pow(1 - p, 3)))) + suf;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    });
+  }, { threshold: 0.4 });
+  io2.observe(hn);
 });
 </script>
 </body></html>
