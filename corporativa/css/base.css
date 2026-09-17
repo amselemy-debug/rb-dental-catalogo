@@ -124,7 +124,7 @@ footer .fbottom a { color:#8d97b4; text-decoration:none; }
   nav.top .pill { white-space:nowrap; font-size:.8rem; padding:9px 14px; }
 }
 @media (max-width:899px) {
-  section { padding:38px 20px; }
+  section { padding:30px 20px; }
   .hero .in, .shero .in14 { flex-direction:column; padding:34px 20px 30px; gap:30px; }
   .hero h1 { font-size:2.2rem; }
   .shero h1 { font-size:2rem; }
@@ -232,12 +232,12 @@ footer .fbottom a { color:#8d97b4; text-decoration:none; }
 .mbox li u { display:block; text-decoration:none; color:var(--mut); font-size:.78rem; }
 @media (max-width:899px) {
   .tp2grid.ph { grid-template-columns:1fr !important; }
-  .tpph .ph3 { aspect-ratio:1/1; margin:10px 10px 0; padding:12px 12px 0; }
-  .tpph .cap3 { margin:0 -12px; font-size:.88rem; padding:9px 54px; }
+  .tpph .ph3 { aspect-ratio:16/10; margin:10px 10px 0; padding:10px 10px 0; }
+  .tpph .cap3 { margin:0 -10px; font-size:.88rem; padding:9px 16px; }
   .tpph .nb { bottom:7px; }
   .mat3 h2 { font-size:1.6rem; }
   .diag { flex-direction:column; gap:20px; }
-  .dphoto { width:78%; max-width:320px; order:-1; }
+  .dphoto { width:62%; max-width:240px; order:-1; margin:0 auto; }
   .dcol, .dcol.l, .dcol.r { flex:0 0 auto; max-width:100%; width:100%; align-items:stretch; text-align:left; gap:10px; }
   .dcol.r .cal { flex-direction:row; }
   .dcol.l .cal { flex-direction:row-reverse; }
