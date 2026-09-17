@@ -258,6 +258,7 @@ footer .fbottom a { color:#8d97b4; text-decoration:none; }
 .dd a:hover { background:rgba(201,168,76,.14); color:var(--gold2); }
 .dd a small { display:block; color:#8d97b4; font-weight:400; font-size:.75rem; margin-top:1px; }
 .dd a:hover small { color:#a8b2cd; }
+.dd.dd3 { min-width:300px; grid-template-columns:1fr; }
 .dd .ddall { grid-column:1 / -1; border-top:1px solid rgba(255,255,255,.1); margin-top:6px; padding-top:12px; color:var(--gold2); }
 .mmenu .sub { display:block; padding:8px 4px 8px 20px; color:#c7cdea; font-size:.86rem; border-bottom:1px solid rgba(255,255,255,.06); }
 .mmenu .sub:hover { color:var(--gold2); }

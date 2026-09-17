@@ -59,6 +59,18 @@
 .rc .st { color:#f5b400; font-size:.85rem; letter-spacing:1px; }
 .rc p { color:#4a5670; font-size:.88rem; }
 .rmore { text-align:center; }
+/* 3 pasos dinamicos: se encienden uno a uno y la foto cambia */
+.envfoto { position:relative; height:330px; }
+.envfoto img { position:absolute; inset:0; height:100%; opacity:0; transition:opacity .8s ease; }
+.envfoto img.on { opacity:1; }
+.envp { opacity:.42; transition:opacity .5s ease, background .5s ease, border-color .5s ease; cursor:default; }
+.envp.on { opacity:1; background:rgba(201,168,76,.10); border-color:rgba(201,168,76,.7); }
+.envp i { transition:color .5s ease; }
+.envp.on i { color:#fff; }
+.envlista .pbar { height:4px; background:rgba(201,168,76,.18); border-radius:4px; overflow:hidden; margin-top:2px; }
+.envlista .pbar span { display:block; height:100%; width:0; background:linear-gradient(90deg,var(--gold),var(--gold2)); border-radius:4px; transition:width .9s ease; }
+@media (max-width:760px) { .envfoto { height:210px; } }
+@media (prefers-reduced-motion: reduce) { .envp { opacity:1; } }
 </style></head><body>
 <div class="topbar">&#9733; Laboratorio de pr&oacute;tesis dental digital &middot; Madrid &middot; Desde 1990 &middot; Servicio en toda Espa&ntilde;a</div>
 <nav class="top"><div class="in">
@@ -66,7 +78,7 @@
   <span class="sp"></span>
   <div class="links"><a href="quienes-somos.html">Qui&eacute;nes somos</a>
     <span class="ddwrap"><a href="servicios.html">Servicios</a><div class="dd"><a href="trabajos/protesis-fija.html">Pr&oacute;tesis fija<small>Coronas y puentes, sobre diente e implante</small></a><a href="trabajos/all-on.html">All-on-4 / All-on-6<small>Arcada completa fija sobre implantes</small></a><a href="trabajos/blender.html">Blender<small>Barras y estructuras fresadas</small></a><a href="trabajos/carga-inmediata.html">Carga inmediata<small>Gu&iacute;a quir&uacute;rgica y provisional</small></a><a href="trabajos/removible.html">Removible<small>Esquel&eacute;ticos, completas y flexibles</small></a><a href="trabajos/diseno-de-sonrisa.html">Dise&ntilde;o de sonrisa<small>Encerado 3D, llaves y carillas</small></a><a href="trabajos/ortodoncia.html">Ortodoncia<small>Retenci&oacute;n, expansi&oacute;n y funcional</small></a><a href="trabajos/ferulas.html">F&eacute;rulas<small>Michigan, descarga y blanqueamiento</small></a><a class="ddall" href="servicios.html">Ver todos los trabajos &rarr;</a></div></span>
-    <a href="como-enviar-un-caso.html">C&oacute;mo enviar un caso</a>
+    <span class="ddwrap"><a href="como-enviar-un-caso.html">C&oacute;mo enviar un caso</a><div class="dd dd3"><a href="como-enviar-un-caso.html#trabajamos-con-tu-escaner">Trabajamos con tu esc&aacute;ner<small>iTero, 3Shape, Medit o cualquier STL</small></a><a href="servicios.html#tiempos-de-entrega">Tiempos de entrega<small>Plazos por tipo de trabajo</small></a><a href="como-enviar-un-caso.html#donde-estamos">D&oacute;nde estamos<small>Barajas, Madrid &middot; recogida gratuita</small></a><a class="ddall" href="como-enviar-un-caso.html">Ver c&oacute;mo enviar un caso &rarr;</a></div></span>
     <a href="https://wa.me/34680555303?text=Hola,%20quiero%20recibir%20las%20tarifas%202026%20del%20laboratorio" target="_blank" rel="noopener">Tarifas</a></div>
   <a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Cont&aacute;ctanos</a>
   <button class="mburger" type="button" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -75,7 +87,7 @@
   <a href="index.html">Inicio</a>
   <a href="quienes-somos.html">Qui&eacute;nes somos</a>
     <a href="servicios.html">Servicios</a><a class="sub" href="trabajos/protesis-fija.html">Pr&oacute;tesis fija</a><a class="sub" href="trabajos/all-on.html">All-on-4 / All-on-6</a><a class="sub" href="trabajos/blender.html">Blender</a><a class="sub" href="trabajos/carga-inmediata.html">Carga inmediata</a><a class="sub" href="trabajos/removible.html">Removible</a><a class="sub" href="trabajos/diseno-de-sonrisa.html">Dise&ntilde;o de sonrisa</a><a class="sub" href="trabajos/ortodoncia.html">Ortodoncia</a><a class="sub" href="trabajos/ferulas.html">F&eacute;rulas</a>
-    <a href="como-enviar-un-caso.html">C&oacute;mo enviar un caso</a>
+    <a href="como-enviar-un-caso.html">C&oacute;mo enviar un caso</a><a class="sub" href="como-enviar-un-caso.html#trabajamos-con-tu-escaner">Trabajamos con tu esc&aacute;ner</a><a class="sub" href="servicios.html#tiempos-de-entrega">Tiempos de entrega</a><a class="sub" href="como-enviar-un-caso.html#donde-estamos">D&oacute;nde estamos</a>
     <a href="https://wa.me/34680555303?text=Hola,%20quiero%20recibir%20las%20tarifas%202026%20del%20laboratorio" target="_blank" rel="noopener">Tarifas</a>
 </div></nav>
 
@@ -181,11 +193,16 @@
   <span class="eyebrow">As&iacute; de f&aacute;cil</span>
   <h2>Env&iacute;a tu caso en 3 pasos.</h2>
   <div class="envh">
-    <div class="envfoto"><img src="img/escaneo-clinica.jpg" alt="Escaneado intraoral en cl&iacute;nica"></div>
-    <div class="envlista">
-      <div class="envp"><i>01</i><div><b>Escanea o toma impresi&oacute;n</b><p>Aceptamos archivos STL de cualquier esc&aacute;ner intraoral, o recogemos tu impresi&oacute;n f&iacute;sica.</p></div></div>
+    <div class="envfoto" id="envfoto">
+      <img class="on" src="img/escaneo-clinica.jpg" alt="Escaneado intraoral en cl&iacute;nica">
+      <img src="img/tecnico-modelo.jpg" alt="El t&eacute;cnico revisa el caso en el laboratorio" loading="lazy">
+      <img src="img/fl-control-calidad.jpg" alt="Pieza terminada y verificada" loading="lazy">
+    </div>
+    <div class="envlista" id="envlista">
+      <div class="envp on"><i>01</i><div><b>Escanea o toma impresi&oacute;n</b><p>Aceptamos archivos STL de cualquier esc&aacute;ner intraoral, o recogemos tu impresi&oacute;n f&iacute;sica.</p></div></div>
       <div class="envp"><i>02</i><div><b>Env&iacute;anos el caso</b><p>Por WhatsApp, email o tu plataforma de esc&aacute;ner. Recogida gratuita en Madrid capital y alrededores.</p></div></div>
       <div class="envp"><i>03</i><div><b>Rec&iacute;belo en 4-5 d&iacute;as</b><p>Trabajo terminado y verificado, entregado en tu cl&iacute;nica. Env&iacute;os a toda Espa&ntilde;a.</p></div></div>
+      <div class="pbar"><span id="envpb"></span></div>
     </div>
   </div>
   <div class="scanline">Compatibles con <b>iTero</b> &middot; <b>3Shape TRIOS</b> &middot; <b>Medit</b> &middot; cualquier STL &middot; dise&ntilde;o en <b>exocad</b></div>
@@ -305,6 +322,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.4 });
   io2.observe(hn);
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var pasos = document.querySelectorAll('#envlista .envp'), fotos = document.querySelectorAll('#envfoto img'), pb = document.getElementById('envpb');
+  if (!pasos.length || !pb) return;
+  var i = 0, timer = null;
+  function pinta() {
+    pasos.forEach(function (p, k) { p.classList.toggle('on', k <= i); });
+    fotos.forEach(function (f, k) { f.classList.toggle('on', k === i); });
+    pb.style.width = ((i + 1) / pasos.length * 100) + '%';
+  }
+  function arranca() { if (timer) return; timer = setInterval(function () { i = (i + 1) % pasos.length; pinta(); }, 2200); }
+  function para() { clearInterval(timer); timer = null; }
+  pasos.forEach(function (p, k) { p.addEventListener('mouseenter', function () { para(); i = k; pinta(); }); p.addEventListener('mouseleave', arranca); });
+  pinta();
+  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { e.isIntersecting ? arranca() : para(); }); }, { threshold: 0.3 });
+  io.observe(document.getElementById('envlista'));
 });
 </script>
 </body></html>
