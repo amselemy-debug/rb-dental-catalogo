@@ -339,7 +339,7 @@ details.fq summary:hover { color:var(--goldd); }
 .rico svg { width:26px; height:26px; stroke:var(--goldd); }
 .rstop b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; font-size:1rem; margin-bottom:5px; }
 .rstop > span:last-child { color:var(--mut); font-size:.84rem; line-height:1.5; display:block; padding:0 6px; }
-.rextra { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:40px; }
+.rextra { display:grid; grid-template-columns:1fr; gap:16px; margin-top:40px; }
 .rx { display:flex; gap:16px; align-items:flex-start; background:var(--soft); border:1px solid var(--line); border-radius:16px; padding:20px 22px; }
 .rxi { width:44px; height:44px; border-radius:12px; background:linear-gradient(120deg,var(--gold),var(--gold2)); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .rxi svg { width:22px; height:22px; stroke:var(--obs); }
