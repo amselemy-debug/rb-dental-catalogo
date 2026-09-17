@@ -8,7 +8,7 @@ Actualizado: 17 sep 2026. Web en `corporativa/`, publicada en tarifas.laboratori
 3. **Captacion de contactos (WhatsApp + email) para enviar la tarifa.**
    - Hoy: los botones de "Tarifas" abren WhatsApp con "Hola, quiero recibir las tarifas 2026 del laboratorio" ya escrito. Lo contesta una persona. Mientras no haya bot: mensaje de bienvenida automatico en WhatsApp Business.
    - Bot de WhatsApp con IA: hace falta cuenta Wassenger (~15 EUR/mes) en el 680 555 303, una clave de IA y el visto bueno al guion (bienvenida, pedir nombre + clinica, enviar tarifa, dudas, ofrecer llamada de Simon).
-   - Email: anadir formulario "Pideme la tarifa" (nombre, clinica, email, telefono) que envie aviso y guarde el contacto.
+   - Email: HECHO (17 sep) pagina `tarifas.html` con boton de WhatsApp + formulario. El envio lo hace `api/tarifa.js` (Vercel) por Brevo: falta poner en Vercel `BREVO_API_KEY` (y opcional `BREVO_LIST_ID`, `TARIFA_TO`). Mientras no este la clave, el formulario ofrece pedirla por WhatsApp con los datos ya escritos.
    - CRM: version simplificada. Una sola lista de contactos (nombre, clinica, telefono, email, origen, fecha, estado: nuevo / tarifa enviada / llamar / cliente) que rellenan el bot y el formulario, con resumen diario por WhatsApp. El CRM completo (lab-crm-rb) queda como base para mas adelante.
 4. **Aviso legal:** falta razon social exacta, CIF y datos registrales. Revisar los tres textos legales con la gestoria.
 
