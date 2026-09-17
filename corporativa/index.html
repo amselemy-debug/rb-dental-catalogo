@@ -195,8 +195,6 @@
   <div class="envh">
     <div class="envfoto" id="envfoto">
       <img class="on" src="img/escaneo-clinica.jpg" alt="Escaneado intraoral en cl&iacute;nica">
-      <img src="img/tecnico-modelo.jpg" alt="El t&eacute;cnico revisa el caso en el laboratorio" loading="lazy">
-      <img src="img/fl-control-calidad.jpg" alt="Pieza terminada y verificada" loading="lazy">
     </div>
     <div class="envlista" id="envlista">
       <div class="envp on"><i>01</i><div><b>Escanea o toma impresi&oacute;n</b><p>Aceptamos archivos STL de cualquier esc&aacute;ner intraoral, o recogemos tu impresi&oacute;n f&iacute;sica.</p></div></div>
@@ -331,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var i = 0, timer = null;
   function pinta() {
     pasos.forEach(function (p, k) { p.classList.toggle('on', k <= i); });
-    fotos.forEach(function (f, k) { f.classList.toggle('on', k === i); });
+    if (fotos.length > 1) fotos.forEach(function (f, k) { f.classList.toggle('on', k === i); });
     pb.style.width = ((i + 1) / pasos.length * 100) + '%';
   }
   function arranca() { if (timer) return; timer = setInterval(function () { i = (i + 1) % pasos.length; pinta(); }, 2200); }
