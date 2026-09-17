@@ -1,6 +1,6 @@
 # Web corporativa RB Dental — pendientes
 
-Actualizado: 16 sep 2026. Web en `corporativa/`, publicada en tarifas.laboratoriodentalrb.com/corporativa/
+Actualizado: 17 sep 2026. Web en `corporativa/`, publicada en tarifas.laboratoriodentalrb.com/corporativa/
 
 ## Ahora
 1. **Revisar la version de ordenador** (Yael, manana). Todo lo de hoy se hizo mirando el movil.
@@ -16,7 +16,6 @@ Actualizado: 16 sep 2026. Web en `corporativa/`, publicada en tarifas.laboratori
 - Ferula **mixta** sobre blanco (la actual es del banco gris, se ve como una franja).
 - **Carilla terminada** (la de ahora es la lila sin cristalizar) y un **encerado / llave de silicona** para Diseno de sonrisa 02.
 - Foto real de **Simon** para Quienes somos (solo hay imagenes generadas por IA en el Drive).
-- Planificacion digital para Carga inmediata 01 (captura de exocad).
 - Fotos del zip sin usar (12): darian para tarjetas nuevas (perno munon, puente cementado, unitaria, implantes periosticos, barras Ackerman/locator, refuerzo locator...). Decidir cuales.
 
 ## Decisiones abiertas
@@ -26,7 +25,7 @@ Actualizado: 16 sep 2026. Web en `corporativa/`, publicada en tarifas.laboratori
 - Recogida gratuita en Madrid ya no aparece en la portada de la home (esta en pie, plazos y donde estamos).
 
 ## Mas adelante
-- **Ofertas del mes**: seccion en la web + pop-up (lo ultimo).
+- ~~Ofertas del mes~~: HECHO (17 sep). Pagina `ofertas.html`, bloque en la portada y pop-up (sale una vez por mes y visitante). Para cambiar mes, textos o desactivarlo: `corporativa/js/ofertas.js`.
 - Pasar la web al dominio principal (Vercel root = `corporativa`, DNS en Wix). La web antigua laboratoriodentalrb.com sigue en linea con /precios publico.
 - Tarifa publica: si solo debe llegar por WhatsApp, proteger tarifas.laboratoriodentalrb.com.
 - Google Fonts en servidor propio (privacidad).
