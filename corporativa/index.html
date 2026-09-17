@@ -85,24 +85,24 @@
     <span class="eyebrow" style="color:var(--gold2)">Laboratorio Dental RB &middot; Madrid</span>
     <h1>Todo lo que necesitas <br><i>para tu pr&oacute;ximo caso.</i></h1>
     <p class="lead">Soluciones prot&eacute;sicas de alta precisi&oacute;n, fabricadas en Madrid para cl&iacute;nicas y odont&oacute;logos de toda Espa&ntilde;a. <span class="sello"><b>1990</b><span>+35 a&ntilde;os de experiencia</span></span></p>
-    <div class="ctas"><a class="pill" href="quienes-somos.html">Con&oacute;cenos</a><a class="pill line" href="servicios.html">Servicios</a></div>
+    <div class="ctas"><a class="pill" href="quienes-somos.html">Con&oacute;cenos</a><a class="pill line" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio" target="_blank" rel="noopener">Cont&aacute;ctanos</a></div>
     <div class="hstatus">Preparando modelo de trabajo</div>
   </div>
   <figure style="margin:0">
     <div class="hud">
       <div class="frame"><i></i><i></i><i></i><i></i></div>
       <div class="slides">
-        <img class="on" src="img/barra-oro-cut.png" alt="Barra de oro y puente ceramico" data-cap="Barra de oro y puente cer&aacute;mico sobre modelo" data-st="Preparando modelo de trabajo">
-        <img src="img/slide-fija-modelo.webp" alt="Estructura protesica fija sobre modelo de trabajo" data-cap="Estructura prot&eacute;sica fija sobre modelo de trabajo" data-st="Comprobando ajuste sobre modelo" loading="lazy">
-        <img src="img/barra-wire-gold.png" alt="Barra Blender del diseno 3D a la pieza terminada" data-cap="Del dise&ntilde;o 3D a la barra fresada &middot; estructura fresada" data-st="Fresando estructura CAD-CAM" loading="lazy">
-        <img src="img/slide-parcial-guante.webp" alt="Protesis parcial removible acrilica superior" data-cap="Pr&oacute;tesis parcial removible acr&iacute;lica superior" data-st="Terminando pr&oacute;tesis removible" loading="lazy">
-        <img src="img/slide-placa-verde.webp" alt="Placa de expansion de ortodoncia" data-cap="Placa de expansi&oacute;n con tornillo &middot; ortodoncia" data-st="Ajustando aparatolog&iacute;a" loading="lazy">
-        <img src="img/slide-completas.webp" alt="Protesis completa acrilica superior e inferior" data-cap="Pr&oacute;tesis completa acr&iacute;lica superior e inferior" data-st="Montaje de dientes en articulador" loading="lazy">
-        <img src="img/removible-exocad.jpg" class="win" alt="Diseno en exocad de una parcial removible" data-cap="Dise&ntilde;o en exocad de una parcial removible &middot; flujo digital" data-st="Dise&ntilde;ando caso digital" loading="lazy">
+        <img class="on" src="img/barra-oro-cut.png" alt="Barra de oro y puente ceramico" data-cap="Barra de oro y puente cer&aacute;mico sobre modelo" data-st="Preparando modelo de trabajo" data-t1="BARRA DE ORO" data-t2="PUENTE CER&Aacute;MICO">
+        <img src="img/slide-fija-modelo.webp" alt="Estructura protesica fija sobre modelo de trabajo" data-cap="Estructura prot&eacute;sica fija sobre modelo de trabajo" data-st="Comprobando ajuste sobre modelo" data-t1="PR&Oacute;TESIS FIJA" data-t2="SOBRE MODELO" loading="lazy">
+        <img src="img/barra-wire-gold.png" alt="Barra Blender del diseno 3D a la pieza terminada" data-cap="Del dise&ntilde;o 3D a la barra fresada &middot; estructura fresada" data-st="Fresando estructura CAD-CAM" data-t1="CAD &middot; 0.02 mm" data-t2="BARRA FRESADA" loading="lazy">
+        <img src="img/slide-parcial-guante.webp" alt="Protesis parcial removible acrilica superior" data-cap="Pr&oacute;tesis parcial removible acr&iacute;lica superior" data-st="Terminando pr&oacute;tesis removible" data-t1="REMOVIBLE" data-t2="ACR&Iacute;LICO" loading="lazy">
+        <img src="img/slide-placa-verde.webp" alt="Placa de expansion de ortodoncia" data-cap="Placa de expansi&oacute;n con tornillo &middot; ortodoncia" data-st="Ajustando aparatolog&iacute;a" data-t1="ORTODONCIA" data-t2="EXPANSI&Oacute;N" loading="lazy">
+        <img src="img/slide-completas.webp" alt="Protesis completa acrilica superior e inferior" data-cap="Pr&oacute;tesis completa acr&iacute;lica superior e inferior" data-st="Montaje de dientes en articulador" data-t1="COMPLETAS" data-t2="ACR&Iacute;LICO" loading="lazy">
+        <img src="img/removible-exocad.jpg" class="win" alt="Diseno en exocad de una parcial removible" data-cap="Dise&ntilde;o en exocad de una parcial removible &middot; flujo digital" data-st="Dise&ntilde;ando caso digital" data-t1="EXOCAD" data-t2="FLUJO DIGITAL" loading="lazy">
       </div>
       <div class="scan" aria-hidden="true"></div>
-      <span class="htag" style="top:22%;left:26%">CAD &middot; 0.02 mm</span>
-      <span class="htag" style="top:68%;left:54%">ZIRCONIO &middot; A2</span>
+      <span class="htag" id="htag1" style="top:22%;left:26%">BARRA DE ORO</span>
+      <span class="htag" id="htag2" style="top:68%;left:54%">PUENTE CER&Aacute;MICO</span>
     </div>
     <div class="hudcap" id="hero-cap">Barra de oro y puente cer&aacute;mico sobre modelo</div>
     <div class="dots" id="hero-dots"></div>
@@ -276,6 +276,9 @@ document.addEventListener('DOMContentLoaded', function () {
     slides[idx].classList.add('on'); dots[idx].classList.add('on');
     if (cap) cap.innerHTML = slides[idx].getAttribute('data-cap');
     if (st && slides[idx].getAttribute('data-st')) st.textContent = slides[idx].getAttribute('data-st');
+    var t1 = document.getElementById('htag1'), t2 = document.getElementById('htag2');
+    if (t1 && slides[idx].getAttribute('data-t1')) t1.innerHTML = slides[idx].getAttribute('data-t1');
+    if (t2 && slides[idx].getAttribute('data-t2')) t2.innerHTML = slides[idx].getAttribute('data-t2');
   }
   setInterval(function () { show(idx + 1); }, 3800);
 });
