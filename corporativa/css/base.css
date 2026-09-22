@@ -528,3 +528,23 @@ nav.top .links a.nofer:hover { color:#fff; }
 .ofpop .acts a.sec { color:var(--goldd); font-family:'Montserrat',sans-serif; font-weight:700; font-size:.86rem; text-decoration:none; }
 .ofpop .x { position:absolute; top:12px; right:12px; width:34px; height:34px; border-radius:50%; border:1px solid rgba(255,255,255,.35); background:rgba(0,0,24,.35); color:#fff; font-size:20px; line-height:1; cursor:pointer; }
 .ofpop .x:hover { background:var(--gold2); color:var(--obs); }
+
+/* --- Tarjetas de tipos: misma medida en todas las paginas de trabajos --- */
+@media (min-width:1101px) {
+  .tipos2 .in14 { max-width:1640px; }
+  .tp2grid.ph { justify-content:center; gap:14px; grid-template-columns:repeat(4,minmax(0,250px)); }
+  .tp2grid.ph.tp3 { grid-template-columns:repeat(3,minmax(0,250px)); }
+  .tp2grid.ph.tp5 { grid-template-columns:repeat(5,minmax(0,250px)); }
+  .tp2grid.ph.tp6 { grid-template-columns:repeat(6,minmax(0,250px)); }
+  .tp2grid.ph .tpph { min-width:0; }
+  .tp2grid.ph .ph3:not(.llena) { margin:8px 8px 0; padding:8px 8px 0; }
+  .tp2grid.ph .ph3.llena { margin:8px 8px 0; }
+  .tp2grid.ph .ph3:not(.llena) img { margin:0 0 6px; }
+  .tp2grid.ph .bd { padding:12px 14px 16px; }
+  .tp2grid.ph .bd p { font-size:.82rem; }
+  .tp2grid.ph .cap3 { font-size:.76rem; padding:5px 16px 5px 56px; min-height:48px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; margin:0 -8px; }
+  .tp2grid.ph .ph3.llena .cap3 { margin:0; }
+  .tp2grid.ph .nb { bottom:14px; font-size:.64rem; padding:3px 9px; }
+  .tp2grid.ph .tag { font-size:.6rem; }
+}
+@media (max-width:1100px) and (min-width:900px) { .tp2grid.ph { grid-template-columns:repeat(2,1fr); } .tp2grid.ph.tp5, .tp2grid.ph.tp6 { grid-template-columns:repeat(3,1fr); } }
