@@ -84,7 +84,8 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
 .pbar span { display:block; height:100%; width:0; background:linear-gradient(90deg,var(--gold),var(--gold2)); border-radius:4px; transition:width .9s ease; }
 /* tipos */
 .tipos2 { background:var(--soft); }
-.tp2grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px; }
+.tp2grid { display:grid; grid-template-columns:repeat(3,minmax(0,316px)); justify-content:center; gap:16px; margin-top:24px; }
+@media (max-width:1100px) and (min-width:900px) { .tp2grid.ph { grid-template-columns:repeat(2,1fr); } }
 .tp2 { background:#fff; border:1px solid var(--line); border-radius:18px; padding:24px; box-shadow:0 12px 30px rgba(10,20,60,.05); transition:transform .35s ease, box-shadow .35s ease; }
 .tp2:hover { transform:translateY(-6px); box-shadow:0 22px 46px rgba(10,20,60,.1); }
 .tp2 i { font-style:normal; font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; color:var(--goldd); display:block; line-height:1; margin-bottom:8px; }

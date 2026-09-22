@@ -84,7 +84,8 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
 .pbar span { display:block; height:100%; width:0; background:linear-gradient(90deg,var(--gold),var(--gold2)); border-radius:4px; transition:width .9s ease; }
 /* tipos */
 .tipos2 { background:var(--soft); }
-.tp2grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px; }
+.tp2grid { display:grid; grid-template-columns:repeat(3,minmax(0,316px)); justify-content:center; gap:16px; margin-top:24px; }
+@media (max-width:1100px) and (min-width:900px) { .tp2grid.ph { grid-template-columns:repeat(2,1fr); } }
 .tp2 { background:#fff; border:1px solid var(--line); border-radius:18px; padding:24px; box-shadow:0 12px 30px rgba(10,20,60,.05); transition:transform .35s ease, box-shadow .35s ease; }
 .tp2:hover { transform:translateY(-6px); box-shadow:0 22px 46px rgba(10,20,60,.1); }
 .tp2 i { font-style:normal; font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; color:var(--goldd); display:block; line-height:1; margin-bottom:8px; }
@@ -201,6 +202,20 @@ h2.big2 em { font-style:normal; color:var(--goldd); }
 </div>
 <div class="icrow"><div class="in"><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-mon"/></svg></span><b>Dise&ntilde;o<br>digital</b></div><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-tooth"/></svg></span><b>Llave de<br>mock-up</b></div><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-diam"/></svg></span><b>Est&eacute;tica<br>de alta gama</b></div><div class="ic1"><span class="b"><svg class="ic"><use href="#ic-clock"/></svg></span><b>Sin tallar<br>para probar</b></div></div></div>
 </header>
+
+<section class="mat3"><div class="egrid2"></div><div class="in14">
+  <div class="mhead2">
+    <span class="eyebrow rv">Con qu&eacute; materiales</span>
+    <h2 class="rv">Una sonrisa, <em>seis decisiones t&eacute;cnicas.</em></h2>
+    <p class="msub rv">Del dise&ntilde;o en pantalla a la carilla, cada paso sale del laboratorio a partir de tus fotos y tu esc&aacute;ner.</p>
+  </div>
+  <div class="diag" data-plegar="Ver el detalle de cada punto">
+    <div class="dcol l"><div class="cal"><div class="tx"><b>Dise&ntilde;o digital de sonrisa</b><span>Sobre fotos del paciente y escaneado intraoral.</span></div><span class="ln"></span></div><div class="cal"><div class="tx"><b>Mock-up impreso en 3D</b><span>Resina impresa sobre el modelo, para validar el dise&ntilde;o.</span></div><span class="ln"></span></div><div class="cal"><div class="tx"><b>Llave de silicona</b><span>Traslada el dise&ntilde;o a la boca sin tallar.</span></div><span class="ln"></span></div></div>
+    <div class="dphoto"><span class="halo"></span><img src="../img/sonrisa-mockup-3d.jpg" alt="Mock-up impreso en 3D" style="border-radius:16px"></div>
+    <div class="dcol r"><div class="cal"><span class="ln"></span><div class="tx"><b>Disilicato de litio</b><span>Carillas de cer&aacute;mica de alta est&eacute;tica.</span></div></div><div class="cal"><span class="ln"></span><div class="tx"><b>Composite inyectado</b><span>Llaves transparentes para inyectar en cl&iacute;nica.</span></div></div><div class="cal"><span class="ln"></span><div class="tx"><b>Provisional en PMMA</b><span>Cuando el caso necesita una fase intermedia.</span></div></div></div>
+  </div>
+  <div class="mboxes" data-plegar="Ver los materiales"><div class="mbox rv"><h4>EL MATERIAL</h4><ul><li>Resina impresa<u>Mock-up sobre el modelo</u></li><li>Silicona<u>Llaves para el mock-up en boca</u></li><li>Disilicato y composite<u>Carillas definitivas</u></li></ul></div><div class="mbox rv"><h4>SEG&Uacute;N EL CASO</h4><ul><li>Mock-up sin tallar<u>El paciente ve su sonrisa antes de empezar</u></li><li>Carillas de cer&aacute;mica<u>Disilicato de litio estratificado o maquillado</u></li><li>Carillas de composite<u>Inyectado con llave transparente</u></li></ul></div></div>
+</div></section>
 
 <section class="tipos2"><div class="in14">
   <span class="eyebrow rv">Qu&eacute; fabricamos</span>
@@ -320,6 +335,17 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+  var ioc = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      Array.prototype.slice.call(e.target.querySelectorAll('.cal')).forEach(function (c, k) {
+        setTimeout(function () { c.classList.add('on'); }, k * 160);
+      });
+      ioc.unobserve(e.target);
+    });
+  }, { threshold: 0.3 });
+  var dg = document.querySelector('.diag');
+  if (dg) ioc.observe(dg);
   var i = 0, ids = ['s1','s2','s3','s4'], pb = document.getElementById('pb');
   if (pb) setInterval(function () {
     ids.forEach(function (id, k) { document.getElementById(id).classList.toggle('on', k <= i); });
