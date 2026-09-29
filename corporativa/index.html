@@ -28,8 +28,8 @@
 .mhead h2 { font-family:'Montserrat',sans-serif; font-weight:800; color:var(--obs2); font-size:2.1rem; letter-spacing:-.02em; margin:6px 0 8px; }
 .mgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; max-width:1250px; margin:0 auto 30px; }
 .mc { border:1px solid var(--line); border-top:4px solid var(--gold); border-radius:16px; padding:20px 22px; background:#fff; box-shadow:0 10px 26px rgba(10,20,60,.05); }
-.mc .mim { height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; background:var(--soft); border-radius:12px; padding:10px; }
-.mc .mim img { max-height:135px; max-width:100%; object-fit:contain; }
+.mc .mim { height:170px; display:block; margin-bottom:14px; background:var(--soft); border-radius:12px; padding:0; overflow:hidden; }
+.mc .mim img { width:100%; height:100%; max-height:none; object-fit:cover; display:block; }
 .mc b { font-family:'Montserrat',sans-serif; color:var(--obs2); display:block; margin-bottom:6px; }
 .mc p { color:var(--mut); font-size:.85rem; }
 .logos { display:flex; align-items:center; justify-content:center; gap:38px; flex-wrap:wrap; max-width:1150px; margin:0 auto; padding:18px 0 4px; border-top:1px solid var(--line); }
@@ -71,6 +71,23 @@
 .envlista .pbar span { display:block; height:100%; width:0; background:linear-gradient(90deg,var(--gold),var(--gold2)); border-radius:4px; transition:width .9s ease; }
 @media (max-width:760px) { .envfoto { height:210px; } }
 @media (prefers-reduced-motion: reduce) { .envp { opacity:1; } }
+
+/* --- portada con mas movimiento --- */
+.lgmarq { width:100%; overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
+.lgtrack { display:flex; align-items:center; gap:56px; width:max-content; animation:lgmove 38s linear infinite; }
+.lgmarq:hover .lgtrack { animation-play-state:paused; }
+.lgtrack img { height:30px; filter:grayscale(1); opacity:.6; transition:filter .3s ease, opacity .3s ease; }
+.lgtrack img:hover { filter:none; opacity:1; }
+@keyframes lgmove { to { transform:translateX(-50%); } }
+.mc, .novc, .sc, .pq1 { transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+.mc:hover, .novc:hover, .pq1:hover { transform:translateY(-6px); box-shadow:0 22px 44px rgba(10,20,60,.12); }
+.sc:hover { transform:translateY(-6px); }
+.mc .mim img, .novc .nim img, .sc .im img { transition:transform .5s ease; }
+.mc:hover .mim img, .novc:hover .nim img, .sc:hover .im img { transform:scale(1.07); }
+.js .aparece { opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+.js .aparece.si { opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce) { .lgtrack { animation:none; flex-wrap:wrap; justify-content:center; width:auto; } .lgtrack img[aria-hidden] { display:none; } .js .aparece { opacity:1; transform:none; } .mc:hover, .novc:hover, .pq1:hover, .sc:hover { transform:none; } }
+@media (max-width:760px) { .lgtrack { gap:34px; animation-duration:28s; } .lgtrack img { height:22px; } }
 </style></head><body>
 <div class="topbar">&#9733; Laboratorio de pr&oacute;tesis dental digital &middot; Madrid &middot; Desde 1990 &middot; Servicio en toda Espa&ntilde;a</div>
 <nav class="top"><div class="in">
@@ -187,7 +204,7 @@
   </div>
   <div class="logos">
     <span>Trabajamos con</span>
-    <img src="/corporativa/img/marcas/exocad.png"><img src="/corporativa/img/marcas/itero.png"><img src="/corporativa/img/marcas/medit.png"><img src="/corporativa/img/marcas/ivoclar.png"><img src="/corporativa/img/marcas/dentsply.png"><img src="/corporativa/img/marcas/noritake.png"><img src="/corporativa/img/marcas/bredent.png"><img src="/corporativa/img/marcas/dentaurum.png"><img src="/corporativa/img/marcas/schmidt.png">
+    <div class="lgmarq"><div class="lgtrack"><img src="/corporativa/img/marcas/exocad.png"><img src="/corporativa/img/marcas/itero.png"><img src="/corporativa/img/marcas/medit.png"><img src="/corporativa/img/marcas/ivoclar.png"><img src="/corporativa/img/marcas/dentsply.png"><img src="/corporativa/img/marcas/noritake.png"><img src="/corporativa/img/marcas/bredent.png"><img src="/corporativa/img/marcas/dentaurum.png"><img src="/corporativa/img/marcas/schmidt.png"><img alt="" aria-hidden="true" src="/corporativa/img/marcas/exocad.png"><img alt="" aria-hidden="true" src="/corporativa/img/marcas/itero.png"><img alt="" aria-hidden="true" src="/corporativa/img/marcas/medit.png"><img alt="" aria-hidden="true" src="/corporativa/img/marcas/ivoclar.png"><img alt="" aria-hidden="true" src="/corporativa/img/marcas/dentsply.png"><img alt="" aria-hidden="true" src="/corporativa/img/marcas/noritake.png"><img alt="" aria-hidden="true" src="/corporativa/img/marcas/bredent.png"><img alt="" aria-hidden="true" src="/corporativa/img/marcas/dentaurum.png"><img alt="" aria-hidden="true" src="/corporativa/img/marcas/schmidt.png"></div></div>
   </div>
 </div></section>
 
@@ -384,6 +401,28 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('keydown',function(ev){ if(ev.key==='Escape') close(); });
   pop.querySelector('a.pill').addEventListener('click',function(){ try{ localStorage.setItem(KEY,'1'); }catch(e){} });
   setTimeout(function(){ pop.classList.add('on'); }, 6000);
+})();
+</script>
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var sel = '.novc, .qs2 > div, .sc, .mhead, .mc, .pq1, .envio .in14 > *, .rev .rhead, #ofertas .ofhome';
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+  var vh = window.innerHeight;
+  els.forEach(function(el){ if (el.getBoundingClientRect().top > vh * 0.92) el.classList.add('aparece'); });
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var el = e.target, sibs = Array.prototype.slice.call(el.parentElement.children).filter(function(x){ return x.classList.contains('aparece'); });
+      var k = Math.max(0, sibs.indexOf(el));
+      setTimeout(function(){ el.classList.add('si'); }, Math.min(k, 6) * 90);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function(el){ if (el.classList.contains('aparece')) io.observe(el); });
+  setTimeout(function(){ els.forEach(function(el){ el.classList.add('si'); }); }, 6000);
 })();
 </script>
 </body></html>
