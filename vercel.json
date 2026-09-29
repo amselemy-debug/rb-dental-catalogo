@@ -1,3 +1,15 @@
 {
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/precios", "has": [{ "type": "host", "value": "(www\\.)?laboratoriodentalrb\\.com" }], "destination": "/tarifas.html", "permanent": true },
+    { "source": "/plans-pricing", "has": [{ "type": "host", "value": "(www\\.)?laboratoriodentalrb\\.com" }], "destination": "/tarifas.html", "permanent": true },
+    { "source": "/como-trabajamos", "has": [{ "type": "host", "value": "(www\\.)?laboratoriodentalrb\\.com" }], "destination": "/como-enviar-un-caso.html", "permanent": true },
+    { "source": "/trabajos", "has": [{ "type": "host", "value": "(www\\.)?laboratoriodentalrb\\.com" }], "destination": "/servicios.html", "permanent": true },
+    { "source": "/contacto", "has": [{ "type": "host", "value": "(www\\.)?laboratoriodentalrb\\.com" }], "destination": "/como-enviar-un-caso.html", "permanent": true },
+    { "source": "/pol%C3%ADtica-de-privacidad", "has": [{ "type": "host", "value": "(www\\.)?laboratoriodentalrb\\.com" }], "destination": "/privacidad.html", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/", "has": [{ "type": "host", "value": "(www\\.)?laboratoriodentalrb\\.com" }], "destination": "/corporativa/index.html" },
+    { "source": "/((?!api/|corporativa/).*)", "has": [{ "type": "host", "value": "(www\\.)?laboratoriodentalrb\\.com" }], "destination": "/corporativa/$1" }
+  ]
 }
