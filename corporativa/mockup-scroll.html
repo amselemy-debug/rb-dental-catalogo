@@ -1,4 +1,4 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Prueba portada con scroll &middot; RB Dental</title>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Prueba portada con scroll (cer&aacute;mica) &middot; RB Dental</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,11 +56,11 @@
     <div class="egrid"></div>
     <div class="textos">
       <div class="paso on" data-from="0"><span class="eyebrow">Laboratorio dental &middot; Madrid desde 1990</span><h1>Todo lo que necesitas <em>para tu pr&oacute;ximo caso.</em></h1><p>Pr&oacute;tesis fija, sobre implantes, removible y ortodoncia. Dise&ntilde;o CAD-CAM y acabado a mano, pieza a pieza.</p><div class="ctas"><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Env&iacute;a tu caso &rarr;</a><a class="pill line" href="/tarifas.html">Tarifas 2026</a></div></div>
-      <div class="paso" data-from=".25"><span class="eyebrow">Barra Blender</span><h2>Titanio fresado <em>y anodizado en oro.</em></h2><p>Estructura fresada en CAD-CAM sobre tus implantes, con ajuste pasivo y el color dorado que la hace inconfundible.</p></div>
-      <div class="paso" data-from=".5"><span class="eyebrow">Acabado artesanal</span><h2>Cada diente, <em>terminado a mano.</em></h2><p>La m&aacute;quina da la precisi&oacute;n. La forma, el color y la naturalidad los pone el t&eacute;cnico.</p></div>
+      <div class="paso" data-from=".25"><span class="eyebrow">Zirconio y disilicato</span><h2>Fresado en CAD-CAM, <em>con precisi&oacute;n de micras.</em></h2><p>Cada corona se dise&ntilde;a en pantalla sobre tu escaneado y se fresa en el laboratorio. Ajuste exacto desde la primera prueba.</p></div>
+      <div class="paso" data-from=".5"><span class="eyebrow">Maquillaje a mano</span><h2>El color, <em>pincelada a pincelada.</em></h2><p>La m&aacute;quina da la forma. El tono, las transparencias y la naturalidad los pone la t&eacute;cnica, mirando tu gu&iacute;a de color.</p></div>
       <div class="paso" data-from=".75"><span class="eyebrow">Plazo fiable</span><h2>En tu cl&iacute;nica <em>en 4-5 d&iacute;as.</em></h2><p>Recogida y entrega gratuitas en Madrid y env&iacute;os a toda Espa&ntilde;a. Hablas directamente con el t&eacute;cnico que hace tu caso.</p><div class="ctas"><a class="pill" href="https://wa.me/34680555303?text=Hola,%20quiero%20enviar%20un%20caso%20al%20laboratorio">Env&iacute;a tu primer caso &rarr;</a></div></div>
     </div>
-    <div class="marco"><canvas id="cv" width="720" height="656" aria-label="Barra Blender con dientes girando en la mano del t&eacute;cnico"></canvas><span class="ttag">BARRA BLENDER &middot; TITANIO ANODIZADO</span></div>
+    <div class="marco"><canvas id="cv" width="640" height="652" aria-label="T&eacute;cnica maquillando a mano unas coronas de cer&aacute;mica"></canvas><span class="ttag">CER&Aacute;MICA &middot; MAQUILLAJE A MANO</span></div>
     <div class="baja" id="baja">Baja para verla girar &darr;</div>
     <div class="barra"><i id="pb"></i></div>
   </div>
@@ -69,16 +69,16 @@
 <section class="despues">
   <span class="eyebrow">Y aqu&iacute; seguir&iacute;a la portada</span>
   <h2>Novedades, servicios, materiales&hellip;</h2>
-  <p>Este bloque sustituir&iacute;a a la portada actual de arriba. Con el v&iacute;deo de la pieza en el plato giratorio quedar&iacute;a a&uacute;n m&aacute;s limpio: la pieza sola girando sobre fondo negro.</p>
+  <p>Este bloque sustituir&iacute;a a la portada actual de arriba. Se puede hacer con cualquier v&iacute;deo vuestro: una corona en el plato giratorio, el fresado, el escaneado&hellip;</p>
   <a class="pill" href="/">Ver la portada actual &rarr;</a>
 </section>
 
 <script>
 (function(){
-  var N = 99, frames = [], loaded = 0, cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+  var N = 115, frames = [], loaded = 0, cv = document.getElementById('cv'), ctx = cv.getContext('2d');
   var sec = document.getElementById('scrolly'), pasos = [].slice.call(document.querySelectorAll('.paso')), pb = document.getElementById('pb'), baja = document.getElementById('baja');
   var actual = -1;
-  function src(i){ return '/corporativa/video/scroll-blender/f' + String(i + 1).padStart(3, '0') + '.jpg'; }
+  function src(i){ return '/corporativa/video/scroll-ceramica/f' + String(i + 1).padStart(3, '0') + '.jpg'; }
   function dibuja(i){
     var im = frames[i]; if (!im || !im.complete || !im.naturalWidth) return;
     var W = cv.clientWidth, H = cv.clientHeight, dpr = Math.min(window.devicePixelRatio || 1, 2);
