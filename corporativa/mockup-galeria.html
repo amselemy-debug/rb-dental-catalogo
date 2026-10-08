@@ -1,0 +1,78 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Prueba tarjetas con fotos &middot; RB Dental</title>
+<meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/corporativa/css/base.css">
+<style>
+body { background:#f3f5fa; }
+.prueba { position:sticky; top:0; z-index:300; background:var(--gold); color:var(--obs); font:700 14px/1.3 'Montserrat',sans-serif; text-align:center; padding:10px 16px; }
+.tag { display:inline-block; background:#fbf5e0; border:1px solid #eadfbe; color:#7c6425; border-radius:999px; padding:3px 12px; font-size:.72rem; font-family:'Montserrat',sans-serif; font-weight:700; margin:0 6px 6px 0; }
+.wrap { max-width:640px; margin:0 auto; padding:40px 20px 80px; display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+.op .lbl { font:700 15px 'Montserrat',sans-serif; color:var(--obs2); margin-bottom:12px; text-align:center; }
+.op .lbl small { display:block; font-weight:600; color:var(--mut); font-size:12px; margin-top:4px; }
+.tpph .pic .sl { opacity:0; transition:opacity .8s ease; object-position:var(--pd); }
+.tpph .pic .sl.on { opacity:1; }
+@media (max-width:760px) { .wrap { grid-template-columns:1fr; } .tpph .ph3.llena .pic img.sl { object-fit:contain; object-position:var(--pm); } }
+/* C: barras tipo "stories" */
+.modC .bars { position:absolute; left:12px; right:12px; top:10px; z-index:4; display:flex; gap:5px; }
+.modC .bars i { flex:1; height:3px; border-radius:3px; background:rgba(13,27,75,.18); overflow:hidden; }
+.modC .bars b { display:block; height:100%; width:0; background:linear-gradient(90deg,var(--gold),var(--gold2)); }
+.modC .bars i.done b { width:100%; }
+.modC .bars i.run b { animation:llena 2.6s linear forwards; }
+@keyframes llena { to { width:100%; } }
+/* D: carrusel con puntos y flechas */
+.modD .dots { position:absolute; left:0; right:0; bottom:10px; z-index:4; display:flex; justify-content:center; gap:7px; }
+.modD .dots i { width:7px; height:7px; border-radius:7px; background:rgba(13,27,75,.25); transition:all .3s; }
+.modD .dots i.on { width:22px; background:linear-gradient(90deg,var(--gold),var(--gold2)); }
+.modD .ar { position:absolute; top:50%; transform:translateY(-50%); z-index:4; width:34px; height:34px; border-radius:50%; border:1px solid rgba(227,199,110,.7); background:rgba(6,10,42,.78); color:#fff; font-size:20px; line-height:1; cursor:pointer; opacity:0; transition:opacity .3s; backdrop-filter:blur(4px); }
+.modD .ar.l { left:10px; } .modD .ar.r { right:10px; }
+.modD:hover .ar { opacity:1; }
+@media (hover:none) { .modD .ar { opacity:.9; } }
+.galbox { position:fixed; inset:0; z-index:500; background:rgba(4,7,30,.92); display:none; align-items:center; justify-content:center; padding:20px; }
+.galbox.on { display:flex; }
+.galbox img { max-width:min(92vw,760px); max-height:80vh; border-radius:16px; background:#fff; display:block; }
+.galbox .gx, .galbox .gp, .galbox .gn { position:absolute; background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(227,199,110,.6); border-radius:50%; width:46px; height:46px; font-size:24px; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+.galbox .gx { top:18px; right:18px; } .galbox .gp { left:18px; top:50%; } .galbox .gn { right:18px; top:50%; }
+.galbox .gc { position:absolute; bottom:18px; left:0; right:0; text-align:center; color:#e3c76e; font:600 .85rem 'Montserrat',sans-serif; }
+@media (max-width:600px){ .galbox .gp { left:6px; } .galbox .gn { right:6px; } }
+</style></head><body>
+<div class="prueba">PRUEBA &middot; Dos modelos m&aacute;s modernos para las tarjetas con varias fotos. No est&aacute; publicada.</div>
+<div class="wrap">
+<div class="op"><div class="lbl">Modelo C &middot; pase autom&aacute;tico<small>Las fotos cambian solas con una barra dorada arriba</small></div><div class="tpph modC"><span class="ph3 llena"><span class="nb">04</span><span class="pic galx" role="button" tabindex="0" aria-label="Ver las fotos" data-gal="/corporativa/img/fija-implante-1.jpg,/corporativa/img/fija-implante-2.jpg,/corporativa/img/fija-implante-3.jpg,/corporativa/img/fija-implante-4.jpg"><img class="sl on" style="--pd:50% 100%;--pm:100% 100%" src="/corporativa/img/fija-implante-card.jpg" alt="Arcada sobre implantes, foto 1"><img class="sl" style="--pd:0% 100%;--pm:0% 100%" src="/corporativa/img/fija-implante-2-card.jpg" alt="Arcada sobre implantes, foto 2"><img class="sl" style="--pd:0% 100%;--pm:0% 100%" src="/corporativa/img/fija-implante-3-card.jpg" alt="Arcada sobre implantes, foto 3"><img class="sl" style="--pd:0% 100%;--pm:0% 100%" src="/corporativa/img/fija-implante-4-card.jpg" alt="Arcada sobre implantes, foto 4"><span class="bars"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></span></span><span class="cap3">Sobre implante</span></span><div class="bd"><p>Zirconio sobre interfase Ti-base, atornillado o cementado, seg&uacute;n tu sistema.</p><span class="tag">TITANIO</span> <span class="tag">ZIRCONIO</span></div></div></div><div class="op"><div class="lbl">Modelo D &middot; carrusel<small>Puntos abajo, flechas al pasar el rat&oacute;n o deslizando en el m&oacute;vil</small></div><div class="tpph modD"><span class="ph3 llena"><span class="nb">04</span><span class="pic galx" role="button" tabindex="0" aria-label="Ver las fotos" data-gal="/corporativa/img/fija-implante-1.jpg,/corporativa/img/fija-implante-2.jpg,/corporativa/img/fija-implante-3.jpg,/corporativa/img/fija-implante-4.jpg"><img class="sl on" style="--pd:50% 100%;--pm:100% 100%" src="/corporativa/img/fija-implante-card.jpg" alt="Arcada sobre implantes, foto 1"><img class="sl" style="--pd:0% 100%;--pm:0% 100%" src="/corporativa/img/fija-implante-2-card.jpg" alt="Arcada sobre implantes, foto 2"><img class="sl" style="--pd:0% 100%;--pm:0% 100%" src="/corporativa/img/fija-implante-3-card.jpg" alt="Arcada sobre implantes, foto 3"><img class="sl" style="--pd:0% 100%;--pm:0% 100%" src="/corporativa/img/fija-implante-4-card.jpg" alt="Arcada sobre implantes, foto 4"><button class="ar l" type="button" aria-label="Anterior">&lsaquo;</button><button class="ar r" type="button" aria-label="Siguiente">&rsaquo;</button><span class="dots"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></span><span class="cap3">Sobre implante</span></span><div class="bd"><p>Zirconio sobre interfase Ti-base, atornillado o cementado, seg&uacute;n tu sistema.</p><span class="tag">TITANIO</span> <span class="tag">ZIRCONIO</span></div></div></div>
+</div>
+<div class="galbox" id="galbox" role="dialog" aria-modal="true" aria-label="Fotos del trabajo"><button class="gx" type="button" aria-label="Cerrar">&times;</button><button class="gp" type="button" aria-label="Anterior">&lsaquo;</button><img alt="Foto del trabajo"><button class="gn" type="button" aria-label="Siguiente">&rsaquo;</button><div class="gc"></div></div>
+<script>
+(function(){
+  // C: pase automatico
+  var c=document.querySelector(".modC"), cs=c.querySelectorAll(".sl"), cb=c.querySelectorAll(".bars i"), ci=0;
+  function pasoC(){ cs.forEach(function(e,j){e.classList.toggle("on",j===ci);}); cb.forEach(function(e,j){ e.className = j<ci ? "done" : (j===ci ? "run" : ""); }); }
+  pasoC(); setInterval(function(){ ci=(ci+1)%cs.length; if(ci===0) cb.forEach(function(e){e.className="";}); void c.offsetWidth; pasoC(); },2600);
+  // D: carrusel
+  var d=document.querySelector(".modD"), ds=d.querySelectorAll(".sl"), dd=d.querySelectorAll(".dots i"), di=0;
+  function verD(n){ di=(n+ds.length)%ds.length; ds.forEach(function(e,j){e.classList.toggle("on",j===di);}); dd.forEach(function(e,j){e.classList.toggle("on",j===di);}); }
+  d.querySelector(".ar.l").addEventListener("click",function(e){e.stopPropagation();verD(di-1);});
+  d.querySelector(".ar.r").addEventListener("click",function(e){e.stopPropagation();verD(di+1);});
+  var x0=null, pic=d.querySelector(".pic"); pic.addEventListener("touchstart",function(e){x0=e.touches[0].clientX;},{passive:true});
+  pic.addEventListener("touchend",function(e){ if(x0===null)return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>35){ e.preventDefault(); verD(di+(dx<0?1:-1)); pic.dataset.sw="1"; setTimeout(function(){delete pic.dataset.sw;},400);} x0=null; });
+  pic.addEventListener("click",function(e){ if(pic.dataset.sw){ e.stopImmediatePropagation(); } },true);
+})();
+
+(function(){
+  var box=document.getElementById('galbox'), img=box.querySelector('img'), gc=box.querySelector('.gc'), fotos=[], i=0;
+  function ver(){ img.src=fotos[i]; gc.textContent=(i+1)+' / '+fotos.length; }
+  function abrir(el){ fotos=el.getAttribute('data-gal').split(','); i=0; ver(); box.classList.add('on'); }
+  function cerrar(){ box.classList.remove('on'); }
+  function mover(d){ i=(i+d+fotos.length)%fotos.length; ver(); }
+  document.querySelectorAll('.galx').forEach(function(el){
+    el.addEventListener('click',function(){ abrir(el); });
+    el.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); abrir(el); } });
+  });
+  box.querySelector('.gx').addEventListener('click',cerrar);
+  box.querySelector('.gp').addEventListener('click',function(e){ e.stopPropagation(); mover(-1); });
+  box.querySelector('.gn').addEventListener('click',function(e){ e.stopPropagation(); mover(1); });
+  box.addEventListener('click',function(e){ if(e.target===box) cerrar(); });
+  document.addEventListener('keydown',function(e){ if(!box.classList.contains('on')) return; if(e.key==='Escape') cerrar(); if(e.key==='ArrowLeft') mover(-1); if(e.key==='ArrowRight') mover(1); });
+  var x0=null; box.addEventListener('touchstart',function(e){ x0=e.touches[0].clientX; },{passive:true});
+  box.addEventListener('touchend',function(e){ if(x0===null) return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) mover(dx<0?1:-1); x0=null; });
+})();
+</script>
+</body></html>
