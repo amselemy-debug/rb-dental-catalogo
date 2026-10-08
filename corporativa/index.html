@@ -88,6 +88,18 @@
 .js .aparece.si { opacity:1; transform:none; }
 @media (prefers-reduced-motion: reduce) { .lgtrack { animation:none; flex-wrap:wrap; justify-content:center; width:auto; } .lgtrack img[aria-hidden] { display:none; } .js .aparece { opacity:1; transform:none; } .mc:hover, .novc:hover, .pq1:hover, .sc:hover { transform:none; } }
 @media (max-width:760px) { .lgtrack { gap:34px; animation-duration:28s; } .lgtrack img { height:22px; } }
+/* caso real (video doctor-paciente) */
+.creal { background:linear-gradient(150deg,var(--obs) 55%,var(--obs2)); color:#fff; border-radius:26px; padding:44px; display:grid; grid-template-columns:minmax(0,320px) minmax(0,1fr); gap:48px; align-items:center; position:relative; overflow:hidden; }
+.creal .cv { position:relative; }
+.creal video { width:100%; display:block; border-radius:18px; border:1.5px solid rgba(227,199,110,.55); box-shadow:0 24px 60px rgba(0,0,0,.5); }
+.creal .eyebrow { color:var(--gold2); }
+.creal h2 { color:#fff; margin:10px 0 14px; }
+.creal h2 em { font-style:normal; color:var(--gold2); }
+.creal p { color:#b9c2d8; line-height:1.7; max-width:520px; margin:0 0 22px; }
+.creal ol { list-style:none; padding:0; margin:0 0 26px; display:grid; gap:12px; }
+.creal li { display:flex; gap:14px; align-items:center; color:#dfe4f2; font-size:.98rem; }
+.creal li b { flex:0 0 30px; height:30px; border-radius:50%; background:linear-gradient(120deg,var(--gold),var(--gold2)); color:var(--obs); font:800 .8rem 'Montserrat',sans-serif; display:flex; align-items:center; justify-content:center; }
+@media (max-width:760px) { .creal { grid-template-columns:1fr; padding:26px 18px; gap:24px; } .creal .cv { max-width:300px; margin:0 auto; } }
 </style></head><body>
 <div class="topbar">&#9733; Laboratorio de pr&oacute;tesis dental digital &middot; Madrid &middot; Desde 1990 &middot; Servicio en toda Espa&ntilde;a</div>
 <nav class="top"><div class="in">
@@ -176,6 +188,17 @@
     <div style="margin-top:18px"><a class="pill" href="quienes-somos.html">Conoce al equipo &rarr;</a></div>
   </div>
 </div></section>
+
+<section style="padding-top:0"><div class="in14"><div class="creal aparece">
+  <div class="cv"><video autoplay muted loop playsinline preload="metadata" poster="/corporativa/video/blender-proceso-poster.jpg"><source src="/corporativa/video/blender-proceso.mp4" type="video/mp4"></video></div>
+  <div>
+    <span class="eyebrow">Un caso real</span>
+    <h2>Del laboratorio <em>a la boca del paciente.</em></h2>
+    <p>Una rehabilitaci&oacute;n completa con barra Blender: la dise&ntilde;amos y fabricamos aqu&iacute;, el doctor la prueba en cl&iacute;nica y el paciente sale con su sonrisa nueva.</p>
+    <ol><li><b>1</b>Dise&ntilde;o y fresado en el laboratorio</li><li><b>2</b>Prueba y ajuste en la cl&iacute;nica</li><li><b>3</b>Colocaci&oacute;n en boca del paciente</li></ol>
+    <a class="pill" href="trabajos/blender.html">Ver barra Blender &rarr;</a>
+  </div>
+</div></div></section>
 
 <section style="padding-top:0"><div class="in14 sinfin">
   <span class="eyebrow" style="color:var(--gold2)">Servicios</span>
