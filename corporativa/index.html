@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function () {
   pop.addEventListener('click',function(ev){ if(ev.target===pop) close(); });
   document.addEventListener('keydown',function(ev){ if(ev.key==='Escape') close(); });
   pop.querySelector('a.pill').addEventListener('click',function(){ try{ localStorage.setItem(KEY,'1'); }catch(e){} });
-  setTimeout(function(){ pop.classList.add('on'); }, 6000);
+  setTimeout(function(){ pop.classList.add('on'); }, 3000);
 })();
 </script>
 <script>

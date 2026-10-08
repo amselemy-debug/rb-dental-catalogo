@@ -5,7 +5,7 @@
    - ofertas: dos ofertas (titulo corto, detalle, texto del boton de WhatsApp) */
 window.OFERTAS_RB = {
   activo: true,
-  mes: "Septiembre 2026",
+  mes: "Octubre 2026",
   ofertas: [
     { kicker: "Clínicas nuevas", titulo: "20% dto. tu primer mes", detalle: "Sobre la tarifa 2026, en prótesis fija y removible. Sin permanencia ni pedido mínimo.", wa: "Hola, quiero el bono de bienvenida del 20% del laboratorio" },
     { kicker: "Regalo de bienvenida", titulo: "1ª corona gratis", detalle: "Tu primera corona cementada, de cerámica o de zirconio, para que compruebes nuestro ajuste sin compromiso.", wa: "Hola, quiero mi primera corona gratis del laboratorio" }
