@@ -151,7 +151,7 @@
     fetch('/api/tarifa',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(d)})
       .then(function(r){ return r.json().catch(function(){ return {ok:false}; }).then(function(j){ j.status=r.status; return j; }); })
       .then(function(j){
-        if(j.ok){ f.reset(); show('ok','<b>Recibido, '+d.nombre.split(' ')[0].replace(/[<>&]/g,'')+'.</b> Te enviamos la tarifa 2026 a tu email en el d&iacute;a. Si tienes prisa, tambi&eacute;n la tienes por <a href="'+waFallback(d)+'" target="_blank" rel="noopener">WhatsApp</a>.'); }
+        if(j.ok){ if(window.rbEvento) rbEvento('pedir_tarifa',{clinica:d.clinica?'si':'no'}); f.reset(); show('ok','<b>Recibido, '+d.nombre.split(' ')[0].replace(/[<>&]/g,'')+'.</b> Te enviamos la tarifa 2026 a tu email en el d&iacute;a. Si tienes prisa, tambi&eacute;n la tienes por <a href="'+waFallback(d)+'" target="_blank" rel="noopener">WhatsApp</a>.'); }
         else { show('err','Ahora mismo no podemos enviar el formulario. <a href="'+waFallback(d)+'" target="_blank" rel="noopener">P&iacute;denos la tarifa por WhatsApp &rarr;</a> (tus datos van ya en el mensaje).'); }
       })
       .catch(function(){ show('err','No hay conexi&oacute;n. <a href="'+waFallback(d)+'" target="_blank" rel="noopener">P&iacute;denos la tarifa por WhatsApp &rarr;</a>'); })
@@ -170,4 +170,5 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
+<script src="/corporativa/js/medicion.js" defer></script>
 </body></html>
