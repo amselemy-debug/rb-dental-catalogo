@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
   b = b || {};
   if (b.web) { return res.json({ ok: true }); } // honeypot: bots rellenan el campo oculto
   const nombre = clean(b.nombre, 80), clinica = clean(b.clinica, 120), email = clean(b.email, 120), tel = clean(b.tel, 40), msg = clean(b.mensaje, 600);
-  if (!nombre || !email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || !b.consent) { res.statusCode = 400; return res.json({ ok: false, error: 'datos' }); }
+  if (!nombre || !clinica || !tel || !email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || !b.consent) { res.statusCode = 400; return res.json({ ok: false, error: 'datos' }); }
   const key = process.env.BREVO_API_KEY;
   // 1) CRM: crear la clinica (si esta configurado)
   let crmOk = false;
