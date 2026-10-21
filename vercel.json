@@ -132,6 +132,28 @@
       ],
       "destination": "/privacidad.html",
       "permanent": true
+    },
+    {
+      "source": "/masinformacion",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?laboratoriodentalrb\\.com"
+        }
+      ],
+      "destination": "/tarifas.html",
+      "permanent": true
+    },
+    {
+      "source": "/masinformacion/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?laboratoriodentalrb\\.com"
+        }
+      ],
+      "destination": "/tarifas.html",
+      "permanent": true
     }
   ],
   "rewrites": [
