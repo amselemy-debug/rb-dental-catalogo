@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /mockup-scroll.html
+Disallow: /mockup-galeria.html
+
+Sitemap: https://www.laboratoriodentalrb.com/sitemap.xml

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Disallow: /index-backup-diseno-anterior.html
