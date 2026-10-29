@@ -156,7 +156,7 @@ main.list { flex:1; min-width:0; }
 .gal { display:flex; gap:12px; overflow-x:auto; padding:2px 2px 12px; scroll-snap-type:x mandatory; scrollbar-width:none; }
 .gal::-webkit-scrollbar { display:none; }
 .g { flex:0 0 170px; scroll-snap-align:start; background:#fff; border:1px solid var(--line); border-radius:14px; padding:8px; margin:0; }
-@media (min-width:1000px) { .g { flex:1 1 0; } }
+@media (min-width:1000px) { .g { flex:1 1 0; } .g img.gb { width:calc(100% + 16px); max-width:none; margin:-8px -8px 0; border-radius:13px 13px 0 0; object-fit:cover; object-position:0% 100%; } }
 .g img { width:100%; height:120px; object-fit:contain; display:block; }
 @media (min-width:1000px) { .g img { height:150px; } }
 .g figcaption { font-family:'Montserrat',sans-serif; font-weight:600; font-size:.72rem; color:var(--obs2); text-align:center; padding-top:6px; }
@@ -368,7 +368,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   <a class="logo" href="/" aria-label="Inicio"><img src="img/logo-rb.png" alt="RB dental &middot; Laboratorio de Pr&oacute;tesis Dental Digital"></a>
   <span class="sp"></span>
   <div class="links">
-    <a href="#fija">Fija</a><a href="#allon">All-on</a><a href="#blender">Blender</a><a href="#carga">Carga inmediata</a><a href="#removible">Removible</a><a href="#estetica">Est&eacute;tica</a><a href="#ortodoncia">Ortodoncia</a><a href="#tiempos">Tiempos</a>
+    <a href="#fija">Fija</a><a href="#allon">All-on</a><a href="#blender">Blender</a><a href="#carga">F&eacute;rula guiada para carga inmediata</a><a href="#removible">Removible</a><a href="#estetica">Est&eacute;tica</a><a href="#ortodoncia">Ortodoncia</a><a href="#tiempos">Tiempos</a>
   </div>
   <a class="pill gold" href="https://wa.me/34680555303?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20vuestras%20tarifas"><span class="pd">WhatsApp &middot; 680 555 303</span><span class="pm">Cont&aacute;ctanos</span></a>
   <button class="mburger" id="mburger" type="button" aria-label="Abrir men&uacute;" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -377,7 +377,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   <a href="#fija">Pr&oacute;tesis fija</a>
   <a href="#allon">All-on-4 / All-on-6</a>
   <a href="#blender">Blender</a>
-  <a href="#carga">Carga inmediata</a>
+  <a href="#carga">F&eacute;rula guiada para carga inmediata</a>
   <a href="#removible">Removible</a>
   <a href="#estetica">Est&eacute;tica</a>
   <a href="#ortodoncia">Ortodoncia</a>
@@ -434,10 +434,10 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 <section class="sec" id="mas-pedidos"><div class="wrap"><div class="mp-panel">
   <div class="head"><div><span class="eyebrow">Los m&aacute;s pedidos</span><h2>Trabajos que marcan la diferencia.</h2></div></div>
   <div class="top4">
-    <a class="t4" href="#fija"><span class="im"><img src="img/fija.jpg" alt="Corona de zirconio" loading="lazy"></span><span class="tx"><span><b>Corona de zirconio</b><span class="d">desde 100 &euro;</span></span><span class="go">&rarr;</span></span></a>
+    <a class="t4" href="#fija"><span class="im"><img src="/corporativa/img/card-fija-glossy.jpg" alt="Coronas de zirconio" loading="lazy"></span><span class="tx"><span><b>Corona de zirconio</b><span class="d">desde 100 &euro;</span></span><span class="go">&rarr;</span></span></a>
     <a class="t4" href="#fija"><span class="im"><img src="img/fija2.jpg" alt="Corona sobre implante" loading="lazy"></span><span class="tx"><span><b>Corona sobre implante</b><span class="d">desde 110 &euro;</span></span><span class="go">&rarr;</span></span></a>
     <a class="t4" href="#allon"><span class="im"><img src="img/allon.jpg" alt="All-on-4 / All-on-6" loading="lazy"></span><span class="tx"><span><b>All-on-4 / All-on-6</b><span class="d">desde 1.200 &euro;</span></span><span class="go">&rarr;</span></span></a>
-    <a class="t4" href="#carga"><span class="im"><img src="img/carga-ferula-b.jpg" alt="Carga inmediata &middot; f&eacute;rula quir&uacute;rgica guiada" loading="lazy"></span><span class="tx"><span><b>Carga inmediata</b><span class="d">desde 180 &euro;</span></span><span class="go">&rarr;</span></span></a>
+    <a class="t4" href="#carga"><span class="im"><img src="img/carga-ferula-b.jpg" alt="F&eacute;rula guiada para carga inmediata" loading="lazy"></span><span class="tx"><span><b>F&eacute;rula guiada para carga inmediata</b><span class="d">desde 180 &euro;</span></span><span class="go">&rarr;</span></span></a>
   </div>
 </div></div></section>
 
@@ -447,7 +447,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
     <a href="#fija" data-spy><svg class="ic"><use href="#ic-tooth"/></svg>Pr&oacute;tesis fija</a>
     <a href="#allon" data-spy><svg class="ic"><use href="#ic-diam"/></svg>All-on-4 / All-on-6</a>
     <a href="#blender" data-spy><svg class="ic"><use href="#ic-chart"/></svg>Blender</a>
-    <a href="#carga" data-spy><svg class="ic"><use href="#ic-scan"/></svg>Carga inmediata</a>
+    <a href="#carga" data-spy><svg class="ic"><use href="#ic-scan"/></svg>F&eacute;rula guiada para carga inmediata</a>
     <a href="#removible" data-spy><svg class="ic"><use href="#ic-tooth"/></svg>Removible</a>
     <a href="#estetica" data-spy><svg class="ic"><use href="#ic-target"/></svg>Est&eacute;tica</a>
     <a href="#ortodoncia" data-spy><svg class="ic"><use href="#ic-shield"/></svg>Ortodoncia</a>
@@ -459,12 +459,12 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 
     <section class="syssec" id="fija">
       <div class="shead"><span class="eyebrow">Tarifas 2026</span><h2>Pr&oacute;tesis fija</h2><div class="sub">Coronas, puentes y estructuras &middot; sobre diente y sobre implante</div></div>
-<div class="gal" data-pres><figure class="g"><img src="img/fija.jpg" alt="" loading="lazy"><figcaption>Coronas de zirconio</figcaption></figure><figure class="g"><img src="img/fija2.jpg" alt="" loading="lazy"><figcaption>Zirconio cementado</figcaption></figure><figure class="g"><img src="img/fija3.jpg" alt="" loading="lazy"><figcaption>Carga inmediata</figcaption></figure><figure class="g"><img src="img/fija4.jpg" alt="" loading="lazy"><figcaption>Rehabilitaci&oacute;n en zirconio</figcaption></figure></div>
+<div class="gal" data-pres><figure class="g"><img src="/corporativa/img/card-fija-glossy.jpg" alt="" loading="lazy"><figcaption>Coronas de zirconio</figcaption></figure><figure class="g"><img src="img/fija2.jpg" alt="" loading="lazy"><figcaption>Zirconio cementado</figcaption></figure><figure class="g"><img src="img/fija3.jpg" alt="" loading="lazy"><figcaption>F&eacute;rula guiada para carga inmediata</figcaption></figure><figure class="g"><img src="img/fija4.jpg" alt="" loading="lazy"><figcaption>Rehabilitaci&oacute;n en zirconio</figcaption></figure></div>
 
       <div class="tblwrap"><table>
 <thead><tr><th>Pr&oacute;tesis fija &middot; <i>sobre diente</i></th><th class="pr">PRECIO</th></tr></thead>
 <tbody><tr><td>Corona de Zirconio Monol&iacute;tico</td><td class="p">100,00 &euro;</td></tr><tr class="z"><td>Corona de Zirconio Estratificado</td><td class="p">110,00 &euro;</td></tr><tr><td>Corona Metal Porcelana</td><td class="p">60,00 &euro;</td></tr><tr class="z"><td>Corona Metal Completa</td><td class="p">36,00 &euro;</td></tr><tr><td>Coronas Provisionales</td><td class="p">15,00 &euro;</td></tr><tr class="z"><td>Perno Mu&ntilde;&oacute;n Colado</td><td class="p">30,00 &euro;</td></tr><tr><td>Puente Maryland (cada pieza)</td><td class="p">52,00 &euro;</td></tr><tr class="z"><td>Atache + Montaje (unidad)</td><td class="p">17,00 &euro;</td></tr><tr><td>Dise&ntilde;o Digital de Mock Up (PMMA) unidad</td><td class="p">25,00 &euro;</td></tr><tr class="z"><td>Compostura Porcelana</td><td class="p">30,00 &euro;</td></tr></tbody></table></div>
-<div class="gal" data-pres><figure class="g"><img src="img/implantes.jpg" alt="" loading="lazy"><figcaption>Sobre implantes</figcaption></figure><figure class="g"><img src="img/implantes2.jpg" alt="" loading="lazy"><figcaption>Zirconio s/ interfase</figcaption></figure><figure class="g"><img src="img/implantes3.jpg" alt="" loading="lazy"><figcaption>Metal cer&aacute;mica</figcaption></figure><figure class="g"><img src="img/implantes4.jpg" alt="" loading="lazy"><figcaption>Estructura s/ implantes</figcaption></figure></div>
+<div class="gal" data-pres><figure class="g"><img class="gb" src="/corporativa/img/fija-implante-card-estudio.jpg" alt="" loading="lazy"><figcaption>Arcada sobre implantes</figcaption></figure><figure class="g"><img src="img/implantes2.jpg" alt="" loading="lazy"><figcaption>Zirconio s/ interfase</figcaption></figure><figure class="g"><img src="img/implantes3.jpg" alt="" loading="lazy"><figcaption>Metal cer&aacute;mica</figcaption></figure><figure class="g"><img src="img/implantes4.jpg" alt="" loading="lazy"><figcaption>Estructura s/ implantes</figcaption></figure></div>
 <div class="tblwrap"><table>
 <thead><tr><th>Pr&oacute;tesis fija &middot; <i>sobre implante</i></th><th class="pr">PRECIO</th></tr></thead>
 <tbody><tr><td>Corona s/Implante Zirconio Monol&iacute;tico</td><td class="p">130,00 &euro;</td></tr><tr class="z"><td>Corona s/Implante Zirconio Estratificado</td><td class="p">130,00 &euro;</td></tr><tr><td>Corona sobre Implante Atornillada</td><td class="p">110,00 &euro;</td></tr><tr class="z"><td>Corona sobre Implante Cementada</td><td class="p">110,00 &euro;</td></tr><tr><td>Provisional sobre Implante</td><td class="p">25,00 &euro;</td></tr><tr class="z"><td>Enc&iacute;a Rosa (por pieza)</td><td class="p">25,00 &euro;</td></tr><tr><td>Prueba de Pasividad por IOI</td><td class="p">15,00 &euro;</td></tr><tr class="z"><td>Confecci&oacute;n Barra Ackerman sobre 2 IOI</td><td class="p">200,00 &euro;</td></tr><tr><td>Confecci&oacute;n Barra Ackerman sobre 3 IOI</td><td class="p">250,00 &euro;</td></tr><tr class="z"><td>Confecci&oacute;n Barra Ackerman sobre 4 IOI</td><td class="p">350,00 &euro;</td></tr><tr><td>Confecci&oacute;n Barra Ackerman sobre 5 IOI</td><td class="p">350,00 &euro;</td></tr><tr class="z"><td>Barra sobre 6 Implantes</td><td class="p">350,00 &euro;</td></tr><tr><td>Caballito sobre Barra de Implantes</td><td class="p">25,00 &euro;</td></tr><tr class="z"><td>Sobredentadura Implanto-mucosoportada</td><td class="p">250,00 &euro;</td></tr><tr><td>Sobredentadura Implanto-mucosoportada (H&iacute;brida)</td><td class="p">450,00 &euro;</td></tr><tr class="z"><td>Supraestructura</td><td class="p">60,00 &euro;</td></tr></tbody></table></div>
@@ -604,7 +604,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
   </div>
 </div>
 <div class="gal" data-pres>
-  <figure class="g"><img src="img/blender.jpg" alt="Barra Blender" loading="lazy"><figcaption>Barra Blender</figcaption></figure><figure class="g"><img src="img/blender2.jpg" alt="Barra + estructura" loading="lazy"><figcaption>Barra + estructura</figcaption></figure><figure class="g"><img src="img/blender3.jpg" alt="Barra anodizada" loading="lazy"><figcaption>Barra anodizada</figcaption></figure><figure class="g"><img src="img/blender4.jpg" alt="Barra Blender Ti" loading="lazy"><figcaption>Barra Blender Ti</figcaption></figure><figure class="g"><img src="img/blender5.jpg" alt="Barra sobredentadura" loading="lazy"><figcaption>Barra sobredentadura</figcaption></figure>
+  <figure class="g"><img src="/corporativa/img/blender-barra-real.jpg" alt="Barra Blender" loading="lazy"><figcaption>Barra Blender sobre modelo</figcaption></figure><figure class="g"><img src="img/blender2.jpg" alt="Barra + estructura" loading="lazy"><figcaption>Barra + estructura</figcaption></figure><figure class="g"><img src="img/blender3.jpg" alt="Barra anodizada" loading="lazy"><figcaption>Barra anodizada</figcaption></figure><figure class="g"><img src="img/blender4.jpg" alt="Barra Blender Ti" loading="lazy"><figcaption>Barra Blender Ti</figcaption></figure><figure class="g"><img src="img/blender5.jpg" alt="Barra sobredentadura" loading="lazy"><figcaption>Barra sobredentadura</figcaption></figure>
 </div>
       <div class="tblwrap"><table>
 <thead><tr><th>Barra Blender &middot; <i>sobre implantes</i></th><th class="pr">PRECIO</th></tr></thead>
@@ -616,11 +616,11 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
     </section>
 
     <section class="syssec" id="carga">
-      <div class="shead"><span class="eyebrow">Implantolog&iacute;a</span><h2>Carga inmediata y f&eacute;rula guiada</h2><div class="sub">Cirug&iacute;a guiada &middot; f&eacute;rulas quir&uacute;rgicas a medida</div></div>
+      <div class="shead"><span class="eyebrow">Implantolog&iacute;a</span><h2>F&eacute;rula guiada para carga inmediata</h2><div class="sub">Cirug&iacute;a guiada &middot; f&eacute;rulas quir&uacute;rgicas a medida</div></div>
       <div class="pres" data-pres>
   <div class="ph"><div>
     <span class="chip">NUEVO &middot; IMPLANTOLOG&Iacute;A</span>
-    <h3>CARGA INMEDIATA Y F&Eacute;RULA GUIADA</h3>
+    <h3>F&Eacute;RULA GUIADA PARA CARGA INMEDIATA</h3>
     <p>Provisional fijo el mismo d&iacute;a de la cirug&iacute;a, con planificaci&oacute;n digital y f&eacute;rula quir&uacute;rgica a medida.</p>
   </div><div class="im"><img src="img/carga-guiada.jpg" alt="F&eacute;rula guiada para carga inmediata"></div></div>
   <div class="body"><div class="que two">
@@ -649,7 +649,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 
     <section class="syssec" id="removible">
       <div class="shead"><span class="eyebrow">Tarifas 2026</span><h2>Pr&oacute;tesis removible</h2><div class="sub">Acr&iacute;lica, flexible, esquel&eacute;ticos y arreglos</div></div>
-<div class="gal" data-pres><figure class="g"><img src="img/removible.jpg" alt="" loading="lazy"><figcaption>Completa de resina</figcaption></figure><figure class="g"><img src="img/removible2.jpg" alt="" loading="lazy"><figcaption>Completa superior</figcaption></figure><figure class="g"><img src="img/removible3.jpg" alt="" loading="lazy"><figcaption>Esquel&eacute;tico flexible</figcaption></figure></div>
+<div class="gal" data-pres><figure class="g"><img src="/corporativa/img/removible-completas-real.jpg" alt="" loading="lazy"><figcaption>Completas de resina</figcaption></figure><figure class="g"><img src="img/removible2.jpg" alt="" loading="lazy"><figcaption>Completa superior</figcaption></figure><figure class="g"><img src="/corporativa/img/removible-flexible-real.jpg" alt="" loading="lazy"><figcaption>Pr&oacute;tesis flexible</figcaption></figure></div>
 
       <div class="tblwrap"><table>
 <thead><tr><th>Pr&oacute;tesis removible &middot; <i>acr&iacute;lica</i></th><th class="pr">PRECIO</th></tr></thead>
@@ -689,7 +689,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 <div class="gal pasos" data-pres>
   <figure class="g"><img src="img/sonrisa-paso1.jpg" alt="1 &middot; Sonrisa inicial" loading="lazy"><figcaption>1 &middot; Sonrisa inicial</figcaption></figure><figure class="g"><img src="img/sonrisa-paso2.jpg" alt="2 &middot; Dise&ntilde;amos tu sonrisa" loading="lazy"><figcaption>2 &middot; Dise&ntilde;amos tu sonrisa</figcaption></figure><figure class="g"><img src="img/sonrisa-paso3.jpg" alt="3 &middot; Preparamos el mock-up" loading="lazy"><figcaption>3 &middot; Preparamos el mock-up</figcaption></figure><figure class="g"><img src="img/sonrisa-paso4.jpg" alt="4 &middot; &iexcl;Tu nueva sonrisa!" loading="lazy"><figcaption>4 &middot; &iexcl;Tu nueva sonrisa!</figcaption></figure>
 </div>
-<div class="gal" data-pres><figure class="g"><img src="img/estetica.jpg" alt="" loading="lazy"><figcaption>Incrustaciones</figcaption></figure><figure class="g"><img src="img/fija.jpg" alt="" loading="lazy"><figcaption>Coronas y carillas</figcaption></figure></div>
+<div class="gal" data-pres><figure class="g"><img src="img/estetica.jpg" alt="" loading="lazy"><figcaption>Incrustaciones</figcaption></figure><figure class="g"><img src="/corporativa/img/fija-carillas-modelo.jpg" alt="" loading="lazy"><figcaption>Carillas de disilicato</figcaption></figure></div>
       <div class="tblwrap"><table>
 <thead><tr><th>Est&eacute;tica &middot; <i>dise&ntilde;o de sonrisa, carillas y llaves</i></th><th class="pr">PRECIO</th></tr></thead>
 <tbody><tr><td>Carillas de Composite sin cer&aacute;mica</td><td class="p">60,00 &euro;</td></tr><tr class="z"><td>Carillas de Composite con cer&aacute;mica</td><td class="p">85,00 &euro;</td></tr><tr><td>Carillas de Disilicato de Litio</td><td class="p">90,00 &euro;</td></tr><tr class="z"><td>Corona de Zirconio Monol&iacute;tico</td><td class="p">100,00 &euro;</td></tr><tr><td>Corona de Zirconio Estratificado</td><td class="p">110,00 &euro;</td></tr><tr class="z"><td>Incrustaciones de Composite (por pieza)</td><td class="p">90,00 &euro;</td></tr><tr><td>Incrustaciones de Disilicato de Litio</td><td class="p">100,00 &euro;</td></tr><tr class="z"><td>Dise&ntilde;o de Sonrisa (por pieza) &middot; Modelo 3D incluido</td><td class="p">30,00 &euro;</td></tr><tr><td>Llave de silicona para el Mock Up (por arcada)</td><td class="p">20,00 &euro;</td></tr><tr class="z"><td>Llave para carillas inyectadas (por arcada)</td><td class="p">40,00 &euro;</td></tr><tr><td>Llave para Carillas</td><td class="p">30,00 &euro;</td></tr></tbody></table></div>
@@ -697,7 +697,7 @@ footer .c { color:var(--mut); font-size:.78rem; flex:1; min-width:240px; line-he
 
     <section class="syssec" id="ortodoncia">
       <div class="shead"><span class="eyebrow">Tarifas 2026</span><h2>Ortodoncia</h2><div class="sub">F&eacute;rulas, retenedores y aparatolog&iacute;a</div></div>
-<div class="gal" data-pres><figure class="g"><img src="img/ferulas.jpg" alt="" loading="lazy"><figcaption>F&eacute;rula fresada</figcaption></figure><figure class="g"><img src="img/ferulas2.jpg" alt="" loading="lazy"><figcaption>F&eacute;rulas de descarga</figcaption></figure><figure class="g"><img src="img/ferulas3.jpg" alt="" loading="lazy"><figcaption>F&eacute;rula de descarga</figcaption></figure><figure class="g"><img src="img/ferulas4.jpg" alt="" loading="lazy"><figcaption>Retenedor Essix</figcaption></figure></div>
+<div class="gal" data-pres><figure class="g"><img class="gb" src="/corporativa/img/ferula-fresada-estudio.jpg" alt="" loading="lazy"><figcaption>F&eacute;rula de descarga fresada</figcaption></figure><figure class="g"><img src="img/ferulas2.jpg" alt="" loading="lazy"><figcaption>F&eacute;rulas de descarga</figcaption></figure><figure class="g"><img class="gb" src="/corporativa/img/ferula-descarga-estudio.jpg" alt="" loading="lazy"><figcaption>F&eacute;rula de descarga</figcaption></figure><figure class="g"><img src="img/ferulas4.jpg" alt="" loading="lazy"><figcaption>Retenedor Essix</figcaption></figure></div>
 
       <div class="tblwrap"><table>
 <thead><tr><th>Ortodoncia &middot; <i>f&eacute;rulas y retenedores</i></th><th class="pr">PRECIO</th></tr></thead>
