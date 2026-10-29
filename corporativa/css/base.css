@@ -533,12 +533,14 @@ nav.top .links a.nofer:hover { color:#fff; }
 .ofpop .x:hover { background:var(--gold2); color:var(--obs); }
 
 /* --- Tarjetas de tipos: misma medida en todas las paginas de trabajos --- */
+@media (min-width:1500px) { .tp2grid.ph.tp7 { grid-template-columns:repeat(7,minmax(0,1fr)) !important; } }
 @media (min-width:1101px) {
   .tipos2 .in14 { max-width:1640px; }
   .tp2grid.ph { justify-content:center; gap:14px; grid-template-columns:repeat(4,minmax(0,250px)); }
   .tp2grid.ph.tp3 { grid-template-columns:repeat(3,minmax(0,250px)); }
   .tp2grid.ph.tp5 { grid-template-columns:repeat(5,minmax(0,250px)); }
   .tp2grid.ph.tp6 { grid-template-columns:repeat(6,minmax(0,250px)); }
+  .tp2grid.ph.tp7 { grid-template-columns:repeat(4,minmax(0,250px)); }
   .tp2grid.ph .tpph { min-width:0; }
   .tp2grid.ph .ph3:not(.llena) { margin:8px 8px 0; padding:8px 8px 0; }
   .tp2grid.ph .ph3.llena { margin:8px 8px 0; }
@@ -550,4 +552,4 @@ nav.top .links a.nofer:hover { color:#fff; }
   .tp2grid.ph .nb { bottom:14px; font-size:.64rem; padding:3px 9px; }
   .tp2grid.ph .tag { font-size:.6rem; }
 }
-@media (max-width:1100px) and (min-width:900px) { .tp2grid.ph { grid-template-columns:repeat(2,1fr); } .tp2grid.ph.tp5, .tp2grid.ph.tp6 { grid-template-columns:repeat(3,1fr); } }
+@media (max-width:1100px) and (min-width:900px) { .tp2grid.ph { grid-template-columns:repeat(2,1fr); } .tp2grid.ph.tp5, .tp2grid.ph.tp6, .tp2grid.ph.tp7 { grid-template-columns:repeat(3,1fr); } }
